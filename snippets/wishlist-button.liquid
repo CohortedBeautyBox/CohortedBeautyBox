@@ -1,0 +1,29 @@
+{% if settings.enable_wishlist %}
+  {% if customer %}
+    {% assign value = product.id %}
+    {% capture productID %}{{ product.id }}{% endcapture %}
+    {% assign display_index = 0 %}
+    {% for tag in customer.tags %}
+		{% if tag contains productID %}
+			{% assign display_index = display_index | plus:1 %}
+			{% capture value %}x{{value}}{% endcapture %}
+		{% endif %}
+    {% endfor %}
+    {% assign display_index = display_index | modulo:2 %}
+	{% if display_index == 1 %}
+		{% assign display = false %}
+	{% else %}
+		{% assign display = true %}
+	{% endif %}
+
+    {% if display %}
+      <a data-submit="contact[email]={{ customer.email }}&contact[tags]={{ value }}&form_type=customer" data-title="{{ product.title }}" class="act-wishlist act-add-to-wishlist" title="Add to Wishlist">
+        <i class="fa fa-heart-o"></i>
+      </a>
+    {% else %}
+		<a title="Already in your wishlist, Go to wishlist" class="act-wishlist act-add-to-wishlist active" href="/pages/wish-list"><i class="fa fa-heart-o"></i></a>
+    {% endif %}
+  {% else %}
+  <a title="Add to Wishlist" class="act-wishlist act-add-to-wishlist" href="/account/login"><i class="fa fa-heart-o"></i></a>
+  {% endif %}
+{% endif %}

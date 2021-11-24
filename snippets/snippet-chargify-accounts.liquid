@@ -1,0 +1,663 @@
+{% if customer %}
+<div id="chargify-accounts" class="table-responsive">
+	<div id="customer_email" style="display:none;">{{customer.email}}</div>
+	<div id="customer_shared_secret" style="display:none;">{{customer.metafields['chargify-accounts']['shared-secret']}}</div>
+
+
+	<h2>Subscriptions</h2>
+	<table id="subscription-table" class="table">
+		<tr>
+			<th>Name</th>
+			<th>State</th>
+			<th>Started At</th>
+			<th>Current Period Started At</th>
+			<th>Current Period Ends At</th>
+			<th>Referral Code</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr id="loading-row"><td colspan=9>{{ "chargify-accounts-spinner.gif" | asset_url | img_tag }}</td></tr>
+	</table>
+
+
+		<input type="hidden" id="input-hidden-change-address-subscription-id" value="" />
+<input type="hidden" id="input-hidden-change-address-subdomain" value="" />
+<div class="address_change chargify-accounts-lightbox-outer-container chargify-accounts-lightbox-default-styles" style="display: none;">
+  <div class="chargify-accounts-lightbox-background"></div>
+  <div class="chargify-accounts-lightbox-main-box">
+    <a class="chargify-accounts-close-lightbox" href="#" onclick="return false;">Close</a>
+    <div class="chargify-accounts-lightbox-content">
+      <div class="chargify-accounts-lightbox-loading"></div>
+      <div class="chargify-accounts-lightbox-loaded-content">
+        <h1>Current Address Information</h1>
+        <div class="chargify-accounts-result-message" style="display: none;"></div>
+        <div class="chargify-accounts-current-addresses">
+          <div class="chargify-accounts-current-shipping-address">
+            <h2>Shipping</h2>
+            <div class="shipping_address1"></div>
+            <div class="shipping_address2"></div>
+            <div><span class="shipping_city"></span>, <span class="shipping_province"></span></div>
+            <div><span class="shipping_country"></span> <span class="shipping_zip"></span></div>
+          </div>
+          <br />
+          <div class="chargify-accounts-current-billing-address">
+            <h2>Billing</h2>
+            <div class="billing_address1"></div>
+            <div class="billing_address2"></div>
+            <div><span class="billing_city"></span>, <span class="billing_province"></span></div>
+            <div><span class="billing_country"></span> <span class="billing_zip"></span></div>
+          </div>
+        </div>
+        <hr />
+        <div class="chargify-accounts-new-address">
+          <h1>Choose a new address from the list below</h1>
+          <div class="chargify-accounts-list-addresses">
+            {% for address in customer.addresses %}
+            <div class="chargify-accounts-row">
+              <div class="chargify-accounts-choice">
+                <div>{{ address.first_name }} {{ address.last_name }}</div>
+                <div class="address1">{{ address.address1 }}</div>
+                <div class="address2">{{ address.address2 }}</div>
+                <div><span class="city">{{ address.city }}</span>, <span class="province">{{ address.province_code }}</span></div>
+                <div><span class="country">{{ address.country_code }}</span> <span class="zip">{{ address.zip }}</span></div>
+              </div>
+              <div class="chargify-accounts-actions">
+                <div><a href="#" onclick="return false" class="chargify-accounts-choose-address-only-shipping">Use this address for shipping</a></div>
+                <hr />
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+// Address Related Code
+  $("body").delegate("#chargify-accounts .chargify-account-change-address", "click", function() {
+    var jq_clicked_element = $(this);
+    var id_number = jq_clicked_element.data("subscription-id");
+    var subdomain = jq_clicked_element.data("subdomain");
+    $("#input-hidden-change-address-subscription-id").val(id_number);
+    $("#input-hidden-change-address-subdomain").val(subdomain);
+
+    openLightbox("address_change");
+
+    showLightboxLoading("Loading...");
+
+    reloadDisplayOfCurrentAddresses(null);
+  });
+
+  $("body").delegate(".chargify-accounts-choose-address-shipping-and-billing",  "click", function() { handleClickChooseAddress($(this), true, true); });
+  $("body").delegate(".chargify-accounts-choose-address-only-shipping",         "click", function() { handleClickChooseAddress($(this), true, false); });
+
+  function reloadDisplayOfCurrentAddresses(extraSuccessFunction) {
+    var id_number = $("#input-hidden-change-address-subscription-id").val();
+    var subdomain = $("#input-hidden-change-address-subdomain").val();
+    $.ajax({
+      url: "{{shop.secure_url}}/apps/" + urlAppsSubDir + "/getaddress",
+      type: "POST",
+      data: {
+        "subscription_id":  id_number,
+        "email":            "{{ customer.email }}",
+        "shared-secret":    "{{ customer.metafields['chargify-accounts']['shared-secret'] }}",
+        "subdomain": subdomain
+      },
+      dataType: "json",
+      statusCode: {
+        204: function() {
+          showLightboxLoading("An error occurred. Please try again later.");
+        },
+        205: function() {
+          showLightboxLoading("An error occurred. Please try again later.");
+        }
+      },
+      success: function(data) {
+        if (data) {
+          var $current_shipping_addresses = $(".chargify-accounts-current-shipping-address");
+
+          $current_shipping_addresses.find(".shipping_address1").text(data.shipping_address1);
+          $current_shipping_addresses.find(".shipping_address2").text(data.shipping_address2);
+          $current_shipping_addresses.find(".shipping_city").text(data.shipping_city);
+          $current_shipping_addresses.find(".shipping_province").text(data.shipping_province);
+          $current_shipping_addresses.find(".shipping_zip").text(data.shipping_zip);
+          $current_shipping_addresses.find(".shipping_country").text(data.shipping_country);
+
+
+          var $current_billing_addresses = $(".chargify-accounts-current-billing-address ");
+
+          $current_billing_addresses.find(".billing_address1").text(data.billing_address1);
+          $current_billing_addresses.find(".billing_address2").text(data.billing_address2);
+          $current_billing_addresses.find(".billing_city").text(data.billing_city);
+          $current_billing_addresses.find(".billing_province").text(data.billing_province);
+          $current_billing_addresses.find(".billing_zip").text(data.billing_zip);
+          $current_billing_addresses.find(".billing_country").text(data.billing_country);
+
+          showLightboxLoadedContent();
+
+          if (extraSuccessFunction != null) {
+            extraSuccessFunction();
+          }
+        }
+      },
+      error: function(data) {
+        showLightboxLoading("An error occurred. Please try again later.");
+      }
+    });
+  }
+
+
+  function handleClickChooseAddress(jq_clicked_element, updateShipping, updateBilling){
+    showLightboxLoading("Updating...");
+
+    var $address_row = jq_clicked_element.closest(".chargify-accounts-row");
+    var id_number = $("#input-hidden-change-address-subscription-id").val();
+    var subdomain = $("#input-hidden-change-address-subdomain").val();
+    $.ajax({
+      url: "{{shop.secure_url}}/apps/" + urlAppsSubDir + "/changeaddress",
+      type: "POST",
+      data: {
+        "subscription_id":  id_number,
+        "email":            "{{ customer.email }}",
+        "shared-secret":    "{{ customer.metafields['chargify-accounts']['shared-secret'] }}",
+        "new_address1":     $address_row.find(".address1").text(),
+        "new_address2":     $address_row.find(".address2").text(),
+        "new_city":         $address_row.find(".city").text(),
+        "new_province":     $address_row.find(".province").text(),
+        "new_zip":          $address_row.find(".zip").text(),
+        "new_country":      $address_row.find(".country").text(),
+        "update_shipping":  updateShipping,
+        "update_billing":   updateBilling,
+        "subdomain": subdomain
+      },
+      dataType: "json",
+      statusCode: {
+        204: function() {
+          showLightboxLoading("An error occurred. Please try again later.");
+        },
+        205: function() {
+          showLightboxLoading("An error occurred. Please try again later.");
+        }
+      },
+      success: function(data) {
+        if (data) {
+          if (data.action_completed_successfully) {
+            reloadDisplayOfCurrentAddresses(function() { showResultMessage("The address was successfully updated."); });
+          }
+          else {
+            showLightboxLoading("An error occurred. Please try again later.");
+          }
+        }
+      },
+      error: function(data) {
+        showLightboxLoading("An error occurred. Please try again later.");
+      }
+    });
+  }
+  // End Address Code
+</script>
+
+
+
+		<script type="text/javascript">
+  $("body").delegate("#chargify-accounts a.hold", "click", function(){
+    var confirm_effect = confirm("Are you sure you want to put your subscription on hold?");
+    if (confirm_effect == true) {
+      var subscription_id = $(this).data("subscription-id");
+      var subdomain = $(this).data("subdomain");
+      $.ajax({
+        url: "{{shop.secure_url}}/apps/" + urlAppsSubDir + "/hold",
+        type: "POST",
+        data: {
+          "subscription_id": subscription_id,
+          "subdomain": subdomain,
+          "email": "{{customer.email}}",
+          "shared-secret": "{{ customer.metafields['chargify-accounts']['shared-secret'] }}"
+        },
+        dataType: "json",
+        statusCode: {
+          204: function() {
+            $("#subscription-table").append("<tr><td colspan=9>Customer has invalid credentials. Please contact the store owner for more information</td></tr>");
+          },
+          205: function() {
+            $("#subscription-table").append("<tr><td colspan=9>Customer information could not be found. Please contact the store owner for more information</td></tr>");
+          }
+        },
+        success: function(data){
+          if (data) {
+            if (data.hold == true) {
+              var jq_row = $("[data-subscription-id='" + data.subscription_id + "']:first-child").closest("tr");
+              jq_row.find(".state").text(data.new_state);
+              jq_row.find(".hold").hide();
+              jq_row.find(".resume").show();
+            }
+            else {
+              alert("There was an error putting this subscription on hold. Please try again later or contact the store owner.");
+            }
+          }
+        },
+        error: function(data){
+          alert("There was an error putting this subscription on hold. Please try again later or contact the store owner.");
+        }
+      });
+    }
+  });
+</script>
+
+		<script type="text/javascript">
+  $("body").delegate("#chargify-accounts a.resume", "click", function(){
+    var confirm_effect = confirm("Are you sure you want to resume your subscription?");
+    if (confirm_effect == true) {
+      var subscription_id = $(this).data("subscription-id");
+      var subdomain = $(this).data("subdomain");
+      $.ajax({
+        url: "{{shop.secure_url}}/apps/" + urlAppsSubDir + "/resume",
+        type: "POST",
+        data: {
+          "subscription_id": subscription_id,
+          "subdomain": subdomain,
+          "email": "{{customer.email}}",
+          "shared-secret": "{{ customer.metafields['chargify-accounts']['shared-secret'] }}"
+        },
+        dataType: "json",
+        statusCode: {
+          204: function() {
+            $("#subscription-table").append("<tr><td colspan=9>Customer has invalid credentials. Please contact the store owner for more information</td></tr>");
+          },
+          205: function() {
+            $("#subscription-table").append("<tr><td colspan=9>Customer information could not be found. Please contact the store owner for more information</td></tr>");
+          }
+        },
+        success: function(data){
+          if (data) {
+            if (data.resume == true) {
+              var jq_row = $("[data-subscription-id='" + data.subscription_id + "']:first-child").closest("tr");
+              jq_row.find(".state").text(data.new_state);
+              jq_row.find(".hold").show();
+              jq_row.find(".resume").hide();
+            }
+            else {
+              alert("There was an error resuming this subscription. Please try again later or contact the store owner.");
+            }
+          }
+        },
+        error: function(data){
+          alert("There was an error resuming this subscription. Please try again later or contact the store owner.");
+        }
+      });
+    }
+  });
+</script>
+
+
+		<script type="text/javascript">
+$("body").delegate("#chargify-accounts .unsubscribe a", "click", function(){
+  var confirm_cancel = confirm("Are you sure you want to cancel your subscription?");
+
+  if (confirm_cancel == true) {
+    var subscription_id = $(this).attr("id");
+    var subdomain = $(this).data("subdomain");
+    $.ajax({
+      url: "{{shop.secure_url}}/apps/" + urlAppsSubDir + "/cancelsubscription",
+      type: "POST",
+      data: {
+        "subscription_id": subscription_id,
+        "subdomain": subdomain,
+        "email": "{{customer.email}}",
+        "shared-secret": "{{ customer.metafields['chargify-accounts']['shared-secret'] }}"
+      },
+      dataType: "json",
+      statusCode: {
+        204: function() {
+            $("#subscription-table").append("<tr><td colspan=9>Customer has invalid credentials. Please contact the store owner for more information</td></tr>");
+        },
+        205: function() {
+            $("#subscription-table").append("<tr><td colspan=9>Customer information could not be found. Please contact the store owner for more information</td></tr>");
+        }
+      },
+      success: function(data){
+        if (data) {
+          if (data.canceled == true) {
+            var jq_row = $("#" + data.subscription_id).closest("tr");
+            jq_row.find(".state").text(data.new_state);
+            jq_row.find(".last-column").attr("colspan", "4").css("text-align", "left");
+            jq_row.find(".change-product").remove();
+            jq_row.find(".change-address").remove();
+            jq_row.find(".unsubscribe").remove();
+          }
+          else {
+              alert("There was an error unsubscribing. Please try again later or contact the store owner.");
+          }
+        }
+      },
+      error: function(data){
+          alert("There was an error unsubscribing. Please try again later or contact the store owner.");
+      }
+    });
+  }
+});
+</script>
+
+
+
+</div>
+
+<script type="text/javascript">
+
+var urlAppsSubDir = "chargify-accounts";
+
+if (!window.jQuery) {
+	alert("JQuery not loaded; Chargify accounts plugin will not be able to display subscription data.");
+}
+else {
+	var shared_secret = "{{ customer.metafields['chargify-accounts']['shared-secret'] }}"
+	if(shared_secret != ""){
+		get_subscriptions(shared_secret);
+	}
+	else{
+		$("#loading-row").hide();
+		$("#subscription-table").append("<tr><td colspan=9>Subscriptions unavailable.</td></tr>");
+	}
+}
+
+function get_subscriptions(shared_secret) {
+	$.ajax({
+		url: "{{shop.secure_url}}/apps/" + urlAppsSubDir + "/getsubscriptions",
+		type: "POST",
+		data: {
+			"email": "{{customer.email}}",
+			"shared-secret": shared_secret
+		},
+		dataType: "json",
+		statusCode: {
+			204: function() {
+				$("#subscription-table").append("<tr><td colspan=9>You have no active Chargify subscriptions. Please contact the store owner for more information</td></tr>");
+			},
+			205: function() {
+				$("#subscription-table").append("<tr><td colspan=9>You have no active Chargify subscriptions. Please contact the store owner for more information</td></tr>");
+			}
+		},
+		success: function(data){
+			if (data) {
+				if (data.subscriptions.length > 0) {
+					for (var i in data.subscriptions) {
+						var subscription = data.subscriptions[i];
+						if(subscription.created_at == null){
+							var start_date = "N/A";
+						}
+						else{
+							var start_date = (new Date(subscription.created_at)).toDateString();
+						}
+						if(subscription.current_period_started_at == null){
+							var period_start = "N/A";
+						}
+						else{
+							var period_start = (new Date(subscription.current_period_started_at)).toDateString();
+						}
+						if(subscription.current_period_ends_at == null){
+							var period_end = "N/A";
+						}
+						else{
+							var period_end = (new Date(subscription.current_period_ends_at)).toDateString();
+						}
+
+						var last_colspan = 1;
+						var $row = $("<tr>");
+						$row.append("<td>" + subscription.product_name + "</td>");
+						var state = subscription.state.replace("_", " ");
+						if(subscription.delayed_cancel_at != null){
+							state = subscription.delayed_cancel_state
+						}
+						$row.append("<td class='state capitalize'>" + state + "</td>");
+						$row.append("<td>" + start_date + "</td>");
+						$row.append("<td>" + period_start + "</td>");
+						var last_column = subscription.referral_code
+							$row.append("<td>" + period_end + "</td>");
+
+						if(subscription.state == "active" || subscription.state == "trialing"){
+								if(subscription.delayed_cancel_at != null){
+									last_colspan += 1;
+								}
+							$row.append("<td class='last-column' colspan=" + last_colspan + ">" + last_column + "</td>");
+
+								$row.append("<td class='change-address'><a style='cursor:pointer;' class='chargify-account-change-address' data-subscription-id='" + subscription.id + "' data-subdomain='" + subscription.subdomain + "'>Change Address</a></td>");
+
+
+								$row.append("<td><a class='hold' style='cursor:pointer;' data-subscription-id='" + subscription.id + "' data-subdomain='" + subscription.subdomain + "'>Pause</a><a class='resume' style='cursor:pointer;display:none;' data-subscription-id='" + subscription.id + "' data-subdomain='" + subscription.subdomain + "'>Resume</a></td>");
+
+								if(subscription.delayed_cancel_at == null){
+									$row.append("<td class='unsubscribe'><a style='cursor:pointer;' id='" + subscription.id + "' data-subdomain='" + subscription.subdomain + "'>Cancel</a></td>");
+								}
+						}
+						else if(subscription.state == "on_hold"){
+								last_colspan += 1;
+								last_colspan += 1;
+
+							$row.append("<td class='last-column' colspan=" + last_colspan + ">" + last_column + "</td>");
+								$row.append("<td><a class='hold' style='cursor:pointer;display:none;' data-subscription-id='" + subscription.id + "' data-subdomain='" + subscription.subdomain + "'>Pause</a><a class='resume' style='cursor:pointer;' data-subscription-id='" + subscription.id + "' data-subdomain='" + subscription.subdomain + "'>Resume</a></td>");
+						}
+						else{
+								last_colspan += 1;
+								last_colspan += 1;
+								last_colspan += 1;
+							$row.append("<td colspan='" + last_colspan + "'>" + last_column + "</td>");
+						}
+						$("#subscription-table").append($row);
+					}
+				}
+				else {
+					$("#subscription-table").append("<tr><td colspan=9>You have no subscriptions.</td></tr>");
+				}
+			}
+		},
+		error: function(data){
+			$("#subscription-table").append("<tr><td colspan=9>Error retrieving subscription data.</td></tr>");
+		},
+		complete: function(data){
+			$("#loading-row").remove();
+		}
+	});
+}
+
+// lightbox
+function openLightbox(lightbox_name) {
+  	$("#header-container").hide();
+	$("." + lightbox_name + ".chargify-accounts-lightbox-outer-container").show();
+	positionLightbox(lightbox_name);
+}
+
+function closeLightbox() {
+	$(".chargify-accounts-lightbox-outer-container").hide();
+    $("#header-container").show();
+	doExtraCleanupWhenClosingLightbox();
+}
+
+function doExtraCleanupWhenClosingLightbox() {
+	$(".chargify-accounts-result-message").hide();
+}
+
+function positionLightbox(lightbox_name) {
+	var jq_main_box = $("." + lightbox_name + " .chargify-accounts-lightbox-main-box");
+	jq_main_box.css("top", $(window).height() / 2 - jq_main_box.height() / 2);
+	jq_main_box.css("left", $(window).width() / 2 - jq_main_box.width() / 2);
+}
+
+function showLightboxLoading(textToDisplay) {
+	$(".chargify-accounts-lightbox-loading").show();
+	$(".chargify-accounts-lightbox-loaded-content").hide();
+	$(".chargify-accounts-lightbox-loading").text(textToDisplay);
+}
+
+function showLightboxLoadedContent() {
+	$(".chargify-accounts-lightbox-loading").hide();
+	$(".chargify-accounts-lightbox-loaded-content").show();
+	$(".chargify-accounts-lightbox-loading").text("");
+}
+
+function showResultMessage(textToDisplay) {
+	$(".chargify-accounts-result-message").text(textToDisplay);
+	$(".chargify-accounts-result-message").show().fadeTo(0, 1);
+	$(".chargify-accounts-result-message").delay(5000).fadeTo(500, 0).slideUp(100);
+}
+
+$(window).resize(function(){
+	change_product_visible = $(".product_change:visible").length > 0
+	change_address_visible = $(".address_change:visible").length > 0
+	if(change_product_visible){
+		positionLightbox("product_change");
+	}
+	else if(change_address_visible){
+		positionLightbox("address_change");
+	}
+});
+$("body").delegate(".chargify-accounts-close-lightbox", "click", closeLightbox);
+
+</script>
+
+
+<style>
+#chargify-accounts > table{
+	width:100%;
+}
+#chargify-accounts > table th{
+	font-weight:bold;
+}
+#chargify-accounts > table td,
+#chargify-accounts > table th {
+	padding: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+#chargify-accounts > table td.state {
+	text-transform: capitalize;
+}
+
+
+  #chargify-accounts a{
+    text-decoration: underline;
+  }
+  
+</style>
+
+
+
+<!--general styles-->
+<style type="text/css">
+#change_email_container{
+	display: block;
+    width: 100%;
+    float: left;
+	margin: 10px 0;
+}
+#change_email_container label,
+#change_email_container input,
+#change_email_container button{
+	display:inline-block;
+	float:left;
+	margin-right:5px;
+}
+#change_email_container input{
+	min-width:200px;
+}
+
+#change_email_container .error{
+	display:none;
+	margin-top: 5px;
+    color: red;
+    float: left;
+    padding: 3px;
+    border: 1px solid red;
+}
+
+#change_email_container .success{
+	display:none;
+	margin-top: 5px;
+    color: green;
+    float: left;
+    padding: 3px;
+    border: 1px solid green;
+}
+
+#change_email_container .error table{
+	border:none;
+	margin:5px 0 0 0;
+}
+
+#change_email_container .error table td{
+	border:none;
+	margin:0;
+}
+
+#change_email_container .error table ul{
+	margin:0;
+}
+
+#change_email_container .loading{
+	display:none;
+	width:100%;
+	float:left;
+}
+
+#chargify-accounts .capitalize {
+  text-transform: capitalize;
+}
+
+
+
+.chargify-accounts-lightbox-background {
+	z-index: 1000000001;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(88,88,88,0.9);
+}
+.chargify-accounts-lightbox-main-box {
+	z-index: 1000000002;
+	position: fixed;
+	padding: 10px;
+	max-height: 80%;
+	overflow: auto;
+  max-width: 100%;
+}
+.chargify-accounts-close-lightbox {
+	float: right;
+}
+.chargify-accounts-lightbox-content {
+	clear: both;
+	margin-top: 10px;
+	width: 480px;
+	min-height: 360px;
+}
+.chargify-accounts-lightbox-loading {
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -220px;
+	width: 440px;
+}
+
+</style>
+
+
+
+<!--default styles - to override-->
+<style type="text/css">
+.chargify-accounts-lightbox-default-styles .chargify-accounts-lightbox-main-box {
+	background-color: #fff;
+}
+.chargify-accounts-lightbox-default-styles .chargify-accounts-result-message {
+	background-color: lightgreen;
+	padding: 4px;
+}
+</style>
+
+
+
+{% endif %}

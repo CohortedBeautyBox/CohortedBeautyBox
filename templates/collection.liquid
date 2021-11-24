@@ -1,0 +1,158 @@
+{% capture sort_by %}{{ collection.sort_by | default: collection.default_sort_by  }}{% endcapture %}    
+{% assign sort_by = sort_by | handleize %}
+<div style="background-image: url({% if collection.image %}{{ collection.image | img_url: 'original' }}{% else %}{{ 'header_default_img.jpg' | asset_url }}{% endif %})" class="parallax-box parrallax-page-title alt-bg parallax-shop" data-stellar-background-ratio="0.4">
+  <div class="parallax-title-content">
+    <h1>{{ collection.title | escape }}</h1>
+    <div class="breadcrumbs">
+      <ul>
+        <li class="home">
+          <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span><span> &gt; </span>
+        </li>
+        <li><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="main-container">
+  <div class="novaworks-main-content">
+    <div class="main container">
+      <div class="row columns-layout">
+        <div class="{% if settings.display_sidebar_cat_page %}col-main col-sm-9 col-sm-push-3{% else %}col-main col-sm-12{% endif %}">
+          <div class="category-products">
+            <div class="toolbar">
+              <div class="sorter">
+                <div class="sort-by">
+                  <span class="current">
+                    <span>
+                      {% case sort_by %}
+                      {% when 'price-ascending' or 'price-descending' %}
+                      Price
+                      {% when 'title-ascending' or 'title-descending' %}
+                      Name                     
+                      {% when 'created-ascending' or 'created-descending' %}
+                      Date
+                      {% when 'best-selling' %}
+                      Best Selling
+                      {% else %}
+                      Name
+                      {% endcase %}
+                      <i class="fa fa-sort-down"></i>
+                    </span>
+                  </span>
+                  <ul>
+                    <li><a class="sort-link" href="price-ascending">Price</a></li>
+                    <li><a class="sort-link" href="title-ascending">Name</a></li>
+                    <li><a class="sort-link" href="created-ascending">Date</a></li>
+                    <li><a class="sort-link" href="best-selling">Best Selling</a></li>
+                  </ul>
+                </div>
+                <div class="direction">
+                  {% case sort_by %}
+                  {% when 'price-ascending' %}
+                  <a class="sort-link" href="price-descending" title="Set Descending Direction">
+                    <i class="fa fa-long-arrow-down"></i>
+                  </a>
+                  {% when 'price-descending' %}
+                  <a class="sort-link" href="price-ascending" title="Set Ascending Direction">
+                    <i class="fa fa-long-arrow-up"></i>
+                  </a>
+                  {% when 'title-ascending' %}  
+                  <a class="sort-link" href="title-descending" title="Set Descending Direction">
+                    <i class="fa fa-long-arrow-down"></i>
+                  </a>
+                  {% when 'title-descending' %}
+                  <a class="sort-link" href="title-ascending" title="Set Ascending Direction">
+                    <i class="fa fa-long-arrow-up"></i>
+                  </a>
+                  {% when 'created-ascending' %}
+                  <a class="sort-link" href="created-descending" title="Set Descending Direction">
+                    <i class="fa fa-long-arrow-down"></i>
+                  </a>
+                  {% when 'created-descending' %}
+                  <a class="sort-link" href="created-ascending" title="Set Ascending Direction">
+                    <i class="fa fa-long-arrow-up"></i>
+                  </a>
+                  {% when 'best-selling' %}
+                  <a class="sort-link" href="best-selling" title="No Direction">
+                    <i class="fa fa-long-arrow-down"></i>
+                  </a>
+                  {% else %}
+                  <a href="title-descending" title="Set Descending Direction">
+                    <i class="fa fa-long-arrow-down"></i>
+                  </a>
+                  {% endcase %}
+                </div>
+                <p class="view-mode  hidden-xxs">
+                  <a title="Grid" onclick="display('grid'); return false;" class="grid active">Grid</a>&nbsp;
+                  <a title="List" onclick="display('list'); return false;" class="list">List</a>&nbsp;
+                </p>
+              </div>
+            </div>
+            {% paginate collection.products by settings.pagination_limit %}
+            <div id="products-viewmode" class="row products-grid">
+              {% for product in collection.products %}
+                <div class="col-lg-{{ 12 | divided_by:settings.products_per_row }} col-md-4 col-sm-4 col-xs-6 item">
+                {% include 'product-grid-item' with collection.handle %}
+                </div>
+              {% else %}
+                <p class="col-xs-12">There are no products available.</p>
+              {% endfor %}
+            </div>
+            {% include 'pagination' %}
+            {% endpaginate %}
+          </div>
+        </div>
+        {% if settings.display_sidebar_cat_page %}
+        {% include 'sidebar' %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  Shopify.queryParams = {};
+  if (location.search.length) {
+    for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+      aKeyValue = aCouples[i].split('=');
+      if (aKeyValue.length > 1) {
+        Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+      }
+    }
+  }
+  var collFilters = jQuery('.coll-filter');
+  collFilters.change(function() {
+    var newTags = [];
+    var newURL = '';
+    delete Shopify.queryParams.page;   
+    collFilters.each(function() { 
+      if (jQuery(this).val() && jQuery(this).is(':checked')) {
+        newTags.push(jQuery(this).val());
+      }
+    });   
+    {% if collection.handle %}
+    newURL = '/collections/' + '{{ collection.handle }}';
+    if (newTags.length) {
+      newURL += '/' + newTags.join('+');
+    }
+    var search = jQuery.param(Shopify.queryParams);
+    if (search.length) {
+      newURL += '?' + search;
+    }
+    location.href = newURL;    
+    {% else %}
+    if (newTags.length) {
+      Shopify.queryParams.constraint = newTags.join('+');        
+    }
+    else {
+      delete Shopify.queryParams.constraint;
+    }
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+    {% endif %}      
+  });
+  jQuery('.sort-link').click(function(e){
+    e.preventDefault();
+    Shopify.queryParams.sort_by = jQuery(this).attr('href');
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+  });
+</script>

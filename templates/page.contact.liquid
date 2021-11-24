@@ -1,0 +1,87 @@
+
+<div class="main-container home-content-container">
+  <div class="novaworks-main-content">
+    <div class="main home-content container">
+      <div class="row columns-layout">
+        <div class="col-main col-md-12">
+          <div class="page-title">
+            <h1>Contact Us</h1>
+          </div>
+          <div class="block_contact">
+            <div class="contact-map">
+              <div class="block-contact-content">
+                <div id="novaworks-active" class="has-map"></div>
+                <div class="gmap-widget">
+                  <div class="map-canvas" data-address="{{ settings.contact_address }}" data-zoom="15" data-maptype="roadmap" data-mapcolor="" data-mapsaturation="color"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row contact-info">
+              <div class="col-md-4">
+                <div class="contact-left">
+                  {{ page.content }}
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="contact-right" id="contactForm">
+                  {% form 'contact' %}
+                  {% if form.posted_successfully? %}
+                  <div class="successForm feedback">
+                    <p>{{ 'contact.form.post_success' | t }}</p>
+                  </div>
+                  {% endif %}
+
+                  {% if form.errors %}
+                  <div class="errorForm feedback">
+                    <p>{{ 'contact.form.post_error' | t }}</p>
+                    {% for field in form.errors %}
+                    <p>{{ 'contact.form.post_field_error_html' | t: field: field, error: form.errors.messages[field] }}</p>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                  <div class="fieldset">
+                    <h2 class="legend">Contact Information</h2>
+                    <ul class="form-list">
+                      <li class="fields">
+                        <label for="name" class="required">Name</label>
+                        <div class="input-box">
+                          <input name="contact[name]" id="name" title="Name" value="" class="input-text" type="text" />
+                        </div>
+                      </li>
+                      <li class="fields">
+                        <label for="email" class="required"><em>*</em>Email</label>
+                        <div class="input-box">
+                          <input name="contact[email]" id="email" title="Email" value="" class="input-text" type="text" />
+                        </div>
+                      </li>
+                      <li>
+                        <label for="telephone">Telephone</label>
+                        <div class="input-box">
+                          <input name="contact[phone]" id="telephone" title="Telephone" value="" class="input-text" type="text" />
+                        </div>
+                      </li>
+                      <li class="wide">
+                        <label for="comment" class="required">Comment</label>
+                        <div class="input-box">
+                          <textarea name="contact[body]" id="comment" title="Comment" class="input-text" cols="5" rows="3"></textarea>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="buttons-set">
+                    <p class="required">* Required Fields</p>
+                    <button type="submit" title="Submit" class="btn btn-default pull-right"><span><span>Submit</span></span></button>
+                  </div>
+                  {% endform %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

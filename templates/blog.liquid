@@ -1,0 +1,48 @@
+<div class="main-container col2-left-layout">
+  <div class="novaworks-main-content">
+    <div class="main container">
+      <div class="row columns-layout">
+        <div class="col-main col-sm-9 col-sm-push-3">
+          <div class="header-background-default">
+            <div class="breadcrumbs">
+              <ul>
+                <li class="home">
+                  <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span><span> &gt; </span>
+                </li>
+                <li class="blog">
+                  <strong>{{ blog.title }}</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {% paginate blog.articles by 5 %}
+          {% for article in blog.articles %}
+          <div class="postWrapper">
+            <div class="postContentWrapper">
+              <div class="postTitle">
+                <h2><a href="{{ article.url }}" >{{ article.title }}</a></h2>
+                <p class="postDetails h7">Posted on <span class="postDate">{{ article.published_at | date: '%A, %B %d %Y %r' }} </span> in <a href="{{blog.url}}">{{blog.title}}</a> by <span class="poster">{{article.author}}</span></p>
+              </div>
+
+              {% if article.image %}
+              <div class="postImage">
+                <a href="{{ article.url }}"><img src="{{ article.image.src | img_url: '1024x1024' }}" alt="{{ article.title }}" /></a>
+              </div>
+              {% endif %}
+              <div class="postContent">{{ article.content | strip_html | truncate: 300, '...'}}
+                <div class="blogReadmore"><a class="blog-read-more" href="{{ article.url }}">Read Full Post</a></div>
+              </div>
+              <div class="postReadmoreComments">
+                {% if article.comments_enabled? %}{{ article.comments_count }} Comments | {% endif %}<a class="blog-read-more" href="{{ article.url }}">Read Full Post</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% include 'pagination' %}
+          {% endpaginate %}
+        </div>
+        {% include 'blog_sidebar' %}
+      </div>
+    </div>
+  </div>
+</div><!-- Main container -->

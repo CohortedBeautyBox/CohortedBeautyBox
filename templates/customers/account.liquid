@@ -1,0 +1,69 @@
+<div style="background-image: url({% if collection.image %}{{ collection.image | img_url: 'original' }}{% else %}{{ 'header_default_img.jpg' | asset_url }}{% endif %})" class="parallax-box parrallax-page-title alt-bg parallax-shop" data-stellar-background-ratio="0.4"></div>
+<div class="main-container">
+  <div class="container">
+    <div class="page-content">
+      <div class="row account-page-styles">
+        <div id="customer_sidebar" class="col-sm-4 col-xs-12">
+          <div class="page-title">
+            <h1>{{ 'customer.account.title' | t }}</h1>
+          </div>
+          <h2>{{ customer.name }}</h2>
+<p><a href="/tools/checkout/front_end/login" class="text-link under-line-link">Manage My Subscriptions</a></p>
+          <p class="email note">{{ customer.email }}</p>
+          <div class="address note">
+            {% if customer.default_address != nil %}
+            <p>{{ customer.default_address.address1 }}</p>
+            {% if customer.default_address.address2 != "" %}
+            <p>{{ customer.default_address.address2 }}</p>
+            {% endif %}
+            <p>{{ customer.default_address.city}}, {% if address.province_code %}{{customer.default_address.province_code}}, {% endif %}{{customer.default_address.country}}</p>
+            <p>{{ customer.default_address.zip}}</p>
+            <p>{{ customer.default_address.phone }}</p>
+            {% endif %}
+            <div class="buttons-set">
+            <a id="view_address" href="/account/addresses" class="sf-roll-button alt-button pull-left"><span>{{ 'customer.account.view_addresses' | t }}</span><span>{{ 'customer.account.view_addresses' | t }}</span></a>
+            </div>
+          </div>
+        </div>
+        <div id="customer_orders" class="col-sm-8 col-xs-12">
+          <div class="customer-bg-color">
+          <h2>MY ORDERS</h2>
+          {% paginate customer.orders by 20 %}
+            {% if customer.orders.size != 0 %}
+            <table>
+            <thead>
+              <tr>
+                <th class="order_number">{{ 'customer.orders.order_number' | t }}</th>
+                <th class="date">{{ 'customer.orders.date' | t }}</th>
+                <th class="payment_status">{{ 'customer.orders.payment_status' | t }}</th>
+                <th class="fulfillment_status">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                <th class="total">{{ 'customer.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in customer.orders %}
+              <tr class="{% cycle 'odd', 'even' %} {% if order.cancelled %}cancelled_order{% endif %}">
+                <td>{{ order.name | link_to: order.customer_url }}</td>
+                <td><span class="note">{{ order.created_at | date: format: 'short' }}</span></td>
+                <td><span class="status_{{ order.financial_status }}">{{ order.financial_status_label }}</span></td>
+                <td><span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status_label }}</span></td>
+                <td><span class="total money">{{ order.total_price | money }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% else %}
+          <p>{{ 'customer.orders.none' | t }}</p>
+          {% endif %}
+          {% include 'pagination' %}
+          {% endpaginate %}
+        </div>
+        </div><div class="clearfix"></div>
+        
+        <div>{% include 'snippet-chargify-accounts' %}</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+

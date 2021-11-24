@@ -1,0 +1,41 @@
+<div class="row{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <a href="{{ product.url | within: collection }}">
+      <img alt="{{ product.title }}" src="{% if product.images.size >= 1%}{{ product.featured_image | product_img_url: 'medium' }}{% else %}{{ 'No_Image_2.png' | asset_url }}{% endif %}">
+    </a>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <h5>
+      <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+    </h5>
+    <div class="price-box">
+      {% assign price = product.price | money %}
+      {% if product.available %}
+      {% if product.price_varies %}
+      <p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+      {% else %}
+      <p class="special-price"><span class="price">{{ price }}</span></p>
+      {% endif %}
+      {% if product.compare_at_price_max > product.price %}
+      <p class="old-price"><span class="price-sep">-</span><span class="price">{{ product.compare_at_price | money }}</span></p>
+      {% endif %}
+      {% else %}
+      {% if product.price_varies %}
+      <p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+      {% else %}
+      <span class="regular-price"><span class="price">{{ price }}</span></span>
+      {% endif %}
+      {{ 'products.product.sold_out_html' | t }}
+      {% endif %}
+    </div>
+    <div class="review-wrap">
+      <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+    </div>
+    <div class="novaworks-quick-act">
+      {% include 'wishlist-button' %}
+    </div>
+    <div class="novaworks-add-to-cart">
+      <a class="ajaxcart_colorbox add_to_cart_small" onclick="ajaxcart({{product.selected_or_first_available_variant.id}});" href="javascript:;">Add to cart</a>
+    </div>
+  </div>
+</div>

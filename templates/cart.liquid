@@ -1,0 +1,196 @@
+<div class="main-container">
+  <div class="novaworks-main-content">
+    <div class="main home-content container">
+      <div class="row columns-layout">
+        <div class="col-main col-md-12">
+          <div class="cart ">
+            <div class="page-title title-buttons">
+              <h1>Shopping Cart</h1>
+              <ul class="checkout-types top">
+                <li>    
+                  <button type="button" name="checkout" title="Proceed to Checkout" class="btn btn-default btn-proceed-checkout btn-checkout" onclick="window.location='/checkout';">
+                    <span>
+                      <span>Proceed to Checkout</span>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                {% if cart.item_count == 0 %}
+                <h2 class="tc">{{ 'cart.general.empty' | t }}</h2>
+                {% else %}
+                <form action="/cart" method="post" id="cartform">
+                  <fieldset>
+                    <table id="shopping-cart-table" class="data-table cart-table">
+                      <thead>
+                        <tr>
+                          <th rowspan="1"><span class="nobr">Product Image</span></th>
+                          <th rowspan="1" class="hidden-xs"><span class="nobr">Product Name</span></th>
+                          <th rowspan="1" class="a-center">Qty</th>
+                          <th class="a-center hidden-xs" colspan="1"><span class="nobr">Unit Price</span></th>
+                          <th class="a-center" colspan="1">Subtotal</th>
+                          <th rowspan="1" class="a-center">&nbsp;</th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <td colspan="7" class="a-right">
+                            <a href="/cart/clear" class="cart-link pull-left">EMPTY CART</a>
+                            <a href="/collections/all" class="cart-link">CONTINUE SHOPPING</a>
+                            <span class="or">OR</span>
+                            <button type="submit" name="update" title="Update Shopping Cart" class="cart-link">
+                              UPDATE SHOPPING CART
+                            </button>
+                          </td>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        {% for item in cart.items %}
+                        <tr>
+                          <td><a href="{{ item.url }}" title="{{ item.product.title }} - {% if item.product.variants.size > 1 %}{{ item.variant.title }}{% endif %}" class="product-image"><img src="{{ item | img_url: 'compact' }}" alt="{{ item.title | escape }}" /></a></td>
+                          <td class="hidden-xs">
+                            <h2 class="product-name">
+                              <a href="{{ item.url }}">{{ item.product.title }}
+                                {% if item.product.variants.size > 1 %}
+                                <span class="variant_title">{{ item.variant.title }}</span><span class="bold_ro_desc" data-product-id="{{ item.id }}-{{ forloop.index0 }}"></span>
+
+                                {% endif %}
+                              </a>
+                            </h2>
+                          </td>
+                          <!-- inclusive price starts here -->
+                          <td class="a-center">
+                            <input type="text" size="4" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="input-text qty" />
+                          </td>
+                          <!--Sub total starts here -->
+                          <td class="a-right hidden-xs">
+                            <span class="cart-price">
+                              <span class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>{{ item.price | money }}</span>                            
+                            </span>
+                          </td>
+                          <td class="a-right">
+                            <span class="cart-price">
+                              <span class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>{{ item.line_price | money }}</span>                            
+                            </span>
+                          </td>
+                          <td class="a-center">
+                            <a href="/cart/change?line={{ forloop.index }}&quantity=0" title="Remove item" class="btn-remove btn-remove2">Remove</a>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </fieldset>
+                </form>
+                {% endif %}
+              </div>
+              
+              <div class="col-md-4 col-sm-12">
+                <div class="cart-collaterals">
+                  <div class="cart-accordion">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form action="/cart" method="post" id="discount-coupon-form">
+                          <div class="discount">
+                            <div class="cart-accordion-heading">
+                              <a href="#" class="cart-accordion-toggle">
+                                Discount Codes                
+                              </a>
+                              <small class="greytext">Have a discount code? You can enter it in "Step 2" of the checkout process</small>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if settings.show_shipping_calculator %}
+              <div class="col-md-4">
+                <div class="shipping">
+                  <div class="cart-accordion-heading">
+                    <a class="cart-accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseShipping">
+                      Estimate Shipping and Tax                
+                    </a>
+                  </div>
+                  {% include 'shipping-rates-calculator' %}
+                </div>
+              </div>
+              {% endif %}
+              <div class="col-md-4">
+                <div class="totals">
+                  <table id="shopping-cart-totals-table">
+                    <tfoot>
+                      <tr>
+                        <td class="a-right" colspan="1">
+                          <strong>Grand Total</strong>
+                        </td>
+                        <td class="a-right">
+                          <input type="hidden" id="total_price_val" value="{{cart.total_price | money_without_currency }}" >
+                          <strong><span class="price" id="total_price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ cart.total_price | money }}</span></strong>
+                        </td>
+                      </tr>
+                    </tfoot>
+                    <tbody>
+                      <tr>
+                        <td class="a-right" colspan="1">
+                          Subtotal    
+                        </td>
+                        <td class="a-right">
+                          <span class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ cart.total_price | money }}</span>    
+                        </td>
+                      </tr>
+                      {% if settings.show_shipping_calculator %}
+                      <tr>
+                        <td class="a-right" colspan="1">
+                          Shipping
+                        </td>
+                        <td class="a-right">
+                          <span class="price" id="shipping-fee">Free</span>
+                        </td>
+                      </tr>
+                      {% endif %}
+                    </tbody>
+                  </table>
+                  <form action="/cart" method="post" id="cartform">
+                  <ul class="checkout-types">
+                    <li>    
+                      <button type="submit" name="checkout" title="Proceed to Checkout" class="btn btn-default btn-proceed-checkout btn-checkout">
+                        <span>
+                          <span>Proceed to Checkout</span>
+                        </span>
+                      </button>
+                    </li>
+                    {% if additional_checkout_buttons %}        
+                    <li>
+                      <div class="extra-checkout-buttons">
+                        {{ content_for_additional_checkout_buttons }}
+                      </div>
+                    </li>
+                    {% endif %}
+                  </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="payment-box">
+          <div class="tex-payment"><span>Buy Now, Pay Later. No Fees.</span><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/c-text-img.png?v=1579186325" alt="Klarna" /><span>Choose Klarna in checkout.</span></div>
+          <div class="payment-logo">
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/f.png?v=1579186359" alt="PayPal" class="icon-py" />
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/e.png?v=1579186350" alt="Mastercard" class="icon-py" />
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/d.png?v=1579186340" alt="Maestro" class="icon-py" />
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/c.png?v=1579186313" alt="Klarna" class="icon-py" />
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/b.png?v=1579186303" alt="Apple Pay" class="icon-py" />
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/a.png?v=1579186293" alt="Amex" class="icon-py" />
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/h.png?v=1579186376" alt="Visa Electron" class="icon-py" />
+              <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/g.png?v=1579186367" alt="Visa" class="icon-py" />
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

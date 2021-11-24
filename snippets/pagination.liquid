@@ -1,0 +1,27 @@
+{% if paginate.pages > 1 %}
+  <div class="text-center">
+    <ul class="pagination clearfix">
+    {% if paginate.previous %}
+    	<li><a href="{{ paginate.previous.url }}" class="prev"><i class="fa fa-angle-left"></i></a></li>
+    {% else %}
+      <li><span><i class="fa fa-angle-left"></i></span></li>
+    {% endif %}
+      {% for part in paginate.parts %}
+
+      {% if part.is_link %}
+      <li>
+        <a href="{{ part.url }}" title="">{{ part.title }}</a>
+      </li>
+      {% else %}
+      <li><span class="active">{{ part.title }}</span></li>
+      {% endif %}
+
+      {% endfor %}
+    {% if paginate.next %}
+    	<li><a href="{{ paginate.next.url }}" class="next"><i class="fa fa-angle-right"></i></a></li>
+    {% else %}
+    	<li><span><i class="fa fa-angle-right"></i></span></li>
+    {% endif %}
+    </ul>
+  </div>
+{% endif %}

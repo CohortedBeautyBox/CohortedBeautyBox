@@ -1,0 +1,107 @@
+<div class="main-container col2-left-layout">
+  <div class="novaworks-main-content">
+    <div class="main container">
+      <div class="row columns-layout">
+        <div class="col-main col-sm-9 col-sm-push-3">
+          <div class="header-background-default">
+            <div class="breadcrumbs">
+              <ul>
+                <li class="home">
+                  <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span><span> &gt; </span>
+                </li>
+                <li>
+                  <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ blog.url }}" title="{{ blog.title | escape }}" itemprop="url"><span itemprop="title">{{ blog.title }}</span></a></span><span> &gt; </span>
+                </li>
+                <li>
+                  <strong>{{ article.title }}</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="postWrapper">
+            {% if article.image %}
+            <div class="postImage">
+              <img src="{{ article.image.src | img_url: '1024x1024' }}" alt="{{ article.title }}" />
+            </div>
+            {% endif %}
+            <div class="postContentWrapper">
+              <div class="postTitle">
+                <h2>{{ article.title }}</h2>
+                <p class="postDetails h7">Posted on <span class="postDate">{{ article.published_at | date: '%A, %B %d %Y %r' }} </span> in <a href="{{blog.url}}">{{blog.title}}</a> by <span class="poster">{{article.author}}</span></p>
+              </div>
+              <div class="postContent">
+                {{ article.content }}
+              </div>
+              {% if blog.comments_enabled? %}
+              <div class="postTitle postComments">
+                <h3>POST COMMENT</h3>
+              </div>
+              <div id="comments">
+                {% paginate article.comments by 20 %}
+                {% for comment in article.comments %}
+                <div id="comment-{{ comment.id }}" class="comment clearfix">
+                  <h5 class="author">{{ 'blogs.article.comment_meta_html' | t: author: comment.author, date: '' }}<strong><span>{{ comment.created_at | date: format: 'short' }}</span></strong></h5>
+                  <div>{{ comment.content }}</div>
+                </div> <!-- /.comment -->
+                {% endfor %}
+
+                {% include 'pagination' %}
+                {% endpaginate %}
+              </div>
+              <div id="postComment">        
+                {% form "new_comment", article %}
+                  {% if form.posted_successfully? %}
+                  {% if blog.moderated? %}
+                  <p class="subtext success">{{ 'blogs.comments.success_moderated' | t }}</p>
+                  {% else %}
+                  <p class="subtext success">{{ 'blogs.comments.success' | t }}</p>
+                  {% endif %}
+                  {% endif %}
+
+                  {% if form.errors %}
+                  <p class="subtext error">{{ 'blogs.comments.error' | t }}</p>
+                  {% endif %}
+                  <fieldset class="group-select">
+                    <h3 class="submitComment">Your email address will not be published.</h3>
+                    <ul class="form-list">
+                      <li>
+                        <div class="input-box">
+                          <label for="name" class="required">Name<em>*</em></label>
+                          <br />
+                          <input name="comment[author]" id="name" value="" title="Name" class="required-entry input-text" type="text" />
+                        </div>
+
+                        <div class="input-box input-box-right">
+                          <label for="email" class="required">Email<em>*</em></label>
+                          <br />
+                          <input name="comment[email]" id="email" value="" title="Email" class="required-entry input-text validate-email" type="text" />
+                        </div>
+
+                        <div class="clear"></div>
+                        <div class="input-box aw-blog-comment-area">
+                          <label for="comment" class="required">Comment<em>*</em></label>
+                          <br />
+                          <textarea name="comment[body]" id="comment" title="Comment" class="required-entry input-text" cols="50" rows="5"></textarea>
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <div class="button-set">
+                    <input name="post_id" type="hidden" value="9" />
+                    <p class="required">* Required Fields</p>
+                    <button class="btn btn-default pull-right" type="submit"><span><span>Submit</span></span>
+                    </button>
+                  </div>
+                {% endform %}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <!-- Begin sidebar -->
+        {% include 'blog_sidebar' %}
+        <!-- End sidebar -->
+      </div>
+    </div>
+  </div>
+</div>

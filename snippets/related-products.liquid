@@ -1,0 +1,44 @@
+{% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
+{% assign found_a_collection = false %}
+{% for c in product.collections %}
+{% if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 %}
+{% assign found_a_collection = true %}
+{% assign collection = c %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if collection and collection.products_count > 1 %}
+<div class="slider-items-products box-collateral box-related">
+  <div class="arw_tab_title">
+    <div class="tab_title">
+      <h2 class="title">{{ settings.related_products_title }}</h2>
+      <p></p>
+    </div>
+    <div class="tab_sub_title">
+      <h2 class="title">{{ settings.related_products_description }}</h2></div>
+  </div>
+  <div class="novaworks_slider product-flexslider hidden-buttons">
+    <div class="slider-items slider-width-col">
+      {% assign current_product = product %}
+      {% assign current_product_found = false %}
+      {% assign index_related = 0 %}
+      {% assign limit_related = settings.number_of_related_products | times:1 %}
+      {% for product in collection.products limit: settings.number_of_related_products %}
+      {% if index_related < limit_related %}
+      {% if product.handle == current_product.handle %}
+      {% assign current_product_found = true %}
+      {% else %}
+      {% assign index_related = index_related | plus:1 %}
+      {% unless current_product_found == false and forloop.last %}
+      <div class="item">
+        {% include 'product-grid-item' %}
+      </div>
+      {% endunless %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

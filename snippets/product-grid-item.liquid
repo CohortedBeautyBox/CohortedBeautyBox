@@ -1,0 +1,59 @@
+{% capture grid_id %}{{product-grid-item}}{% endcapture %}
+<div class="item-product-image-box">
+  {% if product.price_min < product.compare_at_price_min and settings.display_sale_label %}
+  <div class="novaworks-product-badge novaworks-sale-badge">Sale</div>
+  {% endif %}
+  <a class="product-image" href="{{product.url | within: collection}}" title="{{product.title}}">
+    <div class="product-img-additional back">
+      <img src="{% if product.images.size >= 1%}{{ product.featured_image | product_img_url: 'large' }}{% else %}{{ 'No_Image_2.png' | asset_url }}{% endif %}" alt="{{product.title}}">
+    </div>
+  </a>
+  <div class="product-hover-box hidden-xs">
+    <a class="detail_view" href="{{ product.url | within: collection }}"></a>
+    <div class="quick-view">
+      <a class="act-quickview-button" onclick="quickview(this,'{{product.handle}}'); return false;" href="#"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="detail-view">
+      <a class="act-imageview-button" href="{{product.url | within: collection}}"><i class="fa fa-chain"></i></a>
+    </div>
+  </div>
+</div>
+<h3 class="product-name">
+  <a href="{{product.url | within: collection}}" title="{{product.title}}">{{product.title}}</a>
+</h3>
+{% capture collection_handle %}{{product-grid-item}}{% endcapture %}
+{% if collection_handle != '' %}
+<div class="hidden-class">
+  <div class="desc std">
+    {{ product.description | strip_html | truncatewords : 30 }}
+    <a href="{{ product.url | within: collection }}" title="{{ product.title }}" class="link-learn">Learn More</a>
+  </div>
+</div>
+{% endif%}
+<div class="review-wrap">
+  <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+</div>
+<div class="price-box">
+  {% assign price = product.price | money %}
+  {% if product.available %}
+  {% if product.price_varies %}
+  <p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+  {% else %}
+  <p class="special-price"><span class="price">{{ price }}</span></p>
+  {% endif %}
+  {% if product.compare_at_price_max > product.price %}
+  <p class="old-price"><span class="price-sep">-</span><span class="price">{{ product.compare_at_price | money }}</span></p>
+  {% endif %}
+  {% else %}
+  {% if product.price_varies %}
+  <p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+  {% else %}
+  <span class="regular-price"><span class="price">{{ price }}</span></span>
+  {% endif %}
+  {{ 'products.product.sold_out_html' | t }}
+  {% endif %}
+</div>
+<div class="novaworks-quick-act">
+  {% include 'wishlist-button' %}
+  <a href="javascript:;" title="Add to cart" onclick="ajaxcart({{product.selected_or_first_available_variant.id}})" class="ajaxcart_simple button-ajax-cart-id-{{product.selected_or_first_available_variant.id}}"><i class="fa fa-shopping-cart"></i></a>
+</div>

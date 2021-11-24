@@ -1,0 +1,2731 @@
+[
+  {
+    "name": "theme_info",
+    "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0888\/9278\/files\/logo-white-square.png?13835178460298315000",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Bazien theme"
+      },
+      {
+        "type": "paragraph",
+        "content": "This theme is officially supported by [Globo](http:\/\/www.globosoftware.net). If you have any question please contact us at: [http:\/\/shopifydevelopers.net\/contact-us\/](http:\/\/shopifydevelopers.net\/contact-us\/)"
+      }
+    ]
+  },
+  {
+    "name": "General",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "use_favicon",
+        "label": "Use favicon",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "favicon.png",
+        "label": "Favicon",
+        "max-width": 16,
+        "max-height": 16,
+        "info": "16px x 16px .png"
+      }
+    ]
+  },
+  {
+    "name": "Color settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Genaral"
+      },
+      {
+        "type": "color",
+        "id": "main_color",
+        "label": "Primary color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "second_color",
+        "label": "Secondary color",
+        "default": "#c2c2c2",
+        "info": "For second heading line, blog information, add to cart icon and wishlist icon"
+      },
+      {
+        "type": "color",
+        "id": "body_background_color",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "body_text_color",
+        "label": "Body text color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "body_link_color",
+        "label": "Link",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "body_linkhover_color",
+        "label": "Link hover",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "page_block_heading_color",
+        "label": "Page & block heading color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border color",
+        "default": "#ebebeb"
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "color",
+        "id": "header_background_color",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "headerfixed_background_color",
+        "label": "Fixed Background",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Text",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "headerfixed_text_color",
+        "label": "Fixed Text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "dropdown_background_color",
+        "label": "Drop down menu background",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "dropdown_title_color",
+        "label": "Drop down menu title",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "dropdown_text_color",
+        "label": "Drop down menu text",
+        "default": "#c2c2c2"
+      },
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "color",
+        "id": "footer_background_color",
+        "label": "Background",
+        "default": "#353535"
+      },
+      {
+        "type": "color",
+        "id": "footer_text_color",
+        "label": "Text",
+        "default": "#b6b6b6"
+      },
+      {
+        "type": "color",
+        "id": "footer_title_color",
+        "label": "Title",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "footer_link_color",
+        "label": "Link",
+        "default": "#7b7b7b"
+      },
+      {
+        "type": "color",
+        "id": "footer_linkhover_color",
+        "label": "Link hover",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "Header, Logo and Menu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Logo"
+      },
+      {
+        "type": "select",
+        "id": "logo_type",
+        "label": "Use image or text for logo?",
+        "options": [
+          {
+            "value": "text",
+            "label": "Text"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ],
+        "default": "image"
+      },
+      {
+        "type": "text",
+        "id": "brand_text",
+        "label": "Logo text",
+        "default": "Bazien"
+      },
+      {
+        "type": "image",
+        "id": "logo_light.png",
+        "label": "Logo light image",
+        "max-width": 500,
+        "max-height": 200,
+        "info": "210px x 38px recommended"
+      },
+      {
+        "type": "image",
+        "id": "logo_dark.png",
+        "label": "Logo dark image",
+        "max-width": 500,
+        "max-height": 200,
+        "info": "210px x 38px recommended"
+      },
+      {
+        "type": "paragraph",
+        "content": "Maximum logo dimensions are 500px wide by 200px high.Your uploaded file will be resized to fit within those constraints."
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "text",
+        "id": "welcome_msg",
+        "label": "Header top text",
+        "default": "DEFAULT WELCOME MESSAGE"
+      },
+      {
+        "type": "image",
+        "id": "header_default_img.jpg",
+        "label": "Default header background image"
+      },
+      {
+        "type": "header",
+        "content": "Menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_fixed_top_menu",
+        "label": "Enable Fixed Top Menu"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenu1",
+        "label": "Mega Menu 1 Items",
+        "default": "Shop",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      },
+      {
+        "type": "image",
+        "id": "megamenuimage1.png",
+        "label": "Image for Megamenu 1 Item 1"
+      },
+      {
+        "type": "image",
+        "id": "megamenuimage2.png",
+        "label": "Image for Megamenu 1 Item 2"
+      },
+      {
+        "type": "image",
+        "id": "megamenuimage3.png",
+        "label": "Image for Megamenu 1 Item 3"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenu2",
+        "label": "Mega Menu 2 Items",
+        "default": "Sale",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      },
+      {
+        "type": "page",
+        "id": "megamenupage1",
+        "label": "Content of Mega Menu 2 Item 1",
+        "info": "Choose page for megamenu - item 1"
+      },
+      {
+        "type": "page",
+        "id": "megamenupage2",
+        "label": "Content of Mega Menu 2 Item 2",
+        "info": "Choose page for megamenu - item 2"
+      },
+      {
+        "type": "page",
+        "id": "megamenupage3",
+        "label": "Content of Mega Menu 2 Item 3",
+        "info": "Choose page for megamenu - item 3"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenunew",
+        "label": "Mega Menu New Label",
+        "default": "Blog",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenuhot",
+        "label": "Mega Menu Hot Label",
+        "default": "Collection",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      }
+    ]
+  },
+  {
+    "name": "Home page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "home_section_height",
+        "label": "Height of home section",
+        "default": "900"
+      },
+      {
+        "type": "header",
+        "content": "Section 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_1_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home_1_bg.jpg",
+        "label": "Section 1 background",
+        "info": "We recommend width of image should be 1920px x 900px"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_1_parallax",
+        "label": "Parallax effect",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_1_heading",
+        "label": "Section 1 headding",
+        "default": "MAY 15 TRF LOOKBOOK"
+      },
+      {
+        "type": "text",
+        "id": "home_1_description",
+        "label": "Section 1 description"
+      },
+      {
+        "type": "select",
+        "id": "home_1_button_type",
+        "label": "Type of button",
+        "options": [
+          {
+            "value": "text",
+            "label": "Text"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "id": "home_1_btn_img.png",
+        "label": "Section 1 button image"
+      },
+      {
+        "type": "text",
+        "id": "home_1_button",
+        "label": "Section 1 button text",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "text",
+        "id": "home_1_link",
+        "label": "Section 1 button link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Section 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_2_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home_2_bg.jpg",
+        "label": "Section 2 background",
+        "info": "We recommend width of image should be 2920px x 900px"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_2_parallax",
+        "label": "Parallax effect",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_2_heading",
+        "label": "Section 2 headding",
+        "default": "MAY 25 TRF LOOKBOOK"
+      },
+      {
+        "type": "text",
+        "id": "home_2_description",
+        "label": "Section 2 description"
+      },
+      {
+        "type": "select",
+        "id": "home_2_button_type",
+        "label": "Type of button",
+        "options": [
+          {
+            "value": "text",
+            "label": "Text"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "id": "home_2_btn_img.png",
+        "label": "Section 2 button image"
+      },
+      {
+        "type": "text",
+        "id": "home_2_button",
+        "label": "Section 2 button text",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "text",
+        "id": "home_2_link",
+        "label": "Section 2 button link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Section 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_3_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home_3_bg.jpg",
+        "label": "Section 3 background",
+        "info": "We recommend width of image should be 3930px x 900px"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_3_parallax",
+        "label": "Parallax effect",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_3_heading",
+        "label": "Section 3 headding",
+        "default": "MAY 35 TRF LOOKBOOK"
+      },
+      {
+        "type": "text",
+        "id": "home_3_description",
+        "label": "Section 3 description"
+      },
+      {
+        "type": "select",
+        "id": "home_3_button_type",
+        "label": "Type of button",
+        "options": [
+          {
+            "value": "text",
+            "label": "Text"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "id": "home_3_btn_img.png",
+        "label": "Section 3 button image"
+      },
+      {
+        "type": "text",
+        "id": "home_3_button",
+        "label": "Section 3 button text",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "text",
+        "id": "home_3_link",
+        "label": "Section 3 button link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Section 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_4_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home_4_bg.jpg",
+        "label": "Section 4 background",
+        "info": "We recommend width of image should be 4940px x 900px"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_4_parallax",
+        "label": "Parallax effect",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_4_heading",
+        "label": "Section 4 headding",
+        "default": "MAY 45 TRF LOOKBOOK"
+      },
+      {
+        "type": "text",
+        "id": "home_4_description",
+        "label": "Section 4 description"
+      },
+      {
+        "type": "select",
+        "id": "home_4_button_type",
+        "label": "Type of button",
+        "options": [
+          {
+            "value": "text",
+            "label": "Text"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "id": "home_4_btn_img.png",
+        "label": "Section 4 button image"
+      },
+      {
+        "type": "text",
+        "id": "home_4_button",
+        "label": "Section 4 button text",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "text",
+        "id": "home_4_link",
+        "label": "Section 4 button link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Section 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_5_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home_5_bg.jpg",
+        "label": "Section 5 background",
+        "info": "We recommend width of image should be 5950px x 900px"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_5_parallax",
+        "label": "Parallax effect",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_5_heading",
+        "label": "Section 5 headding",
+        "default": "MAY 55 TRF LOOKBOOK"
+      },
+      {
+        "type": "text",
+        "id": "home_5_description",
+        "label": "Section 5 description"
+      },
+      {
+        "type": "select",
+        "id": "home_5_button_type",
+        "label": "Type of button",
+        "options": [
+          {
+            "value": "text",
+            "label": "Text"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "id": "home_5_btn_img.png",
+        "label": "Section 5 button image"
+      },
+      {
+        "type": "text",
+        "id": "home_5_button",
+        "label": "Section 5 button text",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "text",
+        "id": "home_5_link",
+        "label": "Section 5 button link",
+        "default": "#"
+      }
+    ]
+  },
+  {
+    "name": "Collections",
+    "settings": [
+      {
+        "type": "select",
+        "id": "products_per_row",
+        "label": "Products per row",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }
+        ],
+        "default": "3"
+      },
+      {
+        "type": "text",
+        "id": "pagination_limit",
+        "label": "Products per page",
+        "default": "9"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_sale_label",
+        "label": "Display Sale label",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Product details",
+    "settings": [
+      {
+        "type": "select",
+        "id": "product_gallery_style",
+        "label": "Products gallery style",
+        "options": [
+          {
+            "value": "zoom",
+            "label": "Zoom"
+          },
+          {
+            "value": "popup",
+            "label": "Popup"
+          }
+        ],
+        "default": "zoom"
+      },
+      {
+        "type": "select",
+        "id": "product_tab_style",
+        "label": "Products tab style",
+        "options": [
+          {
+            "value": "1",
+            "label": "Vertical tab"
+          },
+          {
+            "value": "2",
+            "label": "Accordion"
+          },
+          {
+            "value": "3",
+            "label": "Horizontal tab"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_product_detail_description",
+        "label": "Display Product Description?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "product_description_title",
+        "label": "Product Description Title",
+        "default": "Product Description"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_custom_tab",
+        "label": "Display Custom Tab?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "custom_tab_title",
+        "label": "Custom Tab Title",
+        "default": "Shipping & Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_tab_content",
+        "label": "Custom Tab HTML Code",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "type": "checkbox",
+        "id": "display_size_chart",
+        "label": "Display Size Chart?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "custom_size_chart_title",
+        "label": "Custom Size Chart Title",
+        "default": "Size Chart"
+      },
+      {
+        "type": "image",
+        "id": "custom_size_chart_content.jpg",
+        "label": "Size Chart Image",
+        "max-width": 1180,
+        "info": "We recommend width of image should be 525px"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_product_reviews",
+        "label": "Display Product Reviews?",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "product_review_title",
+        "label": "Product Reviews Title",
+        "default": "Customer Reviews"
+      },
+      {
+        "type": "header",
+        "content": "Related Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_related_products",
+        "label": "Display Related Products?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "related_products_title",
+        "label": "Title of related products block",
+        "default": "RELATED"
+      },
+      {
+        "type": "text",
+        "id": "related_products_description",
+        "label": "Description of related products block",
+        "default": "Most Trendy Clothes"
+      },
+      {
+        "type": "text",
+        "id": "number_of_related_products",
+        "label": "Number of related products",
+        "default": "6"
+      },
+      {
+        "type": "select",
+        "id": "numberperrow_of_related_products",
+        "label": "Related products per row",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  {
+    "name": "Sidebar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_sidebar_cat_page",
+        "label": "Enable Sidebar at Category Page",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Category block"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_categoryblock_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "sidebar_categoryblock_header",
+        "label": "Category block header",
+        "default": "CATEGORIES"
+      },
+      {
+        "type": "link_list",
+        "id": "sidebar_categoryblock_linklist",
+        "label": "Category block link list"
+      },
+      {
+        "type": "header",
+        "content": "Filter"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_filter_multichoices",
+        "label": "Multi choices",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Shop by Color"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_1",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_1_title",
+        "label": "Shop by tags 1 title",
+        "default": "Shop By Color",
+        "info": "i.e \"Shop by Color\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Size"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_2",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_2_title",
+        "label": "Shop by tags 2 title",
+        "default": "Shop By Size",
+        "info": "i.e \"Shop by Size\"."
+      },
+      {
+        "type": "textarea",
+        "id": "shop_by_tags_2_list_tags",
+        "label": "Shop by tags 2 list",
+        "default": "XS, S, M, L, XL",
+        "info": "Separate by a comma, i.e \"XS, S, M, L, XL\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Price"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_3",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_3_title",
+        "label": "Shop by tags 3 title",
+        "default": "Shop by Price",
+        "info": "i.e \"Shop by Price\"."
+      },
+      {
+        "type": "textarea",
+        "id": "shop_by_tags_3_list_tags",
+        "label": "Shop by tags 3 list",
+        "default": "Under $100, $100 - $300, $300 - $500, Above $500",
+        "info": "Separate by a comma, i.e \"$100 - $300, $300 - $500\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Brand"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_brand",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_brand_title",
+        "label": "Shop by brand title",
+        "default": "Shop by brand",
+        "info": "i.e \"Shop by brand\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Type"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_type",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_type_title",
+        "label": "Shop by type title",
+        "default": "Shop by type",
+        "info": "i.e \"Shop by type\"."
+      },
+      {
+        "type": "header",
+        "content": "Static block"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_staticblock_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "sidebar_staticblock_header",
+        "label": "Static block title",
+        "default": "Static block"
+      },
+      {
+        "type": "textarea",
+        "id": "sidebar_staticblock_text",
+        "label": "Static block content",
+        "default": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "type": "image",
+        "id": "sidebar_staticblock.jpg",
+        "label": "Static block image"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Footer Top"
+      },
+      {
+        "type": "image",
+        "id": "logo-ft.png",
+        "label": "Footer logo"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_top_text",
+        "label": "Footer top text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus diam arcu, placerat ut odio vel, <br\/>ultrices vehicula erat. Ut mauris diam, egestas nec lacus sit amet."
+      },
+      {
+        "type": "paragraph",
+        "content": "Enter your social link to show icon. Empty to disable icon in front end"
+      },
+      {
+        "type": "text",
+        "id": "footer_facebook_link",
+        "label": "Facebook link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_twitter_link",
+        "label": "Twitter link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_pinterest_link",
+        "label": "Pinterest link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_instagram_link",
+        "label": "Instagram link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_googleplus_link",
+        "label": "Google plus link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Footer Primary"
+      },
+      {
+        "type": "text",
+        "id": "footer_column1_title",
+        "label": "Footer Link Block 1 Title",
+        "default": "SHOPPING GUIDE"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_column1_linklist",
+        "label": "Footer Link Block 1 Link list"
+      },
+      {
+        "type": "text",
+        "id": "footer_column2_title",
+        "label": "Footer Link Block 2 Title",
+        "default": "STYLE ADVISOR"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_column2_linklist",
+        "label": "Footer Link Block 2 Link list"
+      },
+      {
+        "type": "text",
+        "id": "footer_column3_title",
+        "label": "Footer Link Block 3 Title",
+        "default": "INFOMATION"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_column3_linklist",
+        "label": "Footer Link Block 3 Link list"
+      },
+      {
+        "type": "text",
+        "id": "footer_column4_title",
+        "label": "Footer Link Block 4 Title",
+        "default": "SHOP LOCATION"
+      },
+      {
+        "type": "textarea",
+        "id": "shop_contact_infos",
+        "label": "Contact infomation",
+        "default": "<p><span class=\"active-text\">1234 Heaven Stress, Beverly Hill OldYork- United State<\/span><\/p><p>Phone: (800) 0123 4567 890<\/p><p>Email: Support@greenwebcorp.com<\/p>"
+      },
+      {
+        "type": "header",
+        "content": "Footer Bottom"
+      },
+      {
+        "type": "textarea",
+        "id": "copyright",
+        "label": "Copyright text",
+        "default": "&copy; 2015 Bazien Store. All Rights Reserved. Powered by <a href='http:\/\/greenwebcorp.com'>Greenweb Team<\/a>"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_1_enable",
+        "label": "Payment logo 1 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_1.png",
+        "label": "Payment logo 1 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_2_enable",
+        "label": "Payment logo 2 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_2.png",
+        "label": "Payment logo 2 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_3_enable",
+        "label": "Payment logo 3 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_3.png",
+        "label": "Payment logo 3 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_4_enable",
+        "label": "Payment logo 4 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_4.png",
+        "label": "Payment logo 4 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_5_enable",
+        "label": "Payment logo 5 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_5.png",
+        "label": "Payment logo 5 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_6_enable",
+        "label": "Payment logo 6 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_6.png",
+        "label": "Payment logo 6 image"
+      }
+    ]
+  },
+  {
+    "name": "Cart Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Shipping rate calculator"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_shipping_calculator",
+        "label": "Display shipping rates calculator",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shipping_calculator_heading",
+        "label": "Shipping Rates Calculator Heading",
+        "default": "Shipping rates calculator"
+      },
+      {
+        "type": "select",
+        "id": "shipping_calculator_default_country",
+        "label": "Shipping Rates Calculator default country selection",
+        "options": [
+          {
+            "value": "",
+            "label": "-- Please Select --"
+          },
+          {
+            "value": "Vietnam",
+            "label": "Vietnam"
+          },
+          {
+            "value": "Canada",
+            "label": "Canada"
+          },
+          {
+            "value": "Australia",
+            "label": "Australia"
+          },
+          {
+            "value": "Afghanistan",
+            "label": "Afghanistan"
+          },
+          {
+            "value": "Aland Islands",
+            "label": "Aland Islands"
+          },
+          {
+            "value": "Albania",
+            "label": "Albania"
+          },
+          {
+            "value": "Algeria",
+            "label": "Algeria"
+          },
+          {
+            "value": "Andorra",
+            "label": "Andorra"
+          },
+          {
+            "value": "Angola",
+            "label": "Angola"
+          },
+          {
+            "value": "Anguilla",
+            "label": "Anguilla"
+          },
+          {
+            "value": "Antigua And Barbuda",
+            "label": "Antigua And Barbuda"
+          },
+          {
+            "value": "Argentina",
+            "label": "Argentina"
+          },
+          {
+            "value": "Armenia",
+            "label": "Armenia"
+          },
+          {
+            "value": "Aruba",
+            "label": "Aruba"
+          },
+          {
+            "value": "Austria",
+            "label": "Austria"
+          },
+          {
+            "value": "Azerbaijan",
+            "label": "Azerbaijan"
+          },
+          {
+            "value": "Bahamas",
+            "label": "Bahamas"
+          },
+          {
+            "value": "Bahrain",
+            "label": "Bahrain"
+          },
+          {
+            "value": "Bangladesh",
+            "label": "Bangladesh"
+          },
+          {
+            "value": "Barbados",
+            "label": "Barbados"
+          },
+          {
+            "value": "Belarus",
+            "label": "Belarus"
+          },
+          {
+            "value": "Belgium",
+            "label": "Belgium"
+          },
+          {
+            "value": "Belize",
+            "label": "Belize"
+          },
+          {
+            "value": "Benin",
+            "label": "Benin"
+          },
+          {
+            "value": "Bermuda",
+            "label": "Bermuda"
+          },
+          {
+            "value": "Bhutan",
+            "label": "Bhutan"
+          },
+          {
+            "value": "Bolivia",
+            "label": "Bolivia"
+          },
+          {
+            "value": "Bosnia And Herzegovina",
+            "label": "Bosnia And Herzegovina"
+          },
+          {
+            "value": "Botswana",
+            "label": "Botswana"
+          },
+          {
+            "value": "Bouvet Island",
+            "label": "Bouvet Island"
+          },
+          {
+            "value": "Brazil",
+            "label": "Brazil"
+          },
+          {
+            "value": "British Indian Ocean Territory",
+            "label": "British Indian Ocean Territory"
+          },
+          {
+            "value": "Brunei",
+            "label": "Brunei"
+          },
+          {
+            "value": "Bulgaria",
+            "label": "Bulgaria"
+          },
+          {
+            "value": "Burkina Faso",
+            "label": "Burkina Faso"
+          },
+          {
+            "value": "Burma",
+            "label": "Burma"
+          },
+          {
+            "value": "Burundi",
+            "label": "Burundi"
+          },
+          {
+            "value": "Cambodia",
+            "label": "Cambodia"
+          },
+          {
+            "value": "Cape Verde",
+            "label": "Cape Verde"
+          },
+          {
+            "value": "Cayman Islands",
+            "label": "Cayman Islands"
+          },
+          {
+            "value": "Central African Republic",
+            "label": "Central African Republic"
+          },
+          {
+            "value": "Chad",
+            "label": "Chad"
+          },
+          {
+            "value": "Chile",
+            "label": "Chile"
+          },
+          {
+            "value": "China",
+            "label": "China"
+          },
+          {
+            "value": "Christmas Island",
+            "label": "Christmas Island"
+          },
+          {
+            "value": "Cocos (Keeling) Islands",
+            "label": "Cocos (Keeling) Islands"
+          },
+          {
+            "value": "Colombia",
+            "label": "Colombia"
+          },
+          {
+            "value": "Comoros",
+            "label": "Comoros"
+          },
+          {
+            "value": "Congo",
+            "label": "Congo"
+          },
+          {
+            "value": "Congo, The Democratic Republic Of The",
+            "label": "Congo, The Democratic Republic Of The"
+          },
+          {
+            "value": "Cook Islands",
+            "label": "Cook Islands"
+          },
+          {
+            "value": "Costa Rica",
+            "label": "Costa Rica"
+          },
+          {
+            "value": "Croatia",
+            "label": "Croatia"
+          },
+          {
+            "value": "Cuba",
+            "label": "Cuba"
+          },
+          {
+            "value": "Curaçao",
+            "label": "Curaçao"
+          },
+          {
+            "value": "Cyprus",
+            "label": "Cyprus"
+          },
+          {
+            "value": "Czech Republic",
+            "label": "Czech Republic"
+          },
+          {
+            "value": "Côte d'Ivoire",
+            "label": "Côte d'Ivoire"
+          },
+          {
+            "value": "Denmark",
+            "label": "Denmark"
+          },
+          {
+            "value": "Djibouti",
+            "label": "Djibouti"
+          },
+          {
+            "value": "Dominica",
+            "label": "Dominica"
+          },
+          {
+            "value": "Dominican Republic",
+            "label": "Dominican Republic"
+          },
+          {
+            "value": "Ecuador",
+            "label": "Ecuador"
+          },
+          {
+            "value": "Egypt",
+            "label": "Egypt"
+          },
+          {
+            "value": "El Salvador",
+            "label": "El Salvador"
+          },
+          {
+            "value": "Equatorial Guinea",
+            "label": "Equatorial Guinea"
+          },
+          {
+            "value": "Eritrea",
+            "label": "Eritrea"
+          },
+          {
+            "value": "Estonia",
+            "label": "Estonia"
+          },
+          {
+            "value": "Ethiopia",
+            "label": "Ethiopia"
+          },
+          {
+            "value": "Falkland Islands (Malvinas)",
+            "label": "Falkland Islands (Malvinas)"
+          },
+          {
+            "value": "Faroe Islands",
+            "label": "Faroe Islands"
+          },
+          {
+            "value": "Fiji",
+            "label": "Fiji"
+          },
+          {
+            "value": "Finland",
+            "label": "Finland"
+          },
+          {
+            "value": "France",
+            "label": "France"
+          },
+          {
+            "value": "French Guiana",
+            "label": "French Guiana"
+          },
+          {
+            "value": "French Polynesia",
+            "label": "French Polynesia"
+          },
+          {
+            "value": "French Southern Territories",
+            "label": "French Southern Territories"
+          },
+          {
+            "value": "Gabon",
+            "label": "Gabon"
+          },
+          {
+            "value": "Gambia",
+            "label": "Gambia"
+          },
+          {
+            "value": "Georgia",
+            "label": "Georgia"
+          },
+          {
+            "value": "Germany",
+            "label": "Germany"
+          },
+          {
+            "value": "Ghana",
+            "label": "Ghana"
+          },
+          {
+            "value": "Gibraltar",
+            "label": "Gibraltar"
+          },
+          {
+            "value": "Greece",
+            "label": "Greece"
+          },
+          {
+            "value": "Greenland",
+            "label": "Greenland"
+          },
+          {
+            "value": "Grenada",
+            "label": "Grenada"
+          },
+          {
+            "value": "Guadeloupe",
+            "label": "Guadeloupe"
+          },
+          {
+            "value": "Guatemala",
+            "label": "Guatemala"
+          },
+          {
+            "value": "Guernsey",
+            "label": "Guernsey"
+          },
+          {
+            "value": "Guinea",
+            "label": "Guinea"
+          },
+          {
+            "value": "Guinea Bissau",
+            "label": "Guinea Bissau"
+          },
+          {
+            "value": "Guyana",
+            "label": "Guyana"
+          },
+          {
+            "value": "Haiti",
+            "label": "Haiti"
+          },
+          {
+            "value": "Heard Island And Mcdonald Islands",
+            "label": "Heard Island And Mcdonald Islands"
+          },
+          {
+            "value": "Holy See (Vatican City State)",
+            "label": "Holy See (Vatican City State)"
+          },
+          {
+            "value": "Honduras",
+            "label": "Honduras"
+          },
+          {
+            "value": "Hong Kong",
+            "label": "Hong Kong"
+          },
+          {
+            "value": "Hungary",
+            "label": "Hungary"
+          },
+          {
+            "value": "Iceland",
+            "label": "Iceland"
+          },
+          {
+            "value": "India",
+            "label": "India"
+          },
+          {
+            "value": "Indonesia",
+            "label": "Indonesia"
+          },
+          {
+            "value": "Iran, Islamic Republic Of",
+            "label": "Iran, Islamic Republic Of"
+          },
+          {
+            "value": "Iraq",
+            "label": "Iraq"
+          },
+          {
+            "value": "Ireland",
+            "label": "Ireland"
+          },
+          {
+            "value": "Isle Of Man",
+            "label": "Isle Of Man"
+          },
+          {
+            "value": "Israel",
+            "label": "Israel"
+          },
+          {
+            "value": "Italy",
+            "label": "Italy"
+          },
+          {
+            "value": "Jamaica",
+            "label": "Jamaica"
+          },
+          {
+            "value": "Japan",
+            "label": "Japan"
+          },
+          {
+            "value": "Jersey",
+            "label": "Jersey"
+          },
+          {
+            "value": "Jordan",
+            "label": "Jordan"
+          },
+          {
+            "value": "Kazakhstan",
+            "label": "Kazakhstan"
+          },
+          {
+            "value": "Kenya",
+            "label": "Kenya"
+          },
+          {
+            "value": "Kiribati",
+            "label": "Kiribati"
+          },
+          {
+            "value": "Korea, Democratic People's Republic Of",
+            "label": "Korea, Democratic People's Republic Of"
+          },
+          {
+            "value": "Kosovo",
+            "label": "Kosovo"
+          },
+          {
+            "value": "Kuwait",
+            "label": "Kuwait"
+          },
+          {
+            "value": "Kyrgyzstan",
+            "label": "Kyrgyzstan"
+          },
+          {
+            "value": "Lao People's Democratic Republic",
+            "label": "Lao People's Democratic Republic"
+          },
+          {
+            "value": "Latvia",
+            "label": "Latvia"
+          },
+          {
+            "value": "Lebanon",
+            "label": "Lebanon"
+          },
+          {
+            "value": "Lesotho",
+            "label": "Lesotho"
+          },
+          {
+            "value": "Liberia",
+            "label": "Liberia"
+          },
+          {
+            "value": "Libyan Arab Jamahiriya",
+            "label": "Libyan Arab Jamahiriya"
+          },
+          {
+            "value": "Liechtenstein",
+            "label": "Liechtenstein"
+          },
+          {
+            "value": "Lithuania",
+            "label": "Lithuania"
+          },
+          {
+            "value": "Luxembourg",
+            "label": "Luxembourg"
+          },
+          {
+            "value": "Macao",
+            "label": "Macao"
+          },
+          {
+            "value": "Macedonia, Republic Of",
+            "label": "Macedonia, Republic Of"
+          },
+          {
+            "value": "Madagascar",
+            "label": "Madagascar"
+          },
+          {
+            "value": "Malawi",
+            "label": "Malawi"
+          },
+          {
+            "value": "Malaysia",
+            "label": "Malaysia"
+          },
+          {
+            "value": "Maldives",
+            "label": "Maldives"
+          },
+          {
+            "value": "Mali",
+            "label": "Mali"
+          },
+          {
+            "value": "Malta",
+            "label": "Malta"
+          },
+          {
+            "value": "Martinique",
+            "label": "Martinique"
+          },
+          {
+            "value": "Mauritania",
+            "label": "Mauritania"
+          },
+          {
+            "value": "Mauritius",
+            "label": "Mauritius"
+          },
+          {
+            "value": "Mayotte",
+            "label": "Mayotte"
+          },
+          {
+            "value": "Mexico",
+            "label": "Mexico"
+          },
+          {
+            "value": "Moldova, Republic of",
+            "label": "Moldova, Republic of"
+          },
+          {
+            "value": "Monaco",
+            "label": "Monaco"
+          },
+          {
+            "value": "Mongolia",
+            "label": "Mongolia"
+          },
+          {
+            "value": "Montenegro",
+            "label": "Montenegro"
+          },
+          {
+            "value": "Montserrat",
+            "label": "Montserrat"
+          },
+          {
+            "value": "Morocco",
+            "label": "Morocco"
+          },
+          {
+            "value": "Mozambique",
+            "label": "Mozambique"
+          },
+          {
+            "value": "Namibia",
+            "label": "Namibia"
+          },
+          {
+            "value": "Nauru",
+            "label": "Nauru"
+          },
+          {
+            "value": "Nepal",
+            "label": "Nepal"
+          },
+          {
+            "value": "Netherlands",
+            "label": "Netherlands"
+          },
+          {
+            "value": "Netherlands Antilles",
+            "label": "Netherlands Antilles"
+          },
+          {
+            "value": "New Caledonia",
+            "label": "New Caledonia"
+          },
+          {
+            "value": "New Zealand",
+            "label": "New Zealand"
+          },
+          {
+            "value": "Nicaragua",
+            "label": "Nicaragua"
+          },
+          {
+            "value": "Niger",
+            "label": "Niger"
+          },
+          {
+            "value": "Nigeria",
+            "label": "Nigeria"
+          },
+          {
+            "value": "Niue",
+            "label": "Niue"
+          },
+          {
+            "value": "Norfolk Island",
+            "label": "Norfolk Island"
+          },
+          {
+            "value": "Norway",
+            "label": "Norway"
+          },
+          {
+            "value": "Oman",
+            "label": "Oman"
+          },
+          {
+            "value": "Pakistan",
+            "label": "Pakistan"
+          },
+          {
+            "value": "Palestinian Territory, Occupied",
+            "label": "Palestinian Territory, Occupied"
+          },
+          {
+            "value": "Panama",
+            "label": "Panama"
+          },
+          {
+            "value": "Papua New Guinea",
+            "label": "Papua New Guinea"
+          },
+          {
+            "value": "Paraguay",
+            "label": "Paraguay"
+          },
+          {
+            "value": "Peru",
+            "label": "Peru"
+          },
+          {
+            "value": "Philippines",
+            "label": "Philippines"
+          },
+          {
+            "value": "Pitcairn",
+            "label": "Pitcairn"
+          },
+          {
+            "value": "Poland",
+            "label": "Poland"
+          },
+          {
+            "value": "Portugal",
+            "label": "Portugal"
+          },
+          {
+            "value": "Qatar",
+            "label": "Qatar"
+          },
+          {
+            "value": "Republic of Cameroon",
+            "label": "Republic of Cameroon"
+          },
+          {
+            "value": "Reunion",
+            "label": "Reunion"
+          },
+          {
+            "value": "Romania",
+            "label": "Romania"
+          },
+          {
+            "value": "Russia",
+            "label": "Russia"
+          },
+          {
+            "value": "Rwanda",
+            "label": "Rwanda"
+          },
+          {
+            "value": "Saint Barthélemy",
+            "label": "Saint Barthélemy"
+          },
+          {
+            "value": "Saint Helena",
+            "label": "Saint Helena"
+          },
+          {
+            "value": "Saint Kitts And Nevis",
+            "label": "Saint Kitts And Nevis"
+          },
+          {
+            "value": "Saint Lucia",
+            "label": "Saint Lucia"
+          },
+          {
+            "value": "Saint Martin",
+            "label": "Saint Martin"
+          },
+          {
+            "value": "Saint Pierre And Miquelon",
+            "label": "Saint Pierre And Miquelon"
+          },
+          {
+            "value": "Samoa",
+            "label": "Samoa"
+          },
+          {
+            "value": "San Marino",
+            "label": "San Marino"
+          },
+          {
+            "value": "Sao Tome And Principe",
+            "label": "Sao Tome And Principe"
+          },
+          {
+            "value": "Saudi Arabia",
+            "label": "Saudi Arabia"
+          },
+          {
+            "value": "Senegal",
+            "label": "Senegal"
+          },
+          {
+            "value": "Serbia",
+            "label": "Serbia"
+          },
+          {
+            "value": "Seychelles",
+            "label": "Seychelles"
+          },
+          {
+            "value": "Sierra Leone",
+            "label": "Sierra Leone"
+          },
+          {
+            "value": "Singapore",
+            "label": "Singapore"
+          },
+          {
+            "value": "Slovakia",
+            "label": "Slovakia"
+          },
+          {
+            "value": "Slovenia",
+            "label": "Slovenia"
+          },
+          {
+            "value": "Solomon Islands",
+            "label": "Solomon Islands"
+          },
+          {
+            "value": "Somalia",
+            "label": "Somalia"
+          },
+          {
+            "value": "South Africa",
+            "label": "South Africa"
+          },
+          {
+            "value": "South Georgia And The South Sandwich Islands",
+            "label": "South Georgia And The South Sandwich Islands"
+          },
+          {
+            "value": "South Korea",
+            "label": "South Korea"
+          },
+          {
+            "value": "Spain",
+            "label": "Spain"
+          },
+          {
+            "value": "Sri Lanka",
+            "label": "Sri Lanka"
+          },
+          {
+            "value": "St. Vincent",
+            "label": "St. Vincent"
+          },
+          {
+            "value": "Sudan",
+            "label": "Sudan"
+          },
+          {
+            "value": "Suriname",
+            "label": "Suriname"
+          },
+          {
+            "value": "Svalbard And Jan Mayen",
+            "label": "Svalbard And Jan Mayen"
+          },
+          {
+            "value": "Swaziland",
+            "label": "Swaziland"
+          },
+          {
+            "value": "Sweden",
+            "label": "Sweden"
+          },
+          {
+            "value": "Switzerland",
+            "label": "Switzerland"
+          },
+          {
+            "value": "Syria",
+            "label": "Syria"
+          },
+          {
+            "value": "Taiwan",
+            "label": "Taiwan"
+          },
+          {
+            "value": "Tajikistan",
+            "label": "Tajikistan"
+          },
+          {
+            "value": "Tanzania, United Republic Of",
+            "label": "Tanzania, United Republic Of"
+          },
+          {
+            "value": "Thailand",
+            "label": "Thailand"
+          },
+          {
+            "value": "Timor Leste",
+            "label": "Timor Leste"
+          },
+          {
+            "value": "Togo",
+            "label": "Togo"
+          },
+          {
+            "value": "Tokelau",
+            "label": "Tokelau"
+          },
+          {
+            "value": "Tonga",
+            "label": "Tonga"
+          },
+          {
+            "value": "Trinidad and Tobago",
+            "label": "Trinidad and Tobago"
+          },
+          {
+            "value": "Tunisia",
+            "label": "Tunisia"
+          },
+          {
+            "value": "Turkey",
+            "label": "Turkey"
+          },
+          {
+            "value": "Turkmenistan",
+            "label": "Turkmenistan"
+          },
+          {
+            "value": "Turks and Caicos Islands",
+            "label": "Turks and Caicos Islands"
+          },
+          {
+            "value": "Tuvalu",
+            "label": "Tuvalu"
+          },
+          {
+            "value": "Uganda",
+            "label": "Uganda"
+          },
+          {
+            "value": "Ukraine",
+            "label": "Ukraine"
+          },
+          {
+            "value": "United Arab Emirates",
+            "label": "United Arab Emirates"
+          },
+          {
+            "value": "United Kingdom",
+            "label": "United Kingdom"
+          },
+          {
+            "value": "United States",
+            "label": "United States"
+          },
+          {
+            "value": "United States Minor Outlying Islands",
+            "label": "United States Minor Outlying Islands"
+          },
+          {
+            "value": "Uruguay",
+            "label": "Uruguay"
+          },
+          {
+            "value": "Uzbekistan",
+            "label": "Uzbekistan"
+          },
+          {
+            "value": "Vanuatu",
+            "label": "Vanuatu"
+          },
+          {
+            "value": "Venezuela",
+            "label": "Venezuela"
+          },
+          {
+            "value": "Virgin Islands, British",
+            "label": "Virgin Islands, British"
+          },
+          {
+            "value": "Wallis And Futuna",
+            "label": "Wallis And Futuna"
+          },
+          {
+            "value": "Western Sahara",
+            "label": "Western Sahara"
+          },
+          {
+            "value": "Yemen",
+            "label": "Yemen"
+          },
+          {
+            "value": "Zambia",
+            "label": "Zambia"
+          },
+          {
+            "value": "Zimbabwe",
+            "label": "Zimbabwe"
+          }
+        ],
+        "default": "Canada"
+      },
+      {
+        "type": "paragraph",
+        "content": "If your customer is logged-in, the country in his default shipping address will be selected. If you are not sure about the spelling to use above, refer to your first checkout page."
+      },
+      {
+        "type": "text",
+        "id": "shipping_calculator_submit_button_label",
+        "label": "Shipping rates calculator submit button label",
+        "default": "Calculate shipping estimate"
+      },
+      {
+        "type": "text",
+        "id": "shipping_calculator_submit_button_label_disabled",
+        "label": "Shipping rates calculator submit button label when calculating",
+        "default": "Calculating..."
+      }
+    ]
+  },
+  {
+    "name": "Product Color",
+    "settings": [
+      {
+        "type": "text",
+        "id": "color_text_1",
+        "label": "Color text 1",
+        "default": "White",
+        "info": "Enter the product color tag. Example: \"Red\""
+      },
+      {
+        "type": "image",
+        "id": "color-1.png",
+        "label": "Color image 1",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_2",
+        "label": "Color text 2",
+        "default": "Black"
+      },
+      {
+        "type": "image",
+        "id": "color-2.png",
+        "label": "Color image 2",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_3",
+        "label": "Color text 3",
+        "default": "Gold"
+      },
+      {
+        "type": "image",
+        "id": "color-3.png",
+        "label": "Color image 3",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_4",
+        "label": "Color text 4",
+        "default": "Red"
+      },
+      {
+        "type": "image",
+        "id": "color-4.png",
+        "label": "Color image 4",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_5",
+        "label": "Color text 5",
+        "default": "Royal"
+      },
+      {
+        "type": "image",
+        "id": "color-5.png",
+        "label": "Color image 5",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_6",
+        "label": "Color text 6",
+        "default": "Navy"
+      },
+      {
+        "type": "image",
+        "id": "color-6.png",
+        "label": "Color image 6",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_7",
+        "label": "Color text 7",
+        "default": "Gray"
+      },
+      {
+        "type": "image",
+        "id": "color-7.png",
+        "label": "Color image 7",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_8",
+        "label": "Color text 8",
+        "default": "Orange"
+      },
+      {
+        "type": "image",
+        "id": "color-8.png",
+        "label": "Color image 8",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_9",
+        "label": "Color text 9",
+        "default": "Purple"
+      },
+      {
+        "type": "image",
+        "id": "color-9.png",
+        "label": "Color image 9",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_10",
+        "label": "Color text 10",
+        "default": "Brown"
+      },
+      {
+        "type": "image",
+        "id": "color-10.png",
+        "label": "Color image 10",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_11",
+        "label": "Color text 11",
+        "default": "Cream"
+      },
+      {
+        "type": "image",
+        "id": "color-11.png",
+        "label": "Color image 11",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_12",
+        "label": "Color text 12",
+        "default": "Steel Gray"
+      },
+      {
+        "type": "image",
+        "id": "color-12.png",
+        "label": "Color image 12",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_13",
+        "label": "Color text 13",
+        "default": "Lilac"
+      },
+      {
+        "type": "image",
+        "id": "color-13.png",
+        "label": "Color image 13",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_14",
+        "label": "Color text 14",
+        "default": "Lime"
+      },
+      {
+        "type": "image",
+        "id": "color-14.png",
+        "label": "Color image 14",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_15",
+        "label": "Color text 15",
+        "default": "Eagle Gray"
+      },
+      {
+        "type": "image",
+        "id": "color-15.png",
+        "label": "Color image 15",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_16",
+        "label": "Color text 16",
+        "default": "Teal"
+      },
+      {
+        "type": "image",
+        "id": "color-16.png",
+        "label": "Color image 16",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_17",
+        "label": "Color text 17",
+        "default": "Eggplant"
+      },
+      {
+        "type": "image",
+        "id": "color-17.png",
+        "label": "Color image 17",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_18",
+        "label": "Color text 18",
+        "default": "Devil Red"
+      },
+      {
+        "type": "image",
+        "id": "color-18.png",
+        "label": "Color image 18",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_19",
+        "label": "Color text 19",
+        "default": "Light Gold"
+      },
+      {
+        "type": "image",
+        "id": "color-19.png",
+        "label": "Color image 19",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_20",
+        "label": "Color text 20",
+        "default": "Bronze"
+      },
+      {
+        "type": "image",
+        "id": "color-20.png",
+        "label": "Color image 20",
+        "max-width": 200,
+        "max-height": 200
+      }
+    ]
+  },
+  {
+    "name": "Fonts",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading font",
+        "info": "used for Header Top, Page Title, Block Title"
+      },
+      {
+        "type": "radio",
+        "id": "font_1",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_1",
+        "label": "Heading font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Body font",
+        "info": "used for Body Text"
+      },
+      {
+        "type": "radio",
+        "id": "font_2",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_2",
+        "label": "Body font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Home section description font",
+        "info": "used for Home section description, banner text"
+      },
+      {
+        "type": "radio",
+        "id": "font_5",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_5",
+        "label": "Home section description name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Slide font",
+        "info": "Use for Home page slider"
+      },
+      {
+        "type": "radio",
+        "id": "slide_fonts_type",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "slide_fonts_name",
+        "label": "Heading font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Button font",
+        "info": "used for Button Text"
+      },
+      {
+        "type": "radio",
+        "id": "font_3",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_3",
+        "label": "Button font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Menu font",
+        "info": "used for Menu Text"
+      },
+      {
+        "type": "radio",
+        "id": "font_4",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_4",
+        "label": "Menu font name",
+        "default": "Gudea"
+      }
+    ]
+  },
+  {
+    "name": "Contact page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_address",
+        "label": "Address",
+        "default": "65b 16 Võng Thị, Hà Nội, Việt Nam"
+      }
+    ]
+  },
+  {
+    "name": "Wishlist",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_wishlist",
+        "label": "Enable Wishlist?",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Newletter popup",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_newsletter_popup",
+        "label": "Enable newsletter popup",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_newsletter_mailchimp",
+        "label": "MailChimp form action",
+        "info": "[Where do I find my MailChimp form action URL?](http:\/\/docs.shopify.com\/support\/configuration\/store-customization\/where-do-i-get-my-mailchimp-form-action)",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_description",
+        "label": "Newsletter description",
+        "default": "Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!"
+      },
+      {
+        "type": "image",
+        "id": "popup_newsletter_bg.jpg",
+        "label": "Newsletter popup background"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_expires",
+        "label": "Newsletter cookie expires",
+        "default": "30"
+      }
+    ]
+  },
+  {
+    "name": "Money options",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_multiple_currencies",
+        "label": "Show Currency Picker?",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency."
+      },
+      {
+        "type": "select",
+        "id": "currency_format",
+        "label": "Money format",
+        "options": [
+          {
+            "value": "money_format",
+            "label": "Without Currency, ex: $10.00"
+          },
+          {
+            "value": "money_with_currency_format",
+            "label": "With Currency, ex: $10 CAD"
+          }
+        ],
+        "default": "money_with_currency_format"
+      },
+      {
+        "type": "text",
+        "id": "supported_currencies",
+        "label": "Currencies you wish to support",
+        "default": "INR GBP CAD USD AUD EUR JPY"
+      },
+      {
+        "type": "text",
+        "id": "default_currency",
+        "label": "Default currency",
+        "default": "USD"
+      },
+      {
+        "type": "paragraph",
+        "content": "Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. [Click here](http:\/\/www.xe.com\/iso4217.php) for a complete list of currency codes. Example: CAD USD."
+      },
+      {
+        "type": "paragraph",
+        "content": "* For this functionality to work in your shop, you are required to edit your money formats as per [these instructions](https:\/\/docs.shopify.com\/support\/settings\/general\/tell-my-script-where-to-find-money-formats)."
+      }
+    ]
+  }
+]

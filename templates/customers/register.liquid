@@ -1,0 +1,53 @@
+<div style="background-image: url({% if collection.image %}{{ collection.image | img_url: 'original' }}{% else %}{{ 'header_default_img.jpg' | asset_url }}{% endif %})" class="parallax-box parrallax-page-title alt-bg parallax-shop" data-stellar-background-ratio="0.4"></div>
+<div class="main-container">
+  <div class="main container">
+    <div class="row">
+      <div class="col-main col-sm-6 col-sm-push-3">
+        <div class="account-create">
+          <div class="page-title">
+            <h1>Create an Account</h1>
+          </div>
+          {% form 'create_customer' %}
+          {{ form.errors | default_errors }}
+          <div class="fieldset first-child">
+            <input type="hidden" name="success_url" value="">
+            <input type="hidden" name="error_url" value="">
+            <h2 class="legend">Personal Information</h2>
+            <ul class="form-list">
+              <li class="fields">
+                <label for="firstname" class="required"><em>*</em>First Name</label>
+                <div class="input-box">
+                  <input type="text" id="firstname" name="customer[first_name]" value="" title="First Name" maxlength="255" class="input-text">
+                </div>
+              </li>
+              <li class="fields">
+                <label for="lastname" class="required"><em>*</em>Last Name</label>
+                <div class="input-box">
+                  <input type="text" id="lastname" name="customer[last_name]" value="" title="Last Name" maxlength="255" class="input-text">
+                </div>
+              </li>
+              <li class="fields">
+                <label for="email_address" class="required"><em>*</em>Email Address</label>
+                <div class="input-box">
+                  <input type="text" name="customer[email]" id="email_address" value="" title="Email Address" class="input-text">
+                </div>
+              </li>
+              <li class="fields">
+                <label for="password" class="required"><em>*</em>Password</label>
+                <div class="input-box">
+                  <input type="password" name="customer[password]" id="password" title="Password" class="input-text">
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="buttons-set">
+            <p class="required">* Required Fields</p>
+            <p class="back-link"><a href="{{ shop.url }}" class="back-link"><small>&laquo; </small>Back</a></p>
+            <button type="submit" title="Submit" class="btn btn-default clear-both"><span><span>Submit</span></span></button>
+          </div>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+{% capture body %}I%20have%20added%20the%20following%20items%20to%20my%20wish%20list%20at%20{{ shop.name | replace: ' ','%20' }}{% endcapture %}
+<section class="main-container">
+  <div class="container">
+    <div class="wishlist-page">
+      <div class="page-title">
+        <h1>{{ page.title }}</h1>
+      </div>
+
+      {% if customer %}
+      
+      <table id="shopping-cart-table" class="data-table cart-table wishlist-product">
+        <thead>
+          <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th class="a-center hidden-xs">Unit Price</th>
+            <th class="a-center">Remove</th>
+            <th class="a-center">Add To Cart</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for tag in customer.tags %}
+          {% assign the_test = 'nutthin' %}
+          {% capture tag_id %}{{ tag }}{% endcapture %}
+          {% assign tag_size = tag_id.size %}
+          {% for tag in customer.tags %}
+          {% capture cur_tag %}{{ tag }}{% endcapture %}
+          {% if cur_tag contains tag_id %}
+          {% assign difference = tag_size | minus:cur_tag.size %}
+          {% if difference == 0 %}
+          {% assign the_test = tag_id %}
+          {% else %}
+          {% assign the_test = 'nutthin' %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+          {% for collection in collections %}
+          {% paginate collection.products by collection.all_products_count %}
+          {% for product in collection.products %}
+          {% capture product_id %}{{ product.id }}{% endcapture %}
+          {% unless used contains product_id %}
+          {% capture diff %}{{ tag_size | minus:product_id.size | modulo:2 }}{% endcapture %}
+          {% assign check = diff %}
+          {% if check contains '1' %}{% assign display = false %}{% else %}{% assign display = true %}{% endif %}
+          {% if display and the_test contains product_id %}
+          
+          {% capture body %}{{ body }}%0A%0A{{ product.title | replace: ' ','%20' }}%3A%20%20{{ shop.url }}{{ product.url }}{% endcapture %}
+          
+          <tr class="row-{{tag_id}} product-item" id="product-{{ product.id }}">
+            <td><a href='{{ product.url }}' class="product-grid-image"><img src="{{ product.featured_image.src | product_img_url: 'compact' }}" alt="{{ product.featured_image.alt | escape }}"></a></td>
+            <td><h2><a href='{{ product.url }}' class="product-title">{{ product.title }}</a></h2></td>
+            <td class="a-center hidden-xs">
+              {% if on_sale %}
+              <p class="sale">
+                <span class="old-price"> {{ product.compare_at_price_min | money }}</span>
+                <span class="special-price">{% if product.price_varies %}{% endif %}{{ product.price_min | money }}</span>
+              </p>
+              {% else %}
+              <p class="regular-product">
+                <span>{% if product.price_varies %}{% endif %}{{ product.price_min | money }}</span>
+              </p>
+              {% endif %}
+            </td>
+            <td class="a-center">
+              <input class="tag-id" type="hidden" value="{{tag_id}}" />
+              <a href='javascript:void(0)' class="btn btn-default btn-remove-wishlist"><i class="fa fa-trash-o"></i></a>        
+            </td>
+            <td class="a-center">
+              <div class="action">
+                {% assign variantCount = product.variants | size %}
+                <form action="/cart/add" method="post" class="variants" id="product-actions-{{ product.id }}" enctype="multipart/form-data" style="padding:0px;">    
+                  {% if sold_out %}
+                  <input class="btn btn-default" type="submit" value="Unavailable" disabled="disabled" />
+                  {% else %}
+                  {% if variantCount > 1 %}
+                  <a class="btn btn-default" href="{{product.url}}"><span>Select options</span></a>
+                  {% else %}
+                  <input type="hidden" name="id" value="{{ product.variants[0].id }}" />      
+                  <input class="btn btn-default" type="submit" value="Add to Cart" />
+                  {% endif %}
+                  {% endif %}
+                </form>         
+              </div>
+            </td>
+          </tr>
+          {% capture used %}{{ product_id }} {{ used }}{% endcapture %}
+          {% endif %}
+          {% endunless %}
+          {% endfor %}
+          {% endpaginate %}
+          {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <form method='post' action='/contact' id='remove-wishlist-form' accept-charset='UTF-8'>
+        <input name='form_type' type='hidden' value='customer'/>
+        <input name='utf8' type='hidden' value='✓'>
+        <input type='hidden' name='contact[email]' value='{{ customer.email }}'/>
+        <input type='hidden' name='contact[tags]'  value='' />
+      </form>
+      {% capture subject %}My%20{{ shop.name | replace: ' ','%20' }}%20Wish%20List{% endcapture %}
+      <a class="share" href='mailto:?to=&?subject={{ subject }}&body={{ body }}'>Share my wish list via email</a>
+      {% else %}
+      <p>To create a wish list you must <a href='/account/login'>sign in</a> or <a href='/account/register'>create an account</a>.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

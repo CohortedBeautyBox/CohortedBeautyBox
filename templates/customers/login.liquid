@@ -1,0 +1,98 @@
+<div style="background-image: url({% if collection.image %}{{ collection.image | img_url: 'original' }}{% else %}{{ 'header_default_img.jpg' | asset_url }}{% endif %})" class="parallax-box parrallax-page-title alt-bg parallax-shop" data-stellar-background-ratio="0.4"></div>
+<div class="main-container">
+    <div class="main container">
+      <div class="row">
+        <div id="login" class="col-main col-md-12">
+          <div class="account-login">
+            <div class="page-title">
+              <h1>Login or Create an Account</h1>
+            </div>
+            {% form 'customer_login' %}
+            {{ form.errors | default_errors }}
+            <div id="login-form" class="row">
+              <div class="col-md-6 col-sm-6 new-users">
+                <div class="content">
+                  <h4 class="lined-heading"><span>New Customers</span></h4>
+                  <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                  <div class="buttons-set">
+                    <a href="/account/register" class="btn btn-default create-account-button"><span>Create an Account</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 registered-users">
+                <div class="content">
+                  <h4 class="lined-heading"><span>Registered Customers</span></h4>
+                  <p class="account">If you have an account with us, please log in.</p>
+                  <ul class="form-list">
+                    <li>
+                      <label for="email" class="required"><em>*</em>Email Address</label>
+                      <div class="input-box">
+                        <input type="text" name="customer[email]" value="" id="email" class="input-text" title="Email Address" />
+                      </div>
+                    </li>
+                    <li>
+                      <label for="pass" class="required"><em>*</em>Password</label>
+                      <div class="input-box">
+                        <input type="password" name="customer[password]" class="input-text" id="pass" title="Password" />
+                      </div>
+                    </li>
+                  </ul>
+                  <p class="required">Required Fields *</p>
+                  <div class="buttons-set">
+                    <a href="#" onclick="showRecoverPasswordForm();return false;" class="f-left c-forgot-password">Forgot Your Password?</a>
+                    <button type="submit" class="btn btn-default clear-both" title="Login" name="send" id="send2">
+                      <span>Login</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endform %}
+          </div>
+        </div>
+        
+        <div id="recover-password" class="col-md-6 col-md-push-3 hidden-class">
+          <div class="page-title">
+            <h1>Forgot Your Password?</h1>
+            <p class="note">{{ 'customer.login.reset_password_subtext' | t }}</p>
+          </div>
+          {% form 'recover_customer_password' %}
+          {{ form.errors | default_errors }}
+
+            <div class="fieldset">
+              <h2 class="legend">Retrieve your password here</h2>
+              <p>Please enter your email address below. You will receive a link to reset your password.</p>
+              <ul class="form-list">
+                <li>
+                  <label for="email_address" class="required"><em>*</em>Email Address</label>
+                  <div class="input-box">
+                    <input type="text" name="email" id="email_address" class="input-text required-entry validate-email" value="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="buttons-set">
+              <p class="required">* Required Fields</p>
+              <p class="back-link"><a href="#" onclick="hideRecoverPasswordForm(); return false;"><small>&laquo; </small>Back to Login</a></p>
+              <button type="submit" title="Submit" class="button"><span><span>Submit</span></span></button>
+            </div>
+          {% endform %}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  function showRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'block';
+    document.getElementById('login').style.display='none';
+  }
+
+  function hideRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'none';
+    document.getElementById('login').style.display = 'block';
+  }
+
+  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+</script>

@@ -1,0 +1,125 @@
+<div class="top-container">
+  {% if settings.home_1_enable %}
+  <div class="home5-block{% if settings.home_1_parallax == false %} home-v5-bg-1{% endif %}">
+    
+    <!--== Parallax Box =============================================-->
+    <div class="parallax-box alt-bg {% if settings.home_1_parallax %} home-v5-bg-1{% endif %}">
+      <div class="parallax-content">
+        <div class="block-home-five-2 table">
+          <div class="table-cell">
+            <div id="video_section_home" style="display : none !important; position: absolute; top: -100px; width: 100%; height: 100%; padding-top : 115px !important; z-index: 0;">
+              <video id="videoHome" controls="No" autoplay loop preload="yes" poster="http://cohortedcommunications.co.uk/wp-content/uploads/2017/08/cohorted-comms-intro-video.mov.00_00_07_22.Still001.jpg" style="min-width : 100%; min-height:100%; width : 100%; height:auto;">
+                <source id="mp4" src="https://s3-eu-west-1.amazonaws.com/www.coldcoffeeprojects.com/dev/cohortedcomms/cohorted-comms-intro-video.mov" type="video/mp4">
+                <source id="webm" src="https://s3-eu-west-1.amazonaws.com/www.coldcoffeeprojects.com/dev/cohortedcomms/cohorted-comms-intro-video.webm" type="video/webm">
+                <source id="ogv" src="https://s3-eu-west-1.amazonaws.com/www.coldcoffeeprojects.com/dev/cohortedcomms/cohorted-comms-intro-video.ogv" type="video/ogg">
+                <p>Your user agent does not support the HTML5 Video element.</p>
+              </video>
+              <script type="text/javascript">
+              	$('#videoHome').hover(function toggleControls() {
+                    if (this.hasAttribute("controls")) {
+                        this.removeAttribute("controls")
+                    } else {
+                        this.removeAttribute("controls", "controls")
+                    }
+                });
+              </script>
+    		</div>
+            <h1>{{ settings.home_1_heading }}</h1>
+            <h2>{{ settings.home_1_description }}</h2>
+            {% if settings.home_1_button_type == 'text' %}
+            <a href="{{ settings.home_1_link }}">{{ settings.home_1_button }}<i class="fa fa-angle-right"></i></a>
+            {% else %}
+            <a class="no-border" href="{{ settings.home_1_link }}"><img src="{{ 'home_1_btn_img.png' | asset_url }}" alt="" /></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== Parallax Box end =============================================-->
+  </div>
+  {% endif %}
+  {% if settings.home_2_enable %}
+  <div class="home5-block{% if settings.home_2_parallax == false %} home-v5-bg-2{% endif %}">
+    <!--== Parallax Box =============================================-->
+    <div class="parallax-box alt-bg {% if settings.home_2_parallax %}home-v5-bg-2{% endif %}">
+      <div class="parallax-content">
+        <div class="block-home-five-1 table">
+          <div class="table-cell">
+            <h2>{{ settings.home_2_heading }}</h2>
+            <p>{{ settings.home_2_description }}</p>
+            {% if settings.home_2_button_type == 'text' %}
+            <a href="{{ settings.home_2_link }}">{{ settings.home_2_button }}<i class="fa fa-angle-right"></i></a>
+            {% else %}
+            <a class="no-border" href="{{ settings.home_2_link }}"><img src="{{ 'home_2_btn_img.png' | asset_url }}" alt="" /></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== Parallax Box end =============================================-->
+  </div>
+  {% endif %}
+  {% if settings.home_3_enable %}
+  <div class="home5-block{% if settings.home_3_parallax == false %} home-v5-bg-3{% endif %}">
+    <!--== Parallax Box =============================================-->
+    <div class="parallax-box alt-bg {% if settings.home_3_parallax %} home-v5-bg-3{% endif %}">
+      <div class="parallax-content">
+        <div class="block-home-five-2 table">
+          <div class="table-cell">
+          <h2>{{ settings.home_3_heading }}</h2>
+          <p>{{ settings.home_3_description }}</p>
+          {% if settings.home_3_button_type == 'text' %}
+          <a href="{{ settings.home_3_link }}">{{ settings.home_3_button }}<i class="fa fa-angle-right"></i></a>
+          {% else %}
+          <a class="no-border" href="{{ settings.home_3_link }}"><img src="{{ 'home_3_btn_img.png' | asset_url }}" alt="" /></a>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== Parallax Box end =============================================-->
+  </div>
+  {% endif %}
+  {% if settings.home_4_enable %}
+  <div class="home5-block{% if settings.home_4_parallax == false %} home-v5-bg-4{% endif %}">
+    <!--== Parallax Box =============================================-->
+    <div class="parallax-box alt-bg {% if settings.home_4_parallax %} home-v5-bg-4{% endif %}">
+      <div class="parallax-content">
+        <div class="block-home-five-2 table">
+          <div class="table-cell">
+          <h2>{{ settings.home_4_heading }}</h2>
+          <p>{{ settings.home_4_description }}</p>
+          {% if settings.home_4_button_type == 'text' %}
+          <a href="{{ settings.home_4_link }}">{{ settings.home_4_button }}<i class="fa fa-angle-right"></i></a>
+          {% else %}
+          <a class="no-border" href="{{ settings.home_4_link }}"><img src="{{ 'home_4_btn_img.png' | asset_url }}" alt="" /></a>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== Parallax Box end =============================================-->
+  </div>
+  {% endif %}
+  {% if settings.home_5_enable %}
+  <div class="home5-block{% if settings.home_1_parallax == false %} home-v5-bg-5{% endif %}">
+    <!--== Parallax Box =============================================-->
+    <div class="parallax-box alt-bg {% if settings.home_1_parallax %} home-v5-bg-5{% endif %}">
+      <div class="parallax-content">
+        <div class="block-home-five-2 table">
+          <div class="table-cell">
+          <h2>{{ settings.home_5_heading }}</h2>
+          <p>{{ settings.home_5_description }}</p>
+          {% if settings.home_5_button_type == 'text' %}
+          <a href="{{ settings.home_5_link }}">{{ settings.home_5_button }}<i class="fa fa-angle-right"></i></a>
+          {% else %}
+          <a class="no-border" href="{{ settings.home_5_link }}"><img src="{{ 'home_5_btn_img.png' | asset_url }}" alt="" /></a>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== Parallax Box end =============================================-->
+  </div>
+  {% endif %}
+</div>

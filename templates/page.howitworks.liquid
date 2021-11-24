@@ -1,0 +1,18 @@
+<div class="main-container home-content-container">
+    {{ page.content }}
+</div>
+<div style="display:none">
+  <div id="data" style="width: 400px;">
+    Before you can subscribe you must log into your Cohorted account. If you don't have an account you can create one here.
+    <center><a class="read-our-support-btn" href="/account/register">CREATE ACCOUNT</a></center>
+  </div>
+</div>
+
+{{ 'jquery.fancybox-1.3.4.pack.js' | asset_url | script_tag }}
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    jQuery("a#inline").fancybox({
+      'hideOnContentClick': false
+    });
+  });
+</script>
