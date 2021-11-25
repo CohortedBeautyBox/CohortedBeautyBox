@@ -1,0 +1,153 @@
+<div class="content-with-image-slider-section">
+  <div class="content-part">
+    <h2>{{ section.settings.section_title }}</h2>
+    {{ section.settings.text }}
+    <ul class="content-with-image-slider-section-buttons">
+      <li>
+        <a class="primary-btn" href="{{ section.settings.button_primary_url }}">{{ section.settings.button_primary }}</a>
+      </li>
+      <li>
+        <a class="secondary-btn" href="{{ section.settings.button_secondary_url }}">{{ section.settings.button_secondary }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="slider-part">
+    {%- if section.blocks.size > 0 -%}
+    <div class="slider-item-wrapper">
+      {%- for block in section.blocks -%}
+      <div class="slider-item" {{ block.shopify_attributes }}>
+        {%- if block.settings.image != blank -%}
+        {{ block.settings.image | img_url: 'master', scale: 2 | img_tag: block.settings.image.alt }}
+        {%- endif -%}
+      </div>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </div>
+</div>
+<style>
+  .slick-next:before {
+    content: url("https://cdn.shopify.com/s/files/1/2635/3958/files/arrow-right.png?v=1637654290");
+  }
+  .slick-prev:before {
+    content: url("https://cdn.shopify.com/s/files/1/2635/3958/files/arrow-left.jpg?v=1637655357");
+  }
+  .slick-prev {
+    left: 40px;
+    background: #fff !important;
+    box-shadow: 0px 8px 32px #00000029;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+  }
+  .slick-next:before, .slick-prev:before {
+    color: #000;
+  }
+  .slick-next {
+    right: 40px;
+    background: #fff !important;
+    box-shadow: 0px 8px 32px #00000029;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+  }
+</style>
+<script>
+  $('.slider-item-wrapper').slick({
+    dots: true,
+    arrow: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+      responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Content With Image Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "Talk about your brand"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+	{
+      "type": "text",
+      "id": "button_primary",
+      "label": "Primary Button Text"
+    },
+	{
+      "type": "url",
+      "id": "button_primary_url",
+      "label": "Primary Button URL"
+    },
+	{
+      "type": "text",
+      "id": "button_secondary",
+      "label": "Secondary Button Text"
+    },
+	{
+      "type": "url",
+      "id": "button_secondary_url",
+      "label": "Secondary Button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slider_image",
+      "name": "Slider Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content With Image Slider",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

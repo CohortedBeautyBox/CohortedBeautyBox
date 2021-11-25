@@ -1,0 +1,42 @@
+<div style="background:{{ section.settings.bg_color }};" class="announcement">
+  <div class="announcement-text">
+    <p style="color:{{ section.settings.text_color }};">{{ section.settings.text }}</p>
+</div>
+</div>
+  <style>
+    .announcement {
+    height: 40px;
+    line-height: 40px;
+}
+    .announcement p {
+    margin: 0;
+    letter-spacing: 0.65px;
+    text-transform: uppercase;
+    opacity: 1;
+    font-size: 13px;
+}
+  </style>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "id": "text",
+      "type": "text",
+      "label": "Title",
+      "default": "Announce here "
+    },
+ {
+      "id": "bg_color",
+      "type": "color",
+      "label": "Background Color"
+    },
+{
+      "id": "text_color",
+      "type": "color",
+      "label": "Text Color"
+    }
+  ]
+}
+{% endschema %}

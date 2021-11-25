@@ -1,0 +1,53 @@
+<div class="section-scroll">
+<div class="section-text">
+  {% for block in section.blocks %}  
+  <div class="text-box">   
+    <h3 class="subtitle">{{ block.settings.linktext }}<span class="line"></span></h3>
+  </div> 
+  {% endfor %}
+
+</div>  
+</div>
+
+{% schema %}
+{
+  "name": "Moving Text",
+	"max_blocks": 4,
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Add Text",
+      "settings": [
+       
+        {
+          "id": "linktext",
+          "type": "text",
+          "label": "Button text",
+          "default": "Click here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Moving Text",
+      "blocks": [
+        { 
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

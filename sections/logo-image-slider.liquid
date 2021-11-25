@@ -1,0 +1,96 @@
+<div class="logo-image-slider-section-with-background">
+  <div class="container">
+    <div class="logo-image-slider-section">
+      <div class="logo-content-part">
+        <p>{{ section.settings.section_title }}</p>
+      </div>
+      <div class="logo-slider-part">
+        {%- if section.blocks.size > 0 -%}
+        <div class="logo-slider-item-wrapper">
+          {%- for block in section.blocks -%}
+          <div class="logo-slider-item" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+            {{ block.settings.image | img_url: 'master', scale: 2 | img_tag: block.settings.image.alt }}
+            {%- endif -%}
+          </div>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+
+</style>
+<script>
+  $('.logo-slider-item-wrapper').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "Logo Image Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "Talk about your brand"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image_slider",
+      "name": "Logo Image Slider",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo Image Slider",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

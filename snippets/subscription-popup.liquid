@@ -1,0 +1,17 @@
+ {% if settings.enable_newsletter_popup %}
+      <section class="block-subscribe-popup" id="popup-newsletter"> 
+        <div class="indent">
+          <h3>CLAIM YOUR FREE GIFT</h3> 
+          <form method="post" action="" name="mc-embedded-subscribe-form">
+            <div class="block-content">
+              <label for="newsletter-2">{{ settings.newsletter_description }}</label>
+              <div class="input-box">
+                <a class="button" href="https://www.cohorted.co.uk/pages/black-edition">Subscribe</a>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </section>
+      {% endif %}

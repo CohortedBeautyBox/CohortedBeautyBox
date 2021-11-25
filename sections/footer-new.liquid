@@ -1,0 +1,152 @@
+ <div id="footer-bg" class="footer-bg">
+        <div id="footer">
+          <div id="footer_a">
+            <div class="container">
+              <div class="row">
+                <div class="footer-top">
+                  <div class="logo-ft">
+                    <img src="{{ 'logo-ft.png' | asset_url }}" title="Cohorted be you be beautiful, Cohorted" alt="Cohorted be you be beautiful, Cohorted" />
+                  </div>
+                  <p class="text-center">{{ settings.footer_top_text }}</p>
+                  <ul class="icon">
+                    {% if settings.footer_facebook_link != '' %}
+                    <li><a href="{{settings.footer_facebook_link}}"><i class="fa fa-facebook"></i></a></li>
+                    {% endif %}
+                    {% if settings.footer_twitter_link != '' %}
+                    <li><a href="{{settings.footer_twitter_link}}"><i class="fa fa-twitter"></i></a></li>
+                    {% endif %}
+                    {% if settings.footer_pinterest_link != '' %}
+                    <li><a href="{{settings.footer_pinterest_link}}"><i class="fa fa-pinterest-p"></i></a></li>
+                    {% endif %}
+                    {% if settings.footer_instagram_link != '' %}
+                    <li><a href="{{settings.footer_instagram_link}}"><i class="fa fa-instagram"></i></a></li>
+                    {% endif %}
+                    {% if settings.footer_googleplus_link != '' %}
+                    <li><a href="{{settings.footer_googleplus_link}}"><i class="fa fa-google-plus"></i></a></li>
+                    {% endif %}
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div id="footer_c">
+            <div class="container">
+              <!-- Information -->
+              <div class="row">
+                <div class="col-md-3 col-sm-3">
+                  <div class="widget-heading clearfix">
+                    <h3>
+                      <span>{{ settings.footer_column1_title }}</span>
+                      <span class="line-ft"></span>
+                    </h3>
+                  </div>
+                  <div class="widget-text">
+                    
+                    
+                    
+                    <ul>
+                      {% assign footerCol1 = settings.footer_column1_linklist %}
+                      {% for link in linklists[footerCol1].links %}
+                      <li>{{ link.title | link_to: link.url }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="widget-heading clearfix">
+                    <h3>
+                      <span>{{ settings.footer_column2_title }}</span>
+                      <span class="line-ft"></span>
+                    </h3>
+                  </div>
+                  <div class="widget-text">
+                    <ul>
+                      {% assign footerCol2 = settings.footer_column2_linklist %}
+                      {% for link in linklists[footerCol2].links %}
+                      <li>{{ link.title | link_to: link.url }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="widget-heading clearfix">
+                    <h3>
+                      <span>{{ settings.footer_column3_title }}</span>
+                      <span class="line-ft"></span>
+                    </h3>
+                  </div>
+                  <div class="widget-text">
+                    <ul>
+                      {% assign footerCol3 = settings.footer_column3_linklist %}
+                      {% for link in linklists[footerCol3].links %}
+                      <li>{{ link.title | link_to: link.url }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="widget-heading clearfix">
+                    <h3>
+                      <span>{{ settings.footer_column4_title }}</span>
+                      <span class="line-ft"></span>
+                    </h3>
+                  </div>
+                  <div class="widget-text">
+                    {{ settings.shop_contact_infos }}				
+                  </div>	
+                </div>										
+              </div>
+              <!-- End Information -->
+            </div>
+          </div>
+          <div id="footer_d">
+            <div class="container copyright-footer">
+              <div class="footer">
+                <div class="row">	    
+                  <div class="footer-copyright-left col-md-7 col-sm-7">		    		
+                    <address>{{ settings.copyright }}</address>	    	
+                  </div>
+                  <div class="footer-copyright-right col-md-5 col-sm-5">
+                    <div class="paypal-logo">
+                      {% if settings.payment_1_enable %}
+                      <a target="_blank" href="javascript:;">
+                        <img title="Comodo, Cohorted" alt="Comodo, Cohorted" src="{{ 'payment_image_1.png' | asset_url }}"/>
+                      </a>
+                      {% endif %}
+                      {% if settings.payment_2_enable %}
+                      <a target="_blank" href="javascript:;">
+                        <img title="PayPal, Cohorted" alt="PayPal, Cohorted" src="{{ 'payment_image_2.png' | asset_url }}"/>
+                      </a>
+                      {% endif %}
+                      {% if settings.payment_3_enable %}
+                      <a target="_blank" href="javascript:;">
+                        <img title="Visa, Cohorted" alt="Visa, Cohorted" src="{{ 'payment_image_3.png' | asset_url }}"/>
+                      </a>
+                      {% endif %}
+                      {% if settings.payment_4_enable %}
+                      <a target="_blank" href="javascript:;">
+                        <img title="Reviews, Cohorted" alt="Reviews, Cohorted" src="{{ 'payment_image_4.png' | asset_url }}"/>
+                      </a>
+                      {% endif %}
+                      {% if settings.payment_5_enable %}
+                      <a target="_blank" href="javascript:;">
+                        <img title="PayPal" alt="" src="{{ 'payment_image_5.png' | asset_url }}"/>
+                      </a>
+                      {% endif %}
+                      {% if settings.payment_6_enable %}
+                      <a target="_blank" href="javascript:;">
+                        <img title="PayPal" alt="" src="{{ 'payment_image_6.png' | asset_url }}"/>
+                      </a>	
+                      {% endif %}
+                    </div>		 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end footer_d -->
+        </div><!-- end footer --> 
+      </div><!-- end footer-bg -->

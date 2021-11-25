@@ -1,0 +1,55 @@
+<div class="text-with-button-section">
+  <div class="container">
+    <div class="text-container">
+      {{ section.settings.text }}
+    </div>
+    <ul class="buttons-section">
+      <li>
+        <a class="primary-btn" href="{{ section.settings.button_primary_url }}">{{ section.settings.button_primary }}</a>
+      </li>
+      <li>
+        <a class="secondary-btn" href="{{ section.settings.button_secondary_url }}">{{ section.settings.button_secondary }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text With Buttons",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+	{
+      "type": "text",
+      "id": "button_primary",
+      "label": "Primary Button Text"
+    },
+	{
+      "type": "url",
+      "id": "button_primary_url",
+      "label": "Primary Button URL"
+    },
+	{
+      "type": "text",
+      "id": "button_secondary",
+      "label": "Secondary Button Text"
+    },
+	{
+      "type": "url",
+      "id": "button_secondary_url",
+      "label": "Secondary Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text With Buttons",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

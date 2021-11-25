@@ -1,0 +1,230 @@
+{
+  "sections": {
+    "main": {
+      "type": "content-with-image-slider",
+      "blocks": {
+        "090a2923-1937-4a24-af5f-d78417d7ce09": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+          }
+        },
+        "92c1809e-a3e2-47a1-9338-4c08e79d8a88": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+          }
+        },
+        "930d9fc9-37a3-48d0-8db2-9bca89f47ff9": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+          }
+        },
+        "d25060f9-2342-49fc-bffa-3576438d48c5": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "090a2923-1937-4a24-af5f-d78417d7ce09",
+        "92c1809e-a3e2-47a1-9338-4c08e79d8a88",
+        "930d9fc9-37a3-48d0-8db2-9bca89f47ff9",
+        "d25060f9-2342-49fc-bffa-3576438d48c5"
+      ],
+      "settings": {
+        "section_title": "Beauty Picked <br>Just For You",
+        "text": "<p>The Cohorted Beauty Box is a curation of hand-picked premium products selected by our beauty experts. It contains a secret selection of beauty must-haves, enclosed in an elegant all-black exterior, with 100% sustainable packaging.<\/p>",
+        "button_primary": "SHOP BEAUTY BOXES",
+        "button_primary_url": "#",
+        "button_secondary": "SUBSCRIBE NOW",
+        "button_secondary_url": "#"
+      }
+    },
+    "1637663171009ad60c": {
+      "type": "logo-image-slider",
+      "blocks": {
+        "22c74fd2-56d0-4b12-847f-61ed35492897": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "ea1fe73c-ed92-4439-a80b-e4beaa38444f": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_3.png"
+          }
+        },
+        "bd74c9f3-5abb-4369-8349-cdf00eaa97e5": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_4.png"
+          }
+        },
+        "5feeedb3-bcd1-46dc-a64e-277651274ee7": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_1.png"
+          }
+        },
+        "f6e61c74-c452-467e-8950-1c2d04576800": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_2.png"
+          }
+        },
+        "5bd8542f-2172-4d6c-991a-bab53473a10b": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Health-Wellbeing.png"
+          }
+        }
+      },
+      "block_order": [
+        "22c74fd2-56d0-4b12-847f-61ed35492897",
+        "ea1fe73c-ed92-4439-a80b-e4beaa38444f",
+        "bd74c9f3-5abb-4369-8349-cdf00eaa97e5",
+        "5feeedb3-bcd1-46dc-a64e-277651274ee7",
+        "f6e61c74-c452-467e-8950-1c2d04576800",
+        "5bd8542f-2172-4d6c-991a-bab53473a10b"
+      ],
+      "settings": {
+        "section_title": "FEATURED IN:"
+      }
+    },
+    "16376651973aa099d6": {
+      "type": "text-with-button",
+      "settings": {
+        "text": "<p>We're an activist-driven beauty box & shop, curated for a modern, progressive life. Always clean, cruelty-free, and oh-so vegan.<\/p>",
+        "button_primary": "SHOP BEAUTY BOXES",
+        "button_primary_url": "#",
+        "button_secondary": "SUBSCRIBE OUR BEAUTY BOX",
+        "button_secondary_url": "#"
+      }
+    },
+    "163766681042642122": {
+      "type": "collection-list",
+      "blocks": {
+        "1637666810b0d36d5e-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "classic-beauty-boxes"
+          }
+        },
+        "1637666810b0d36d5e-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "letterbox-gifts"
+          }
+        },
+        "1637666810b0d36d5e-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ovali-collection"
+          }
+        },
+        "d083f8d6-c75f-411b-a4f8-97ed2bacaaf1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "the-essentials-edit"
+          }
+        },
+        "b8293ce4-182d-4787-94e1-c6df9138d291": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "beauty-for-conservation-makeup-bags"
+          }
+        },
+        "e635f5c9-25ec-43c8-afcb-5c267823de87": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cohorted-advent-calendars"
+          }
+        }
+      },
+      "block_order": [
+        "1637666810b0d36d5e-0",
+        "1637666810b0d36d5e-1",
+        "1637666810b0d36d5e-2",
+        "d083f8d6-c75f-411b-a4f8-97ed2bacaaf1",
+        "b8293ce4-182d-4787-94e1-c6df9138d291",
+        "e635f5c9-25ec-43c8-afcb-5c267823de87"
+      ],
+      "settings": {
+        "title": "Cohorted<br>Beauty Boxes",
+        "text": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,<\/p>",
+        "icon": "shopify:\/\/shop_images\/arrow-right_49313eb1-b17b-4ba2-9bdb-3f590ef7cd6b.png"
+      }
+    },
+    "1637750429655519e4": {
+      "type": "gallery-collection",
+      "settings": {
+        "image_box_1": "shopify:\/\/shop_images\/20210825-produtos-pre-maquiagem-que-voc-precisa-testar-kylier-20210518222954-2.jpg",
+        "title": "Cohorted Sustainability",
+        "text": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,<\/p>",
+        "url_text": "Learn More",
+        "url": "#",
+        "image_box_2": "shopify:\/\/shop_images\/20210825-cohorted_187571009_744233156192476_1719330821901752303_n.jpg",
+        "image_box_3": "shopify:\/\/shop_images\/20210825-cohorted_187571009_744233156192476_1719330821901752303_n.png"
+      }
+    },
+    "163775437718cb5645": {
+      "type": "feature-collection",
+      "settings": {
+        "title": "Shop Our Collections",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p><\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "collection": "classic-beauty-boxes"
+      }
+    },
+    "1637759844be385943": {
+      "type": "moving-text",
+      "blocks": {
+        "1637759844be2bb37b-0": {
+          "type": "select",
+          "settings": {
+            "linktext": "Cruelty free"
+          }
+        },
+        "1637759844be2bb37b-1": {
+          "type": "select",
+          "settings": {
+            "linktext": "Vegan"
+          }
+        },
+        "f703b981-5738-4a4e-bb79-c2f7b27acbf6": {
+          "type": "select",
+          "settings": {
+            "linktext": "No Harsh Chemicals"
+          }
+        },
+        "f6e0b31d-f6be-46f5-9a49-f491be52ec57": {
+          "type": "select",
+          "settings": {
+            "linktext": "Certified"
+          }
+        }
+      },
+      "block_order": [
+        "1637759844be2bb37b-0",
+        "1637759844be2bb37b-1",
+        "f703b981-5738-4a4e-bb79-c2f7b27acbf6",
+        "f6e0b31d-f6be-46f5-9a49-f491be52ec57"
+      ],
+      "settings": {
+        "text-box": "Title"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1637663171009ad60c",
+    "16376651973aa099d6",
+    "163766681042642122",
+    "1637750429655519e4",
+    "163775437718cb5645",
+    "1637759844be385943"
+  ]
+}

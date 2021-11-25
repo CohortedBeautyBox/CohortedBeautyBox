@@ -432,6 +432,28 @@
     "display_slide_3": "false",
     "display_slide_4": "false",
     "enable_slideshowbanner": "true",
+    "sections": {
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "text": "FREE SHIPPING ON ORDERS $50+",
+          "bg_color": "#000000",
+          "text_color": "#fff5ef"
+        }
+      },
+      "header-new": {
+        "type": "header-new",
+        "settings": {}
+      },
+      "instagram-section": {
+        "type": "instagram-section",
+        "settings": {}
+      },
+      "footer-new": {
+        "type": "footer-new",
+        "settings": {}
+      }
+    },
     "content_for_index": []
   },
   "presets": {

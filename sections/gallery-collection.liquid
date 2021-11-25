@@ -1,0 +1,85 @@
+<div class="section-column-gallery">
+  <div class="row">
+    <div style="padding:0;" class="col-md-6">
+      <div class="image-box">
+        <img class="image_box_1" src="{{ section.settings.image_box_1 | img_url:'master'}}">
+      </div>
+    </div>
+    <div style="padding:0;" class="col-md-6">
+      <div class="text-container-wrapper">
+      <h2>{{ section.settings.title }}</h2>
+      <div class="description-before"><span></span>{{ section.settings.text }}
+        </div>
+                        <div class="secondary-button"><a class="secondary-btn" href="{{ section.settings.url }}">{{ section.settings.url_text }}</a></div>
+
+    </div> 
+      
+        <div style="margin:0;" class="row">
+           <div style="padding:0;" class="col-md-6">
+      <div class="image-box">
+        <img class="image_box_2" src="{{ section.settings.image_box_2 | img_url:'master'}}">
+      </div>
+    </div>
+          <div style="padding:0;" class="col-md-6">
+      <div class="image-box">
+        <img class="image_box_3" src="{{ section.settings.image_box_3 | img_url:'master'}}">
+      </div>
+    </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+</div>  
+
+{% schema %}
+{
+  "name": "3 Column Gallery",
+  "settings": [
+ {
+        "type": "image_picker",
+        "id": "image_box_1",
+        "label": "Image 1"
+   },
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+	{
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+ {
+      "type": "text",
+      "id": "url_text",
+      "label": "Button Label"
+    },
+   {
+      "type": "url",
+      "id": "url",
+      "label": "Button Link"
+    },
+{
+        "type": "image_picker",
+        "id": "image_box_2",
+        "label": "Image 2"
+   },
+{
+        "type": "image_picker",
+        "id": "image_box_3",
+        "label": "Image 3"
+   }
+  ],
+ 
+  "presets": [
+    {
+      "name": "3 Column Gallery"   
+    }
+  ]
+}
+{% endschema %}
