@@ -216,6 +216,13 @@
       "settings": {
         "text-box": "Title"
       }
+    },
+    "16378198083e5d0414": {
+      "type": "featured-product",
+      "settings": {
+        "featured_product": "cohorted-subscription-beauty-box",
+        "background_info": "shopify:\/\/shop_images\/Share-Friends-Background_b95973e7-7529-4263-9530-dde9f563dfad.png"
+      }
     }
   },
   "order": [
@@ -225,6 +232,7 @@
     "163766681042642122",
     "1637750429655519e4",
     "163775437718cb5645",
-    "1637759844be385943"
+    "1637759844be385943",
+    "16378198083e5d0414"
   ]
 }

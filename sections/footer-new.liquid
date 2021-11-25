@@ -3,28 +3,18 @@
           <div id="footer_a">
             <div class="container">
               <div class="row">
+
                 <div class="footer-top">
-                  <div class="logo-ft">
+                  <!-- <div class="logo-ft">
                     <img src="{{ 'logo-ft.png' | asset_url }}" title="Cohorted be you be beautiful, Cohorted" alt="Cohorted be you be beautiful, Cohorted" />
-                  </div>
+                  </div> -->
+                  <div class="insta-header">
+                    <h2><i>Download </i>Cohorted <i>Cult App</i><br>
+                    <small>Your new destination for all things beauty, fashion and more...</small></h2>
+                    <a class="secondary-btn white" href="#">DOWNLOAD NOW!</a>
+                    </div>
                   <p class="text-center">{{ settings.footer_top_text }}</p>
-                  <ul class="icon">
-                    {% if settings.footer_facebook_link != '' %}
-                    <li><a href="{{settings.footer_facebook_link}}"><i class="fa fa-facebook"></i></a></li>
-                    {% endif %}
-                    {% if settings.footer_twitter_link != '' %}
-                    <li><a href="{{settings.footer_twitter_link}}"><i class="fa fa-twitter"></i></a></li>
-                    {% endif %}
-                    {% if settings.footer_pinterest_link != '' %}
-                    <li><a href="{{settings.footer_pinterest_link}}"><i class="fa fa-pinterest-p"></i></a></li>
-                    {% endif %}
-                    {% if settings.footer_instagram_link != '' %}
-                    <li><a href="{{settings.footer_instagram_link}}"><i class="fa fa-instagram"></i></a></li>
-                    {% endif %}
-                    {% if settings.footer_googleplus_link != '' %}
-                    <li><a href="{{settings.footer_googleplus_link}}"><i class="fa fa-google-plus"></i></a></li>
-                    {% endif %}
-                  </ul>
+                 
                 </div>
 
               </div>
@@ -96,13 +86,33 @@
                     </h3>
                   </div>
                   <div class="widget-text">
-                    {{ settings.shop_contact_infos }}				
+                    {{ settings.shop_contact_infos }}	
+                    <ul class="footer icon">
+                      {% if settings.footer_facebook_link != '' %}
+                      <li><a href="{{settings.footer_facebook_link}}"><i class="fa fa-facebook"></i></a></li>
+                      {% endif %}
+                      {% if settings.footer_twitter_link != '' %}
+                      <li><a href="{{settings.footer_twitter_link}}"><i class="fa fa-twitter"></i></a></li>
+                      {% endif %}
+                      {% if settings.footer_pinterest_link != '' %}
+                      <li><a href="{{settings.footer_pinterest_link}}"><i class="fa fa-pinterest-p"></i></a></li>
+                      {% endif %}
+                      {% if settings.footer_instagram_link != '' %}
+                      <li><a href="{{settings.footer_instagram_link}}"><i class="fa fa-instagram"></i></a></li>
+                      {% endif %}
+                      {% if settings.footer_googleplus_link != '' %}
+                      <li><a href="{{settings.footer_googleplus_link}}"><i class="fa fa-google-plus"></i></a></li>
+                      {% endif %}
+                    </ul>			
                   </div>	
                 </div>										
               </div>
               <!-- End Information -->
             </div>
           </div>
+          <div class="review-images">
+            <div class="container">
+            <a href="#"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/trustpilot.png?v=1637836399"></a> <a href="#"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/reviews.png?v=1637836399"></a></div></div>
           <div id="footer_d">
             <div class="container copyright-footer">
               <div class="footer">

@@ -1,18 +1,55 @@
 <div class="section-scroll">
-<div class="section-text">
+  <div class="container marquee">
+<div class="section-text marquee--inner">
   {% for block in section.blocks %}  
-  <div class="text-box">   
+<div class="text-box">   
     <h3 class="subtitle">{{ block.settings.linktext }}<span class="line"></span></h3>
-  </div> 
+  </div>
   {% endfor %}
 
+</div>
 </div>  
 </div>
+
+<style>
+  
+
+
+
+
+  .marquee {
+    height: 200px;
+    width: 2000px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.marquee--inner {
+  display: block;
+  width: 200%;
+  position: absolute;
+  animation: marquee 25s linear infinite;
+}
+
+/* .marquee--inner:hover {
+  animation-play-state: paused;
+} */
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+</style>
 
 {% schema %}
 {
   "name": "Moving Text",
-	"max_blocks": 4,
+	"max_blocks":10,
   "settings": [
     {
       "id": "text-box",

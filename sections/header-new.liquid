@@ -76,21 +76,10 @@
                   <!-- End Header Logo -->
                 </div>
                 <div class="col-md-5 col-sm-5 col-xs-5 no-relative">
-                  <!-- Top Search ============================================= -->
-                  <div id="top-search">
-                    <a href="javascript;" id="top-search-trigger">
-                      <i class="fa fa-search"></i>
-                      <i class="fa fa-times"></i>
-                    </a>
-                    <form action="/search" method="GET" id="search_mini_form">
-                      <input id="search" type="text" placeholder="Type & Hit Enter.." name="q" value="" class="input-text" maxlength="128" autocomplete="off">
-                    </form>
-                  </div>
-                  <!-- End Top Search ============================================= -->
                   <div id="cart">
                     <div class="parent shopping-bag-item">
                       <a class="cart-contents" href="/cart" title="View contents of your shopping cart">
-                        <i class="fa fa-shopping-cart"></i>
+                        <p class="bag">BAG</p>
                         <span class="cart-count">{{ cart.item_count }}</span>
                       </a>
                       <div class="shopping-bag">
@@ -136,6 +125,65 @@
                           <p class="empty">You have no items in your shopping cart.</p>
                         </div>
                         {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Top Search ============================================= -->
+                  <div id="top-search">
+                    <a href="javascript;" id="top-search-trigger">
+                      <i class="fa fa-search"></i>
+                      <i class="fa fa-times"></i>
+                    </a>
+                    <form action="/search" method="GET" id="search_mini_form">
+                      <input id="search" type="text" placeholder="Type & Hit Enter.." name="q" value="" class="input-text" maxlength="128" autocomplete="off">
+                    </form>
+                    
+                  </div>
+                  <!-- End Top Search ============================================= -->
+                 
+                  <div class="top-header top-header-new">
+                    <div class="containers">
+                      <div class="row">
+                        <div class="header">   
+                         
+                          <p class="help"> <a href="#">Help</a></p>
+
+                    
+                          <div class="pull-right top-dropdown header-links">
+                            {% if shop.customer_accounts_enabled %}
+                            
+                            <p class="label">My Account</p>
+                            <ul class="links">
+                              <li class="first"><a href="/account" title="My Account">My Account</a></li>
+                              {% if settings.enable_wishlist %}
+                              <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li>
+                              {% endif %}
+                              <li><a href="/checkout" title="Checkout">Checkout</a></li>
+          
+                              {% if customer  %}
+                              <li class="last">{{ 'Logout' | customer_logout_link }}</li>
+                              {% else %}
+                              <li>{{ 'Sign up' | customer_register_link }}</li>
+                              <li class="last">{{ 'Login' | customer_login_link }}</li>
+                              {% endif %}
+                            </ul>
+                            {% else %}
+                            <p class="label">Checkout</p>
+                            <ul class="links">
+                              <li><a href="/checkout" title="Checkout">Checkout</a></li>
+                            </ul>
+                            {% endif %} 
+                            <i class="fa fa-angle-down"></i>
+                          </div>
+                                <!-- Header Currency -->
+                                {% if settings.show_multiple_currencies %}
+                                <div class="pull-right top-dropdown currency">
+                                  {% include 'currency-picker' %}
+                                  <i class="fa fa-angle-down"></i>
+                                </div>
+                                {% endif %}
+                                <!-- End Header Currency -->  
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -119,8 +119,8 @@
     "footer_column2_linklist": "account-links",
     "footer_column3_title": "Key Information",
     "footer_column3_linklist": "key-information",
-    "footer_column4_title": "Contact Us",
-    "shop_contact_infos": "<p><span class=\"active-text\">Opening Hours:\n<br>Monday - Friday 10:00am - 6:00pm \n<\/span><\/p>\n<p>Customer Service:<br><a href=\"mailto:customerservice@cohorted.co.uk\" target=\"_new\" class=\"footer-link\">customerservice@cohorted.co.uk<\/a><\/p>\n<p>Press & Marketing:<br><a href=\"mailto:marketing@cohorted.co.uk\" target=\"_new\" class=\"footer-link\">marketing@cohorted.co.uk<\/a><\/p>\n<p>Work With Us:<br><a href=\"mailto:workwithus@cohorted.co.uk\" target=\"_new\" class=\"footer-link\">workwithus@cohorted.co.uk<\/a><\/p>",
+    "footer_column4_title": "STAY IN TOUCH",
+    "shop_contact_infos": "<p>Subscribe to the UK's number one luxury beauty box today and receive full-sized premium beauty products straight to your door each month.<\/p>\n<form class=\"footer-form\" method=\"post\" action=\"\" name=\"mc-embedded-subscribe-form\">\n            <div class=\"block-content\">\n              <div class=\"input-box\">\n\t\t\t    <input type=\"email\" name=\"email\" class=\"email\" placeholder=\"EMAIL ADDRESS\">\n                <a class=\"button\" href=\"https:\/\/www.cohorted.co.uk\/pages\/black-edition\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2635\/3958\/files\/arrow-right_49313eb1-b17b-4ba2-9bdb-3f590ef7cd6b_30x.png?v=1637748503\"><\/a>\n                <div class=\"clear\"><\/div>\n              <\/div>\n            <\/div>\n          <\/form>",
     "copyright": "&copy; 2020-21 Cohorted (trading name of Cohorted Communications Ltd). All Rights Reserved.",
     "payment_1_enable": true,
     "payment_2_enable": true,
@@ -447,7 +447,9 @@
       },
       "instagram-section": {
         "type": "instagram-section",
-        "settings": {}
+        "settings": {
+          "insta_html": "<div class=\"container\">\n<div class=\"insta-header\">\n<h2>On The Gram <\/h2>\n<a class=\"secondary-btn\" href=\"https:\/\/www.instagram.com\/cohorted\/\">Follow Us<\/a>\n<\/div>\n<\/div>\n        <div id=\"flockler-embed-17be0c97de90dbfd60f1135add4bcc15\"><\/div>"
+        }
       },
       "footer-new": {
         "type": "footer-new",
