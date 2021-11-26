@@ -1,8 +1,9 @@
 {%- assign product = all_products[section.settings.featured_product] -%} 
 <div class="single_product">
 	<div class="row">
-		<div style="padding:0;" class="col-md-5">
+		<div style="padding:0;" class="col-md-6">
 <div class="product-info">
+	<div class="product-align-center">
 <h2>{{ product.title }}</h2>
 <div class="review-wrap">
 	<span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
@@ -31,11 +32,12 @@
 	 {{ product.description | strip_html | truncate: 200}}
   </div>
   <div class="save">SUBSCRIBE AND <span class="color">SAVE £12.99 - ORDER WILL SHIP EVERY MONTH</span></div>
-<div class="more-info"><a href="">More Information</a></div>
+<div class="more-info"><a href="{{product.url}}">More Information</a></div>
 <div class="text-left"><a class="secondary-btn white" href="">COMPLETE SUBSCRIPTION</a></div>
 </div>
+</div>
 </div>	
-<div style="padding:0;" class="col-md-7">
+<div style="padding:0;" class="col-md-6">
 <div  class="feature-image">
 
 	{% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
@@ -51,7 +53,6 @@
 	.product-info { 
 	background-image: url({{section.settings.background_info | img_url: 'master'}});
     background-size:cover;
-	height:515px; 
 }
 </style>
 {% schema %}

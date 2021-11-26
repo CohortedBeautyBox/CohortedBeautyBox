@@ -1,198 +1,198 @@
- <div id="header-container" class="header-container" data-sticky-class="not-dark">
-        <!-- Top Header -->
-        <div class="top-header">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 welcome-msg">{{ settings.welcome_msg }}</div>
-              <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">               
-                <!-- Header Currency -->
-                {% if settings.show_multiple_currencies %}
-                <div class="pull-right top-dropdown currency">
-                  {% include 'currency-picker' %}
-                  <i class="fa fa-angle-down"></i>
-                </div>
-                {% endif %}
-                <!-- End Header Currency -->
-                <div class="pull-right top-dropdown header-links">
-                  {% if shop.customer_accounts_enabled %}
-                  <p class="label">My Account</p>
-                  <ul class="links">
-                    <li class="first"><a href="/account" title="My Account">My Account</a></li>
-                    {% if settings.enable_wishlist %}
-                    <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li>
-                    {% endif %}
-                    <li><a href="/checkout" title="Checkout">Checkout</a></li>
-
-                    {% if customer  %}
-                    <li class="last">{{ 'Logout' | customer_logout_link }}</li>
-                    {% else %}
-                    <li>{{ 'Sign up' | customer_register_link }}</li>
-                    <li class="last">{{ 'Login' | customer_login_link }}</li>
-                    {% endif %}
-                  </ul>
-                  {% else %}
-                  <p class="label">Checkout</p>
-                  <ul class="links">
-                    <li><a href="/checkout" title="Checkout">Checkout</a></li>
-                  </ul>
-                  {% endif %} 
-                  <i class="fa fa-angle-down"></i>
-                </div>
-              </div>
-            </div>
+<div id="header-container" class="header-container" data-sticky-class="not-dark">
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 welcome-msg">{{ settings.welcome_msg }}</div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">               
+          <!-- Header Currency -->
+          {% if settings.show_multiple_currencies %}
+          <div class="pull-right top-dropdown currency">
+            {% include 'currency-picker' %}
+            <i class="fa fa-angle-down"></i>
           </div>
-        </div>
-        <!-- End Top Header -->
-        <div class="nav-container">
-          <!-- Header -->
-          <div class="logo-fade" id="header-section">
-            <div class="container nova-header">
-              <div class="row">
-                
-                <!-- Start Header Top Menu -->
-                {% include 'mega_menu' %}
-                <!-- End Header Top Menu -->
-                <div class="col-md-2 col-sm-2">
-                  <!-- Header Logo -->
-                  <div class="header-logo">
-                    <div class="logo-center clearfix" id="logo">
-                      <h1 class="logo">
-                        <a href="{{shop.url}}">
-                          {% if settings.logo_type == 'image' %}
-                            {% if template contains 'index' or template contains 'collection' or template contains 'product' or template contains 'customers' %}
-                            <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_black.png' | asset_url }}" class="standard" />
-                            <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_light.png' | asset_url }}" class="retina" />
-                            {% else %}
-                            <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_dark.png' | asset_url }}" class="standard" />
-                            <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_black.png' | asset_url }}" class="retina" />
-                            {% endif %}
-                          {% else %}
-                          	{{ settings.brand_text }}
-                          {% endif %}
-                        </a>
-                      </h1>
-                    </div>
-                  </div>
-                  <!-- End Header Logo -->
-                </div>
-                <div class="col-md-5 col-sm-5 col-xs-5 no-relative">
-                  <div id="cart">
-                    <div class="parent shopping-bag-item">
-                      <a class="cart-contents" href="/cart" title="View contents of your shopping cart">
-                        <p class="bag">BAG</p>
-                        <span class="cart-count">{{ cart.item_count }}</span>
-                      </a>
-                      <div class="shopping-bag">
-                        {% if cart.item_count > 0%}
-                        <div class="bag-header">There are <span class="cart-count">{{ cart.item_count }}</span> {{ cart.item_count | pluralize: 'item', 'items' }} in your cart</div>
-                        <div class="bag-contents">
-                          {% for item in cart.items %}
-                          <div class="item">
-                            <div class="product-image">
-                              <a href="{{ item.url }}" title="{{ item.title | escape }}" class="image">
-                                <img src="{{ item | img_url: 'small' }}" width="87" height="103" alt="{{ item.title | escape }}">
-                              </a>
-                            </div>
-                            <div class="product-details">
-                              <div class="product-name"> 
-                                <a href="{{ item.url }}">{{ item.title | escape }}</a>
-                              </div>
-                              <span class="bold_ro_desc" data-product-id="{{item.id}}-{{ forloop.index0 }}"></span>
-<span class="bold_load_cart_item_properties"></span>
+          {% endif %}
+          <!-- End Header Currency -->
+          <div class="pull-right top-dropdown header-links">
+            {% if shop.customer_accounts_enabled %}
+            <p class="label">My Account</p>
+            <ul class="links">
+              <li class="first"><a href="/account" title="My Account">My Account</a></li>
+              {% if settings.enable_wishlist %}
+              <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li>
+              {% endif %}
+              <li><a href="/checkout" title="Checkout">Checkout</a></li>
 
- 
-                              <span class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" style="display:none !important;"></span>
-{{ item.line_price | money }}</span>
-                              <div class="quantity">Qty: <strong>{{ item.quantity }}</strong></div>
-                              <a onclick="changeCartProduct({{item.id}}, 0)" title="Remove This Item" class="btn-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                          </div>
-                          <hr>
-                          {% endfor %}
-                        </div>
-                        <div class="bag-buttons">								
-                          <a href="/cart" class="sf-roll-button bag-button">
-                            <span>View Cart</span>
-                            <span>View Cart</span>
-                          </a>
-                          <a href="/checkout" name="checkout" class="sf-roll-button checkout-button">
-                            <span>Check Out</span>
-                            <span>Check Out</span>
-                          </a>
-                        </div>
-                        {% else %}
-                        <div class="shopping-no-items">
-                          <p class="empty">You have no items in your shopping cart.</p>
-                        </div>
-                        {% endif %}
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Top Search ============================================= -->
-                  <div id="top-search">
-                    <a href="javascript;" id="top-search-trigger">
-                      <i class="fa fa-search"></i>
-                      <i class="fa fa-times"></i>
-                    </a>
-                    <form action="/search" method="GET" id="search_mini_form">
-                      <input id="search" type="text" placeholder="Type & Hit Enter.." name="q" value="" class="input-text" maxlength="128" autocomplete="off">
-                    </form>
-                    
-                  </div>
-                  <!-- End Top Search ============================================= -->
-                 
-                  <div class="top-header top-header-new">
-                    <div class="containers">
-                      <div class="row">
-                        <div class="header">   
-                         
-                          <p class="help"> <a href="#">Help</a></p>
-
-                    
-                          <div class="pull-right top-dropdown header-links">
-                            {% if shop.customer_accounts_enabled %}
-                            
-                            <p class="label">My Account</p>
-                            <ul class="links">
-                              <li class="first"><a href="/account" title="My Account">My Account</a></li>
-                              {% if settings.enable_wishlist %}
-                              <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li>
-                              {% endif %}
-                              <li><a href="/checkout" title="Checkout">Checkout</a></li>
-          
-                              {% if customer  %}
-                              <li class="last">{{ 'Logout' | customer_logout_link }}</li>
-                              {% else %}
-                              <li>{{ 'Sign up' | customer_register_link }}</li>
-                              <li class="last">{{ 'Login' | customer_login_link }}</li>
-                              {% endif %}
-                            </ul>
-                            {% else %}
-                            <p class="label">Checkout</p>
-                            <ul class="links">
-                              <li><a href="/checkout" title="Checkout">Checkout</a></li>
-                            </ul>
-                            {% endif %} 
-                            <i class="fa fa-angle-down"></i>
-                          </div>
-                                <!-- Header Currency -->
-                                {% if settings.show_multiple_currencies %}
-                                <div class="pull-right top-dropdown currency">
-                                  {% include 'currency-picker' %}
-                                  <i class="fa fa-angle-down"></i>
-                                </div>
-                                {% endif %}
-                                <!-- End Header Currency -->  
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- CLOSE .row -->
-            </div>
-            <!-- CLOSE .container -->
+              {% if customer  %}
+              <li class="last">{{ 'Logout' | customer_logout_link }}</li>
+              {% else %}
+              <li>{{ 'Sign up' | customer_register_link }}</li>
+              <li class="last">{{ 'Login' | customer_login_link }}</li>
+              {% endif %}
+            </ul>
+            {% else %}
+            <p class="label">Checkout</p>
+            <ul class="links">
+              <li><a href="/checkout" title="Checkout">Checkout</a></li>
+            </ul>
+            {% endif %} 
+            <i class="fa fa-angle-down"></i>
           </div>
-          <!-- End Header -->
         </div>
       </div>
+    </div>
+  </div>
+  <!-- End Top Header -->
+  <div class="nav-container">
+    <!-- Header -->
+    <div class="logo-fade" id="header-section">
+      <div class="container nova-header">
+        <div class="row">
+          
+          <!-- Start Header Top Menu -->
+          {% include 'mega_menu' %}
+          <!-- End Header Top Menu -->
+          <div class="col-md-2 col-sm-2">
+            <!-- Header Logo -->
+            <div class="header-logo">
+              <div class="logo-center clearfix" id="logo">
+                <h1 class="logo">
+                  <a href="{{shop.url}}">
+                    {% if settings.logo_type == 'image' %}
+                      {% if template contains 'index' or template contains 'collection' or template contains 'product' or template contains 'customers' %}
+                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_black.png' | asset_url }}" class="standard" />
+                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_light.png' | asset_url }}" class="retina" />
+                      {% else %}
+                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_dark.png' | asset_url }}" class="standard" />
+                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_black.png' | asset_url }}" class="retina" />
+                      {% endif %}
+                    {% else %}
+                      {{ settings.brand_text }}
+                    {% endif %}
+                  </a>
+                </h1>
+              </div>
+            </div>
+            <!-- End Header Logo -->
+          </div>
+          <div class="col-md-5 col-sm-5 col-xs-5 no-relative">
+            <div id="cart">
+              <div class="parent shopping-bag-item">
+                <a class="cart-contents" href="/cart" title="View contents of your shopping cart">
+                  <p class="bag">BAG</p>
+                  <span class="cart-count">{{ cart.item_count }}</span>
+                </a>
+                <div class="shopping-bag">
+                  {% if cart.item_count > 0%}
+                  <div class="bag-header">There are <span class="cart-count">{{ cart.item_count }}</span> {{ cart.item_count | pluralize: 'item', 'items' }} in your cart</div>
+                  <div class="bag-contents">
+                    {% for item in cart.items %}
+                    <div class="item">
+                      <div class="product-image">
+                        <a href="{{ item.url }}" title="{{ item.title | escape }}" class="image">
+                          <img src="{{ item | img_url: 'small' }}" width="87" height="103" alt="{{ item.title | escape }}">
+                        </a>
+                      </div>
+                      <div class="product-details">
+                        <div class="product-name"> 
+                          <a href="{{ item.url }}">{{ item.title | escape }}</a>
+                        </div>
+                        <span class="bold_ro_desc" data-product-id="{{item.id}}-{{ forloop.index0 }}"></span>
+<span class="bold_load_cart_item_properties"></span>
+
+
+                        <span class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" style="display:none !important;"></span>
+{{ item.line_price | money }}</span>
+                        <div class="quantity">Qty: <strong>{{ item.quantity }}</strong></div>
+                        <a onclick="changeCartProduct({{item.id}}, 0)" title="Remove This Item" class="btn-remove"><i class="fa fa-times"></i></a>
+                      </div>
+                    </div>
+                    <hr>
+                    {% endfor %}
+                  </div>
+                  <div class="bag-buttons">								
+                    <a href="/cart" class="sf-roll-button bag-button">
+                      <span>View Cart</span>
+                      <span>View Cart</span>
+                    </a>
+                    <a href="/checkout" name="checkout" class="sf-roll-button checkout-button">
+                      <span>Check Out</span>
+                      <span>Check Out</span>
+                    </a>
+                  </div>
+                  {% else %}
+                  <div class="shopping-no-items">
+                    <p class="empty">You have no items in your shopping cart.</p>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <!-- Top Search ============================================= -->
+            <div id="top-search">
+              <a href="javascript;" id="top-search-trigger">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-times"></i>
+              </a>
+              <form action="/search" method="GET" id="search_mini_form">
+                <input id="search" type="text" placeholder="Type & Hit Enter.." name="q" value="" class="input-text" maxlength="128" autocomplete="off">
+              </form>
+              
+            </div>
+            <!-- End Top Search ============================================= -->
+           
+            <div class="top-header top-header-new">
+              <div class="containers">
+                <div class="row">
+                  <div class="header">   
+                   
+                    <p class="help"> <a href="#">Help</a></p>
+
+              
+                    <div class="pull-right top-dropdown header-links">
+                      {% if shop.customer_accounts_enabled %}
+                      
+                      <p class="label">My Account</p>
+                      <ul class="links">
+                        <li class="first"><a href="/account" title="My Account">My Account</a></li>
+                        {% if settings.enable_wishlist %}
+                        <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li>
+                        {% endif %}
+                        <li><a href="/checkout" title="Checkout">Checkout</a></li>
+    
+                        {% if customer  %}
+                        <li class="last">{{ 'Logout' | customer_logout_link }}</li>
+                        {% else %}
+                        <li>{{ 'Sign up' | customer_register_link }}</li>
+                        <li class="last">{{ 'Login' | customer_login_link }}</li>
+                        {% endif %}
+                      </ul>
+                      {% else %}
+                      <p class="label">Checkout</p>
+                      <ul class="links">
+                        <li><a href="/checkout" title="Checkout">Checkout</a></li>
+                      </ul>
+                      {% endif %} 
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                          <!-- Header Currency -->
+                          {% if settings.show_multiple_currencies %}
+                          <div class="pull-right top-dropdown currency">
+                            {% include 'currency-picker' %}
+                            <i class="fa fa-angle-down"></i>
+                          </div>
+                          {% endif %}
+                          <!-- End Header Currency -->  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CLOSE .row -->
+      </div>
+      <!-- CLOSE .container -->
+    </div>
+    <!-- End Header -->
+  </div>
+</div>

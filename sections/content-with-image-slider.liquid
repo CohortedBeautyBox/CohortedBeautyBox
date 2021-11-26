@@ -1,5 +1,6 @@
 <div class="content-with-image-slider-section">
   <div class="content-part">
+    <div class="slider-info">
     <h2>{{ section.settings.section_title }}</h2>
     {{ section.settings.text }}
     <ul class="content-with-image-slider-section-buttons">
@@ -10,7 +11,7 @@
         <a class="secondary-btn" href="{{ section.settings.button_secondary_url }}">{{ section.settings.button_secondary }}</a>
       </li>
     </ul>
-  </div>
+  </div></div>
   <div class="slider-part">
     {%- if section.blocks.size > 0 -%}
     <div class="slider-item-wrapper">

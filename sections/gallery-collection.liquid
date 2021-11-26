@@ -1,11 +1,11 @@
 <div class="section-column-gallery">
   <div class="row">
     <div style="padding:0;" class="col-md-6">
-      <div class="image-box">
+      <div class="image-box hide-phone">
         <img class="image_box_1" src="{{ section.settings.image_box_1 | img_url:'master'}}">
       </div>
     </div>
-    <div style="padding:0;" class="col-md-6">
+    <div style="padding:0;" class="col-md-6 gallery-content">
       <div class="text-container-wrapper">
       <h2>{{ section.settings.title }}</h2>
       <div class="description-before"><span></span>{{ section.settings.text }}
@@ -14,13 +14,19 @@
 
     </div> 
       
-        <div style="margin:0;" class="row">
-           <div style="padding:0;" class="col-md-6">
+    <div class="row">
+      <div class="image-box show-mob">
+        <img class="image_box_1" src="{{ section.settings.image_box_1 | img_url:'master'}}">
+      </div>
+    </div>
+
+        <div style="margin:0;" class="row"> 
+           <div style="padding:0;" class="col-md-6 col-sm-6 col-xs-6 ">
       <div class="image-box">
         <img class="image_box_2" src="{{ section.settings.image_box_2 | img_url:'master'}}">
       </div>
-    </div>
-          <div style="padding:0;" class="col-md-6">
+        </div>
+          <div style="padding:0;" class="col-md-6 col-sm-6 col-xs-6">
       <div class="image-box">
         <img class="image_box_3" src="{{ section.settings.image_box_3 | img_url:'master'}}">
       </div>

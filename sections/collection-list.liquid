@@ -6,6 +6,26 @@
     </div>
     {% for block in section.blocks %}
     {%- assign collection = collections[block.settings.collection] -%} 
+    <div class="collection-list-li hide-collection-mob">
+      {%- if collection.image -%}
+      {%- assign collection_image = collection.image -%}
+      {%- elsif collection.products.first and collection.products.first.images != empty -%}
+      {%- assign collection_image = collection.products.first.featured_image -%}
+      {%- else -%}
+      {%- assign collection_image = blank -%}
+      {%- endif -%}
+
+      <a href="{{ collection.url }}">
+        <img src="{{ collection_image | img_url: '480x' }}" alt="">
+        <span>{{ collection.title }} <img style="width:30px; height:18px;" src="{{ section.settings.icon | img_url: '30x' }}"></span>
+      </a>
+    </div>
+    {%- endfor -%}
+
+    <div class="collection-show-mob">
+      <div class="collection-show-inner">
+      {% for block in section.blocks %}
+    {%- assign collection = collections[block.settings.collection] -%} 
     <div class="collection-list-li">
       {%- if collection.image -%}
       {%- assign collection_image = collection.image -%}
@@ -21,8 +41,48 @@
       </a>
     </div>
     {%- endfor -%}
+      </div></div>
+    </div>
+
   </div>
 </div>
+
+
+<script>
+  $('.collection-show-mob-1').slick({
+    dots: true,
+    arrow: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+      responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+
+  ]
+  });
+</script>
 
 
 {% schema %}
