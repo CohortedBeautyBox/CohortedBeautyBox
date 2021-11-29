@@ -1,3 +1,29 @@
+@font-face {
+  font-family: 'Austin';
+  src: local('Austin Roman'), local('Austin-Roman'),
+      url('AustinCyr-Roman.woff2') format('woff2'),
+      url('AustinCyr-Roman.woff') format('woff'),
+      url('AustinCyr-Roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std 45 Book';
+  src: url('AvenirLTStd-Book.woff2') format('woff2'),
+      url('AvenirLTStd-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body p{
+  font-family: 'Avenir LT Std 45 Book' !important;
+
+}
+
+
+
 .content-with-image-slider-section {
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +60,7 @@ ul.content-with-image-slider-section-buttons a {
   padding: 0;
   font-size: 18px;
   letter-spacing: .9px;
-  font-family: Austin Cyr;
+  font-family: 'Austin';
 }
 .primary-btn {
   letter-spacing: .9px;
@@ -45,7 +71,7 @@ ul.content-with-image-slider-section-buttons a {
   line-height: 70px;
   font-size: 18px;
   display: inline-block;
-  font-family: Austin Cyr;
+  font-family: 'Austin';
   text-align: center;
 }
 .nav-container {
@@ -65,7 +91,7 @@ ul.content-with-image-slider-section-buttons a {
   height: 70px;
   width: 280px;
   text-transform: uppercase;
-  font-family: Austin Cyr;
+  font-family: 'Austin';
   font-weight: 500;
   font-size: 18px;
   text-align: center;
@@ -75,10 +101,10 @@ ul.content-with-image-slider-section-buttons a {
   color: #000;
 }
 .content-part h2 {
-  font-family: Austin Cyr;
+  font-family: 'Austin';
   text-transform: capitalize;
-      font-size: 90px;
-    line-height: 100px;
+      font-size: 100px;
+    line-height: 110px;;
   letter-spacing: 0px;
   color:#000;
 }
@@ -119,12 +145,12 @@ ul.content-with-image-slider-section-buttons a {
   width: 320px;
 }
 .text-container p {
-    font-family: Austin Cyr;
-    font-style: italic;
-    font-size: 51px;
-    line-height: 55px;
-    letter-spacing: 0;
-    color: #000;
+  font-family: Austin !important;
+  font-style: italic;
+  font-size: 65px;
+  line-height: 70px;
+  letter-spacing: 0;
+  color: #000;
 }
 .text-container {
   max-width: 1566px;
@@ -150,23 +176,24 @@ ul.content-with-image-slider-section-buttons a {
   width: 25%;
 }
 .collection-list-li a span {
-    position: absolute;
-    color: #fff;
-    width: 90%;
-    bottom: 10px;
-    left: 0;
-    border-top: 1px solid #ffff;
-    z-index: 99;
-    padding-top: 10px;
-    margin: 0 auto;
-    right: 0;
-    text-align: left;
-    font-family: Austin Cyr;
-    text-transform: uppercase;
-    font-size: 18px;
-    justify-content: space-between;
-    display: flex;
-   align-items: center;
+  position: absolute;
+  color: #fff;
+  width: 90%;
+  bottom: 10px;
+  left: 0;
+  border-top: 1px solid #ffff;
+  z-index: 99;
+  padding-top: 10px;
+  margin: 0 auto;
+  right: 0;
+  text-align: left;
+  font-family: Austin;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: .5px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 .collection-list-li a::before {
     background: #000000 0% 0% no-repeat padding-box;
@@ -177,7 +204,7 @@ ul.content-with-image-slider-section-buttons a {
     width: 100%;
 }
 .text-container-wrapper h2 {
-    font-family: Austin Cyr;
+    font-family: 'Austin';
     text-transform: capitalize;
     font-size: 90px;
     line-height: 100px;
@@ -267,7 +294,9 @@ body .is-sticky .cart-contents span {
     align-items: center;
 }
 #novaworks-nav a {
-    font-size: 12px !important;
+  font-size: 12px!important;
+  color: #000;
+  font-family: 'Avenir LT Std 45 Book';
 }
 div#undefined-sticky-wrapper {
     border: 1px solid #DCDCDC;
@@ -302,6 +331,16 @@ div#undefined-sticky-wrapper {
   height: 409px;
   object-fit: cover;
   width: 100%;
+}
+.collection-list-li:hover img {
+  transform: scale(1);
+}
+.collection-list-li a {
+  overflow: hidden;
+}
+.collection-list-li img {
+  transition: transform .5s ease;
+  overflow: hidden;
 }
 .collection-list-li {
     width: 25%;
@@ -381,7 +420,7 @@ img.image_box_2, img.image_box_3 {
   justify-content: space-between;
   padding: 10px 10px 5px 10px;
   font-size: 20px;
-  font-family: Austin Cyr;
+  font-family: 'Austin';
   margin-bottom: 0;
   text-align: left;
 } 
@@ -391,12 +430,12 @@ img.image_box_2, img.image_box_3 {
 .feature-collection-main .slick-prev:before {
     content: "PREV" !important;
     font-size: 12px;
-      font-family: Austin Cyr;
+      font-family: 'Austin';
 }
 .feature-collection-main .slick-next:before {
     content: "NEXT" !important;
     font-size: 12px;
-      font-family: Austin Cyr;
+      font-family: 'Austin';
 }
 .feature-collection-main .slick-prev {
     left: -25px;
@@ -416,7 +455,7 @@ img.image_box_2, img.image_box_3 {
 /* scrolling text section */
 .text-box h3.subtitle {
     text-align: left;
-    font: italic normal normal 70px/70px Austin Cyr;
+    font: italic normal normal 70px/70px 'Austin';
     letter-spacing: 0;
     color: #000;
     display: flex;
@@ -460,7 +499,7 @@ span.line {
 }
 .product-info h2 {
   text-align: left;
-  font: normal normal normal 50px/58px Austin Cyr;
+  font: normal normal normal 50px/58px 'Austin';
   letter-spacing: 2.75px;
   color: #fff;
   text-transform: uppercase;
@@ -482,11 +521,13 @@ span.line {
 
 .product-info .save {
   text-align: left;
-  font: normal normal normal 11px/20px Avenir LT Std;
   letter-spacing: 0;
   text-transform: uppercase;
   opacity: 1;
   margin: 20px 0 10px 0;
+  font-size: 11px;
+  line-height: 20px;
+  font-family: 'Avenir LT Std 45 Book';
 }
 .product-info .more-info {
   color: #fff;
@@ -518,12 +559,14 @@ span.line {
   display: flex;
 }
 .more-info a {
-    text-align: left;
-    font: normal normal normal 15px/24px Avenir Next LT Pro;
-    letter-spacing: .75px;
-    color: #dcdcdc;
-    opacity: 1;
-    text-decoration: underline;
+  text-align: left;
+  letter-spacing: .75px;
+  color: #dcdcdc;
+  opacity: 1;
+  text-decoration: underline;
+  line-height: 24px;
+  font-size: 15px;
+  font-family: 'Austin';
 }
 .product-info .spr-icon.spr-icon-star-empty {
   opacity: 1;
@@ -537,7 +580,7 @@ span.color {
 /* instafeed */
 #new-feed h2 {
   text-align: center;
-  font: normal normal normal 62px/100px Austin Cyr;
+  font: normal normal normal 62px/100px 'Austin';
   letter-spacing: 2px;
   color: #000000;
   text-transform: capitalize;
@@ -554,6 +597,7 @@ div#new-feed {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+  text-align: left;
 }
        
 .flockler-grid-items {
@@ -564,12 +608,19 @@ div#new-feed {
 /* footer */
 .footer-top h2 {
   text-align: left;
-  font: normal normal normal 55px/40px Austin Cyr;
+  font-family: Austin;
+  font-size: 70px;
+  line-height: 70px;
   letter-spacing: 2px;
   color: #fff;
   text-transform: capitalize;
   margin: 0;
 }
+.insta-header small {
+  letter-spacing: 0.75px;
+  color: #DCDCDC;
+  font-size: 15px !important;
+}                                                                                         
 #footer_d .footer {
     border-top: 1px solid #b6b6b654;
 }
@@ -586,7 +637,7 @@ div#new-feed {
   border-bottom: 1px solid #b6b6b654;
 }
 #footer_c h3 {
-  font: normal normal normal 22px/34px Austin Cyr;
+  font: normal normal normal 22px/34px 'Austin';
   letter-spacing: 1.2px;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -700,7 +751,7 @@ form.footer-form {
   justify-content: flex-end;
 }
 p.help a {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   position: relative;
   top: -1px;
@@ -710,7 +761,7 @@ a.cart-contents {
   padding: 0 25px;
 }
 p.bag {
-  font-size: 11px;
+  font-size: 12px;
   color: #000;
   position: relative;
   top: 1px;
@@ -770,6 +821,216 @@ div#nova-mobile-menu svg {
 
 .is-sticky #nova-mobile-menu svg.icon.icon-hamburger{  fill: #fff;}
 .show-mob {display:none;}
+
+a.selected-currency {
+  position: relative;
+  left: -20px;
+}
+.pull-right.top-dropdown.currency .label {
+  display: none;
+}
+.pull-right.top-dropdown.currency .parent.aux-currency a {
+  color: #000;
+  font-size: 12px;
+  padding-right: 6px;
+}
+.is-sticky .pull-right.top-dropdown.currency .parent.aux-currency a {
+  color: #fff;
+}
+.header-links p.label {
+  font-size: 12px;
+}
+.top-header .currency i, .top-header .header-links i, .top-header .store_language i {
+  color: #000;
+}
+.is-sticky .currency i, .is-sticky .header-links i, .is-sticky .store_language i {
+  color: #fff;
+}
+.parent.aux-currency {
+  text-align: center;
+}
+.pull-right.top-dropdown.currency .fa.fa-angle-down {
+  text-align: center;
+  left: 0;
+}
+.pull-right.top-dropdown.currency {
+  margin-left: 0;
+}
+#novaworks-nav li.level0 {
+  margin-top: 0;
+}
+#novaworks-nav .level0:nth-child(1) {
+  display: none;
+}
+h2.title_phn {
+  display: none;
+}
+
+/* mega menu css */
+li.level-top.parent-dropdown {
+  position: static;
+}
+
+.sub-wrappers {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 77px;
+  background: #fff;
+  transition: .5s;
+  overflow: hidden;
+  padding: 50px;
+  display: none;
+}
+li.level-top.parent-dropdown:hover .level0.sub-wrappers {
+  display: block;
+}
+.nova-header .col-md-5.col-sm-5.col-xs-6 {
+  position: static;
+}
+.nova-header .main-navigation {
+  position: static;
+}
+#novaworks-nav .sub-wrappers .title_group {
+  color: #000 !important;
+}
+.nova-header .header-topMenu {
+  position: static;
+}
+.mega_menu_right {
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+}
+.mega_menu_left {
+  width: 500px;
+}
+.mega_menu_right a img {
+  object-fit: cover;
+  width: 253px;
+  height: 313px;
+}
+.mega_menu_item {
+  width: 253px;
+}
+.menu_grid .row {
+  align-items: flex-start;
+}
+.menu_grid #novaworks-nav li {
+  float: unset;
+  padding: 0;
+  text-align: left;
+}
+.mainlink .level1.menugroups {
+    float: unset !important;
+}
+.mega_menu_right_list {
+  display: flex;
+  grid-gap: 10px;
+}
+
+/* width */
+.mega_menu_right::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.mega_menu_right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.mega_menu_right::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.mega_menu_right::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.mega_menu_item a div {
+  font-size: 16px;
+  font-family: 'Austin';
+  margin: 15px 0;
+}
+.mega_menu_left h3 {
+  padding: 0 14px;
+  font-family: 'Austin';
+  font-size: 24px;
+  line-height: 34px;
+}
+/* collection list page css */
+.row.category-list .item {
+  position: relative;
+} 
+.row.category-list .item {
+  position: relative;
+  margin-bottom: 30px;
+  display: block;
+}
+.collection-list-li a:hover img {
+  transform: scale(1.2);
+} 
+.col-lg-4.col-md-4.col-sm-4.col-xs-6.item a {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.row.category-list .image img {
+  height: 470px;
+  object-fit: cover;
+}
+.row.category-list .image a::before {
+  background: #000 0 0 no-repeat padding-box;
+  opacity: .4;
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+  z-index: 999999;
+}
+.details {
+  position: absolute;
+  color: #fff;
+  width: 90%;
+  bottom: 10px;
+  left: 0;
+  border-top: 1px solid #ffff;
+  z-index: 999999;
+  padding-top: 10px;
+  margin: 0 auto;
+  right: 0;
+  text-align: left;
+  font-family: Austin;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: .5px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.details h4 {
+  font-family: Austin;
+  color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+}
+h4.title:before {
+  position: absolute;
+  content: "";
+  background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/arrow-right_49313eb1-b17b-4ba2-9bdb-3f590ef7cd6b_30x.png?v=1637748503);
+  height: 20px;
+  width: 24px;
+  right: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 5px;
+}
 @media (max-width:1399px) {
 
   .slider-info {
@@ -827,8 +1088,35 @@ img.image_box_2, img.image_box_3 {
 }
 }
 @media (max-width:1199px) {
+  #sidebar-nav-menu .collapsible-wrapper {
+    font-family: 'Austin';
+    font-size: 15px !important;
+    line-height: 21px !important;
+    letter-spacing: .75px !important;
+    border-bottom: 1px solid #DCDCDC;
+    padding: 15px 0 !important;
+    text-transform: capitalize !important;
+    color: #000 !important;
+}
+.close_btn svg {
+  height: 14px !important;
+  width: 14px !important;
+}
+.close_btn {
+  text-align: right;
+  padding-right: 20px;
+}
   .text-box h3.subtitle {
-    font: italic normal normal 60px/60px Austin Cyr;
+    font: italic normal normal 60px/60px 'Austin';
+}
+#novaworks-nav .level0:nth-child(1) {
+  display: flex;
+} 
+ul#sidebar-nav-menu {
+  margin-top: 15px;
+}
+div#mobile-search form {
+  padding-bottom: 5px;
 }
 div#nova-mobile-menu {
   text-align: left !important;
@@ -881,7 +1169,7 @@ body .sticky-wrapper.is-sticky .nav-container {
   border-top: 1px solid transparent;
 }
 .footer-top h2 {
-  font: normal normal normal 45px/40px Austin Cyr;
+  font: normal normal normal 45px/40px 'Austin';
 }
 .product-info a.secondary-btn.white {
   width: 310px;
@@ -914,7 +1202,7 @@ div#nova-mobile-menu {
   height: auto;
 }
 .footer-top h2 {
-  font: normal normal normal 31px/37px Austin Cyr;
+  font: normal normal normal 31px/37px 'Austin';
 }
 .secondary-btn {
   width: 230px;
@@ -985,18 +1273,102 @@ div#nova-mobile-menu {
   line-height: 70px;
 }
 .text-box h3.subtitle {
-  font: italic normal normal 60px/60px Austin Cyr;
+  font: italic normal normal 60px/60px 'Austin';
 }
 }
 
 @media (max-width:767px) {
-  #nova-mobile-menu svg.icon.icon-hamburger {
-    fill: #fff;
+  .cart-contents {  
+    margin-right: 0;
 }
+h2.title_phn {
+  display: block;
+}
+h2.title_des {
+  display: none;
+}
+#footer_a .footer-top {
+  border-bottom: 1px solid #b6b6b654;
+}
+#footer_c h3 {
+  margin-bottom: 20px;
+}
+.insta-header small {
+  font-size: 15px!important;
+  text-align: center;
+  margin: 20px 20px;
+  display: inline-block;
+}
+.secondary-btn {
+  width: 260px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 16px;
+}
+.text-container p {
+  font-size: 24px;
+  line-height: 32px;
+}
+.text-with-button-section .buttons-section a.secondary-btn::after {
+  content: "SUBSCRIBE NOW";
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.text-with-button-section .buttons-section a.secondary-btn {
+  font-size: 0;
+  position: relative;
+}
+div#undefined-sticky-wrapper {
+  height: auto !important;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+}
+.is-sticky .container.nova-header {
+  background: #000;
+}
+.header-transparent #header-container, .header-transparent #header-container #header-section, .header-transparent .main-navigation .header-topMenu .header-topMenu-inner, .header-transparent .nav-container, .header-transparent .top-header {
+  background-color: #fff!important;
+}
+body #logo img.retina {
+  display: none !important;
+} 
+body #logo img.standard {
+  display: flex !important;
+}
+
+body .is-sticky #logo img.retina {
+  display: flex !important;
+} 
+body .is-sticky #logo img.standard {
+  display: none !important;
+}
+body .cart-contents span {
+  font-size: 10px;
+  height: 23px;
+  line-height: 23px;
+  top: -10px;
+  width: 23px;
+}
+.announcement p {
+  font-size: 11px;
+}
+p.bag {
+  display: none;
+}
+  /* #nova-mobile-menu svg.icon.icon-hamburger {
+    fill: #fff;
+} */
 .buttons-section {
   display: grid !important;;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
+}
+.content-part h2 br {
+  display: none;
 }
 .text-with-button-section .buttons-section a {
   width: 100%;
@@ -1007,12 +1379,12 @@ div#nova-mobile-menu {
 p.bag {
   color: #fff;
 }
-body .cart-contents span {
+/* body .cart-contents span {
   color: #fff;
   border: 1px solid #fff;
-}
+} */
 .announcement p { 
-  font-size: 11px;
+  font-size: 11px !important;
 }
 .content-part h2 {
   font-size: 32px;
@@ -1075,6 +1447,7 @@ ul.content-with-image-slider-section-buttons a {
 .text-container-wrapper h2 {
   font-size: 32px;
   line-height: 32px;
+  letter-spacing: 1.6px;
 }
 .collection-list-section {
   padding: 32px 0;
@@ -1117,15 +1490,18 @@ img.image_box_1 {
   margin-left: 0;
 }
 .text-box h3.subtitle {
-  font: italic normal normal 32px/44px Austin Cyr;
+  font-size: 32px;
+  line-height: 44px;
 }
 .marquee {
   height: 120px;
   margin-bottom: 10px;
 }
 .product-info h2 {
-  font: normal normal normal 24px/30px Austin Cyr;
+  font-family: 'Austin';
   letter-spacing: 1.2px;
+  line-height: 30px;
+  font-size: 24px;
 }
 .product-info {
   padding: 50px 40px;
@@ -1159,7 +1535,7 @@ img.image_box_1 {
   width: 100%;
 }
 #new-feed h2 {
-  font: normal normal normal 32px/44px Austin Cyr;
+  font: normal normal normal 32px/44px 'Austin';
   margin-bottom: 18px;
 }
 div#new-feed {
@@ -1180,10 +1556,14 @@ div#new-feed {
 }
 .insta-header {
   justify-content: center;
+  text-align: center;
 }
 .footer-top h2 {
-  font: normal normal normal 31px/32px Austin Cyr;
+  font-family: Austin;
   padding: 0 30px;
+  font-size: 32px;
+  text-align: center;
+  font-style: italic;
 }
 #footer_d .paypal-logo {
   text-align: center;

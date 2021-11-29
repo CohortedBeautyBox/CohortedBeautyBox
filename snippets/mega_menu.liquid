@@ -1,46 +1,17 @@
-{% assign items_list_1 = settings.megamenu1 | split:"," | strip | downcase %}
-{% assign items_list_2 = settings.megamenu2 | split:"," | strip | downcase %}
+
 {% assign items_list_new = settings.megamenunew | split:"," | strip | downcase %}
 {% assign items_list_hot = settings.megamenuhot | split:"," | strip | downcase %}
 {% assign megamenu_image_index = 1 %}
 {% assign megamenu_content_index = 1 %}
 <div class="col-md-5 col-sm-5 col-xs-6">
-  <div id="nova-mobile-menu" class="visible-md visible-sm visible-xs"></div>
+  <div id="nova-mobile-menu" class="visible-md visible-sm visible-xs">{% render 'icon-menu' %}</div>
+ 
   <!-- Header Top Menu -->
   <div class="main-navigation hidden-md hidden-sm hidden-xs">
     <div class="header-topMenu">
       <div class="header-topMenu-inner">
-        <!-- Mobile menu -->
-        <div class="novaworks-mobile-navbar">
-          <nav>
-            <ul id="mobile-menu">
-              {% for link in linklists['main-menu'].links %}
-              <li class="level0 level-top{% if link.active %} active{% endif %} {% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}{% if linklists[link.handle] != empty %} parent{% endif %}">
-                <a href="{{link.url}}"><span>{{link.title}}</span></a>
-                {% if linklists[link.handle] != empty %}
-                <ul class="level0">
-                  {% for sublink in linklists[link.handle].links %}
-                  <li class="level1 item{% if sublink.active %} active{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}{% if linklists[sublink.handle] != empty %} m-dropdown parent{% endif %}">
-                    <a href="{{sublink.url}}"><span>{{sublink.title}}</span></a>
-                    {% if linklists[sublink.handle] != empty %}
-                    <ul class="level1">
-                      {% for subsublink in linklists[sublink.handle].links %}
-                      <li class="level2{% if subsublink.active %} active{% endif %}{% if linklists[subsublink.handle] != empty %} m-dropdown{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
-                        <a href="{{subsublink.url}}"><span>{{subsublink.title}}</span></a>
-                      </li>
-                      {% endfor %}
-                    </ul>
-                    {% endif %}
-                  </li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-              </li>
-              {% endfor %}
-            </ul>
-          </nav>
-        </div>
-		<!-- End Mobile menu -->
+       
+
         <!-- Desktop menu -->
         <div class="novaworks-navigation">
           <div class="novaworks-main-menu">
@@ -59,55 +30,137 @@
                   </span>
                   {% if items_list_1 contains cat or items_list_2 contains cat or linklists[link.handle] != empty %}<i class="fa fa-angle-down"></i>{% endif %}
                 </a>
-                {% if items_list_1 contains cat or items_list_2 contains cat or linklists[link.handle] != empty %}
-                {% if items_list_1 contains cat %}
-                <div class="level0 sub-wrapper">
+                 
+                {% if linklists[link.handle] != empty %}
+                <div class="level0 sub-wrappers">
                   {% if linklists[link.handle] != empty %}
                   {% if linklists[link.handle].links.size > 5 %}
                   	{% assign sub_menu_col = 5 %}
                   {% else %}
                     {% assign sub_menu_col = linklists[link.handle].links.size %}
                   {% endif %}
-                  <div class="grid12-{% if linklists[link.handle].links.size < 4 %}6{% else %}8{% endif %} itemgrid-{{sub_menu_col}}col">
-                    <ul class="level0">
-                      {% for sublink in linklists[link.handle].links %}
-                      <li class="level1 groups item first">
-                        <a href="{{ sublink.url }}"><span class="title_group">{{ sublink.title }}</span></a>
-                        {% if linklists[sublink.handle] != empty %}
-                        <div class="groups-wrapper">
-                          <ul class="level1">
-                            {% for subsublink in linklists[sublink.handle].links %}
-                            <li class="level2 {% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
-                              <a href="{{ subsublink.url }}"><span>{{ subsublink.title }}</span></a>
-                            </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
+                  <div class="menu_grid">
+                    {%- for block in section.blocks  -%}
+                    {%- assign mega_menu = 0 | plus: 0 -%}
+                    {% if block.settings.image1 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image2 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image3 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image4 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image6 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image7 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+
+                    {%- assign menu_title = link.title | downcase -%}
+                    {%- assign block-title = block.settings.title | downcase -%}
+                    {% if menu_title == block-title  %}
+
+                    <div class="header-mega-menu row">
+
+                      <div class="{{ megamenu_item_block }} mega_menu_left">
+                        <h3>Shop all</h3>
+                        <ul class="mainlink">
+                          {% for sublink in linklists[link.handle].links %}
+                          <li class="level1 menugroups">
+                            <a href="{{ sublink.url }}"><span class="title_group">{{ sublink.title }}</span></a>
+                            {% if linklists[sublink.handle] != empty %}
+                            <div class="menugroups-wrapper">
+                              <ul class="level1">
+                                {% for subsublink in linklists[sublink.handle].links %}
+                                <li class="level2 {% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
+                                  <a href="{{ subsublink.url }}"><span>{{ subsublink.title }}</span></a>
+                                </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                            {% endif %}
+                          </li>
+                          {% endfor %}
+                        </ul>
+                        
+                      </div>
+
+                      <div class=" mega_menu_right">
+                        <div class=" mega_menu_right_list">
+                          <div class="mega_menu_item">
+                      {% if block.settings.image1 != blank %}
+                      <a href="{{ block.settings.link1 }}" class=""">
+                        <img src="{{ block.settings.image1 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle1 != blank %}
+                        <div class="">{{block.settings.menutitle1}}</div>
                         {% endif %}
-                      </li>
-                      {% endfor %}
-                    </ul>
+                      </a>
+                      {% endif %}
+                      </div>
+                      <div class="mega_menu_item">
+                      {% if block.settings.image2 != blank %}
+                      <a href="{{ block.settings.link2 }}" class="">
+                        <img src="{{ block.settings.image2 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle2 != blank %}
+                        <div class="">{{block.settings.menutitle2}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+                      </div>
+                      <div class="mega_menu_item">
+                      {% if block.settings.image3 != blank %}
+                      <a href="{{ block.settings.link3 }}" class="">
+                        <img src="{{ block.settings.image3 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle3 != blank %}
+                        <div class="">{{block.settings.menutitle3}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+                      </div>
+                      <div class="mega_menu_item">
+                      {% if block.settings.image4 != blank %}
+                      <a href="{{ block.settings.link4 }}" class="">
+                        <img src="{{ block.settings.image4 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle4 != blank %}
+                        <div class="">{{block.settings.menutitle4}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+                      </div>
+                      <div class="mega_menu_item">
+                      {% if block.settings.image5 != blank %}
+                      <a href="{{ block.settings.link5 }}" class="">
+                        <img src="{{ block.settings.image5 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle5 != blank %}
+                        <div class="">{{block.settings.menutitle5}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+                      </div>
+                      <div class="mega_menu_item">
+                      {% if block.settings.image6 != blank %}
+                      <a href="{{ block.settings.link6 }}" class="">
+                        <img src="{{ block.settings.image6 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle6 != blank %}
+                        <div class="">{{block.settings.menutitle6}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+                      </div>
+                      </div>
+                      </div>
+                    </div>
+                    {% endif %}
+                    {%- endfor -%}
                   </div>
                   {% endif %}
-                  {% capture mega_image %}megamenuimage{{ megamenu_image_index }}.png{% endcapture %}
-                  <div class="text-right grid12-{% if linklists[link.handle].links.size < 4 %}6{% else %}4{% endif %}">
-                    <div class="bg-menu-1"><img src="{{ mega_image | asset_url }}" alt="" /></div>
-                  </div>
-                  {% assign megamenu_image_index = megamenu_image_index | plus:1 %}
                 </div>
-                {% elsif items_list_2 contains cat %}
-                <div class="level0 sub-wrapper">
-                  {% if megamenu_content_index == 1 %}
-                  <div class="grid12-12">{{ pages[settings.megamenupage1].content }}</div>
-                  {% endif %}
-                  {% if megamenu_content_index == 2 %}
-                  <div class="grid12-12">{{ pages[settings.megamenupage2].content }}</div>
-                  {% endif %}
-                  {% if megamenu_content_index == 3 %}
-                  <div class="grid12-12">{{ pages[settings.megamenupage3].content }}</div>
-                  {% endif %}
-                  {% assign megamenu_content_index = megamenu_content_index | plus:1 %}
-                </div>
+              
                 {% else %}
                 <ul class="level0 menu-dropdown">
                   {% for sublink in linklists[link.handle].links %}
@@ -126,7 +179,7 @@
                   {% endfor %}
                 </ul>
                 {% endif %}
-                {% endif %}
+               
               </li>
               {% endfor %}
             </ul>

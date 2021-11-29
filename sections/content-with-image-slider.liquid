@@ -28,11 +28,14 @@
 </div>
 <style>
   .slick-next:before {
-    content: url("https://cdn.shopify.com/s/files/1/2635/3958/files/arrow-right.png?v=1637654290");
+    content: url("{{'arrow-right.png' | asset_img_url:'30x20'}}");
   }
   .slick-prev:before {
-    content: url("https://cdn.shopify.com/s/files/1/2635/3958/files/arrow-left.jpg?v=1637655357");
+    content: url("{{'arrow-left.png' | asset_img_url:'30x20'}}");
   }
+  .slick-arrow {
+    line-height: 68px;
+}
   .slick-prev {
     left: 40px;
     background: #fff !important;
