@@ -1,0 +1,126 @@
+
+<div class="redeem-gifts">
+	<div class="container">
+		<div class="text-container-wrapper full-width">
+			<h2>{{ section.settings.title }}</h2>
+			<div class="description-before">{{ section.settings.text }}</div>
+		  </div>
+
+		  <div class="product-box-inner">
+		<ul class="grid-point-listd">
+			  {% for block in section.blocks %}  
+			  <li><div class="product-box">
+				  <img src="{{ block.settings.product_image | img_url:'master'}}">
+				  <a href="{{ block.settings.link }}" class="product-btn">{{ block.settings.linktext }}</a>
+			  </div></li>
+			  {% endfor %}
+			
+		</ul>
+		<div class="product-feature-image">
+			<img src="{{ section.settings.feature_image | img_url:'master'}}">
+		</div>
+	</div>
+
+	</div>
+  </div>
+  <style>
+	.text-container-wrapper.full-width {
+    width: 100%;
+    text-align: center;
+	padding-bottom: 80px;
+}
+.products-with-image {
+    padding: 70px 0;
+}
+.products-with-image .description-before {
+    justify-content: center;
+	
+}
+a.product-btn {
+    font-size: 15px;
+    font-family: 'Austin';
+    background: #A7A7A7 0% 0% no-repeat padding-box;
+    display: inline-block;
+    line-height: 70px;
+    height: 70px;
+    color: #fff;
+    margin-top: 20px;
+    width: 100%;
+}
+ul.grid-point-listd {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+ul.grid-point-listd li {
+    width: 50%;
+    padding: 0 10px;
+}
+.product-box-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+  </style>
+  {% schema %}
+  {
+	"name": "Products with image",
+	"class": "products-with-image",
+	  "max_blocks": 4,
+	"settings": [
+	{
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+	{
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+	{
+        "type": "image_picker",
+        "id": "feature_image",
+        "label": "Select Image"
+	      }
+	],
+	"blocks": [
+	  {
+		"type": "select",
+		"name": "Add Product",
+		"settings": [
+		{
+			"type": "image_picker",
+			"id": "product_image",
+			"label": "Select Image"
+			  },
+		  {
+			"id": "link",
+			"type": "url",
+				 "label": "Button Link"
+		  },
+		  {
+			"id": "linktext",
+			"type": "text",
+			"label": "Button Text"		  }
+		]
+	  }
+	],
+	"presets": [
+	  {
+		"name": "Products with image",
+		"category": "Earn Points",
+		"blocks": [
+		  { 
+			"type": "select"
+		  },
+		  {
+			"type": "select"
+		  }
+		]
+	  }
+	]
+  }
+  {% endschema %}
+  

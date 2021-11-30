@@ -37,7 +37,7 @@
 			
 			<li class="level0 nav-0 parent home collapsible">
 			  {% if linklists[link.handle] != empty %}
-			  <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"></span>
+			  <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"><img src="{{ 'drop-down-arrow.png' | asset_img_url: '10x10'}}"></span>
 			  {% endif %}
 			  <a class="collapsible-wrapper {{avtive}}" href="{{ link.url }}"><span class="category_name">{{ link.title }}</span></a>
 			  {% if linklists[link.handle] != empty %}
@@ -68,78 +68,237 @@
 				  {% endif %}
 				</li>
 			  {% endfor %}
+                {%- for block in section.blocks  -%}
+                    {%- assign mega_menu = 0 | plus: 0 -%}
+                    {% if block.settings.image1 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image2 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image3 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image4 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image6 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+                    {% if block.settings.image7 != blank %}
+                    {%- assign mega_menu = mega_menu | plus: 1 -%}
+                    {% endif %}
+
+                    {%- assign menu_title = link.title | downcase -%}
+                    {%- assign block-title = block.settings.title | downcase -%}
+                    {% if menu_title == block-title  %}
+
+                    <div class="header-mega-menu row">
+						<div class="menu_scroll">
+							<div class="menu_scroll_item">
+                      {% if block.settings.image1 != blank %}
+                      <a href="{{ block.settings.link1 }}" class="">
+                        <img src="{{ block.settings.image1 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle1 != blank %}
+                        <div class="">{{block.settings.menutitle1}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+					  </div>
+					  <div class="menu_scroll_item">
+                      {% if block.settings.image2 != blank %}
+                      <a href="{{ block.settings.link2 }}" class="">
+                        <img src="{{ block.settings.image2 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle2 != blank %}
+                        <div class="">{{block.settings.menutitle2}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+					</div>
+					<div class="menu_scroll_item">
+                      {% if block.settings.image3 != blank %}
+                      <a href="{{ block.settings.link3 }}" class="">
+                        <img src="{{ block.settings.image3 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle3 != blank %}
+                        <div class="">{{block.settings.menutitle3}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+					  </div>
+					  <div class="menu_scroll_item">
+                      {% if block.settings.image4 != blank %}
+                      <a href="{{ block.settings.link4 }}" class="">
+                        <img src="{{ block.settings.image4 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle4 != blank %}
+                        <div class="">{{block.settings.menutitle4}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+					  </div>
+					  <div class="menu_scroll_item">
+                      {% if block.settings.image5 != blank %}
+                      <a href="{{ block.settings.link5 }}" class="">
+                        <img src="{{ block.settings.image5 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle5 != blank %}
+                        <div class="">{{block.settings.menutitle5}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+					  </div>
+					  <div class="menu_scroll_item">
+                      {% if block.settings.image6 != blank %}
+                      <a href="{{ block.settings.link6 }}" class="">
+                        <img src="{{ block.settings.image6 | img_url : '400x400'}}">
+                        {% if block.settings.menutitle6 != blank %}
+                        <div class="">{{block.settings.menutitle6}}</div>
+                        {% endif %}
+                      </a>
+                      {% endif %}
+					  </div>
+                    </div>
+				</div>
+                    {% endif %}
+                    {%- endfor -%}
 			  </ul>
 			  {% endif %}
 			</li>
 			{% endfor %}
-	  </ul>
-	</nav>
+        <li class="mobile_help collapsible"><a class="collapsible-wrapper" href="#">Help</a></li>
+        <li class="collapsible">
+          {% if shop.customer_accounts_enabled %}
+          <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"></span>
+          <a href="#" class="collapsible-wrapper">Account</a>
+          <ul class="links collapsible" data-expanded="{% if avtive != '' %}1{% else %}0{% endif %}">
+            <li class="first"><a href="/account" title="My Account">My Account</a></li>
+            {% if settings.enable_wishlist %}
+            <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li>
+            {% endif %}
+            <li><a href="/checkout" title="Checkout">Checkout</a></li>
+
+            {% if customer  %}
+            <li class="last">{{ 'Logout' | customer_logout_link }}</li>
+            {% else %}
+            <li>{{ 'Sign up' | customer_register_link }}</li>
+            <li class="last">{{ 'Login' | customer_login_link }}</li>
+            {% endif %}
+          </ul>
+          {% else %}
+          <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"></span>
+          <a href="#" class="collapsible-wrapper">Checkout</a>
+          <ul class="links collapsible">
+            <li><a class="collapsible-wrapper" href="/checkout" title="Checkout">Checkout</a></li>
+          </ul>
+          {% endif %}
+        </li>
+      </ul>
+  </nav>
+  <div class="mobile_social_media">
+    <div class="mobile_social_media_title">FOLLOW US</div>
+    <ul class="mobile_social">
+      {% if settings.footer_facebook_link != '' %}
+      <li><a href="{{settings.footer_facebook_link}}">Facebook</a></li>
+      {% endif %}
+      {% if settings.footer_twitter_link != '' %}
+      <li><a href="{{settings.footer_twitter_link}}">Twitter</a></li>
+      {% endif %}
+      {% if settings.footer_pinterest_link != '' %}
+      <li><a href="{{settings.footer_pinterest_link}}">Pinterest</a></li>
+      {% endif %}
+      {% if settings.footer_instagram_link != '' %}
+      <li><a href="{{settings.footer_instagram_link}}">Instagram</a></li>
+      {% endif %}
+      {% if settings.footer_googleplus_link != '' %}
+      <li><a href="{{settings.footer_googleplus_link}}">Google Plus</a></li>
+      {% endif %}
+    </ul>		
   </div>
-  <style>
-  div#mobile-search {
-	  border-bottom: 1px solid rgba(60,60,60,.1);
-  }
-  div#mobile-search form {
-	  display: flex;
-	  align-items: center;
-  }
-  div#mobile-search form {
-	  display: flex;
-  }
-  .novaworks-mobile-navbar {
-	  padding: f;
-	  position: fixed;
-	  left: 0;
-	  right: 0;
-	  top: 0;
-	  bottom: 0;
-	  background-color: #00000085;
-	  z-index: 9999;
-	  display: none;
-  }
-	.novaworks-mobile-navbar.open_mobile_navbar{
-	display:block;
+</div>
+<style>
+	div#mobile-search {
+		border-bottom: 1px solid rgba(60,60,60,.1);
 	}
-  input#Search {
-	  background: 0 0;
-	  /* height: 30px; */
-	  font-size: 13px;
-	  color: #c0bebb;
-	  letter-spacing: .03em;
-	  padding: 5px 20px;
-	  border: none;
-	  width: 100%;
+	div#mobile-search form {
+		display: flex;
+		align-items: center;
+	}
+	div#mobile-search form {
+		display: flex;
+	}
+	.novaworks-mobile-navbar {
+		padding: f;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: #00000085;
+		z-index: 9999;
+		display: none;
+	}
+	  .novaworks-mobile-navbar.open_mobile_navbar{
+	  display:block;
+	  }
+	  li.level2.collapsible a.collapsible-wrapper {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    border: none !important;
+    font-family: 'Avenir LT Std 45 Book' !important;
+}
+	input#Search {
+		background: 0 0;
+		/* height: 30px; */
+		font-size: 13px;
+		color: #c0bebb;
+		letter-spacing: .03em;
+		padding: 5px 15px;
+		border: none;
+		width: 100%;
+	}
+	span.plus-right img {
+	  position: absolute;
+	  top: 20px;
+	  transform: rotate(267deg);
   }
-  div#mobile-search button.btn {
-	  background: transparent;
-	  padding: 0;
-	  /* height: 20px; */
+
+  .collapsible .plus-right {
+	  width: 50px;
+	  height: 50px;
   }
-  svg.icon.icon-search {
+	#sidebar-nav-menu .plus-left, #sidebar-nav-menu .plus-right {
+	  background-image: none;
+  }
+	div#mobile-search button.btn {
+		background: transparent;
+		padding: 0;
+		/* height: 20px; */
+	}
+	svg.icon.icon-search {
 	  display: inline-block;
-	  width: 20px;
-	  height: 20px;
+	  width: 16px;
+	  height: 16px;
 	  vertical-align: middle;
+	  fill: #1E1E1E;
   }
-	.icon-fallback-text, .label-hidden {
-	  position: absolute!important;
-	  overflow: hidden;
-	  clip: rect(0 0 0 0);
-	  height: 1px;
-	  width: 1px;
-	  margin: -1px;
-	  padding: 0;
-	  border: 0;
-  }
-	.close_btn svg.icon.icon-close {
-	  width: 20px;
-	  height: 20px;
-  }
-	.novaworks-mobile-navbar.open_mobile_navbar nav{
-	  left: 0;
-	  transform: translateX(0px);
+	  .icon-fallback-text, .label-hidden {
+		position: absolute!important;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		width: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
 	}
-   .novaworks-mobile-navbar nav {
+	  .close_btn svg.icon.icon-close {
+		width: 20px;
+		height: 20px;
+	}
+	  .novaworks-mobile-navbar.open_mobile_navbar nav{
+		left: 0;
+		transform: translateX(0px);
+	  }
+	  .novaworks-mobile-navbar nav {
 	  width: 400px;
 	  position: fixed;
 	  left: -400px;
@@ -149,28 +308,58 @@
 	  color: #000;
 	  bottom: 0;
 	  height: 100%;
-	  overflow: hidden;
+	  overflow-x: scroll;
 	  z-index: 999!important;
 	  box-shadow: 0 0 150px rgb(0 0 0 / 10%);
 	  transition: transform .25s cubic-bezier(.165, .84, .44, 1);
-	  padding: 25px;
+	  padding: 25px 37px 25px 20px;
   }
-	.novaworks-mobile-navbar ul#sidebar-nav-menu li {
-	  position: relative;
-  }
-	.novaworks-mobile-navbar ul#sidebar-nav-menu a {
-	  padding: 10px 25px 10px 0;
-	  display: block;
-	  font-size: 14px;
-	  letter-spacing: 1px;
-	  text-decoration: none;
-	  text-transform: uppercase;
-	  white-space: nowrap;
-	  text-align: left;
-	  line-height: 1.7;
-	  color: #202020;
-  }
-  </style>
+	  .novaworks-mobile-navbar ul#sidebar-nav-menu li {
+		position: relative;
+	}
+	  .novaworks-mobile-navbar ul#sidebar-nav-menu a {
+		padding: 10px 25px 10px 0;
+		display: block;
+		font-size: 14px;
+		letter-spacing: 1px;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+		text-align: left;
+		line-height: 1.7;
+		color: #202020;
+	}
+	.menu_scroll_item img {
+    width: 211px;
+    height: 241px;
+    object-fit: cover;
+}
+.menu_scroll_item a {
+    padding: 0 !important;
+}
+.menu_scroll {
+    display: flex;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.header-mega-menu.row {
+    display: flex;
+    overflow-x: scroll;
+}
+.menu_scroll_item {
+    width: 211px;
+}
+.menu_scroll_item div {
+    font-family: 'Austin';
+    font-size: 12px;
+    line-height: 16px;
+    color: #000;
+    padding: 10px 0;
+    max-width: 200px;
+    white-space: break-spaces;
+}
+	</style>
   <script>
 	$(document).on('click', '#nova-mobile-menu', function(){
 	  $('.novaworks-mobile-navbar').addClass('open_mobile_navbar');

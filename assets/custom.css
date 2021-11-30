@@ -175,6 +175,9 @@ ul.content-with-image-slider-section-buttons a {
 .collection-list-li {
   width: 25%;
 }
+.collection-list-li a:hover::before {
+  opacity: .35;
+}
 .collection-list-li a span {
   position: absolute;
   color: #fff;
@@ -202,6 +205,7 @@ ul.content-with-image-slider-section-buttons a {
     position: absolute;
     height: 100%;
     width: 100%;
+    z-index: 1;
 }
 .text-container-wrapper h2 {
     font-family: 'Austin';
@@ -299,7 +303,10 @@ body .is-sticky .cart-contents span {
   font-family: 'Avenir LT Std 45 Book';
 }
 div#undefined-sticky-wrapper {
-    border: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+}
+div#undefined-sticky-wrapper {
+  height: auto !important;
 }
 .sticky-wrapper.is-sticky .novaworks-navigation #novaworks-nav>li.level0>a>span {
     font-size: 12px;
@@ -754,7 +761,7 @@ p.help a {
   font-size: 12px;
   text-transform: uppercase;
   position: relative;
-  top: -1px;
+  top: 0;
   padding: 0 30px;
 }
 a.cart-contents {
@@ -764,7 +771,7 @@ p.bag {
   font-size: 12px;
   color: #000;
   position: relative;
-  top: 1px;
+  top: 2px;
 }
 body .cart-contents span {
   font-size: 10px;
@@ -908,11 +915,11 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
 }
 .mega_menu_right a img {
   object-fit: cover;
-  width: 253px;
+  width: 274px;
   height: 313px;
 }
 .mega_menu_item {
-  width: 253px;
+  width: 274px;
 }
 .menu_grid .row {
   align-items: flex-start;
@@ -930,25 +937,6 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
   grid-gap: 10px;
 }
 
-/* width */
-.mega_menu_right::-webkit-scrollbar {
-  width: 6px;
-}
-
-/* Track */
-.mega_menu_right::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-.mega_menu_right::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-.mega_menu_right::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 .mega_menu_item a div {
   font-size: 16px;
   font-family: 'Austin';
@@ -976,14 +964,19 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
   display: block;
   position: relative;
   width: 100%;
+  overflow: hidden;
+}
+.col-lg-4.col-md-4.col-sm-4.col-xs-6.item a:hover img {
+  transform: scale(1.1);
 }
 .row.category-list .image img {
   height: 470px;
   object-fit: cover;
+  transition: transform .5s ease;
 }
 .row.category-list .image a::before {
   background: #000 0 0 no-repeat padding-box;
-  opacity: .4;
+  opacity: .30;
   content: "";
   position: absolute;
   width: 100%;
@@ -1031,8 +1024,193 @@ h4.title:before {
   background-repeat: no-repeat;
   top: 5px;
 }
-@media (max-width:1399px) {
+ul#novaworks-nav li.level-top a.level-top {
+  margin: 0 8px 0 8px !important;
+  padding: 31px 0;
+}
+/* contact page */
+#contact-us .insta-header {
+  border-top: 1px solid #dddd;
+  padding-top: 60px;
+}
 
+.page-title h1 {
+  text-align: center;
+  font: normal normal normal 80px/110px 'Austin';
+  letter-spacing: 0px;
+  color: #1A1A1A;
+  text-transform: capitalize;
+}
+.page-title {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 50px 0;
+}
+.info-boxs{
+  text-align: center;
+}
+
+.info-boxs h3 {
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 1.6px;
+  font-family: 'Austin';
+}
+.info-boxs p {
+  font-size: 15px;
+  line-height: 24px;
+  height: 100px;
+  overflow: hidden;
+}
+.contact-content {
+  padding: 50px 80px !important;
+}
+.info-boxs h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.info-boxs p {
+  height: 100%;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.form-list li {
+  width: 100%;
+}
+.input-box input, .input-box select {
+  height: 50px;
+  line-height: 37px;
+  font-size: 12px;
+  text-indent: 10px;
+}
+#contactForm .form-list li.wide .input-box textarea {
+  font-size: 12px;
+  text-indent: 10px;
+}
+.info-boxs a {
+  font-size: 15px;
+}
+.info-boxs a {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 1.2px;
+  font-family: 'Austin';
+}
+#contactForm ul.form-list {
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin-top: 50px;
+}
+.input-box input, .input-box select {
+  height: 65px;
+  line-height: 55px;
+  text-indent: 20px;
+  color: #000;
+  font-size: 15px;
+  font-family: 'AVENIR LT STD 45 BOOK';
+  width: 100%;
+  appearance: none;
+}
+.select-inp:before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/down-arrow.png?v=1638259587);
+  right: 20px;
+  top: 20px;
+  background-size: contain;
+}
+#contactForm .buttons-set {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+select#customer-services option {
+  background: #F1F1F1 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 12px;
+}
+.form-list li:last-child {
+  grid-column: 1 / span 2;
+}
+#contactForm .form-list li.wide .input-box textarea {
+  color: #A7A7A7;
+}
+#contactForm .form-list label {
+  display: none;
+}
+.input-box input::placeholder {
+  color: #A7A7A7;
+}
+.cms-page.contact .insta-header {
+  border-top: 1px solid #ccc;
+  padding-top: 60px;
+}
+@media(min-width:1400px){
+
+
+  #novaworks-nav a {
+    font-size: 15px!important;
+}
+p.help a {
+  font-size: 15px;
+}
+.header-links p.label {
+  font-size: 15px;
+}
+.pull-right.top-dropdown.currency .parent.aux-currency a {
+  font-size: 15px;
+}
+p.bag {
+  font-size: 15px;
+}
+.sticky-wrapper.is-sticky .novaworks-navigation #novaworks-nav>li.level0>a>span {
+  font-size: 15px;
+}
+body .cart-contents span {
+  height: 15px;
+  line-height: 14px;
+  top: 15px;
+}
+.contact-content {
+  padding: 0 300px;
+}
+.container.nova-header {
+  padding: 0 100px;
+}
+.gallery-content {
+  align-content: space-between;
+}
+img.image_box_2, img.image_box_3 {
+  height: 100%;
+}
+.product-info {
+  padding: 0 60px;
+}
+}
+@media(max-width:1600px){
+
+  .info-boxs h3 {
+    font-size: 24px;
+    line-height: 39px;
+}
+.info-boxs a {
+  font-size: 19px;
+}
+.info-boxs p {
+  height: 130px;
+}
+}
+@media (max-width:1399px) {
+.input-box input, .input-box select {
+    height: 52px;
+    line-height: 40px;
+    font-size: 13px;
+    appearance: none;
+}
   .slider-info {
     max-width: 585px;
     padding-left: 40px;
@@ -1069,24 +1247,7 @@ img.image_box_2, img.image_box_3 {
   font-size: 17px;
 }
 }
-@media(min-width:1400px){
 
-  #novaworks-nav a {
-    font-size: 15px !important; 
-}
-.container.nova-header {
-  padding: 0 100px;
-}
-.gallery-content {
-  align-content: space-between;
-}
-img.image_box_2, img.image_box_3 {
-  height: 100%;
-}
-.product-info {
-  padding: 0 60px;
-}
-}
 @media (max-width:1199px) {
   #sidebar-nav-menu .collapsible-wrapper {
     font-family: 'Austin';
@@ -1097,6 +1258,9 @@ img.image_box_2, img.image_box_3 {
     padding: 15px 0 !important;
     text-transform: capitalize !important;
     color: #000 !important;
+}
+.contact-content {
+  padding:  80px!important;
 }
 .close_btn svg {
   height: 14px !important;
@@ -1281,6 +1445,20 @@ div#nova-mobile-menu {
   .cart-contents {  
     margin-right: 0;
 }
+#contact-us .insta-header {
+  border-top: none;
+  padding-top: 0;
+}
+#contactForm ul.form-list {
+  display: flex!important;
+  flex-wrap: wrap;
+  grid-gap: 15px !important;
+  margin-top: 0 !important;
+  padding: 0 15px;
+}
+.page-title h1 {
+  font: normal normal normal 36px/36px 'Austin';
+}
 h2.title_phn {
   display: block;
 }
@@ -1322,10 +1500,23 @@ h2.title_des {
   font-size: 0;
   position: relative;
 }
-div#undefined-sticky-wrapper {
+.container.nova-header {
   height: auto !important;
   border: none;
-  border-bottom: 1px solid #dcdcdc;
+}
+.info-boxs h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.info-boxs {
+  text-align: left;
+}
+.contact-content {
+  padding: 10px 20px !important;
+}
+.info-boxs p {
+    height: 100%;
+    margin-bottom: 20px;
 }
 .is-sticky .container.nova-header {
   background: #000;

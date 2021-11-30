@@ -1,0 +1,71 @@
+<div class="rich-text">
+	<div class="container">
+		{% if section.settings.text != blank %}
+	  <div class="text-container">
+		
+		{{ section.settings.text }}
+		
+	  </div>
+	  {% endif %}
+	  <ul class="buttons-section">
+		{% if section.settings.button_primary != blank %}
+		<li>
+			
+		  <a class="primary-btn" href="{{ section.settings.button_primary_url }}">
+			  {{ section.settings.button_primary }}</a>
+		 
+		</li>
+		{% endif %}
+		{% if section.settings.button_secondary != blank %}
+		<li>
+			
+		  <a class="secondary-btn" href="{{ section.settings.button_secondary_url }}">
+			  {{ section.settings.button_secondary }}</a>
+		 
+		</li>
+		{% endif %}
+	  </ul>
+	</div>
+  </div>
+
+  {% schema %}
+  {
+	"name": "Rich Text",
+	"class": "rich-text-main",
+	
+	"settings": [
+	  {
+		"type": "html",
+		"id": "text",
+		"label": "Text",
+		"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+	  },
+	  {
+		"type": "text",
+		"id": "button_primary",
+		"label": "Primary Button Text"
+	  },
+	  {
+		"type": "url",
+		"id": "button_primary_url",
+		"label": "Primary Button URL"
+	  },
+	  {
+		"type": "text",
+		"id": "button_secondary",
+		"label": "Secondary Button Text"
+	  },
+	  {
+		"type": "url",
+		"id": "button_secondary_url",
+		"label": "Secondary Button URL"
+	  }
+	],
+	"presets": [
+	  {
+		"name": "Rich Text",
+		"category": "Text"
+	  }
+	]
+  }
+  {% endschema %}

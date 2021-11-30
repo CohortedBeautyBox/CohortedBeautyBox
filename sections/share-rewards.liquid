@@ -1,0 +1,46 @@
+<div class="background-image-with-text">
+	<div class="container">
+<div class="background-inner-content">
+	<div class="text-container-wrapper full-width">
+		<h2 style="color:#fff;">Share The Rewards</h2>
+		<div class="description-before"><p style="color:#fff;">Refer your friends with your own unique referral link. You can refer as many friends as you'd like, at anytime. Earn 100 points when they spend over £25 at Cohorted.</p></div>
+		<a class="secondary-btn white" href="#">SIGN IN NOW!</a>
+	  </div>
+</div>
+	</div>
+  </div>
+  <style>
+  .background-inner-content {
+    background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/Share-Friends-Background_b95973e7-7529-4263-9530-dde9f563dfad.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+}
+.background-inner-content .text-container-wrapper.full-width {
+    max-width: 60%;
+    margin: 0 auto;
+}
+.description-before {
+    margin-bottom: 30px;
+}
+</style>
+  {% schema %}
+  {
+	"name": "Share rewards",
+	"settings": [
+	  {
+		"type": "html",
+		"id": "text",
+		"label": "Text",
+		"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+	  }
+	],
+	"presets": [
+	  {
+		"name": "Share rewards",
+		"category": "Banner"
+	  }
+	]
+  }
+  {% endschema %}
+  

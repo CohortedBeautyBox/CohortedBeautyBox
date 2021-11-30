@@ -163,7 +163,7 @@
   {%- render 'bold-subscription-widget' -%}
 </head>
 
-<body class="{% if template contains 'index' %}header-transparent{% else %}header-black-inner{% endif %} cms-home-v2 cms-{{template}}{% if template contains 'index' or template contains 'collection' or template contains 'product' or template contains 'customers' %} white-nav{% endif %}">
+<body id="{{ page_title | handleize }}" class="{% if template contains 'index' %}header-transparent{% else %}header-black-inner{% endif %} cms-home-v2 cms-{{template}}{% if template contains 'index' or template contains 'collection' or template contains 'product' or template contains 'customers' %} white-nav{% endif %}">
   <div id="nova-notification" class="ajax-notification">
     <div class="notification-content"></div>
     <a href="javascript:;" class="btn-remove">Close</a>

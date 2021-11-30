@@ -1,0 +1,103 @@
+<div class="rew_banner">
+	<div class="container">
+<div class="banner_inner">
+	<div class="banner_login_box">
+  <h3>My Account</h3>
+  <div class="icon-text">
+	  <img src="">
+	  <h5>Earn Points For Every Purchase You Make.</h5>
+  </div>
+  <div class="account-buttons">  <a href=""> <img src="">SIGN UP </a>
+	<a class="white" href=""> <img src="">MY ACCOUNT </a></div>
+
+	</div>
+	<div class="img-right">
+		<img src="{{ 'Share-Rewards-Promo-Banner.jpg' | asset_img_url: 'master' }}">
+	</div>
+</div>
+	</div>
+  </div>
+  <style>
+	.banner_inner {
+  display: grid;
+  grid-template-columns: 438px 1fr;
+  grid-gap: 50px;
+  margin-bottom: 80px;
+}
+.banner_login_box {
+  background: #FFF5EF 0% 0% no-repeat padding-box;
+  margin: 0 50px;
+  height: max-content;
+  padding: 40px 20px;
+  text-align: left;
+}
+.banner_login_box h3 {
+  font-size: 30px;
+  line-height: 32px;
+  font-family: 'Austin';
+  text-transform: capitalize;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  display: block;
+  margin-bottom: 25px;
+}
+.icon-text {
+  display: flex;
+  grid-gap: 15px;
+}
+.page-title.new h5 {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'AVENIR LT STD 45 BOOK';
+  color: #1A1A1A;
+  margin-top: 0;
+}
+.icon-text img {
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.icon-text h5 {
+  margin-top: 0;
+  font-family: 'Austin';
+  font-size: 24px;
+  line-height: 28px;
+}
+.account-buttons a {
+  height: 65px;
+  border: 1px solid #000;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 65px;
+  font-family: 'Austin';
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.account-buttons .white {
+  background: #fff;
+}
+</style>
+  {% schema %}
+  {
+	"name": "Cohorted rewards banner",
+	"class": "Cohorted_rew_banner",
+	"settings": [
+	  {
+		"type": "html",
+		"id": "text",
+		"label": "Text",
+		"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+	  }
+	],
+	"presets": [
+	  {
+		"name": "Cohorted rewards banner",
+		"category": "Banner"
+	  }
+	]
+  }
+  {% endschema %}
