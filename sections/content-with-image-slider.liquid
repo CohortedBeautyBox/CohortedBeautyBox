@@ -4,12 +4,17 @@
     <h2>{{ section.settings.section_title }}</h2>
     {{ section.settings.text }}
     <ul class="content-with-image-slider-section-buttons">
+      {% if section.settings.button_primary_url != blank %}
       <li>
-        <a class="primary-btn" href="{{ section.settings.button_primary_url }}">{{ section.settings.button_primary }}</a>
+        <a class="primary-btn" href="{{ section.settings.button_primary_url }}">{{ section.settings.button_primary }}</a>       
       </li>
-      <li>
+      {% endif %}
+      {% if section.settings.button_secondary_url != blank %}
+      <li>        
         <a class="secondary-btn" href="{{ section.settings.button_secondary_url }}">{{ section.settings.button_secondary }}</a>
+       
       </li>
+      {% endif %}
     </ul>
   </div></div>
   <div class="slider-part">

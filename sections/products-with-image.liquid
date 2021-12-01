@@ -1,10 +1,13 @@
 
 <div class="redeem-gifts">
 	<div class="container">
+		{% if section.settings.title != blank %}
+
 		<div class="text-container-wrapper full-width">
 			<h2>{{ section.settings.title }}</h2>
 			<div class="description-before">{{ section.settings.text }}</div>
 		  </div>
+		  {% endif %}
 
 		  <div class="product-box-inner">
 		<ul class="grid-point-listd">
@@ -23,44 +26,7 @@
 
 	</div>
   </div>
-  <style>
-	.text-container-wrapper.full-width {
-    width: 100%;
-    text-align: center;
-	padding-bottom: 80px;
-}
-.products-with-image {
-    padding: 70px 0;
-}
-.products-with-image .description-before {
-    justify-content: center;
-	
-}
-a.product-btn {
-    font-size: 15px;
-    font-family: 'Austin';
-    background: #A7A7A7 0% 0% no-repeat padding-box;
-    display: inline-block;
-    line-height: 70px;
-    height: 70px;
-    color: #fff;
-    margin-top: 20px;
-    width: 100%;
-}
-ul.grid-point-listd {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 50px;
-}
-ul.grid-point-listd li {
-    width: 50%;
-    padding: 0 10px;
-}
-.product-box-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-  </style>
+ 
   {% schema %}
   {
 	"name": "Products with image",

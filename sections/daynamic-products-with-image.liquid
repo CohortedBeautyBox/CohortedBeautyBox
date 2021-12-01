@@ -1,0 +1,134 @@
+
+<div class="redeem-gifts">
+	<div class="container">
+		{% if section.settings.title != blank %}
+
+		<div class="text-container-wrapper full-width">
+			<h2>{{ section.settings.title }}</h2>
+			<div class="description-before">{{ section.settings.text }}</div>
+			<a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+		  </div>
+		  {% endif %}
+
+		  <div class="product-box-inner">
+			<div class="product-feature-image">
+				<img src="{{ section.settings.feature_image | img_url:'master'}}">
+			</div>
+		<ul style="order:{{ section.settings.section_order }};" class="grid-point-listd">
+			  {% for block in section.blocks %}  
+			  {%- assign dynamic_products = all_products[block.settings.featured_product] -%} 		
+			  <li><div class="product-box daynamic">
+				{% assign featured_image = dynamic_products.selected_or_first_available_variant.featured_image | default: dynamic_products.featured_image %}
+				<img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img">
+				<div class="product-info-new">
+					<div class="review-wrap">
+						<span class="shopify-product-reviews-badge" data-id="{{ dynamic_products.id }}"></span>
+					  </div>
+					<div class="product-align-center">
+				<h2>{{ dynamic_products.title }}</h2>
+				
+				<div class="product-price"><div class="price-box">
+					{% assign price = dynamic_products.price | money %}
+					{% if dynamic_products.available %}
+					{% if dynamic_products.price_varies %}
+					<p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+					{% else %}
+					<p class="special-price"><span class="price">{{ price }}</span></p>
+					{% endif %}
+					{% if dynamic_products.compare_at_price_max > dynamic_products.price %}
+					<p class="old-price"><span class="price-sep">-</span><span class="price">{{ dynamic_products.compare_at_price | money }}</span></p>
+					{% endif %}
+					{% else %}
+					{% if dynamic_products.price_varies %}
+					<p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+					{% else %}
+					<span class="regular-price"><span class="price">{{ price }}</span></span>
+					{% endif %}
+					{{ 'products.product.sold_out_html' | t }}
+					{% endif %}
+				  </div></div>				
+				</div>
+				</div>
+			  </div>
+			</li>
+			  {% endfor %}
+			
+		</ul>
+	
+	</div>
+
+	</div>
+  </div>
+  
+  {% schema %}
+  {
+	"name": "Dynamic Products",
+	"class": "products-with-image",
+	  "max_blocks": 4,
+	"settings": [
+	{
+        "type": "text",
+        "id": "section_order",
+        "label": "section order"
+	      },
+	{
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+	{
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+		{
+			"id": "linktext",
+			"type": "text",
+			"label": "Button Text"		  },
+		{
+		"id": "link",
+		"type": "url",
+		"label": "Button Link"
+		},
+		{
+			"type": "text",
+			"id": "btn_class",
+			"label": "Button Class"
+			},
+	{
+        "type": "image_picker",
+        "id": "feature_image",
+        "label": "Select Image"
+	      }
+	],
+	"blocks": [
+	  {
+		"type": "select",
+		"name": "Add Product",
+		"settings": [
+		{
+			"type": "product",
+			"id": "featured_product",
+			"label": "Select Product"
+		  }	
+ 
+		]
+	  }
+	],
+	"presets": [
+	  {
+		"name": "Dynamic Products",
+		"category": "Dynamic Products",
+		"blocks": [
+		  { 
+			"type": "select"
+		  }
+		
+		]
+	  }
+	]
+  }
+  {% endschema %}
+  

@@ -32,8 +32,10 @@ body p{
 .content-part {
   width: 50%;
 }
-.slider-info {
+.slider-info p{
   max-width: 640px;
+}
+.slider-info {
   padding-left: 100px;
 }
 .slider-part {
@@ -1149,6 +1151,9 @@ select#customer-services option {
   border-top: 1px solid #ccc;
   padding-top: 60px;
 }
+#shopify-section-template--14208435028073__16383415596fe6c6bb .content-with-image-slider-section-buttons {
+  column-gap: 0;
+}
 @media(min-width:1400px){
 
 
@@ -1205,11 +1210,18 @@ img.image_box_2, img.image_box_3 {
 }
 }
 @media (max-width:1399px) {
+  .content-part h2 {
+    font-size: 90px;
+    line-height: 100px;
+}
 .input-box input, .input-box select {
     height: 52px;
     line-height: 40px;
     font-size: 13px;
     appearance: none;
+}
+.slider-info p {
+  max-width: 585px;
 }
   .slider-info {
     max-width: 585px;
@@ -1249,6 +1261,28 @@ img.image_box_2, img.image_box_3 {
 }
 
 @media (max-width:1199px) {
+  .content-part h2 {
+    font-size: 75px;
+    line-height: 90px;
+}
+.full-width .description-before {
+  max-width: 100%;
+}
+ul.content-with-image-slider-section-buttons a {
+  width: 210px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 14px;
+}
+.slider-info p {
+  max-width: 400px;
+}
+.text-container-wrapper.full-width h2 {
+  font-size: 45px;
+}
+.text-with-image .product-image-content {
+  padding: 50px;
+}
   #sidebar-nav-menu .collapsible-wrapper {
     font-family: 'Austin';
     font-size: 15px !important;
@@ -1305,8 +1339,19 @@ body .sticky-wrapper.is-sticky .nav-container {
   background-color: #fff !important;
 }
 .content-part h2 {
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 70px;
+  line-height: 80px;
+}
+.text-container p {
+  font-size: 55px;
+  line-height: 60px;
+}
+.text-container-wrapper {
+  width: 100%;
+}
+.collection-list-li {
+  width: 33.33%;
+  padding: 10px;
 }
 .content-with-image-slider-section .slick-slide img {
   height: 650px;
@@ -1370,7 +1415,7 @@ div#nova-mobile-menu {
 }
 .secondary-btn {
   width: 230px;
-  font-size: 16px;
+  font-size: 15px;
 }
 .product-info a.secondary-btn.white {
   width: 290px;
@@ -1548,7 +1593,7 @@ body .cart-contents span {
   font-size: 11px;
 }
 p.bag {
-  display: none;
+  visibility: hidden;
 }
   /* #nova-mobile-menu svg.icon.icon-hamburger {
     fill: #fff;
@@ -1711,6 +1756,7 @@ img.image_box_1 {
 .feature-collection-main .text-container-wrapper {
   width: 100%;
 }
+
 .marquee {
   height: 120px !important;
   margin-bottom: 10px !important;
@@ -1726,8 +1772,9 @@ img.image_box_1 {
   width: 100%;
 }
 #new-feed h2 {
-  font: normal normal normal 32px/44px 'Austin';
+  font: normal normal normal 32px/44px Austin;
   margin-bottom: 18px;
+  width: 100%;
 }
 div#new-feed {
   margin-top: 30px;

@@ -1,7 +1,7 @@
 <div class="rich-text">
-	<div class="container">
+	<div class="containers">
 		{% if section.settings.text != blank %}
-	  <div class="text-container">
+	  <div class="text-container full-width">
 		
 		{{ section.settings.text }}
 		
@@ -28,7 +28,13 @@
 	</div>
   </div>
 
+  <style>
+	  .rich-text .text-container.full-width {
+    max-width: 100% !important;
+}
+  </style>
   {% schema %}
+
   {
 	"name": "Rich Text",
 	"class": "rich-text-main",

@@ -1,39 +1,129 @@
 <div class="background-image-with-text">
 	<div class="container">
-<div class="background-inner-content">
+<div style="background-image: url({{ section.settings.feature_image | img_url:'master'}}); background-color:{{ block.settings.bg_color }} !important;" class="background-inner-content">
 	<div class="text-container-wrapper full-width">
-		<h2 style="color:#fff;">Share The Rewards</h2>
-		<div class="description-before"><p style="color:#fff;">Refer your friends with your own unique referral link. You can refer as many friends as you'd like, at anytime. Earn 100 points when they spend over £25 at Cohorted.</p></div>
-		<a class="secondary-btn white" href="#">SIGN IN NOW!</a>
+		<h2 style="color:{{ section.settings.title_color }};">{{ section.settings.title }}</h2>
+		<div class="description-before"><div style="color:{{ section.settings.text_color }};">
+			{{ section.settings.text }} </div></div>
+		<a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
 	  </div>
 </div>
 	</div>
   </div>
   <style>
   .background-inner-content {
-    background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/Share-Friends-Background_b95973e7-7529-4263-9530-dde9f563dfad.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 50px 20px;
+    padding-top: 50px;
+}
+.text-container-wrapper.full-width {
+    padding-top: 20px;
 }
 .background-inner-content .text-container-wrapper.full-width {
-    max-width: 60%;
+    width: 70%;
     margin: 0 auto;
+    text-align: center;
 }
 .description-before {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+.description-before div {
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: .75px;
+}
+
+.full-width .description-before {
+    text-align: center;
+}
+.text-container-wrapper.full-width h2 {
+    text-align: center;
+    font-size: 80px;
+    line-height: 112px;
+    letter-spacing: 4px;
+}
+@media(max-width:767px){
+	.background-inner-content .text-container-wrapper.full-width {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.background-inner-content {
+    padding-top: 50px;
+    padding-bottom: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.background-image-with-text h2 {
+    margin-top: 0;
+	font-size: 30px;
+    line-height: 52px;
+    letter-spacing: 0;
+}
+.description-before div {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: .6px;
+}
+
 }
 </style>
   {% schema %}
   {
 	"name": "Share rewards",
 	"settings": [
-	  {
-		"type": "html",
-		"id": "text",
-		"label": "Text",
-		"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-	  }
+	{
+        "type": "image_picker",
+        "id": "feature_image",
+        "label": "Select BG Image"
+	      },
+		  {
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+			  },
+			  {
+				"type": "html",
+				"id": "text",
+				"label": "Text",
+				"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+			  },
+			  {
+				"id": "link",
+				"type": "url",
+					 "label": "Button Link"
+			  },
+			  {
+				"id": "linktext",
+				"type": "text",
+				"label": "Button Text"		  },
+		  {
+			"type": "color",
+			"id": "bg_color",
+			"label": "BG Color"
+			  },
+			  {
+				"type": "color",
+				"id": "title_color",
+				"label": "Title Color"
+				  },
+				  {
+					"type": "color",
+					"id": "text_color",
+					"label": "Text Color"
+					  },
+					  {
+						"type": "text",
+						"id": "btn_class",
+						"label": "Button Class"
+						  }
+					  
+	  
 	],
 	"presets": [
 	  {

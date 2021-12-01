@@ -1,0 +1,89 @@
+
+<div style="background:{{ section.settings.bg_color }};" class="redeem-gifts">
+	<div class="container-full">
+		  <div class="product-box-inner">
+			
+			<div style="order:{{ section.settings.section_order }};" class="{{section.settings.sectionOrder}}   product-image-content">
+				{% if section.settings.title != blank %}
+		<div class="text-container-wrapper full-width img-with-txt">
+			<h2>{{ section.settings.title }}</h2>
+			<div class="description-before"><span></span>{{ section.settings.text }}</div>
+			<div class="description-before visibilty-hide"><span></span><a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a></div>
+			
+		  </div>
+		  {% endif %}
+			</div>
+			<div class="product-feature-image">
+				<img src="{{ section.settings.feature_image | img_url:'master'}}">
+			</div>
+	
+	
+	</div>
+
+	</div>
+  </div>
+  
+  {% schema %}
+  {
+	"name": "Image With Text",
+	"class": "text-with-image",
+	"settings": [
+	{
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+	      },
+		  {
+			"type": "checkbox",
+			"id": "sectionOrder",
+			"label": "Align Right"
+			},
+
+	{
+        "type": "text",
+        "id": "section_order",
+        "label": "section order"
+	     },
+	{
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+	{
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+		{
+			"id": "linktext",
+			"type": "text",
+			"label": "Button Text"		  
+		},
+		{
+		"id": "link",
+		"type": "url",
+		"label": "Button Link"
+		},
+		{
+			"type": "text",
+			"id": "btn_class",
+			"label": "Button Class"
+			},
+	{
+        "type": "image_picker",
+        "id": "feature_image",
+        "label": "Select Image"
+	      }
+	],
+	"presets": [
+	  {
+		"name": "Image With Text",
+		"category": "Image With Text"
+		
+	  }
+	]
+  }
+  {% endschema %}
+  
