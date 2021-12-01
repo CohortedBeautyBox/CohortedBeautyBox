@@ -220,7 +220,7 @@ ul.content-with-image-slider-section-buttons a {
 .description-before span:before {
   content: "";
   position: absolute;
-  height: 2px;
+  height: 1px;
   width: 65px;
   top: 8px;
   background: #000;

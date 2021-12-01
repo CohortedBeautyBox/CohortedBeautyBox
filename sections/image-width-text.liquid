@@ -3,7 +3,7 @@
 	<div class="container-full">
 		  <div class="product-box-inner">
 			
-			<div style="order:{{ section.settings.section_order }};" class="{{section.settings.sectionOrder}}   product-image-content">
+			<div style="order:{{ section.settings.section_order }};" class="product-image-content">
 				{% if section.settings.title != blank %}
 		<div class="text-container-wrapper full-width img-with-txt">
 			<h2>{{ section.settings.title }}</h2>
@@ -34,9 +34,13 @@
         "label": "Background Color"
 	      },
 		  {
-			"type": "checkbox",
+			"type": "select",
 			"id": "sectionOrder",
-			"label": "Align Right"
+			"options": [
+			  { "value": "orderOne", "label": "Order 1"},
+			  { "value": "orderTwo", "label": "Order 2"}
+			],
+			"label": "Section Order"
 			},
 
 	{
