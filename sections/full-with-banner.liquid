@@ -1,0 +1,82 @@
+<div class="section-full-banner">
+<div class="banner-inner-content">
+	<div class="banner-image">
+		<img src="{{ section.settings.feature_image | img_url:'master'}}">
+	</div>
+
+	<div class="banner-content container">
+		<h3 style="color:{{ section.settings.title_color }};"> <i>{{ section.settings.sub_title }}</i></h3>
+		<h2 style="color:{{ section.settings.title_color }};">{{ section.settings.title }}</h2>
+		<div class="description-banner"><div style="color:{{ section.settings.text_color }};">
+			{{ section.settings.text }} </div></div>
+		 <a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+	  </div>
+</div>
+  </div>
+ 
+  {% schema %}
+  {
+	"name": "full with banner",
+	"class":"full-with-banner",
+	"settings": [
+	{
+        "type": "image_picker",
+        "id": "feature_image",
+        "label": "Select Banner Image"
+	      },
+		  {
+			"type": "text",
+			"id": "sub_title",
+			"label": "Sub Title"
+			  },
+		  {
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+			  },
+			  {
+				"type": "html",
+				"id": "text",
+				"label": "Text"
+			  },
+			  {
+				"id": "link",
+				"type": "url",
+					 "label": "Button Link"
+			  },
+			  {
+				"id": "linktext",
+				"type": "text",
+				"label": "Button Text"		  },
+		  {
+			"type": "color",
+			"id": "bg_color",
+			"label": "BG Color"
+			  },
+			  {
+				"type": "color",
+				"id": "title_color",
+				"label": "Title Color"
+				  },
+				  {
+					"type": "color",
+					"id": "text_color",
+					"label": "Text Color"
+					  },
+					  {
+						"type": "text",
+						"id": "btn_class",
+						"label": "Button Class"
+						  }
+					  
+	  
+	],
+	"presets": [
+	  {
+		"name": "full with banner",
+		"category": "Banner"
+	  }
+	]
+  }
+  {% endschema %}
+  

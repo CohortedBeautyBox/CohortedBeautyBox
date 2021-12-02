@@ -1,0 +1,94 @@
+<div class="section-insta">
+	<div class="container">
+	<div class="insta-main">   
+  {% for block in section.blocks %}  
+  <div class="insta-block">   
+    <a href="{{ block.settings.link }}" class="btn">
+		<img src="{{ block.settings.insta_img | img_url:'master' }}">
+		<h4>{{ block.settings.insta_title }}</h4>
+		<p>{{ block.settings.linktext }}</p>
+		</a>
+  </div> 
+  {% endfor %}
+</div>  
+</div>  
+</div>
+  <style>
+
+.section-insta {
+    paddin-top: 70px;
+}
+.insta-main {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.insta-block h4 {
+    font: normal normal normal 24px/34px 'Austin';
+    letter-spacing: 1.2px;
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+.insta-block p {
+    font: normal normal normal 15px/24px Avenir Next LT Pro;
+letter-spacing: 0.75px;
+}
+
+.insta-block a {
+    padding: 0;
+}
+
+  </style>
+
+{% schema %}
+{
+  "name": "Socail Media",
+	"max_blocks": 3,
+  "settings": [
+   
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Add Block",
+      "settings": [
+	  {
+		"id": "insta_img",
+		"type": "image_picker",
+		"label": "Select Image"
+		  },
+	  {
+		"id": "insta_title",
+		"type": "text",
+	    "label": "Title"
+	  },
+	  {
+		"id": "linktext",
+		"type": "text",
+		"label": "text"
+	  },
+        {
+          "id": "link",
+          "type": "url",
+       		"label": "Block link"
+        }
+        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Socail Media",
+      "category": "Socail Media",
+      "blocks": [
+        { 
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

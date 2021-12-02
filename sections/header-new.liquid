@@ -63,8 +63,8 @@
                       <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_black.png' | asset_url }}" class="standard" />
                       <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_light.png' | asset_url }}" class="retina" />
                       {% else %}
-                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_dark.png' | asset_url }}" class="standard" />
-                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_black.png' | asset_url }}" class="retina" />
+                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_black.png' | asset_url }}" class="standard" />
+                      <img title="Cohorted - Cohorted Beauty Box Subscription" alt="Cohorted - Cohorted Beauty Box Subscription" src="{{ 'logo_light.png' | asset_url }}" class="retina" />
                       {% endif %}
                     {% else %}
                       {{ settings.brand_text }}
@@ -196,6 +196,7 @@
     <!-- End Header -->
   </div>
 </div>
+{% render 'mobile-menu' %}
 {% schema %}
   {
     "name": "Header",

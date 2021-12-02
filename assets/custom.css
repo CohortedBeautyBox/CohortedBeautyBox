@@ -1490,6 +1490,15 @@ div#nova-mobile-menu {
   .cart-contents {  
     margin-right: 0;
 }
+.review-images {
+  padding-bottom: 40px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd47;
+}
+.review-images .container img {
+  margin-right: 20px;
+  width: 110px;
+}
 #contact-us .insta-header {
   border-top: none;
   padding-top: 0;
@@ -1701,11 +1710,11 @@ ul.content-with-image-slider-section-buttons a {
   font-size: 14px;
 }
 .secondary-btn {
-  font-size: 16px;
-  height: 55px;
-  line-height: 55px;
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
   width: 190px;
-}
+} 
 img.image_box_1 {
   height: 375px;
 }

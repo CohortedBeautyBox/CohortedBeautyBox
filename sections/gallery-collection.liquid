@@ -10,7 +10,19 @@
       <h2>{{ section.settings.title }}</h2>
       <div class="description-before"><span></span>{{ section.settings.text }}
         </div>
+
+
+                     {% if section.settings.url != blank %}
                         <div class="secondary-button"><a class="secondary-btn" href="{{ section.settings.url }}">{{ section.settings.url_text }}</a></div>
+                        {% endif %}                        
+
+                        {% if section.settings.icons_url_1 != blank %}
+                        <div class="social-links-new">
+                          <span class="title-follow">Follow Elle L on</span>
+                          <span><a href="{ section.settings.icons_url_1'}}">  <img class="social_icons" src="{{ section.settings.image_box_4 | img_url:'master'}}"></a></span>
+                          <span><a href="{ section.settings.icons_url_2'}}">  <img class="social_icons" src="{{ section.settings.image_box_5 | img_url:'master'}}"></a></span>
+                        </div>
+                        {% endif %}
 
     </div> 
       
@@ -38,7 +50,18 @@
   
 
 </div>  
-
+<style>
+.social-links-new {
+  margin-bottom: 20px;
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+}
+.title-follow{
+padding-right: 10px;
+}
+</style>
 {% schema %}
 {
   "name": "3 Column Gallery",
@@ -55,7 +78,7 @@
         "default": "Collection list"
       },
 	{
-      "type": "richtext",
+      "type": "html",
       "id": "text",
       "label": "Text",
       "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
@@ -79,7 +102,31 @@
         "type": "image_picker",
         "id": "image_box_3",
         "label": "Image 3"
-   }
+   },
+   {
+    "type": "header",
+    "content": "Social Media"
+},
+{
+  "type": "image_picker",
+  "id": "image_box_4",
+  "label": "Icon 1"
+},
+{
+  "type": "url",
+  "id": "icons_url_1",
+  "label": "Icon 1 Link"
+},
+{
+  "type": "image_picker",
+  "id": "image_box_5",
+  "label": "Icon 2"
+},
+{
+  "type": "url",
+  "id": "icons_url_2",
+  "label": "Icon 2 Link"
+}
   ],
  
   "presets": [
