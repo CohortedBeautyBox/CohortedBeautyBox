@@ -1,0 +1,177 @@
+ 
+<div style="background-color:{{ section.settings.bag-color }};" class="testimoni-main">
+	<div class="container">
+		{% if block.settings.title != 'blank'%}
+		<div class="text-container-wrapper">
+		  <h2>{{ section.settings.title }}</h2>
+		  {{ section.settings.text }}
+		  <a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+			</div>
+			{% endif %}
+			
+		   <div class="feature-collection review-item">   
+			{% for block in section.blocks %} 	
+		  <div class="feature-item reviews-item">
+		  {% if block.settings.review_bg != 'blank'%}
+		  <div style="background-color:{{ block.settings.review_bg }};" class="review_box">
+			<div class="review-wraps">
+				<span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i></span>
+			  </div>	  
+		 <p style="color:{{ block.settings.text_color }} !important;">{{ block.settings.review_text }}</p>
+		 <h4 style="color:{{ block.settings.text_color }};" class="author">{{ block.settings.author }}</h4>
+		  </div>
+		  {% endif %}
+	
+	  </div> 
+	
+	  {% endfor %}
+		   </div>
+		  </div>
+	</div>
+	<script>
+	  $('.review-item').slick({
+		dots: true,
+		arrow: false,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		  responsive: [
+		{
+		  breakpoint: 1024,
+		  settings: {
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			infinite: true,
+			dots: true
+		  }
+		},
+		{
+		  breakpoint: 600,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		},
+		{
+		  breakpoint: 480,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		}
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	  ]
+	  });
+	</script>
+	<style>
+		.review-wraps i {
+    color: #fff !important;
+    opacity: 1 !important;
+    padding: 0 2px;
+}
+.review-wraps {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.review_box {
+    color: #fff;
+    padding: 30px;
+    font-family: 'Avenir LT Std 45 Book';
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: left;
+}
+.review-item .slick-arrow {
+    display: none !important;
+}
+	.review_box .author {
+    text-transform: lowercase;
+    font: normal normal normal 24px/28px 'Austin';
+}
+	</style>
+	
+	{% schema %}
+	{
+	  "name": "Review slider",
+	  "class": "testimonial-slider",
+	  "max_blocks": 50,
+	  "settings": [
+	  {
+		"type": "text",
+		"id": "title",
+		"label": "Heading",
+		"default": "Heading"
+	  },
+	{
+	  "type": "html",
+	  "id": "text",
+	  "label": "Text",
+	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+	},
+	{
+		"id": "link",
+		"type": "url",
+			 "label": "Button Link"
+	  },
+	  {
+		"id": "linktext",
+		"type": "text",
+		"label": "Button Text"		  },
+			  {
+				"type": "text",
+				"id": "btn_class",
+				"label": "Button Class"
+				  },
+			  
+	{
+		"type": "color",
+		"id": "bag-color",
+		"label": "Background Color"
+	  }
+	  ],
+	  "blocks": [		
+		  {
+			"type": "review",
+			"name": "Review Slider",
+			"settings":[
+			{
+			  "id": "review_text",
+			  "type": "richtext",
+				   "label": "Review Text"
+			},
+			{
+				"id": "author",
+				"type": "text",
+				"label": "Author"
+			  },
+			  {
+				"id": "review_bg",
+				"type": "color",
+				"label": "Review Background"
+			  },
+			  {
+				"id": "text_color",
+				"type": "color",
+				"label": "Text Color"
+			  }
+			  
+		  
+		  ]
+		}
+	  ],
+	  "presets": [
+		{
+		  "name": "Review slider",
+		  "category": "Review slider",
+		  "blocks": [
+			
+			
+		  ]
+		}
+	  ]
+	}
+	{% endschema %}
+	

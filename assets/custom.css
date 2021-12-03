@@ -1154,6 +1154,13 @@ select#customer-services option {
 #shopify-section-template--14208435028073__16383415596fe6c6bb .content-with-image-slider-section-buttons {
   column-gap: 0;
 }
+.slick-slide {
+  outline: none;
+}
+.rich-content {
+  padding: 0 25px;
+}
+
 @media(min-width:1400px){
 
 
@@ -1172,9 +1179,9 @@ p.help a {
 p.bag {
   font-size: 15px;
 }
-.sticky-wrapper.is-sticky .novaworks-navigation #novaworks-nav>li.level0>a>span {
+/* .sticky-wrapper.is-sticky .novaworks-navigation #novaworks-nav>li.level0>a>span {
   font-size: 15px;
-}
+} */
 body .cart-contents span {
   height: 15px;
   line-height: 14px;
@@ -1210,9 +1217,19 @@ img.image_box_2, img.image_box_3 {
 }
 }
 @media (max-width:1399px) {
+  .banner-content h3 {
+    font: italic normal normal 27px/40px Austin !important;
+}
+.banner-content h2 {
+  font: normal normal normal 65px/70px Austin !important;
+}
+.description-banner div {
+  font-size: 13px;
+  line-height: 20px; 
+}
   .content-part h2 {
     font-size: 90px;
-    line-height: 100px;
+    line-height: 100px; 
 }
 .input-box input, .input-box select {
     height: 52px;
@@ -1261,6 +1278,20 @@ img.image_box_2, img.image_box_3 {
 }
 
 @media (max-width:1199px) {
+  body h2.heading {
+    font: normal normal normal 70px/70px Austin;
+    letter-spacing: 1px;
+  }
+  body h5.content {
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    line-height: 24px;
+    margin: 30px 0 30px 0;
+  }
+  .review_box {
+    height: 100%;
+
+}
   .content-part h2 {
     font-size: 75px;
     line-height: 90px;
@@ -1281,7 +1312,7 @@ ul.content-with-image-slider-section-buttons a {
   font-size: 45px;
 }
 .text-with-image .product-image-content {
-  padding: 50px;
+  padding: 50px !important;
 }
   #sidebar-nav-menu .collapsible-wrapper {
     font-family: 'Austin';
@@ -1388,6 +1419,14 @@ body .sticky-wrapper.is-sticky .nav-container {
   .logo-image-slider-section-with-background .slick-arrow {
     visibility: hidden;
 }
+body .text-container-wrapper.full-width h2 {
+  font-size: 46px;
+  letter-spacing: 1px;
+  line-height: 50px;
+}
+body .overlap_heading {
+  left: 0;
+}
 .collection-list-li a span {
   font-size: 16px;
 }
@@ -1487,6 +1526,21 @@ div#nova-mobile-menu {
 }
 
 @media (max-width:767px) {
+  .description-before span {
+    margin-right: 70px;
+}
+.review_box {
+  height: 100%;
+}
+.text-with-image .product-image-content {
+  padding: 20px !important;
+}
+.section-column-gallery {
+  margin: 0 0 50px 0;
+}
+.section-column-gallery .text-container-wrapper {
+  padding: 50px 40px;
+}
   .cart-contents {  
     margin-right: 0;
 }

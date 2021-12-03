@@ -1,4 +1,7 @@
 <div class="section-insta">
+  <div class="section-header text-center">
+    <h2> {{ section.settings.text-box }} </h2>
+  </div>
 	<div class="container">
 	<div class="insta-main">   
   {% for block in section.blocks %}  
@@ -16,12 +19,10 @@
   <style>
 
 .section-insta {
-    paddin-top: 70px;
+    padding-bottom: 70px;
 }
-.insta-main {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 30px;
+.insta-main .slick-track{
+  width: 100%;
 }
 .insta-block h4 {
     font: normal normal normal 24px/34px 'Austin';
@@ -31,21 +32,90 @@
 }
 .insta-block p {
     font: normal normal normal 15px/24px Avenir Next LT Pro;
-letter-spacing: 0.75px;
+    letter-spacing: 0.75px;
+    text-transform: lowercase;
+    color: #464646;
 }
-
+.insta-block {
+    padding: 0 10px;
+}
 .insta-block a {
     padding: 0;
 }
-
+.insta-block a {
+    width: 100%;
+}
+.insta-block img {
+    width: 100%;
+}
+.section-insta h2 {
+    font: normal normal normal 80px/112px 'Austin';
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.section-insta h2 {
+    font: normal normal normal 32px/32px Austin!important;
+}
+@media(max-width:767px){
+  .section-insta {
+    padding-bottom: 30px;
+}
+  .insta-block {
+    width: auto;
+}
+}
   </style>
+
+<script>
+  $('.insta-main').slick({
+    dots: false,
+    arrow: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+      responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots:true
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots:true
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+</script>
 
 {% schema %}
 {
   "name": "Socail Media",
 	"max_blocks": 3,
   "settings": [
-   
+  {
+		"id": "text-box",
+		"type": "text",
+		"label": "Heading Here"
+		  }
   ],
   "blocks": [
     {

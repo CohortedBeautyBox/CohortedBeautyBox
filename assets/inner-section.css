@@ -38,7 +38,7 @@ grid-template-columns: 1fr 1fr;
 .text-container-wrapper.full-width h2 {
     text-align: center;
     font-size: 80px;
-    line-height: 112px;
+    line-height: 80px;
     letter-spacing: 4px;
 }
 .full-width .description-before {
@@ -121,8 +121,8 @@ ul.grid-point-listd li {
     height: 100%;
 }
 .product-feature-image img {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     object-fit: cover;
 }
 div#shopify-section-template--14208435028073__16383556045ac15327 {
@@ -138,7 +138,8 @@ h3.shopify_explorer_faq__separator {
     color: #000;
     text-transform: capitalize;
     letter-spacing: 4px;
-    padding: 50px 0;
+    padding: 70px 0 0;
+    margin: 0;
 }
 h3.shopify_explorer_faq__question {
     font: normal normal normal 24px/34px 'Austin';
@@ -158,16 +159,29 @@ h3.shopify_explorer_faq__question {
 .shopify_explorer_faq__answer {
     display: none;
 }
+.activesticky {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    transform: translateY(15%);
+    z-index: 1;
+}
 .faq-menu {
     text-align: left;
     align-items: center;
     margin-top: 30px;
-}	
+    width: 25%;
+    padding: 40px 20px;
+
+}
+.faq-main {
+    width: 75%;
+}
 .faq-inner {
-    display: grid;
-    grid-template-columns: 33% 1fr;
-    justify-content: space-between;
+    display: flex;
+    justify-content: end;
     align-items: baseline;
+    position: relative;
 }
 .faq-menu a {
     display: block;
@@ -177,6 +191,10 @@ h3.shopify_explorer_faq__question {
     border-left: 1px solid #ccc;
     height: 50px;
     line-height: 50px;
+    -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 .single-text {
     text-align: left;
@@ -189,15 +207,15 @@ html {
     padding-top: 20px;
     padding-bottom: 0;
 }
-.faq-menu a:before {
+.faq-menu a.faq-title.active:before {
     content: "";
     position: absolute;
     background: #000;
     border-left: 1px solid #000;
-    left: 0;
+    left: -1px;
     height: 100%;
     width: 2px;
-} 
+}
 .faq-main {
     margin-top: -80px;
 }
@@ -233,8 +251,15 @@ html {
     height: 100%;
     width: 100%;
 }
-
-
+h3.shopify_explorer_faq__question.h5.link span {
+    border: none!important;
+    padding: 0;
+    margin: 0;
+}
+.products-with-image .description-before {
+    max-width: 70%;
+    margin: 0 auto;
+}
 @media (max-width:1460px) {
 	.banner-content {
 		padding: 70px;
@@ -272,19 +297,60 @@ html {
 	}
 }
 @media(max-width:991px){
+    .banner-content h2 {
+        font: normal normal normal 45px/50px Austin!important;
+    }
+    .section-insta h2 {
+        font: normal normal normal 70px/100px 'Austin'!important;
+    }
+    .banner-content h3 {
+        font: italic normal normal 27px/30px Austin!important;
+    }
+    .banner-content {
+        padding: 20px 20px;
+    }
 h3.shopify_explorer_faq__separator {
-    font: normal normal normal 60px/72px Austin;
+    font: normal normal normal 60px/72px Austin !important;
     letter-spacing: 2px;
     padding: 30px 0;
 }
 .banner-content {
-	max-width: 70%;
+	max-width: 80%;
+}
+.banner-content {
+    padding: 20px 50px;
 }
 }
 @media(max-width:767px){
+    body h2.heading {
+        font: normal normal normal 32px/32px Austin;
+        letter-spacing: 1px;
+    }
+    .rich-text-main {
+        padding-top: 30px;
+    }
+    body h5.content {
+        letter-spacing: .5px;
+        font-size: 12px;
+        line-height: 20px;
+        margin: 20px 0 20px 0;
+    }
+    .products-with-image .description-before {
+        max-width: 100%;
+    }
+    .faq-menu {
+        display: none;
+    }
+    .faq-main {
+        margin-top: -50px;
+        width: 100%;
+    }
 	.faq-inner {
 		grid-template-columns: 1fr !important;
 	}
+    .shopify_explorer_faq__question span {
+        right: 0;
+    }
 	h3.shopify_explorer_faq__separator {
 		font: normal normal normal 24px/34px Austin;
 		letter-spacing: 1.2px;
@@ -330,8 +396,9 @@ h3.shopify_explorer_faq__separator {
 		font: normal normal normal 12px/16px Austin!important;
 	}
 	.img-with-txt .description-before {
-		padding-left: 0 !important;
-	}
+        padding-left: 0!important;
+        margin-bottom: 10px !important;
+    }
 	.description-before span:before {
 		height: 1px;
 		width: 45px;

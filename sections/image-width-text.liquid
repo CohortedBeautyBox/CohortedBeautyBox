@@ -5,7 +5,8 @@
 			
 			<div style="order:{{ section.settings.section_order }};" class="product-image-content">
 				{% if section.settings.title != blank %}
-		<div class="text-container-wrapper full-width img-with-txt">
+		<div class="{% if section.settings.overlap_heading %}overlap_heading {% else %} not_overlap {% endif %} text-container-wrapper full-width img-with-txt">
+			
 			<h2>{{ section.settings.title }}</h2>
 			<div class="description-before"><span></span>{{ section.settings.text }}</div>
 			<div class="description-before visibilty-hide"><span></span><a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a></div>
@@ -22,7 +23,12 @@
 
 	</div>
   </div>
-  
+  <style>
+.overlap_heading { 
+    position: relative;
+    left: -100px;
+}
+  </style>
   {% schema %}
   {
 	"name": "Image With Text",
@@ -54,8 +60,14 @@
         "label": "Heading",
         "default": "Collection list"
       },
+	  {
+        "type": "checkbox",
+        "id": "overlap_heading",
+        "label": "Overlap Heading",
+        "default": false
+      },
 	{
-      "type": "richtext",
+      "type": "html",
       "id": "text",
       "label": "Text",
       "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
