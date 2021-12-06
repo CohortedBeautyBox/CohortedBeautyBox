@@ -1,6 +1,6 @@
 
-<div style="background:{{ section.settings.bg_color }};" class="redeem-gifts">
-	<div class="container-full">
+<div style="background:{{ section.settings.bg_color }};" class="{% if section.settings.enable_gradiant %}enable_gradiant {% else %} redeem-gifts {% endif %} ">
+	<div  class=" container-full {% if section.settings.margin_bottom %} margin_bottom {% else %} container-full{% endif %} ">
 		  <div class="product-box-inner">
 			
 			<div style="order:{{ section.settings.section_order }};" class="product-image-content">
@@ -9,7 +9,8 @@
 			
 			<h2>{{ section.settings.title }}</h2>
 			<div class="description-before"><span></span>{{ section.settings.text }}</div>
-			<div class="description-before visibilty-hide"><span></span><a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a></div>
+			<div class="description-before visibilty-hide"><span></span>
+				<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a></div>
 			
 		  </div>
 		  {% endif %}
@@ -28,26 +29,24 @@
     position: relative;
     left: -100px;
 }
+.enable_gradiant {
+    background: transparent linear-gradient(0deg, #E4E4E466 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box !important;
+}
+.margin_bottom {
+    margin-bottom: 70px;
+}
+@media(max-width:767px){
+	 .enable_gradiant {
+    background: #E4E4E466 !important;
+    margin-top: 50px;
+}
+}
   </style>
   {% schema %}
   {
 	"name": "Image With Text",
 	"class": "text-with-image",
 	"settings": [
-	{
-        "type": "color",
-        "id": "bg_color",
-        "label": "Background Color"
-	      },
-		  {
-			"type": "select",
-			"id": "sectionOrder",
-			"options": [
-			  { "value": "orderOne", "label": "Order 1"},
-			  { "value": "orderTwo", "label": "Order 2"}
-			],
-			"label": "Section Order"
-			},
 
 	{
         "type": "text",
@@ -82,16 +81,44 @@
 		"type": "url",
 		"label": "Button Link"
 		},
-		{
-			"type": "text",
-			"id": "btn_class",
-			"label": "Button Class"
-			},
 	{
         "type": "image_picker",
         "id": "feature_image",
         "label": "Select Image"
-	      }
+	      },
+		  {
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color"
+			  },
+	
+			  {
+				"type": "checkbox",
+				"id": "enable_gradiant",
+				"label": "Enable Gradiant Background",
+				"default": false
+				  },
+			  
+			  {
+				"type": "select",
+				"id": "sectionOrder",
+				"options": [
+				  { "value": "orderOne", "label": "Primary Button"},
+				  { "value": "orderTwo", "label": "secondary Button"},
+				  { "value": "orderThree", "label": "secondary White Button"}
+				],
+				"label": "Button Color"
+				},
+				{
+					"type": "checkbox",
+					"id": "margin_bottom",
+					"label": "Enable Bottom Gutter",
+					"default": false
+					  }	
+					  
+					  
+				
+
 	],
 	"presets": [
 	  {

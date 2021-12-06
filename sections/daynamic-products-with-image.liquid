@@ -6,20 +6,28 @@
 		<div class="text-container-wrapper full-width">
 			<h2>{{ section.settings.title }}</h2>
 			<div class="description-before">{{ section.settings.text }}</div>
-			<a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+			<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+
 		  </div>
 		  {% endif %}
 
-		  <div class="product-box-inner">
-			<div class="product-feature-image">
+		  <div class="product-box-inner {% if section.settings.swipe_coloum %} swipe_coloum {% endif %} ">
+			<div style="order:{{ section.settings.section_order }};" class="product-feature-image">
 				<img src="{{ section.settings.feature_image | img_url:'master'}}">
 			</div>
-		<ul style="order:{{ section.settings.section_order }};" class="grid-point-listd">
+		<ul class="grid-point-listd">
 			  {% for block in section.blocks %}  
 			  {%- assign dynamic_products = all_products[block.settings.featured_product] -%} 		
 			  <li><div class="product-box daynamic">
 				{% assign featured_image = dynamic_products.selected_or_first_available_variant.featured_image | default: dynamic_products.featured_image %}
-				<img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img">
+				{% if block.settings.feature_image != blank %}  
+				<img src="{{ block.settings.feature_image | img_url: 'master' }}">
+				{% else %}
+				<img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt }}" 
+				id="FeaturedImage-{{ section.id }}" class="product-featured-img">
+				
+		
+				{% endif %}
 				<div class="product-info-new">
 					<div class="review-wrap">
 						<span class="shopify-product-reviews-badge" data-id="{{ dynamic_products.id }}"></span>
@@ -60,6 +68,14 @@
 
 	</div>
   </div>
+  <style>
+	@media(max-width:767px){
+
+		.swipe_coloum {
+    flex-direction: column-reverse;
+}
+	}
+  </style>
   
   {% schema %}
   {
@@ -70,7 +86,7 @@
 	{
         "type": "text",
         "id": "section_order",
-        "label": "section order"
+        "label": "Swipe Section By Number"
 	      },
 	{
         "type": "text",
@@ -79,7 +95,7 @@
         "default": "Collection list"
       },
 	{
-      "type": "richtext",
+      "type": "html",
       "id": "text",
       "label": "Text",
       "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
@@ -94,15 +110,26 @@
 		"label": "Button Link"
 		},
 		{
-			"type": "text",
-			"id": "btn_class",
-			"label": "Button Class"
-			},
+				"type": "select",
+				"id": "sectionOrder",
+				"options": [
+				  { "value": "orderOne", "label": "Primary Button"},
+				  { "value": "orderTwo", "label": "secondary Button"},
+				  { "value": "orderThree", "label": "secondary White Button"}
+				],
+				"label": "Button Color"
+				},
 	{
         "type": "image_picker",
         "id": "feature_image",
         "label": "Select Image"
-	      }
+	      },
+		  {
+			"type": "checkbox",
+			"id": "swipe_coloum",
+			"label": "Swipe coloumn Mob",
+			"default": false
+			  }
 	],
 	"blocks": [
 	  {
@@ -113,6 +140,11 @@
 			"type": "product",
 			"id": "featured_product",
 			"label": "Select Product"
+		  },
+		  {
+			"type": "image_picker",
+			"id": "feature_image",
+			"label": "Select Product Image"
 		  }	
  
 		]

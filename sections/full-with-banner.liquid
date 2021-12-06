@@ -10,18 +10,25 @@
 		<img class="show-mob" src="{{ section.settings.feature_image | img_url:'master'}}">
 		{% endif %}
 	</div>
-
-	<div class="banner-content container">
+	<div class="{% if section.settings.banner_right %}banner_right {% else %} banner_left {% endif %} banner-content container">
 		<h3 style="color:{{ section.settings.title_color }};"> <i>{{ section.settings.sub_title }}</i></h3>
 		<h2 style="color:{{ section.settings.title_color }};">{{ section.settings.title }}</h2>
 		<div class="description-banner"><div style="color:{{ section.settings.text_color }};">
 			{{ section.settings.text }} </div></div>
-		 <a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+			{% if section.settings.linktext != blank %}
+			<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+			{% endif %}
+
 	  </div>
 </div>
   </div>
   <style>
 	  .show-mob{display: none;}
+
+	  .banner_right {
+    left: unset;
+    right: 0;
+}
 
 	  @media(max-width:767px){
 		.banner-content h3 {
@@ -56,10 +63,16 @@
 	"class":"full-with-banner",
 	"settings": [
 	{
+        "type": "checkbox",
+        "id": "banner_right",
+        "label": "Content Right",
+		"default": false
+	      },
+	{
         "type": "image_picker",
         "id": "feature_image",
         "label": "Select Banner Image"
-	      },
+	      },		  
 		  {
 			"type": "image_picker",
 			"id": "feature_mobile",
@@ -89,7 +102,18 @@
 			  {
 				"id": "linktext",
 				"type": "text",
-				"label": "Button Text"		  },
+				"label": "Button Text"		  
+			},
+			{
+				"type": "select",
+				"id": "sectionOrder",
+				"options": [
+				  { "value": "orderOne", "label": "Primary Button"},
+				  { "value": "orderTwo", "label": "secondary Button"},
+				  { "value": "orderThree", "label": "secondary White Button"}
+				],
+				"label": "Button Color"
+				},
 		  {
 			"type": "color",
 			"id": "bg_color",
@@ -104,13 +128,8 @@
 					"type": "color",
 					"id": "text_color",
 					"label": "Text Color"
-					  },
-					  {
-						"type": "text",
-						"id": "btn_class",
-						"label": "Button Class"
-						  }
-					  
+					  }
+					
 	  
 	],
 	"presets": [

@@ -256,8 +256,9 @@ body #top-search {
   background-color: #fff !important;
 }
 .top-header-new {
-  display: block !important;
+  display: flex !important;
   position: unset;
+  justify-content: flex-end;
 }
 .sticky-wrapper .level-top a {
     color: #000 !important;
@@ -448,9 +449,13 @@ img.image_box_2, img.image_box_3 {
 }
 .feature-collection-main .slick-prev {
     left: -25px;
+    line-height: 60px !important;
+
 }
 .feature-collection-main .slick-next {
     right: -10px;
+    line-height: 60px !important;
+
 }
 .feature-collection-main .spr-icon.spr-icon-star-empty {
     opacity: 1;
@@ -1160,8 +1165,15 @@ select#customer-services option {
 .rich-content {
   padding: 0 25px;
 }
-
-@media(min-width:1400px){
+.socail_title {
+  font-size: 15px;
+  line-height: 21px;
+  font-family: 'Austin';
+  color: #fff;
+  margin-top: 25px;
+  display: none;
+}
+@media(min-width:1500px){
 
 
   #novaworks-nav a {
@@ -1526,8 +1538,28 @@ div#nova-mobile-menu {
 }
 
 @media (max-width:767px) {
+  .socail_title {
+    display: block;
+    letter-spacing: 1px;
+}
+.footer-copyright-left address {
+  text-align: center;
+  line-height: 17px;
+}
+#footer_d .footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.footer-copyright-right.col-md-5.col-sm-5 {
+  margin-bottom: 20px;
+}
   .description-before span {
     margin-right: 70px;
+}
+#footer_c {
+  margin-top: -3px;
 }
 .review_box {
   height: 100%;
@@ -1547,7 +1579,11 @@ div#nova-mobile-menu {
 .review-images {
   padding-bottom: 40px;
   text-align: left;
-  border-bottom: 1px solid #dddddd47;
+  /* border-bottom: 1px solid #dddddd47; */
+  padding-top: 20px;
+}
+#footer_d .footer {
+  border-top: 1px solid #dddddd47 !important;
 }
 .review-images .container img {
   margin-right: 20px;
@@ -1578,7 +1614,8 @@ h2.title_des {
 }
 #footer_c h3 {
   margin-bottom: 20px;
-}
+  display: inline-block;
+} 
 .insta-header small {
   font-size: 15px!important;
   text-align: center;
@@ -1688,6 +1725,7 @@ p.bag {
 .content-part h2 {
   font-size: 32px;
   line-height: 40px;
+  margin-top: 40px;
 }
 .slider-info {  
   padding-left: 24px;
@@ -1735,6 +1773,7 @@ ul.content-with-image-slider-section-buttons a {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
+  height: 50px;
 }
 ul.content-with-image-slider-section-buttons a {
   width: 100%;

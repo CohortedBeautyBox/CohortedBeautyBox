@@ -24,14 +24,14 @@
 		</li>
 		{% endif %}
 	  </ul>
-	  <div class="section-image">	
-		{% if section.settings.feature_image != blank %}
+	  {% if section.settings.feature_image != blank %}
+	  <div class="section-image">		
 		<img class="show-desktops" src="{{ section.settings.feature_image | img_url:'master'}}">
-		{% endif %}
 		{% if section.settings.feature_mobile != blank %}
 		<img class="show-mobs" src="{{ section.settings.feature_mobile | img_url:'master'}}">
 		{% else %}
 		<img class="show-mobs" src="{{ section.settings.feature_image | img_url:'master'}}">
+		{% endif %}
 		{% endif %}
 
 	</div>
