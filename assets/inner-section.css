@@ -283,6 +283,29 @@ h3.shopify_explorer_faq__question.h5.link span {
     width: 12px !important;
     border-radius: 100%;
 }
+#shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
+    max-width: 70%;
+    margin: 0 auto;
+    right: 0;
+    text-align: center;
+    transform: translateY(0%);
+    bottom: unset;
+    top: 20%;
+}
+.banner-content h5 {
+    letter-spacing: .75px;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: 'AVENIR LT STD 45 BOOK';
+    margin-bottom: 30px;
+    text-transform: inherit;
+}
+.link-images img {
+    max-width: 225px;
+}
+#cohorted-apps #new-feed {
+    display: none;
+}
 @media (max-width:1460px) {
 	.banner-content {
 		padding: 70px;
@@ -345,6 +368,15 @@ h3.shopify_explorer_faq__separator {
 }
 }
 @media(max-width:767px){
+    .title-align h4 {
+        font: normal normal normal 21px/40px 'Austin';
+    }
+    .profile {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;  
+        font-size: 22px;
+    }
     .row.category-list .image img {
         height: 360px;
     }

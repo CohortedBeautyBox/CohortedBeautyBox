@@ -1,0 +1,76 @@
+<div class="container">
+<div class="row category-list">
+	{% for block in section.blocks %} 	
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
+<!-- Begin product image -->
+<div class="image">
+<a href="{{ block.settings.link }}">
+
+	<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
+</a>
+</div>
+<!-- End product image -->
+
+<!-- Begin product description -->
+<div class="details">
+<a href="{{ block.settings.link }}" class="clearfix">
+<h4 class="title">{{ block.settings.title }}</h4>
+</a>
+</div>
+<!-- End product description -->
+</div>
+{% endfor %}
+	</div>
+</div>
+
+
+	{% schema %}
+	{
+	  "name": "Collection Box",
+	  "class": "testimonial-slider collection-box",
+	  "max_blocks": 5,
+	  "settings": [
+	 
+		  
+	  ],
+	  "blocks": [
+		{
+		  "type": "image",
+		  "name": "Collection Image",
+		  "settings": [
+		  
+		  {
+			"type": "image_picker",
+			"id": "featured_image",
+			"label": "Select Slider Image"
+		  },
+		  {
+			"type": "text",
+			"id": "title",
+			"label": "Heading",
+			"default": "Heading"
+		  },
+		  {
+			"type": "url",
+			"id": "link",
+			"label": "Collection Link"
+		  }
+
+		  
+		  ]
+		}
+	  ],
+	  "presets": [
+		{
+		  "name": "Collection Box",
+		  "category": "Collection Box",
+		  "blocks": [
+			{ 
+			  "type": "image"
+			}
+			
+		  ]
+		}
+	  ]
+	}
+	{% endschema %}

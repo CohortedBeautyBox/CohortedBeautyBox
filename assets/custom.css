@@ -980,6 +980,10 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
   height: 470px;
   object-fit: cover;
   transition: transform .5s ease;
+  width: 100%;
+}
+.collection-box {
+  margin-top: 50px;
 }
 .row.category-list .image a::before {
   background: #000 0 0 no-repeat padding-box;
@@ -1174,7 +1178,10 @@ select#customer-services option {
   display: none;
 }
 @media(min-width:1500px){
-
+  #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
+    bottom: unset;
+    top: 2%;
+}
 
   #novaworks-nav a {
     font-size: 15px!important;
@@ -1290,6 +1297,10 @@ img.image_box_2, img.image_box_3 {
 }
 
 @media (max-width:1199px) {
+  #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
+    max-width: 100% !important;
+    top: 0 !important;
+}
   body h2.heading {
     font: normal normal normal 70px/70px Austin;
     letter-spacing: 1px;
@@ -1538,6 +1549,18 @@ div#nova-mobile-menu {
 }
 
 @media (max-width:767px) {
+  #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
+    top: 50%!important;
+    transform: translateY(-50%) !important;
+}
+.link-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.link-images img {
+  max-width: 100% !important;
+}
   .socail_title {
     display: block;
     letter-spacing: 1px;

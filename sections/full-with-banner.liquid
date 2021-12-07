@@ -19,6 +19,16 @@
 			<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
 			{% endif %}
 
+			<div class="app-url">
+				{% if section.settings.enable_apps %}
+				<h5 style="color:{{ section.settings.text_color }};">Get it on:</h5>
+				<div class="link-images">
+					<a href="#"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/app-store.jpg?v=1638854192"></a> <a href="#"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/google-paly.jpg?v=1638854192"></a>
+				</div>
+				{% endif %}
+			</div>
+
+
 	  </div>
 </div>
   </div>
@@ -128,7 +138,14 @@
 					"type": "color",
 					"id": "text_color",
 					"label": "Text Color"
-					  }
+					  },
+					  {
+						"type": "checkbox",
+						"id": "enable_apps",
+						"label": "Enable Apps Buttons",
+						"default": false
+						  }
+
 					
 	  
 	],

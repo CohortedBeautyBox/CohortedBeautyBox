@@ -1,0 +1,150 @@
+
+<div class="{% if section.settings.enable_gradiant %}enable_gradiant {% else %} redeem-gifts {% endif %} ">
+	<div  class=" container-full {% if section.settings.margin_bottom %} margin_bottom {% else %} container-full{% endif %} ">
+		  <div class="product-box-inner">
+			
+			<div class="product-image-content">
+				{% if section.settings.title != blank %}
+		<div class="text-container-wrapper full-width img-with-txt">
+			
+			<h2>{{ section.settings.title }}</h2>
+			<div class="description-before">{{ section.settings.text }}</div>
+			{% if section.settings.feature_image2 != blank %}
+			<img class="app-image-mob" src="{{ section.settings.feature_image | img_url:'master'}}">
+
+			<div class="app-links">			 
+				<a href="{{ section.settings.link }}"><img src="{{ section.settings.feature_image2 | img_url:'master'}}"></a>
+				<a href="{{ section.settings.link2 }}"><img src="{{ section.settings.feature_image3 | img_url:'master'}}"></a>
+			</div>
+			{% endif %}
+		  </div>
+		  {% endif %}
+			</div>
+			<div class="product-feature-image">
+				<img src="{{ section.settings.feature_image | img_url:'master'}}">
+			</div>
+	
+	
+	</div>
+
+	</div>
+  </div>
+  <style>
+.normal-text-with-image .full-width .description-before {
+    padding-left: 10px;
+}
+.enable_gradiant {
+    background: transparent linear-gradient(0deg, #E4E4E466 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box !important;
+}
+.margin_bottom {
+    margin-bottom: 70px;
+}
+.app-image-mob{display:none;}
+
+@media(max-width:767px){
+
+	.normal-text-with-image .product-feature-image{display: none;}
+
+	.app-image-mob {
+    display: block;
+    margin-top: 40px;
+}
+
+	 .enable_gradiant {
+    background: #E4E4E466 !important;
+    margin-top: 50px;
+}
+.normal-text-with-image .app-links {
+    text-align: center;
+    display: flex;
+    grid-gap: 10px;
+    margin-top: 30px;
+}
+.normal-text-with-image .img-with-txt h2 {
+    text-align: center !important;
+}
+.normal-text-with-image .img-with-txt .description-before {
+    text-align: center;
+}
+}
+  </style>
+  {% schema %}
+  {
+	"name": "Normal Image With Text",
+	"class": "text-with-image normal-text-with-image",
+	"settings": [
+
+	{
+        "type": "text",
+        "id": "section_order",
+        "label": "section order"
+	     },
+	{
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+	{
+      "type": "html",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+	
+	{
+        "type": "image_picker",
+        "id": "feature_image",
+        "label": "Select Image"
+	      },
+
+		  {
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color"
+			  },
+	
+			  {
+				"type": "checkbox",
+				"id": "enable_gradiant",
+				"label": "Enable Gradiant Background",
+				"default": false
+				  },
+			  
+		
+				{
+					"id": "feature_image2",
+					"type": "image_picker",
+					"label": "Select App Image"		  
+				},
+				{
+				"id": "link",
+				"type": "url",
+				"label": "App Link"
+				},
+				{
+					"id": "feature_image3",
+					"type": "image_picker",
+					"label": "Select App Image"		  
+				},
+				{
+				"id": "link2",
+				"type": "url",
+				"label": "App Link"
+				}
+
+					  
+					  
+				
+
+	],
+	"presets": [
+	  {
+		"name": "Normal Image With Text",
+		"category": "Image With Text"
+		
+	  }
+	]
+  }
+  {% endschema %}
+  

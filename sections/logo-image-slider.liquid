@@ -1,4 +1,4 @@
-<div class="logo-image-slider-section-with-background">
+<div style="background:{{ section.settings.bg_color }}; class="logo-image-slider-section-with-background">
   <div class="container">
     <div class="logo-image-slider-section">
       <div class="logo-content-part">
@@ -71,7 +71,12 @@
       "id": "section_title",
       "label": "Title",
       "default": "Talk about your brand"
-    }
+    },
+    {
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color"
+			  }
   ],
   "blocks": [
     {

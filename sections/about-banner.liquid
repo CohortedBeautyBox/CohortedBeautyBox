@@ -1,0 +1,155 @@
+<div class="section-full-banner">
+	<div class="banner-inner-content container">
+		<div class="banner-image row">
+			<div class="col-md-3">
+			{% if section.settings.feature_image1 != blank %}
+			<img class="show-mobb" src="{{ section.settings.feature_image1 | img_url:'master'}}">
+			{% endif %}
+		</div>
+		<div class="col-md-6">
+			{% if section.settings.feature_image2 != blank %}
+			<img class="show-desktopp" src="{{ section.settings.feature_image2 | img_url:'master'}}">
+			{% endif %}
+		</div>
+		<div class="col-md-3">
+			{% if section.settings.feature_image3 != blank %}
+			<img class="show-mobb" src="{{ section.settings.feature_image3 | img_url:'master'}}">
+			{% endif %}
+		</div>
+		</div>
+		<div class="{% if section.settings.banner_right %}banner_right {% else %} banner_left {% endif %} banner-content container">
+			<h3 style="color:{{ section.settings.title_color }};"> <i>{{ section.settings.sub_title }}</i></h3>
+			<h2 style="color:{{ section.settings.title_color }};">{{ section.settings.title }}</h2>		
+		  </div>
+
+		  <div class="text-container-wrapper">
+			<h2>{{ section.settings.title_bottom }}</h2>
+		   {{ section.settings.text_bottom }}
+
+		   {% if section.settings.linktext != blank %}
+<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+{% endif %}
+			  </div>
+	</div>
+	  </div>
+	  <style>
+		  .about-banner {
+    margin-top: 50px;
+}
+.about-banner .banner_left {
+    top: 0;
+    padding: 0px 38px;
+}
+.banner-image.row div {
+    padding: 40px 40px;
+}
+.banner-image.row {
+    display: flex;
+    align-items: center;
+}
+.about-banner .text-container-wrapper {
+    width: 60%;
+    text-align: center;
+    padding-right: 0;
+    margin: 0 auto;
+}
+.text-container-wrapper a {
+    margin-top: 40px;
+}
+		  @media(max-width:767px){
+		  }
+	  </style>
+	 
+	  {% schema %}
+	  {
+		"name": "About banner",
+		"class":"full-with-banner about-banner",
+		"settings": [
+		{
+			"type": "checkbox",
+			"id": "banner_right",
+			"label": "Content Right",
+			"default": false
+			  },
+		{
+			"type": "image_picker",
+			"id": "feature_image1",
+			"label": "Select Image First "
+			  },		  
+			  {
+				"type": "image_picker",
+				"id": "feature_image2",
+				"label": "Select Image Secound"
+				  },
+				  {
+					"type": "image_picker",
+					"id": "feature_image3",
+					"label": "Select Image Third"
+					  },
+			  
+			  {
+				"type": "text",
+				"id": "sub_title",
+				"label": "Sub Title"
+				  },
+			  {
+				"type": "text",
+				"id": "title",
+				"label": "Title"
+				  },
+			
+		
+				  {
+					"type": "color",
+					"id": "title_color",
+					"label": "Title Color"
+					  },
+					  {
+						"type": "color",
+						"id": "text_color",
+						"label": "Text Color"
+						  },
+						  {
+							"type": "text",
+							"id": "title_bottom",
+							"label": "Title"
+							  },
+							  {
+								"type": "html",
+								"id": "text_bottom",
+								"label": "Content Here"
+								  },
+								  {
+									"id": "link",
+									"type": "url",
+									"label": "Button Link"
+								  },
+								  {
+									"id": "linktext",
+									"type": "text",
+									"label": "Button Text"		  
+								},
+						  {
+							"type": "select",
+							"id": "sectionOrder",
+							"options": [
+							  { "value": "orderOne", "label": "Primary Button"},
+							  { "value": "orderTwo", "label": "secondary Button"},
+							  { "value": "orderThree", "label": "secondary White Button"}
+							],
+							"label": "Button Color"
+							}
+						  
+	
+						
+		  
+		],
+		"presets": [
+		  {
+			"name": "About banner",
+			"category": "Banner"
+		  }
+		]
+	  }
+	  {% endschema %}
+	  

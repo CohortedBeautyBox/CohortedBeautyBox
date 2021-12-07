@@ -1,0 +1,100 @@
+<div style="background:{{ section.settings.bg_color }};" class="logo-image-slider-section-with-background">
+	<div class="container">
+	  <div class="logo-image-slider-section">
+		<div class="logo-content-part">
+		  <p>{{ section.settings.section_title }}</p>
+		</div>
+		<div class="logo-slider-part">
+		  {%- if section.blocks.size > 0 -%}
+		  <div class="logo-slider-item-wrapper">
+			{%- for block in section.blocks -%}
+			<div class="logo-slider-item" {{ block.shopify_attributes }}>
+			  {%- if block.settings.image != blank -%}
+			  {{ block.settings.image | img_url: 'master', scale: 2 | img_tag: block.settings.image.alt }}
+			  {%- endif -%}
+			</div>
+			{%- endfor -%}
+		  </div>
+		  {%- endif -%}
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  <style>.app-links {
+    text-align: left;
+}
+
+.inner-logo-slider .logo-slider-item-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 25px;
+}
+.inner-logo-slider .logo-content-part p {
+    color: #000;
+    font-family: 'Avenir LT Std 45 Book';
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.inner-logo-slider .logo-image-slider-section {
+    padding: 30px 0 30px 0;
+}
+.inner-logo-slider .logo-content-part {
+    width: 100%;
+}
+.inner-logo-slider .logo-slider-part {
+    width: 100%;
+}
+@media(max-width:767px){
+	.inner-logo-slider .logo-slider-item-wrapper {
+    grid-template-columns: repeat(3,1fr) !important;
+    align-items: center;
+    grid-gap: 20px;
+}
+.logo-slider-item-wrapper .logo-slider-item:nth-child(4) img {
+    max-width: 110px;
+    height: 25px;
+}
+
+}
+
+</style>
+  {% schema %}
+  {
+	"name": "Inner Logo Slider",
+	"class": "inner-logo-slider",
+	"settings": [
+	  {
+		"type": "text",
+		"id": "section_title",
+		"label": "Title",
+		"default": "Talk about your brand"
+	  },
+	  {
+		"type": "color",
+		"id": "bg_color",
+		"label": "Background Color"
+		  }
+	],
+	"blocks": [
+	  {
+		"type": "logo_image_slider",
+		"name": "Logo Image Slider",
+		"settings": [
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		  }
+		]
+	  }
+	],
+	"presets": [
+	  {
+		"name": "Inner Logo Slider",
+		"category": "Text"
+	  }
+	]
+  }
+  {% endschema %}

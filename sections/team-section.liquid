@@ -1,0 +1,124 @@
+ 
+<div class="testimoni-main">
+	<div class="container">
+		{% if block.settings.title != 'blank'%}
+		<div class="text-container-wrapper full-width">
+		  <h2>{{ section.settings.title }}</h2>
+		  {{ section.settings.text }}
+			</div>
+			{% endif %}
+			
+		   <div class="team-collection">   
+			{% for block in section.blocks %} 	
+		  <div class="team-item">
+			  {% if block.settings.featured_image != 'blank'%}
+		<div class="product-image">
+			<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
+			<h5 class="job_title">{{ block.settings.job_title }}</h5>
+			<p class="job_position">{{ block.settings.job_position }}</p>
+		  </div>
+		  {% endif %}
+	  </div> 
+	  {% endfor %}
+		   </div>
+		  </div>
+	</div>
+	<style>
+	.team-collection img {
+    width: 100%;
+}
+.team-collection {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.team-section .text-container-wrapper {
+    width: 50%;
+    text-align: center;
+    padding-right: 0;
+    margin: 0 auto;
+	padding-bottom: 50px;
+}
+.team-section {
+    margin-top: 70px;
+}
+p.job_position {
+    font-size: 15px;
+    line-height: 24px;
+    color: #464646;
+}
+h5.job_title {
+    font: normal normal normal 28px/40px 'Austin';
+    letter-spacing: 1.4px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+	  </style>
+	
+	{% schema %}
+	{
+	  "name": "Team Section",
+	  "class": "testimonial-slider team-section",
+	  "max_blocks": 50,
+	  "settings": [
+	  {
+		"type": "text",
+		"id": "title",
+		"label": "Heading",
+		"default": "Heading"
+	  },
+	{
+	  "type": "html",
+	  "id": "text",
+	  "label": "Text",
+	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+	},
+		  
+	{
+		"type": "color",
+		"id": "bag-color",
+		"label": "Background Color"
+	  }
+	  ],
+	  "blocks": [
+		{
+		  "type": "image",
+		  "name": "Slider Image",
+		  "settings": [
+		  
+		  {
+			"type": "image_picker",
+			"id": "featured_image",
+			"label": "Select Slider Image"
+		  },
+		  {
+			"type": "text",
+			"id": "job_title",
+			"label": "Job Name",
+			"default": "John Doe"
+		  },
+		  {
+			"type": "text",
+			"id": "job_position",
+			"label": "Job Position",
+			"default": "JOB POSITION TITLE HERE"
+		  }
+		  ]
+		}
+	  ],
+	  "presets": [
+		{
+		  "name": "Team Section",
+		  "category": "Team Section",
+		  "blocks": [
+			{ 
+			  "type": "image"
+			}
+			
+		  ]
+		}
+	  ]
+	}
+	{% endschema %}
+	

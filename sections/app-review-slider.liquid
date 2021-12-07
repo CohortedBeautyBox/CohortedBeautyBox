@@ -1,0 +1,211 @@
+ 
+<div style="background-color:{{ section.settings.bag-color }};" class="testimoni-main">
+	<div class="container">
+		{% if block.settings.title != 'blank'%}
+		<div class="text-container-wrapper full-width">
+		  <h2 style="color:{{ block.settings.text_color }};">{{ section.settings.title }}</h2>
+		  <div class="review-wraps">
+			<span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i><i class="spr-icon spr-icon-star-empty" aria-hidden="true"></i></span>
+		  </div>
+		  <div style="color:{{ block.settings.text_color }};">{{ section.settings.text }}</div>
+		  <a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+			</div>
+			{% endif %}
+			
+		   <div class="feature-collection review-item-new">   
+			{% for block in section.blocks %} 	
+		  <div class="feature-item reviews-item">
+		  {% if block.settings.review_bg != 'blank'%}
+		  <div class="title-align">
+		  <div class="profile">{{ block.settings.short_name }}</div><h4 style="color:{{ block.settings.text_color }};" class="author">{{ block.settings.author }}</h4></div>
+		  <div style="background-color:{{ block.settings.review_bg }};" class="review_box">			  
+		 <p style="color:{{ block.settings.text_color }} !important;">{{ block.settings.review_text }}</p>
+		 <p style="color:{{ block.settings.text_color }};" class="play-store">			
+			<img src="{{ 'play-icon.jpg' | asset_img_url: 'master'}}">	<span>playstore</span></p>
+		
+		  </div>
+		  {% endif %}
+	
+	  </div> 
+	
+	  {% endfor %}
+		   </div>
+		  </div>
+	</div>
+	<script>
+	  $('.review-item-new').slick({
+		dots: false,
+		arrow: false,
+		speed: 300,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		  responsive: [
+		{
+		  breakpoint: 1024,
+		  settings: {
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			infinite: true,
+			dots: true
+		  }
+		},
+		{
+		  breakpoint: 600,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		},
+		{
+		  breakpoint: 480,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		}
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	  ]
+	  });
+	</script>
+	<style>
+		.app-testimonial-slider .slick-arrow {
+    visibility: hidden;
+}
+.review-item-new .slick-slide {
+    border: 1px solid #fff;
+    padding: 20px;
+    text-align: left;
+}
+.app-testimonial-slider .review-wraps {
+    margin-bottom: 10px;
+}
+.review-item-new p {
+    color: #fff;
+}
+.title-align h4 {
+    font: normal normal normal 24px/50px 'Austin';
+    text-transform: capitalize !important;
+}
+p.play-store {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    grid-gap: 10px;
+}
+.app-testimonial-slider .testimoni-main {
+    padding: 40px 0 70px 0;
+}
+.app-testimonial-slider h2, .app-testimonial-slider i, .app-testimonial-slider p {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+.app-testimonial-slide .testimoni-main {
+    padding: 40px 0;
+}
+.title-align {
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+    margin-bottom: 20px;
+}
+.profile {
+    background: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-family: 'Austin';
+    font-size: 24px;
+}
+	</style>
+	
+	{% schema %}
+	{
+	  "name": "App Review slider",
+	  "class": "testimonial-slider app-testimonial-slider",
+	  "max_blocks": 50,
+	  "settings": [
+	  {
+		"type": "text",
+		"id": "title",
+		"label": "Heading",
+		"default": "Heading"
+	  },
+	{
+	  "type": "html",
+	  "id": "text",
+	  "label": "Text",
+	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+	},
+	{
+		"id": "link",
+		"type": "url",
+			 "label": "Button Link"
+	  },
+	  {
+		"id": "linktext",
+		"type": "text",
+		"label": "Button Text"		  },
+			  {
+				"type": "text",
+				"id": "btn_class",
+				"label": "Button Class"
+				  },
+			  
+	{
+		"type": "color",
+		"id": "bag-color",
+		"label": "Background Color"
+	  }
+	  ],
+	  "blocks": [		
+		  {
+			"type": "review",
+			"name": "Review Slider",
+			"settings":[
+			{
+			  "id": "review_text",
+			  "type": "richtext",
+				   "label": "Review Text"
+			},		
+			{
+				"id": "short_name",
+				"type": "text",
+				"label": "Author Shortname"
+			  },
+			{
+				"id": "author",
+				"type": "text",
+				"label": "Author"
+			  },
+			  {
+				"id": "review_bg",
+				"type": "color",
+				"label": "Review Background"
+			  },
+			  {
+				"id": "text_color",
+				"type": "color",
+				"label": "Text Color"
+			  }
+			  
+		  
+		  ]
+		}
+	  ],
+	  "presets": [
+		{
+		  "name": "App Review slider",
+		  "category": "App Review slider",
+		  "blocks": [
+			
+			
+		  ]
+		}
+	  ]
+	}
+	{% endschema %}
+	
