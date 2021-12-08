@@ -7,19 +7,10 @@
 	  </div>
 	  {% endif %}
 	  <ul class="buttons-section">
-		{% if section.settings.button_primary != blank %}
+		{% if section.settings.linktext != blank %}
 		<li>
 			
-		  <a class="primary-btn" href="{{ section.settings.button_primary_url }}">
-			  {{ section.settings.button_primary }}</a>
-		 
-		</li>
-		{% endif %}
-		{% if section.settings.button_secondary != blank %}
-		<li>
-			
-		  <a class="secondary-btn" href="{{ section.settings.button_secondary_url }}">
-			  {{ section.settings.button_secondary }}</a>
+			<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
 		 
 		</li>
 		{% endif %}
@@ -73,18 +64,35 @@ h5.content {
 }
 .rich-content {
     padding: 0 25px;
-    max-width: 50%;
+    max-width: 65%;
     margin: 0 auto;
 }
+.rich-content h5 {
+    font-size: 21px;
+    line-height: 24px;
+    font-family: 'Avenir LT Std 45 Book';
+    margin-bottom: 40px;
+}
+.rich-content p {
+    text-transform: initial;
+    font-size: 15px;
+}
 @media(max-width:767px){
-
+	.rich-text ul.buttons-section {
+    display: flex !important;
+}
 	img.show-desktops {
     display: block;
 }
 img.show-mobs {
     display: none;
 }
-
+.rich-content {
+    max-width: 100% !important;
+}
+.rich-text-main {
+    padding-top: 40px;
+}
 }
   </style>
   {% schema %}
@@ -106,24 +114,24 @@ img.show-mobs {
 	  },
 	  {
 		"type": "text",
-		"id": "button_primary",
-		"label": "Primary Button Text"
+		"id": "linktext",
+		"label": "Button Text"
 	  },
 	  {
 		"type": "url",
-		"id": "button_primary_url",
-		"label": "Primary Button URL"
+		"id": "link",
+		"label": "Button URL"
 	  },
 	  {
-		"type": "text",
-		"id": "button_secondary",
-		"label": "Secondary Button Text"
-	  },
-	  {
-		"type": "url",
-		"id": "button_secondary_url",
-		"label": "Secondary Button URL"
-	  },
+		"type": "select",
+		"id": "sectionOrder",
+		"options": [
+		  { "value": "orderOne", "label": "Primary Button"},
+		  { "value": "orderTwo", "label": "secondary Button"},
+		  { "value": "orderThree", "label": "secondary White Button"}
+		],
+		"label": "Button Color"
+		},
 	  {
 		"type": "image_picker",
 		"id": "feature_image",

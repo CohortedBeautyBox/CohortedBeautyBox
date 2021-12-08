@@ -1,5 +1,5 @@
 <div class="container">
-<div class="row category-list">
+<div class="row category-list category-item-list">
 	{% for block in section.blocks %} 	
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
 <!-- Begin product image -->
@@ -22,6 +22,98 @@
 {% endfor %}
 	</div>
 </div>
+<style>
+.category-item-list .item:nth-child(2n+1) {
+    clear: unset;
+}
+.category-item-list .slick-next:before {
+		  content: url("{{'arrow-right.png' | asset_img_url:'25x20'}}") !important;
+		}
+		.category-item-list .slick-prev:before {
+		  content: url("{{'arrow-left.png' | asset_img_url:'25x20'}}") !important;
+		}
+@media(max-width:767px){
+	.category-item-list .slick-prev.slick-arrow {
+    left: 15px;
+    top: 100% !important;
+    transform: translateY(10px);
+	z-index: 1;
+}
+	.category-item-list .slick-next.slick-arrow {
+	right: 15px;
+    top: 100% !important;
+    transform: translateY(10px);
+	}
+}
+.category-item-list .slick-dots li {
+    width: 80px;
+    height: 20px;
+    margin: 0 !important;
+}
+.category-item-list .slick-dots li button {
+    width: 75px !important;
+    height: 3px!important;
+    padding: 0 !important;
+    border: 1px solid #ccc!important;
+    background: #ccc;
+}
+.category-item-list .slick-dots li.slick-active button:before {
+    opacity: 1!important;
+    color: #000;
+    background: #000!important;
+    height: 3px!important;
+    width: 75px!important;
+    border-radius: 15px;
+}
+.slick-next:before, .slick-prev:before {
+    opacity: 1;
+}
+</style>
+
+<script>
+	  if ($(window).width() < 767){
+	$('.category-item-list').slick({
+	  dots: false,
+	  arrow: true,
+	  speed: 300,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+		responsive: [
+	  {
+		breakpoint: 1024,
+		settings: {
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  infinite: true,
+		  arrow: true,
+		  dots: false
+		}
+	  },
+	  {
+		breakpoint: 600,
+		settings: {
+		  slidesToShow: 1,
+		  dots: true,
+		  arrow: true,
+		  slidesToScroll: 1
+		}
+	  },
+	  {
+		breakpoint: 480,
+		settings: {
+		  slidesToShow: 1,
+		  arrow: true,
+		  dots: true,
+		  slidesToScroll: 1
+		}
+	  }
+	  // You can unslick at a given breakpoint now by adding:
+	  // settings: "unslick"
+	  // instead of a settings object
+	]
+	});
+}
+  </script>
 
 
 	{% schema %}

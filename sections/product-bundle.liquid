@@ -1,0 +1,336 @@
+
+<div class="redeem-gifts">
+	<div class="container">					
+		  <div style="background:#EBEBEB66;" class="product-box-inner {% if section.settings.swipe_coloum %} swipe_coloum {% endif %} ">
+			<div style="order:{{ section.settings.section_order }};" class="product-feature-image">
+				<img src="{{ section.settings.feature_image | img_url:'master'}}">
+			</div>
+
+			<div class="bundle-div">
+
+				<h2>Price Bundle Includes</h2>
+				<p>ARMANI BEAUTY <br>PRIZE VALUE: £234.80</p>
+
+				<ul class="grid-point-listd bundle-box">
+					{% for block in section.blocks %}  
+					{%- assign dynamic_products = all_products[block.settings.featured_product] -%} 		
+					<li><div class="product-box daynamic">
+					  {% assign featured_image = dynamic_products.selected_or_first_available_variant.featured_image | default: dynamic_products.featured_image %}
+					  {% if block.settings.feature_image != blank %}  
+					  <img src="{{ block.settings.feature_image | img_url: 'master' }}">
+					  {% else %}
+					  <img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt }}" 
+					  id="FeaturedImage-{{ section.id }}" class="product-featured-img">
+					  
+			  
+					  {% endif %}
+					  <div class="product-info-new">
+						<h4>LAMER The Hand Treatment</h4>
+						  <!-- <div class="review-wrap">
+							  <span class="shopify-product-reviews-badge" data-id="{{ dynamic_products.id }}"></span>
+							</div> -->
+						  <div class="product-align-center">
+					 
+					  
+					  <!-- <div class="product-price"><div class="price-box">
+						  {% assign price = dynamic_products.price | money %}
+						  {% if dynamic_products.available %}
+						  {% if dynamic_products.price_varies %}
+						  <p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+						  {% else %}
+						  <p class="special-price"><span class="price">{{ price }}</span></p>
+						  {% endif %}
+						  {% if dynamic_products.compare_at_price_max > dynamic_products.price %}
+						  <p class="old-price"><span class="price-sep">-</span><span class="price">{{ dynamic_products.compare_at_price | money }}</span></p>
+						  {% endif %}
+						  {% else %}
+						  {% if dynamic_products.price_varies %}
+						  <p class="minimal-price"><span class="price-label">From:</span><span class="price">{{ price }}</span></p>
+						  {% else %}
+						  <span class="regular-price"><span class="price">{{ price }}</span></span>
+						  {% endif %}
+						  {{ 'products.product.sold_out_html' | t }}
+						  {% endif %}
+						</div></div>	 -->
+						
+					  </div>
+					</div>
+					<!-- <div class="buy-now"><a class="secondary-btn" href="{{dynamic_products.url}}">Buy Now</a></div>						</div> -->
+				  </li>
+					{% endfor %}
+				  
+			  </ul>
+
+			</div> 
+		
+	</div>
+
+	</div>
+  </div>
+
+  <script>
+	$('.bundle-box').slick({
+	  dots: true,
+	  arrow: true,
+	  speed: 300,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  customPaging : function(slider, i) {
+		var thumb = $(slider.$slides[i]).data();
+		return '<a>'+i+'</a>';
+	  },
+		responsive: [
+	  {
+		breakpoint: 1024,
+		settings: {
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  infinite: true,
+		  dots: true
+		}
+	  },
+	  {
+		breakpoint: 600,
+		settings: {
+		  slidesToShow: 1,
+		  slidesToScroll: 1
+		}
+	  },
+	  {
+		breakpoint: 480,
+		settings: {
+		  slidesToShow: 1,
+		  slidesToScroll: 1
+		}
+	  }
+  
+	]
+	});
+  </script>
+
+
+  <style>
+	  .bundle-div .slick-dots {
+    bottom: -23px!important;
+    left: 10px;
+}
+.product-bundle .product-box.daynamic h4 {
+    background: #fff;
+    margin: 0 auto;
+    max-width: 70%;
+    padding-bottom: 20px;
+}
+.product-bundle .product-box.daynamic {
+    margin-bottom: 13px;
+}
+.product-bundle .product-box.daynamic img {
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 70%;
+}
+li.slick-active a {
+    font-weight: bold;
+
+}
+.bundle-div ul li{
+	font: normal normal normal 21px/25px Orelo SemiWide Medium;
+letter-spacing: 1.05px;
+}
+.bundle-div .slick-dots li:last-child {
+    visibility: visible;
+}
+.bundle-div .slick-dots li:first-child {
+    visibility: visible;
+}
+.bundle-div .slick-dots li {
+    visibility: hidden;
+}
+.product-bundle .grid-point-listd {
+    margin-top: 20px;
+}
+.bundle-div h4 {
+    font-size: 15px;
+    line-height: 21px;
+    font-family: 'Avenir LT Std 45 Book';
+}
+.bundle-div h2 {
+    font: normal normal normal 70px/70px 'Austin';
+    text-transform: capitalize;
+}
+.bundle-div p {
+    font-size: 15px;
+    line-height: 21px;
+    font-family: 'Avenir LT Std 45 Book';
+}
+	.product-bundle .product-box-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.image_block {
+    margin-top: 0 !important;
+}
+.slick-arrow {
+    z-index: 999;
+}
+.product-bundle .bundle-div {
+    width: 50%;
+}
+.product-bundle .product-feature-image {
+    width: 50%;
+}
+.bundle-div .grid-point-listd li {
+    width: auto;
+    padding: 0;
+}
+.bundle-div .slick-prev.slick-arrow {
+    left: 15px;
+    top: 100% !important;
+    transform: translateX(150px);
+    z-index: 1;
+}
+.bundle-div .slick-next.slick-arrow {
+    right: 15px;
+    top: 100% !important;
+    transform: translateX(-150px);
+}
+}
+
+.slick-next:before, .slick-prev:before {
+    opacity: 1;
+}
+
+.bundle-div .slick-next:before {
+		  content: url("{{'arrow-right.png' | asset_img_url:'25x20'}}") !important;
+		}
+		.bundle-div .slick-prev:before {
+		  content: url("{{'arrow-left.png' | asset_img_url:'25x20'}}") !important;
+		}
+	@media(max-width:767px){
+		.product-bundle .product-feature-image {
+    width: 100%;
+}
+.product-bundle .product-box.daynamic img {
+    max-width: 90%;
+}
+.product-bundle .product-box.daynamic h4 {
+    max-width: 90%;
+}
+.product-bundle .grid-point-listd.bundle-box.slick-initialized.slick-slider.slick-dotted {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-top: 20px;
+}
+.bundle-div h2 {
+    font: normal normal normal 32px/32px'Austin';
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+.bundle-div .slick-next.slick-arrow {
+    transform: translateX(-40px);
+	top: 95% !important;
+}
+.bundle-div .slick-prev.slick-arrow {
+    transform: translateX(40px);
+	top: 95% !important;
+}
+.bundle-div .slick-dots {
+    bottom: -3px!important;
+}
+.product-bundle .bundle-div {
+    width: 100%;
+}
+		.swipe_coloum {
+    flex-direction: column-reverse;
+}
+	}
+  </style>
+  
+  {% schema %}
+  {
+	"name": "Dynamic Products",
+	"class": "products-with-image product-bundle",
+	  "max_blocks": 4,
+	"settings": [
+	{
+        "type": "text",
+        "id": "section_order",
+        "label": "Swipe Section By Number"
+	      },
+	{
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+	{
+      "type": "html",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+		{
+			"id": "linktext",
+			"type": "text",
+			"label": "Button Text"		  },
+		{
+		"id": "link",
+		"type": "url",
+		"label": "Button Link"
+		},
+		{
+				"type": "select",
+				"id": "sectionOrder",
+				"options": [
+				  { "value": "orderOne", "label": "Primary Button"},
+				  { "value": "orderTwo", "label": "secondary Button"},
+				  { "value": "orderThree", "label": "secondary White Button"}
+				],
+				"label": "Button Color"
+				},
+	{
+        "type": "image_picker",
+        "id": "feature_image",
+        "label": "Select Image"
+	      },
+		  {
+			"type": "checkbox",
+			"id": "swipe_coloum",
+			"label": "Swipe coloumn Mob",
+			"default": false
+			  }
+	],
+	"blocks": [
+	  {
+		"type": "select",
+		"name": "Add Product",
+		"settings": [
+		{
+			"type": "product",
+			"id": "featured_product",
+			"label": "Select Product"
+		  },
+		  {
+			"type": "image_picker",
+			"id": "feature_image",
+			"label": "Select Product Image"
+		  }	
+ 
+		]
+	  }
+	],
+	"presets": [
+	  {
+		"name": "Product Bundle",
+		"category": "Product Bundle",
+		"blocks": [
+		  { 
+			"type": "select"
+		  }
+		
+		]
+	  }
+	]
+  }
+  {% endschema %}
+  

@@ -4,12 +4,14 @@
 	<li data-tab="tab-specs"><span>What we do</span></li>
 	<li data-tab="tab-delivery"><span>What we value</span></li>
 	  </ul>
+	  <div class="tab-slider">
   <div style="background-image: url('{{ section.settings.featured_image | img_url: 'master' }};');" id="tab-description" class="shopify-tab-content current">
 	<div class="tab-content">
 		<div class="text-container-wrapper">
 			<h2>{{ section.settings.title }}</h2>
 			{{ section.settings.text }}
 			  </div>
+			
 	</div>
   </div>
   <div style="background-image: url('{{ section.settings.featured_image2 | img_url: 'master' }};');" id="tab-specs" class="shopify-tab-content">
@@ -20,13 +22,16 @@
 			  </div>
 	</div>
   </div>
-  <div style="background-image: url('{{ section.settings.featured_image | img_url: 'master' }};');" id="tab-delivery" class="shopify-tab-content">
+  <div style="background-image: url('{{ section.settings.featured_image3 | img_url: 'master' }};');" id="tab-delivery" class="shopify-tab-content">
 	<div class="tab-content">
 		<div class="text-container-wrapper">
 			<h2>{{ section.settings.title3 }}</h2>
 			{{ section.settings.text3 }}
 			  </div>
 	</div>  </div>
+
+</div>
+
 </div>
 
   <style>
@@ -34,9 +39,11 @@
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1px solid #ffff;
-    width: 100%;
-    margin: 40px 100px;
+    border-bottom: 1px solid #ffffff6e;
+    width: 87%;
+    left: 0;
+    margin: 40px  auto;
+    right: 0;
 }
 .tabs-main .text-container-wrapper h2 {
     color: #fff;
@@ -63,7 +70,7 @@ ul.shopify-tabs > li {
     font: normal normal normal 32px/70px 'Austin';
     position: relative;
     padding-right: 40px;
-}
+} 
 ul.shopify-tabs > li span {
     position: relative;
     display: block;
@@ -102,9 +109,82 @@ ul.shopify-tabs > li.current span:before {
 	  })
 	})
   </script>
+
+<script>
+	if ($(window).width() < 767){
+	$('.tab-slider').slick({	
+	  dots: true,
+	  arrow: false,
+	  speed: 300,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+		responsive: [
+	  {
+		breakpoint: 1024,
+		settings: {
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  infinite: true,
+		  dots: true
+		}
+	  },
+	  {
+		breakpoint: 600,
+		settings: {
+		  slidesToShow: 1,
+		  slidesToScroll: 1
+		}
+	  },
+	  {
+		breakpoint: 480,
+		settings: {
+		  slidesToShow: 1,
+		  slidesToScroll: 1
+		}
+	  }
+	  // You can unslick at a given breakpoint now by adding:
+	  // settings: "unslick"
+	  // instead of a settings object
+	]
+	});
+}
+  </script>
+
   <style>
 .shopify-tab-content {
     height: 900px;
+}
+@media(max-width:767px){
+
+	.shopify-tab-content {
+    height: 590px;
+    object-fit: cover;
+    background-position: center;
+}
+ul.shopify-tabs {
+    display: none;
+}
+.tab-content {
+    position: relative;
+    bottom: 30px;
+    text-align: left;
+    color: #fff;
+    padding: 25px 0px;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+.tabs-main .slick-dots {
+    bottom: 10px!important;
+    text-align: left;
+    padding: 0 20px;
+}
+.tabs-main .slick-dots li button {
+    border: 1px solid #fff!important;
+}
+.tabs-main .slick-dots li.slick-active button:before {
+    background: #fff!important;
+}
 }
 
   </style>

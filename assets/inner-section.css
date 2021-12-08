@@ -102,7 +102,15 @@ ul.grid-point-listd li {
     align-items: center;
 }
 .text-with-image .product-image-content {
-    padding: 80px;
+    padding: 50px 80px;
+}
+#black-edition-new .text-with-image .text-container-wrapper.full-width {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+}
+#black-edition-new .text-with-image {
+    margin-top: 70px;
 }
 .img-with-txt h2 {
     text-align: left !important;
@@ -306,6 +314,20 @@ h3.shopify_explorer_faq__question.h5.link span {
 #cohorted-apps #new-feed {
     display: none;
 }
+#shopify-section-template--14216801779817__16389655410a4e7ed5 .description-banner div {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+#shopify-section-template--14216801779817__16389655410a4e7ed5  .space {
+    width: 50px;
+    height: 1px;
+    background: #202020;
+    display: block;
+}
+#black-edition-new .save {
+    display: none;
+}
 @media (max-width:1460px) {
 	.banner-content {
 		padding: 70px;
@@ -368,6 +390,27 @@ h3.shopify_explorer_faq__separator {
 }
 }
 @media(max-width:767px){
+    .rich-content h5 {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    #shopify-section-template--14216526561385__163894878105e30c94 .banner-inner-content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    #shopify-section-template--14216526561385__163894878105e30c94 .banner-content {
+        padding-top: 20px !important;
+        position: relative;
+    }
+    #shopify-section-template--14215128940649__1638879485405f909c .logo-image-slider-section {
+        padding: 0;
+    }
+    .logo-slider-item img {
+        height: 25px;
+    }
     .title-align h4 {
         font: normal normal normal 21px/40px 'Austin';
     }

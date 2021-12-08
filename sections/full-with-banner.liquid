@@ -18,6 +18,13 @@
 			{% if section.settings.linktext != blank %}
 			<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
 			{% endif %}
+             
+			{% if section.settings.feature_image2 != blank %}
+			<div class="app-links">			 
+				<a href="{{ section.settings.link2 }}"><img src="{{ section.settings.feature_image2 | img_url:'master'}}"></a>
+				<a href="{{ section.settings.link3 }}"><img src="{{ section.settings.feature_image3 | img_url:'master'}}"></a>
+			</div>
+			{% endif %}
 
 			<div class="app-url">
 				{% if section.settings.enable_apps %}
@@ -38,6 +45,15 @@
 	  .banner_right {
     left: unset;
     right: 0;
+}
+
+.full-with-banner .app-links img {
+    max-width: 170px;
+}
+.full-with-banner .app-links {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
 }
 
 	  @media(max-width:767px){
@@ -139,6 +155,26 @@
 					"id": "text_color",
 					"label": "Text Color"
 					  },
+					  {
+						"id": "feature_image2",
+						"type": "image_picker",
+						"label": "Select App Image"		  
+					},
+					{
+					"id": "link2",
+					"type": "url",
+					"label": "App Link"
+					},
+					{
+						"id": "feature_image3",
+						"type": "image_picker",
+						"label": "Select App Image"		  
+					},
+					{
+					"id": "link3",
+					"type": "url",
+					"label": "App Link"
+					},
 					  {
 						"type": "checkbox",
 						"id": "enable_apps",
