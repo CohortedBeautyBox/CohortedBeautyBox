@@ -1,0 +1,75 @@
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="thumbnail">
+						
+						<img src="{{ section.settings.image | img_url:'master' }}">
+                        <a data-fancybox="video-gallery" href="{{ section.settings.link }}">
+							<div class="play-button"><h5>Play</h5></div>
+							
+						</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+		<style>
+.video-main .thumbnail {
+    padding: 0;
+    border: none;
+	position: relative;
+}
+.play-button {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    background: #fff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    top: 25%;
+    cursor: pointer;
+}
+.play-button h5 {
+    font: normal normal normal 24px/34px Austin;
+    letter-spacing: 2.4px;
+    margin: 0;
+}
+
+
+		</style>
+
+{% schema %}
+
+  {
+	"name": "Video Section",
+	"class": "video-main",
+	
+	"settings": [
+	  {
+		"type": "image_picker",
+		"id": "image",
+		"label": "Select Image"
+		  },
+		  {
+			"type": "url",
+			"id": "link",
+			"label": "Video Link"
+		  }
+
+	],
+	"presets": [
+	  {
+		"name": "Video Section",
+		"category": "Text"
+	  }
+	]
+  }
+  {% endschema %}

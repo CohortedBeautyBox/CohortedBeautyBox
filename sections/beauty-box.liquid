@@ -1,0 +1,207 @@
+ 
+<div class="testimoni-main">
+	<div class="container">
+		{% if block.settings.title != 'blank'%}
+		<div class="text-container-wrapper full-width">
+		  <h2>{{ section.settings.title }}</h2>
+			</div>
+			{% endif %}
+			
+		   <div class="team-collection">   
+			{% for block in section.blocks %} 	
+		  <div class="team-item">
+			  {% if block.settings.featured_image != 'blank'%}
+		<div class="product-image">
+			<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
+			<h5 class="job_title">{{ block.settings.job_title }}</h5>
+			<p class="job_position">{{ block.settings.job_position }}</p>
+		  </div>
+		  {% endif %}
+
+		  {% if block.settings.linktext != blank %}
+<a class="{% if block.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif block.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ block.settings.link }}">{{ block.settings.linktext }}</a>
+{% endif %}
+	  </div> 
+	  {% endfor %}
+		   </div>
+		  </div>
+	</div>
+	<style>
+	.team-collection img {
+    width: 100%;
+}
+.team-collection {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.image_block .secondary-btn {
+    width: 100%;
+}
+.beauty_box .text-container-wrapper {
+    width: 70%;
+    text-align: center;
+    padding-right: 0;
+    margin: 0 auto;
+	padding-bottom: 50px;
+}
+.beauty_box .team-item {
+    background: #E4E4E466 0% 0% no-repeat padding-box;
+    padding: 15px;
+	text-align: left;
+	position: relative;
+	counter-increment: css-counter 1;
+	z-index: 1;
+}
+.beauty_box .team-item:before {
+    content: "0" counter(css-counter);
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+    color: #fff;
+    font-size: 150px;
+    font-family: 'FontAwesome';
+    z-index: -1;
+}
+.beauty_box .team-collection {
+    list-style-type: none;
+    counter-reset: css-counter 0;
+}
+.beauty_box .team-collection img {
+    width: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 4px #00000080;
+    padding: 5px 5px 10px 5px;
+}
+.team-section {
+    margin-top: 70px;
+}
+p.job_position {
+    font-size: 15px;
+    line-height: 24px;
+    color: #464646;
+	margin-bottom: 30px;
+}
+h5.job_title {
+    font: normal normal normal 28px/40px 'Austin';
+    letter-spacing: 1.4px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+@media(max-width:767px){
+
+	.team-section {
+    margin-top: 0px;
+}
+.image_block .product-image{padding: 0;}
+.team-section .text-container-wrapper {
+    width: 100%;
+    padding-bottom: 40px;
+}
+.team-section {
+    margin-top: 0px;
+}
+.image_block .team-collection {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 10px;
+    grid-row-gap: 30px;
+}
+h5.job_title {
+    font: normal normal normal 18px/32px 'Austin';
+    letter-spacing: 1px;
+}
+p.job_position {
+    font-size: 12px;
+    line-height: 16px;
+}
+}
+	  </style>
+	
+	{% schema %}
+	{
+	  "name": "Beauty Box",
+	  "class": "beauty_box team-section",
+	  "max_blocks":9,
+	  "settings": [
+	  {
+		"type": "text",
+		"id": "title",
+		"label": "Heading",
+		"default": "Heading"
+	  },
+	{
+	  "type": "html",
+	  "id": "text",
+	  "label": "Text",
+	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+	},
+		  
+	{
+		"type": "color",
+		"id": "bag-color",
+		"label": "Background Color"
+	  }
+	  ],
+	  "blocks": [
+		{
+		  "type": "image",
+		  "name": "Block Image",
+		  "settings": [
+		  
+		  {
+			"type": "image_picker",
+			"id": "featured_image",
+			"label": "Select Slider Image"
+		  },
+		  {
+			"type": "text",
+			"id": "job_title",
+			"label": "Job Name",
+			"default": "John Doe"
+		  },
+		  {
+			"type": "text",
+			"id": "job_position",
+			"label": "Job Position",
+			"default": "JOB POSITION TITLE HERE"
+		  },
+		  {
+			"id": "linktext",
+			"type": "text",
+			"label": "Button Text"		  
+		},
+		{
+		"id": "link",
+		"type": "url",
+		"label": "Button Link"
+		},
+		  {
+			"type": "select",
+			"id": "sectionOrder",
+			"options": [
+			  { "value": "orderOne", "label": "Primary Button"},
+			  { "value": "orderTwo", "label": "secondary Button"},
+			  { "value": "orderThree", "label": "secondary White Button"}
+			],
+			"label": "Button Color"
+			}
+		  ]
+		}
+	  ],
+	  "presets": [
+		{
+		  "name": "Beauty Box",
+		  "category": "Beauty Box",
+		  "blocks": [
+			{ 
+			  "type": "image"
+			}
+			
+		  ]
+		}
+	  ]
+	}
+	{% endschema %}
+	

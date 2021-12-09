@@ -1,0 +1,250 @@
+<div class="slider-content">
+	<h2 class="site_heading">{{ section.settings.title_main }}</h2>
+		<div class="slider-content-items">
+			{% for block in section.blocks %} 	
+    <div class="slider-content-item">
+		<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
+		<div class="content-item">
+			<h4 class="title-h4">{{ block.settings.title }}</h4>
+			<p class="paragraph">{{ block.settings.paragraph }}</p>
+			{% if block.settings.linktext != blank %}
+<a class="primary-btn-new"  href="{{ block.settings.link }}">{{ block.settings.linktext }}</a>
+{% endif %}
+<!-- <div class="counter">
+	<p>{{ block.settings.count }}</p>
+</div> -->
+		</div>
+	</div>
+	{% endfor %}
+		</div>
+
+	</div>
+	<style>
+
+.slider-content-item {
+    position: relative;
+    padding: 0 12px;
+}
+.claim-slider {
+    margin-bottom: 100px;
+    margin-top: 70px;
+}
+.content-item {
+    background: #000000 0% 0% no-repeat padding-box;
+    max-width: 480px;
+    padding: 20px;
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    left: -30px;
+	display: none;
+}
+.slick-current.slick-active .content-item {
+    display: block;
+}
+p.paragraph {
+    font: normal normal normal 14px/24px Avenir Next LT Pro;
+    letter-spacing: 0.7px;
+    color: #fff;
+}
+.content-item h4.title-h4 {
+    font: normal normal normal 32px/44px Austin;
+    letter-spacing: 1.6px;
+    color: #fff;
+    text-transform: capitalize;
+}
+a.primary-btn-new {
+    border: 1px solid #FFFFFF;
+    color: #fff;
+    font: normal normal normal 16px/60px Austin;
+    height: 60px;
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+	.claim-slider .slick-next:before {
+			  content: url("{{'arrow-right.png' | asset_img_url:'25x20'}}") !important;
+			}
+			.claim-slider .slick-prev:before {
+			  content: url("{{'arrow-left.png' | asset_img_url:'25x20'}}") !important;
+			}
+
+			.claim-slider .slick-prev.slick-arrow {
+    left: 29%;
+    top: 100% !important;
+    transform: translateY(-10px);
+    z-index: 1;
+	box-shadow: none;
+}
+	.claim-slider .slick-next.slick-arrow {
+		right: 29%;
+		top: 100% !important;
+		transform: translateY(-10px);
+		box-shadow: none;
+		}
+	
+	.claim-slider .slick-dots li {
+		width: 150px;
+		height: 20px;
+		margin: 0 !important;
+	}
+	.claim-slider .slick-dots li button {
+		width: 145px !important;
+		height: 1px!important;
+		padding: 0 !important;
+		border: 1px solid #ccc!important;
+		background: #ccc;
+	}
+	.claim-slider .slick-dots li.slick-active button:before {
+		opacity: 1!important;
+		color: #000;
+		background: #000!important;
+		height: 2px!important;
+		width: 145px!important;
+		border-radius: 15px;
+	}
+	.claim-slider .slick-dots li{
+		width: 150px;
+	}
+	.slick-next:before, .slick-prev:before {
+		opacity: 1;
+	}
+	h2.site_heading {
+    font: normal normal normal 80px/70px Austin;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+	@media(max-width:767px){
+	}
+		
+	</style>
+	
+	<script>
+        $('.slider-content-items').slick({
+		  dots: true,
+		  arrow: true,
+		  centerPadding: '200px',
+		  centerMode: true,
+		  speed: 300,
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+			responsive: [
+		  {
+			breakpoint: 1024,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  infinite: true,
+			  arrow: true,
+			  dots: false
+			}
+		  },
+		  {
+			breakpoint: 600,
+			settings: {
+			  slidesToShow: 1,
+			  dots: true,
+			  arrow: true,
+			  slidesToScroll: 1
+			}
+		  },
+		  {
+			breakpoint: 480,
+			settings: {
+			  slidesToShow: 1,
+			  arrow: true,
+			  dots: true,
+			  slidesToScroll: 1
+			}
+		  }
+		  // You can unslick at a given breakpoint now by adding:
+		  // settings: "unslick"
+		  // instead of a settings object
+		]
+		});
+	  </script>
+	
+	
+		{% schema %}
+		{
+		  "name": "Claim Slider",
+		  "class": "claim-slider collection-box",
+		  "max_blocks": 10,
+		  "settings": [
+		  {
+			"type": "text",
+			"id": "title_main",
+			"label": "Heading",
+			"default": "Heading"
+		  }
+			  
+		  ],
+		  "blocks": [
+			{
+			  "type": "image",
+			  "name": "Collection Image",
+			  "settings": [
+			  {
+				"type": "image_picker",
+				"id": "featured_image",
+				"label": "Select Slider Image"
+			  },
+			  {
+				"type": "header",
+				"content": "Slide Content"		  
+				},
+			
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Heading",
+					"default": "Heading"
+				  },
+				  {
+					"type": "html",
+					"id": "paragraph",
+					"label": "Content"
+				  },
+			  {
+				"id": "linktext",
+				"type": "text",
+				"label": "Button Text"		  
+				},
+					  {
+						"type": "url",
+						"id": "link",
+						"label": "Button Link"
+						  },
+							{
+						"type": "select",
+						"id": "sectionOrder",
+						"options": [
+						  { "value": "orderOne", "label": "Primary Button"},
+						  { "value": "orderTwo", "label": "secondary Button"},
+						  { "value": "orderThree", "label": "secondary White Button"}
+						],
+						"label": "Button Color"
+						}
+
+			  ]
+			}
+		  ],
+		  "presets": [
+			{
+			  "name": "Claim Slider",
+			  "category": "Claim Slider",
+			  "blocks": [
+				{ 
+				  "type": "image"
+				}
+				
+			  ]
+			}
+		  ]
+		}
+		{% endschema %}

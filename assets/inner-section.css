@@ -328,6 +328,21 @@ h3.shopify_explorer_faq__question.h5.link span {
 #black-edition-new .save {
     display: none;
 }
+#shopify-section-template--14216801779817__1638968515399efa42 .feature-image img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+#shopify-section-template--14216801779817__1638968515399efa42 .feature-image {
+    height: auto;
+}
+#shopify-section-template--14216801779817__1638968515399efa42 .single_product .row {
+    align-items: center;
+}
+#shopify-section-template--14216801779817__1638968515399efa42 {
+    background: transparent linear-gradient(0deg,#f8f8f8 0,#f4f4f4 48%,#f0f0f0 93%,#efefef 100%) 0 0 no-repeat padding-box;
+    margin-top: 70px;
+}
 @media (max-width:1460px) {
 	.banner-content {
 		padding: 70px;
@@ -394,6 +409,9 @@ h3.shopify_explorer_faq__separator {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 30px;
+    }
+    #shopify-section-template--14216801779817__1638968515399efa42 .feature-image img {
+        width: 100%;   
     }
     #shopify-section-template--14216526561385__163894878105e30c94 .banner-inner-content {
         position: relative;

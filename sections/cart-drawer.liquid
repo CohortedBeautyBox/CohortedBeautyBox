@@ -29,12 +29,16 @@
       {%- endif -%}
       {%- endif -%}
     </div>
+    <div class="free-ship-text">
+      <p>FREE SHIPPING ON ORDERS $50+</p>
+    </div>
     {% if cart.item_count > 0 %}
     <div class="cart-drawer-content">
       <form action="/cart" method="post" novalidate>
         <div class="cart-content">
           {% for item in cart.items %}
           <div class="row">
+            <div class="cart-block">
             {% if item.image != blank %}
             <div class="col-5 col-md-5">
               <a href="{{ item.url | within: collections.all }}">
@@ -44,7 +48,15 @@
             {% endif %}
             <div class="col-7 col-md-7">
               <a href="{{ item.url }}">{{ item.product.title }}</a>
-              {% unless item.product.has_only_default_variant %}
+              
+              <div class="cartdrawerquantity">
+                <div class="value-qty">
+                <span class="minus" onclick="drawerMinus(this)">&#8722;</span>
+                <input class="cart__qty-input" data-variantid="{{ item.variant_id }}" type="text" name="updates[]" id="updates_large_{{ item.key }}" value="{{ item.quantity }}" min="0" pattern="[0-9]*" data-quantity-item="{{ forloop.index }}" onchange="drawerInputitem(this)">
+                <span class="plus" onclick="drawerPlus(this)">&#43;</span>
+                </div>
+                <div class="price">
+                {% unless item.product.has_only_default_variant %}
               <p>{{ item.variant.title }}</p>
               {% endunless %}
               {% if item.original_line_price != item.line_price %}
@@ -53,14 +65,12 @@
               {% else %}
               {{ item.price | money }}
               {% endif %}
-              <div class="cartdrawerquantity">
-                <span class="minus" onclick="drawerMinus(this)">&#8722;</span>
-                <input class="cart__qty-input" data-variantid="{{ item.variant_id }}" type="text" name="updates[]" id="updates_large_{{ item.key }}" value="{{ item.quantity }}" min="0" pattern="[0-9]*" data-quantity-item="{{ forloop.index }}" onchange="drawerInputitem(this)">
-                <span class="plus" onclick="drawerPlus(this)">&#43;</span>
+                  </div>
               </div>
               <span class="cart-remove" data-variantid="{{ item.variant_id }}" onclick="drawerRemove(this)">
                 <small>{{ 'cart.general.remove' | t }}</small>
               </span>
+            </div>
             </div>
           </div>
           {% endfor %}
@@ -69,13 +79,18 @@
           <div class="row">
             <div class="col-md-12">
               <div class="cart-drawer-subtotal"><p>{{ 'cart.general.subtotal' | t }}</p>
-                <p>{{ cart.total_price | money }}</p>
+                <p class="price-draw">{{ cart.total_price | money }}</p>
                 {% if cart.total_discounts > 0 %}
-                <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
+                <p >{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                 {% endif %}
+                 
+              </div>
+              <div class="drawer-shipping">
+                <p>SHIPPING</p>
+                <p class="price-draw">FREE</p>
               </div>
               <input type="submit" name="checkout" id="cart_btn" class="cart-drawer-btn btn" value="{{ 'cart.general.checkout' | t }}">
-
+<p class="tax-dicount">Taxes and discount codes are added at checkout.</p>
             </div>
           </div>
         </div>

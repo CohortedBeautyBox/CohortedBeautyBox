@@ -21,10 +21,10 @@
 			  <li><div class="product-box daynamic">
 				{% assign featured_image = dynamic_products.selected_or_first_available_variant.featured_image | default: dynamic_products.featured_image %}
 				{% if block.settings.feature_image != blank %}  
-				<img src="{{ block.settings.feature_image | img_url: 'master' }}">
+				<a href="{{ dynamic_products.url }}"><img src="{{ block.settings.feature_image | img_url: 'master' }}">
 				{% else %}
 				<img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt }}" 
-				id="FeaturedImage-{{ section.id }}" class="product-featured-img">
+				id="FeaturedImage-{{ section.id }}" class="product-featured-img"></a>
 				
 		
 				{% endif %}
@@ -33,7 +33,7 @@
 						<span class="shopify-product-reviews-badge" data-id="{{ dynamic_products.id }}"></span>
 					  </div>
 					<div class="product-align-center">
-				<h2>{{ dynamic_products.title }}</h2>
+						<a href="{{ dynamic_products.url }}"><h2>{{ dynamic_products.title }}</h2></a>
 				
 				<div class="product-price"><div class="price-box">
 					{% assign price = dynamic_products.price | money %}

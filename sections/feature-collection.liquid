@@ -12,10 +12,12 @@
  {% for product in collection.products %}
 
       <div class="feature-item">
+       
 	<div class="product-image">
-        <img class="grid-view-item__image lazyload" src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt | escape }}">
+    <a href="{{ product.url }}">  <img class="grid-view-item__image lazyload" src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt | escape }}"></a>
       </div>
-      	<div class="h4 grid-view-item__title">{{ product.title }}<div class="price-box">
+      <div class="h4 grid-view-item__title"><a href="{{ product.url }}">{{ product.title }}</a>
+        <div class="price-box">
   {% assign price = product.price | money %}
   {% if product.available %}
   {% if product.price_varies %}
@@ -46,7 +48,18 @@
        </div>
       </div>
 </div>
-
+<style>
+  .slick-arrow {
+    box-shadow: 0px 0px 16px #00000029;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    color: #000 !important;
+    z-index: 1;
+    opacity: 1 !important;
+    background: #fff;
+}
+</style>
 <script>
   $('.feature-collection').slick({
     dots: false,
@@ -87,7 +100,7 @@
 
 {% schema %}
   {
-    "name": "Collection box", 
+    "name": "Feature Collection", 
     "settings": [
 {
         "type": "text",
@@ -107,12 +120,13 @@
         "label": "Collection"
       }
 
-],
+],   
  
   "presets": [
     {
-      "name": "Collection box"   
+      "name": "Feature Collection"    
     }
 ]
   }
 {% endschema %}
+  

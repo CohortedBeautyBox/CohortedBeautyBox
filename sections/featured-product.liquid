@@ -1,5 +1,5 @@
 {%- assign product = all_products[section.settings.featured_product] -%} 
-<div class="single_product">
+<div style="background-color:{{section.settings.info_bg }};" class="single_product">
 	<div class="row">
 		<div style="padding:0;" class="col-md-6">
 <div style="{% if section.settings.background_info != blank  %}background-image: url({{section.settings.background_info | img_url: 'master'}});{% else %} background-color:{{section.settings.info_bg }}; {% endif %}" class="product-info">
@@ -33,7 +33,9 @@
   </div>
   <div class="save">SUBSCRIBE AND <span class="color">SAVE £12.99 - ORDER WILL SHIP EVERY MONTH</span></div>
 <div class="more-info"><a style="color:{{section.settings.text_color }};" href="{{product.url}}">More Information</a></div>
-<div class="text-left"><a class="secondary-btn white" href="">COMPLETE SUBSCRIPTION</a></div>
+<div class="text-left">{% if section.settings.linktext != blank %}
+	<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+	{% endif %}	</div>
 </div>
 </div>
 </div>	
@@ -88,7 +90,27 @@
         "type": "color",
         "id": "text_color",
         "label": "Select Text Color"
-      }
+      },
+	  {
+		"id": "linktext",
+		"type": "text",
+		"label": "Button Text"		  
+	},
+			  {
+				"type": "url",
+				"id": "link",
+				"label": "Button Link"
+				  },
+	  {
+		"type": "select",
+		"id": "sectionOrder",
+		"options": [
+		  { "value": "orderOne", "label": "Primary Button"},
+		  { "value": "orderTwo", "label": "secondary Button"},
+		  { "value": "orderThree", "label": "secondary White Button"}
+		],
+		"label": "Button Color"
+		}
 
 ],
  
@@ -98,4 +120,4 @@
     }
 ]
   }
-{% endschema %}
+{% endschema %} 
