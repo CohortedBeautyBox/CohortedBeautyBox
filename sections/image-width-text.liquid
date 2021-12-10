@@ -1,7 +1,7 @@
 
 <div style="background:{{ section.settings.bg_color }};" class="{% if section.settings.enable_gradiant %}enable_gradiant {% else %} redeem-gifts {% endif %} ">
 	<div  class=" container-full {% if section.settings.margin_bottom %} margin_bottom {% else %} container-full{% endif %} ">
-		  <div class="product-box-inner">
+		  <div class="{% if section.settings.swipe_column %}swipe_column {% else %} swipe_unset {% endif %}product-box-inner">
 			
 			<div style="order:{{ section.settings.section_order }};" class="product-image-content">
 				{% if section.settings.title != blank %}
@@ -16,7 +16,14 @@
 		  {% endif %}
 			</div>
 			<div class="product-feature-image">
-				<img src="{{ section.settings.feature_image | img_url:'master'}}">
+				{% if section.settings.feature_image != blank %}
+				<img class="show-desktop" src="{{ section.settings.feature_image | img_url:'master'}}">
+				{% endif %}
+				{% if section.settings.feature_mobile != blank %}
+				<img class="show-mob" src="{{ section.settings.feature_mobile | img_url:'master'}}">
+				{% else %}
+				<img class="show-mob" src="{{ section.settings.feature_image | img_url:'master'}}">
+				{% endif %}
 			</div>
 	
 	
@@ -39,6 +46,11 @@
 	 .enable_gradiant {
     background: #E4E4E466 !important;
     margin-top: 50px;
+}
+.swipe_column{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column-reverse;
 }
 }
   </style>
@@ -81,11 +93,26 @@
 		"type": "url",
 		"label": "Button Link"
 		},
+		{
+			"type": "select",
+			"id": "sectionOrder",
+			"options": [
+			  { "value": "orderOne", "label": "Primary Button"},
+			  { "value": "orderTwo", "label": "secondary Button"},
+			  { "value": "orderThree", "label": "secondary White Button"}
+			],
+			"label": "Button Color"
+			},
 	{
         "type": "image_picker",
         "id": "feature_image",
         "label": "Select Image"
 	      },
+		  {
+			"type": "image_picker",
+			"id": "feature_mobile",
+			"label": "Select Image Mobile"
+			  },
 		  {
 			"type": "color",
 			"id": "bg_color",
@@ -98,17 +125,13 @@
 				"label": "Enable Gradiant Background",
 				"default": false
 				  },
+				  {
+					"type": "checkbox",
+					"id": "swipe_column",
+					"label": "Swipe Column Mob",
+					"default": false
+					  },
 			  
-			  {
-				"type": "select",
-				"id": "sectionOrder",
-				"options": [
-				  { "value": "orderOne", "label": "Primary Button"},
-				  { "value": "orderTwo", "label": "secondary Button"},
-				  { "value": "orderThree", "label": "secondary White Button"}
-				],
-				"label": "Button Color"
-				},
 				{
 					"type": "checkbox",
 					"id": "margin_bottom",

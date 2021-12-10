@@ -33,23 +33,10 @@
           <div class="product-view">
             <div class="product-essential">
                 <div class="row">
-                  <div class="col-md-7 col-sm-7 col-xs-12">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="row" id="product-images">
-                      <div class="col-md-2 col-sm-2 col-xs-2 more-views-wrap">
-                        <div class="more-views">
-                          <div id="item-thumbnails" class="item-thumbnails hidden-buttons">
-                            {% for image in product.images %}
-                            <div>
-                              <a href="{{ image | img_url: 'master' }}" class="{% if settings.product_gallery_style == 'zoom' %}cloud-zoom-gallery colorbox-group{% else %}colorbox-group{% endif %}" title=""{% if settings.product_gallery_style == 'zoom' %} rel="useZoom: 'image-zoom', smallImage: '{{ image | img_url: '1024x1024' }}'"{% endif %}>
-                                <img src="{{ image | img_url: 'medium' }}" alt="" />
-                              </a>
-                            </div>
-                            {% endfor %}
-                          </div>
-                        </div>
-                      </div>
-                      <!-- End Imagezoom -->
-                      <div class="col-md-10 col-sm-10 col-xs-10 pull-right">
+                       <!-- End Imagezoom -->
+                       <div class=" pull-rightmain-image">
                         <div class="product-image">
                           {% if product.price_min < product.compare_at_price_min %}
                           <div class="novaworks-product-badge novaworks-sale-badge">Sale</div>
@@ -62,9 +49,23 @@
                           {% endif %}
                         </div>
                       </div>
+                      <div class="more-views-wrapeee">
+                        <div class="more-views">
+                          <div id="item-thumbnails" class="item-thumbnails hidden-buttons">
+                            {% for image in product.images %}
+                            <div>
+                              <a href="{{ image | img_url: 'master' }}" class="{% if settings.product_gallery_style == 'zoom' %}cloud-zoom-gallery colorbox-group{% else %}colorbox-group{% endif %}" title=""{% if settings.product_gallery_style == 'zoom' %} rel="useZoom: 'image-zoom', smallImage: '{{ image | img_url: '1024x1024' }}'"{% endif %}>
+                                <img src="{{ image | img_url: 'medium' }}" alt="" />
+                              </a>
+                            </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                     
                     </div>
                   </div>
-                  <div class="col-md-5 col-sm-5 col-xs-12">
+                  <div class="col-md-6 col-sm-6 col-xs-12 pro-left">
                     <div class="product-box-left">
                       <div class="product-name">
                         <h1>{{ product.title }}</h1>
@@ -77,6 +78,39 @@
                         <p class="special-price">
                           <span id="price-preview" class="price">{{ variant.price | money }}</span>
                         </p>
+                        <div class="pro-icon">
+                          <ul>
+                            <li>
+                              <img src="{{ 'pro-icon-1.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
+                            </li>
+                            <li>
+                              <img src="{{ 'pro-icon-2.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
+                            </li>
+                            <li>
+                              <img src="{{ 'pro-icon-3.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
+                            </li>
+                            <li>
+                              <img src="{{ 'pro-icon-4.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+                        <div class="pro-discription">
+                          
+                          <p>{{ product.description | strip_html | truncatewords: 31 }}</p>
+                          <a href="#">MORE INFORMATION</a>
+                        </div>
+                       
+                        <div class="pro-subscribe">
+                        <fieldset>
+                          <label>
+                            <input type="radio" name="radio-button" value="css" checked />
+                            <span>SUBSCRIBE AND SAVE £12.99 - ORDER WILL SHIP EVERY MONTH</span>
+                          </label>
+                         
+                        </fieldset>
+                      </div>
+
                         {% if variant.price < variant.compare_at_price %}
                         <p class="old-price">
                           <span class="price-sep">-</span>
@@ -84,7 +118,7 @@
                         </p>
                         {% endif %}
                       </div>
-                      <div class="product-codes">
+                      <!-- <div class="product-codes">
                       {% unless product.available %}
                       <p class="availability in-stock">Availability: <span>Out of stock</span></p>
                       {% else %}
@@ -97,7 +131,7 @@
                       {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
                       {% assign hide_default_title = true %}
                       {% endif %}
-                      <div class="tex-payment-pro"><span>Buy Now, Pay Later. No Fees.</span><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/c-text-img.png?v=1579186325" alt="Klarna" /><a href="https://cohorted.zendesk.com/hc/en-us" target="_blank">Learn More.</a></div>
+                      <div class="tex-payment-pro"><span>Buy Now, Pay Later. No Fees.</span><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/c-text-img.png?v=1579186325" alt="Klarna" /><a href="https://cohorted.zendesk.com/hc/en-us" target="_blank">Learn More.</a></div> -->
                       <div class="add-to-box">
                         <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
                           <!-- Begin product options -->
@@ -124,7 +158,7 @@
                             <div class="purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
                               <div class="purchase">
                                 {% unless product.available %}
-                                <div class="add-to-cart">
+                                <div class="add-to-cart ddwdqwdd">
 
                                   <button name="add" disabled type="button" onclick="" title="{{ 'products.product.sold_out_html' | t }}" class="button btn-cart">
                                     <span><span>{{ 'products.product.sold_out_html' | t }}</span></span>
@@ -151,10 +185,10 @@
                           <!-- End product options -->
                         </form>
                       </div>
-                      <div class="short-description">
+                      <!-- <div class="short-description">
                         <div class="std">{{ product.description | strip_html | truncatewords: 31 }}</div>
-                      </div>
-                      <div class="novaworks-social-share">
+                      </div> -->
+                      <!-- <div class="novaworks-social-share">
                         <h2>SHARE:</h2>
                         <ul>
                           <li class="facebook">
@@ -178,14 +212,26 @@
                             </a>
                           </li>
                         </ul>
-                      </div>
+                      </div> -->
+                   <div class="pro-bottom-icons">
+<ul>
+  <li>
+    <img src="{{ 'gift-box.png' | asset_img_url: 'master'}}"><span>100% sustainable packaging</span>   
+  </li>
+    <li> <img src="{{ 'time.png' | asset_img_url: 'master'}}"><span>48 hour recorded delivery</span>   
+    </li>
+      <li> <img src="{{ 'gift-box.png' | asset_img_url: 'master'}}"><span>Expect to see a range of both well known and niche luxury brands.</span>
+    
+  </li>
+</ul>
+                   </div>
                     </div>
                   </div>
                 </div>
             </div>
 			{% if settings.display_product_detail_description or settings.display_product_reviews or settings.display_custom_tab or settings.display_size_chart %}
             {% if settings.product_tab_style == '1' %}
-            <div class="product-collateral hidden-xs">
+            <div style="display: none;" class="product-collateral hidden-xs">
               <div id="parentVerticalTab" class="tab-for-layout-0">
                 <ul class="resp-tabs-list hor_1">
                   {% if settings.display_product_detail_description %}

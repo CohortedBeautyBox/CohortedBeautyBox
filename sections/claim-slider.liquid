@@ -38,6 +38,7 @@
     top: 30%;
     left: -30px;
 	display: none;
+	z-index: 1;
 }
 .slick-current.slick-active .content-item {
     display: block;
@@ -74,14 +75,14 @@ a.primary-btn-new {
 			.claim-slider .slick-prev.slick-arrow {
     left: 29%;
     top: 100% !important;
-    transform: translateY(-10px);
+    transform: translateY(10px);
     z-index: 1;
 	box-shadow: none;
 }
 	.claim-slider .slick-next.slick-arrow {
 		right: 29%;
 		top: 100% !important;
-		transform: translateY(-10px);
+		transform: translateY(10px);
 		box-shadow: none;
 		}
 	
@@ -118,8 +119,70 @@ a.primary-btn-new {
     color: #000000;
     margin-bottom: 50px;
 }
+.slider-content-item {
+  position: relative;
+  padding: 0 12px;
+  counter-increment: css-counter 1;
+}
+.slider-content-item .content-item::before {
+  content: "0" counter(css-counter);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  color: #1a1a1a;
+  font-size: 150px;
+  font-family: 'FontAwesome';
+  z-index: -1;
+}
+.claim-slider .slick-track {
+    position: relative;
+}
 
 	@media(max-width:767px){
+		.content-item h4.title-h4 {
+    font: normal normal normal 21px/29px Austin;
+    letter-spacing: 1.6px;
+}
+.content-item {	
+    display: block;
+}
+p.paragraph {
+    font: normal normal normal 12px/20px Avenir Next LT Pro;
+    letter-spacing: 0.6px;
+}
+a.primary-btn-new {
+    font: normal normal normal 14px/50px Austin;
+    height: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+}
+		body .content-item {
+    max-width: 100%;
+    padding: 20px;
+    position: relative;
+    top: 0%;
+    left: 0;
+}
+.claim-slider .slick-dots li {
+    width: 60px;
+}
+.claim-slider .slick-dots li button {
+    width: 55px !important;
+}
+.claim-slider .slick-dots li.slick-active button:before {
+	width: 55px !important;
+}
+.claim-slider .slick-prev.slick-arrow {
+    left: 5%;
+    transform: translateY(0px);
+}
+.claim-slider .slick-next.slick-arrow {
+    right: 5%;
+    transform: translateY(0px);
+}
+.claim-slider .slick-dots {
+    bottom: -54px!important;
+}
 	}
 		
 	</style>
@@ -138,6 +201,7 @@ a.primary-btn-new {
 			breakpoint: 1024,
 			settings: {
 			  slidesToShow: 1,
+			  centerPadding: '50px',
 			  slidesToScroll: 1,
 			  infinite: true,
 			  arrow: true,
@@ -145,8 +209,10 @@ a.primary-btn-new {
 			}
 		  },
 		  {
-			breakpoint: 600,
+			breakpoint: 600,			
 			settings: {
+				centerMode: false,
+			centerPadding: '0',
 			  slidesToShow: 1,
 			  dots: true,
 			  arrow: true,
@@ -156,6 +222,8 @@ a.primary-btn-new {
 		  {
 			breakpoint: 480,
 			settings: {
+				centerMode: false,
+			centerPadding: '0',	
 			  slidesToShow: 1,
 			  arrow: true,
 			  dots: true,

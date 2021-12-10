@@ -1,0 +1,271 @@
+<div class="container-tab">
+	<div id="verticalTab">	
+	<div class="product-tabs-parent">
+		<ul class="resp-tabs-list">
+			<h2 class="site_heading">{{ section.settings.heading }}</h2>
+		<li>{{ section.settings.text_head }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
+		<li>{{ section.settings.text_head2 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
+		<li>{{ section.settings.text_head3 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
+		<li>{{ section.settings.text_head4 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
+		<li>{{ section.settings.text_head5 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
+		</ul>
+		<div class="resp-tabs-container">
+			<h2 style="display:none;" class="site_heading">{{ section.settings.heading }}</h2>
+	
+			<div class="text-container-wrapper">
+				{{ section.settings.text }}
+				  </div>
+				  <div class="text-container-wrapper">
+					{{ section.settings.text2 }}
+					  </div>
+					  <div class="text-container-wrapper">
+						{{ section.settings.text3 }}
+						  </div>
+						  <div class="text-container-wrapper">
+							{{ section.settings.text4 }}
+							  </div>
+							  <div class="text-container-wrapper">
+								{{ section.settings.text5 }}
+								  </div>
+		</div>
+		</div>
+		</div></div>
+	
+	
+		  <style>
+			.product-tabs .resp-vtabs .resp-tabs-container {
+		border: none !important;
+		width: 100%;
+		background: transparent radial-gradient(closest-side at 50% 50%, #FFFFFF00 0%, #E4E4E466 100%) 0% 0% no-repeat padding-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 70px;
+	}
+	.product-tabs .resp-vtabs .resp-tabs-list li img {
+		opacity: .3;
+	}
+	.product-tabs .resp-vtabs .resp-tabs-list li {
+		padding: 0;
+		border: none !important;
+		border-bottom: 1px solid #dcdcdc7d!important;
+		padding: 30px 0px !important;
+		text-align: left;
+		font: normal normal normal 28px/40px Austin;
+		letter-spacing: 1.4px;
+		color: #DCDCDC;
+		text-transform: capitalize;
+		display: grid;
+		grid-template-columns: 1fr 30px;
+		align-items: center;
+	}
+	body .product-tabs .resp-tab-item.resp-tab-active img {
+		opacity: 1;
+	}
+	
+	body .product-tabs .resp-tab-item.resp-tab-active {
+		color: #000 !important;
+		border-bottom: 1px solid #000!important;
+	}
+	.product-tabs .resp-tabs-container .text-container-wrapper {
+		width: 100%;
+		padding-right: 0 !important;
+		text-align: center;
+	}
+	.product-tabs .resp-tabs-container .text-container-wrapper p {
+		color: #464646;
+		font: normal normal normal 18px/28px Avenir Next LT Pro;
+		text-align: left;
+	}
+	
+	.resp-vtabs ul.resp-tabs-list {
+		width: 100%;
+		border: none;
+		padding: 70px;
+	}
+	.product-tabs-parent {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+		body {
+		background: #ffffff;
+		font-family: 'AVENIR LT STD 45 BOOK';
+	}
+	.product-tabs {
+		padding: 70px 0;
+	}
+	@media(max-width:768px){
+		.product-tabs {
+		padding: 20px 0;
+	}
+		.product-tabs .resp-vtabs .resp-tabs-container {
+		display: flex;
+		padding: 20px;
+		flex-wrap: wrap;
+	}
+	.site_heading{
+		display: block !important;
+	}
+	h2.resp-accordion {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background: transparent !important;
+		border: none !important;
+	}
+	span.resp-arrow {
+		display: none;
+	}
+	.product-tabs-parent {
+		grid-template-columns: 1fr !important;
+	}
+	.resp-vtabs .resp-tab-content {
+		border: none;
+		padding-left: 0;
+	}
+	h2.resp-accordion:first-child {
+		border-top: none !important;
+	}
+	h2.resp-accordion {
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background: transparent !important;
+		border: none !important;
+		padding: 20px 0px !important;
+		text-align: left;
+		font: normal normal normal 15px/21px 'Austin';
+		color: #A7A7A7;
+		text-transform: capitalize;
+		display: grid;
+		grid-template-columns: 1fr 30px;
+		align-items: center;
+		border-bottom: 1px solid #dcdcdc7d!important;
+	}
+	h2.resp-accordion.resp-tab-active {
+		color: #000 !important;
+		border: none !important;
+	}
+	.product-tabs .resp-tabs-container .text-container-wrapper p {
+		font: normal normal normal 12px/16px Avenir Next LT Pro;
+		letter-spacing: .6px;
+	}
+	.resp-accordion img {
+		width: 22px;
+		opacity: .5;
+	}
+	.resp-tab-active img {
+		opacity: 1;
+	}
+	.resp-tabs-container .site_heading {
+		margin-bottom: 10px;
+		text-align: left;
+		width: 100%;
+	}
+	}
+		  </style>
+	
+		
+		
+		  {% schema %}
+		
+		  {
+			"name": "Horizontal Tabs",
+			"class": "product-tabs tabs",
+			
+			"settings": [
+			{
+				"type": "text",
+				"id": "heading",
+				"label": "Heading",
+				"default": "Why Cohorted?"
+			  },
+			
+		
+			{
+				"type": "text",
+				"id": "text_head",
+				"label": "Tab Heading 1",
+				"default": "Tab Heading"
+			  },
+			  {
+				"type": "html",
+				"id": "text",
+				"label": "Text",
+				"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+			  },
+	
+	
+			{
+				"type": "text",
+				"id": "text_head2",
+				"label": "Tab Heading 2",
+				"default": "Tab Heading"
+			  },
+	
+			
+			  {
+				"type": "html",
+				"id": "text2",
+				"label": "Text 2",
+				"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+			  },
+		
+			{
+				"type": "text",
+				"id": "text_head3",
+				"label": "Tab Heading 3",
+				"default": "Tab Heading"
+			  },
+			  
+			
+			{
+				"type": "html",
+				"id": "text3",
+				"label": "Text 3",
+				"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+			  },
+	
+			  {
+				"type": "text",
+				"id": "text_head4",
+				"label": "Tab Heading 4",
+				"default": "Tab Heading"
+			  },
+			
+			{
+			  "type": "html",
+			  "id": "text4",
+			  "label": "Text 4",
+			  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+			},
+			{
+				"type": "text",
+				"id": "text_head5",
+				"label": "Tab Heading 5",
+				"default": "Tab Heading"
+			  },
+			
+			{
+			  "type": "html",
+			  "id": "text5",
+			  "label": "Text 5",
+			  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+			}
+			
+	
+			  
+			  
+				  
+			],
+			"presets": [
+			  {
+				"name": "Horizontal Tabs",
+				"category": "Tabs"
+			  }
+			]
+		  }
+		  {% endschema %}

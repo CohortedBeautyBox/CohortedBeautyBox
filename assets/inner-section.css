@@ -405,13 +405,35 @@ h3.shopify_explorer_faq__separator {
 }
 }
 @media(max-width:767px){
+    h2.site_heading {
+        font: normal normal normal 31px/32px Austin !important;
+        letter-spacing: 2px !important;
+    }
+    #black-edition-new .text-with-image {
+        margin-top: 0;
+    }
+    #black-edition-new .text-with-image .text-container-wrapper.full-width {    
+        padding-bottom: 20px;
+    }
+    #black-edition-new .enable_gradiant {
+        margin-top: 0;
+    }
+    .play-button {
+        height: 90px;
+        width: 90px;
+        top: 5%;
+    }
     .rich-content h5 {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 30px;
     }
     #shopify-section-template--14216801779817__1638968515399efa42 .feature-image img {
-        width: 100%;   
+        width: 70%;
+        margin-top: 40px;
+    }
+    .content-item {
+        display: none;
     }
     #shopify-section-template--14216526561385__163894878105e30c94 .banner-inner-content {
         position: relative;

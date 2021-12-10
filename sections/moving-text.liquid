@@ -1,4 +1,4 @@
-<div class="section-scroll">
+<div class="{% if section.settings.hide_mob %} hide_mob {% else %} show_desktop {% endif %} section-scroll">
   <div class="container marquee">
 <div class="section-text marquee--inner">
   {% for block in section.blocks %}  
@@ -12,10 +12,7 @@
 </div>
 
 <style>
-  
-
-
-
+.hide_mob{display: none;}
 
   .marquee {
     height: 200px;
@@ -44,6 +41,9 @@
   0% { left: 0; }
   100% { left: -100%; }
 }
+@media(max-width:767px){
+  .hide_mob{display: block;}
+}
 </style>
 
 {% schema %}
@@ -52,10 +52,10 @@
 	"max_blocks":10,
   "settings": [
     {
-      "id": "text-box",
-      "type": "text",
-      "label": "Heading",
-      "default": "Title"
+      "id": "hide_mob",
+      "type": "checkbox",
+      "label": "Show On Mobile",
+      "default": false
     }
   ],
   "blocks": [
@@ -70,6 +70,7 @@
           "label": "Button text",
           "default": "Click here"
         }
+        
       ]
     }
   ],

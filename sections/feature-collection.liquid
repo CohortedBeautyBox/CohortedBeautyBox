@@ -14,7 +14,8 @@
       <div class="feature-item">
        
 	<div class="product-image">
-    <a href="{{ product.url }}">  <img class="grid-view-item__image lazyload" src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt | escape }}"></a>
+     <img class="grid-view-item__image lazyload" src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt | escape }}">
+     <a class="secondary-btn white" href="{{ product.url }}"> Buy Now  {{ product.price | money}}</a>
       </div>
       <div class="h4 grid-view-item__title"><a href="{{ product.url }}">{{ product.title }}</a>
         <div class="price-box">
@@ -40,6 +41,7 @@
       <div class="review-wrap">
   <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
 </div>
+
   </div> 
       
 	
@@ -49,7 +51,26 @@
       </div>
 </div>
 <style>
-  .slick-arrow {
+  .feature-collection-main .product-image {
+    display: block;
+    position: relative;
+    transition: width 2s;
+}
+.feature-collection-main .feature-item:hover .product-image::before{
+  opacity: .5;
+  transition: width 2s;
+
+}
+.product-image::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    left: 0;
+    opacity: 0;
+}
+  .feature-collection-main .slick-arrow {
     box-shadow: 0px 0px 16px #00000029;
     height: 60px;
     width: 60px;
@@ -59,6 +80,22 @@
     opacity: 1 !important;
     background: #fff;
 }
+.feature-collection-main .secondary-btn.white {
+    margin: 0 auto;
+    width: 90%;
+    transform: translateY(0px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: width 2s;
+    opacity: 0;
+}
+.feature-item:hover .secondary-btn.white {
+    transform: translateY(-90px);
+    transition: width 2s;
+    opacity: 1;
+}
+
 </style>
 <script>
   $('.feature-collection').slick({
@@ -101,6 +138,7 @@
 {% schema %}
   {
     "name": "Feature Collection", 
+    "class": "feature-collection-main",
     "settings": [
 {
         "type": "text",

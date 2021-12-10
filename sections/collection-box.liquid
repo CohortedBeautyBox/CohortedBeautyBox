@@ -1,4 +1,7 @@
 <div class="container">
+	{% if section.settings.site_heading != blank%}
+	<h2 class="site_heading">{{ section.settings.site_heading }}</h2>
+	{% endif %}
 <div class="row category-list category-item-list">
 	{% for block in section.blocks %} 	
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
@@ -122,7 +125,11 @@
 	  "class": "testimonial-slider collection-box",
 	  "max_blocks": 5,
 	  "settings": [
-	 
+	  {
+		"type": "text",
+		"id": "site_heading",
+		"label": "Heading"
+	  }
 		  
 	  ],
 	  "blocks": [

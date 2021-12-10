@@ -21,6 +21,10 @@ body p{
   font-family: 'Avenir LT Std 45 Book' !important;
 
 }
+body {
+  background: #ffffff !important;
+  font-family: unset;
+}
 
 
 
@@ -485,6 +489,7 @@ img.image_box_2, img.image_box_3 {
     align-items: center;
     grid-gap: 20px;
       justify-content: center;
+      text-transform: capitalize;
 }
 span.line {
     display: flex;
@@ -614,11 +619,22 @@ span.color {
 }
 div#new-feed {
   margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+div#shopify-section-footer-new {
+  position: relative;
+  z-index: 1;
+}
+div#shopify-section-instagram-section {
+  background: #ffff;
+  position: relative;
+  z-index: 1;
 }
 #new-feed .insta-header {
   margin-bottom: 40px;
 }
-.insta-header {
+.insta-header { 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -925,7 +941,7 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
 }
 .mega_menu_right {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   flex-wrap: wrap;
   grid-gap: 10px;
 }
@@ -1189,6 +1205,19 @@ select#customer-services option {
   color: #fff;
   margin-top: 25px;
   display: none;
+}
+.product-tabs-parent .site_heading {
+  text-align: left;
+}
+div#shopify-section-template--14219375804521__1639141991c6e99c43 {
+  margin-top: 0;
+}
+h2.site_heading {
+  font: normal normal normal 80px/70px Austin;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  color: #000000;
+  margin-bottom: 50px;
 }
 @media(min-width:1500px){
   #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
@@ -1562,9 +1591,30 @@ div#nova-mobile-menu {
 }
 
 @media (max-width:767px) {
+  .resp-tabs-container .site_heading {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
   #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
     top: 50%!important;
     transform: translateY(-50%) !important;
+}
+.logo-slider-item-wrapper .slick-arrow {
+  display: none !important;
+}
+#shopify-section-template--14216801779817__16389655410a4e7ed5 .banner-content {
+  padding: 30px 20px;
+  position: relative;
+}
+#shopify-section-template--14216801779817__16389655410a4e7ed5 .banner-inner-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+#shopify-section-template--14216801779817__16389655410a4e7ed5 .app-links img {
+  max-width: 110px;
 }
 .link-images {
   display: grid;
@@ -1719,11 +1769,11 @@ body .is-sticky #logo img.standard {
   display: none !important;
 }
 body .cart-contents span {
-  font-size: 10px;
-  height: 23px;
-  line-height: 23px;
+  font-size: 9px;
+  height: 24px;
+  line-height: 21px;
   top: -10px;
-  width: 23px;
+  width: 24px;
 }
 .announcement p {
   font-size: 11px;
