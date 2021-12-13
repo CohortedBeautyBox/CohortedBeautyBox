@@ -22,10 +22,9 @@ body p{
 
 }
 body {
-  background: #ffffff !important;
-  font-family: unset;
+  background: #fff!important;
+  font-family: 'AVENIR LT STD 45 BOOK' !important;
 }
-
 
 
 .content-with-image-slider-section {
@@ -33,12 +32,15 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
-.content-with-image-slider-section .slick-arrow {
+/* .content-with-image-slider-section .slick-arrow {
   line-height: 80px !important;
-}
-.content-part {
+} */
+.content-part {  
   width: 50%;
 }
+.sticky-wrapper.is-sticky .parent-dropdown .fa.fa-angle-down {
+  color: #fff;
+} 
 .slider-info p{
   max-width: 640px;
 }
@@ -325,7 +327,6 @@ div#undefined-sticky-wrapper {
 /* slider css */
 .content-with-image-slider-section .slick-slide img {
     display: block;
-    height: 800px;
     object-fit: cover;
     width: 100%;
 }
@@ -988,6 +989,59 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
 .row.category-list .item {
   position: relative;
 } 
+.cms-collection .review-wrap span i {
+  opacity: 1 !important;
+  margin: 10px 2px;
+  display: inline-block;
+}   
+.box-related .review-wrap span i {
+  opacity: 1!important;
+  margin: 10px 2px !important;
+  color: #000 !important;
+}    
+.box-related .price-box p span {
+  margin-bottom: 0;
+  font: normal normal normal 21px/29px Austin !important;
+  letter-spacing: 1.05px;
+  color: #000 !important;
+  margin-top: 15px;
+}
+.box-related .tab_title h2.title {
+  font: normal normal normal 65px/65px Austin !important;
+  color: #000;
+  text-transform: capitalize !important;
+  letter-spacing: 0 !important;
+}
+.box-related .novaworks-quick-act {
+  display: none;
+}
+.box-related .price-box span {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 16px;
+  padding: 0;
+}  
+body .box-related .price-box span {
+  font: normal normal normal 21px/29px Austin!important;
+  margin-top: 7px;
+}       
+.box-related .product-name a {
+  font: normal normal normal 21px/29px Austin;
+  letter-spacing: 1.05px;
+}
+.cms-collection .price-box .special-price .price {
+  color: #000000;
+  font: normal normal normal 21px/29px Austin;
+  letter-spacing: 1.05px;
+} 
+.cms-collection .price {
+  color: #000000;
+  font: normal normal normal 21px/29px Austin;
+  letter-spacing: 1.05px;
+} 
+
+.cms-collection .novaworks-quick-act{display: none;}
 .row.category-list .item {
   position: relative;
   margin-bottom: 30px;
@@ -1001,6 +1055,14 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+.cms-collection .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a {
+  font: normal normal normal 21px/29px Austin;
+  letter-spacing: 1.05px;
+}
+.box-related .product-name a {
+  font: normal normal normal 21px/29px Austin;
+  letter-spacing: 1.05px;
 }
 .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a:hover img {
   transform: scale(1.1);
@@ -1135,7 +1197,8 @@ ul#novaworks-nav li.level-top a.level-top {
   font-size: 24px;
   line-height: 34px;
   letter-spacing: 1.2px;
-  font-family: 'Austin';
+  font-family: Austin;
+  text-decoration: underline;
 }
 #contactForm ul.form-list {
   clear: both;
@@ -1343,6 +1406,9 @@ img.image_box_2, img.image_box_3 {
     max-width: 100% !important;
     top: 0 !important;
 }
+.row.category-list .image img {
+  height: 370px;
+}
   body h2.heading {
     font: normal normal normal 70px/70px Austin;
     letter-spacing: 1px;
@@ -1428,6 +1494,7 @@ div#nova-mobile-menu {
 .top-header-new .header {
   display: none;
 }
+
 body .sticky-wrapper.is-sticky .nav-container {
   position: fixed !important;
 }
@@ -1449,9 +1516,9 @@ body .sticky-wrapper.is-sticky .nav-container {
   width: 33.33%;
   padding: 10px;
 }
-.content-with-image-slider-section .slick-slide img {
+/* .content-with-image-slider-section .slick-slide img {
   height: 650px;
-}
+} */
 .text-container-wrapper h2 {
   font-size: 80px;
   line-height: 90px;
@@ -1483,6 +1550,9 @@ body .sticky-wrapper.is-sticky .nav-container {
 @media (max-width:991px) {
   .logo-image-slider-section-with-background .slick-arrow {
     visibility: hidden;
+}
+.row.category-list .image img {
+  height: 100%;
 }
 body .text-container-wrapper.full-width h2 {
   font-size: 46px;
@@ -1826,9 +1896,9 @@ ul.content-with-image-slider-section-buttons a {
 .content-part p {
   margin: 30px 0 40px 0;
 }
-.content-with-image-slider-section .slick-slide img {
+/* .content-with-image-slider-section .slick-slide img {
   height: 375px;
-} 
+}  */
 .content-part {
   width: 100%;
   margin-bottom: 41px;

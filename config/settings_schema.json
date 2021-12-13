@@ -1045,6 +1045,12 @@
       },
       {
         "type": "text",
+        "id": "footer_lindin_link",
+        "label": "Linkedin link",
+        "default": "#"
+      },
+      {
+        "type": "text",
         "id": "footer_googleplus_link",
         "label": "Google plus link",
         "default": "#"

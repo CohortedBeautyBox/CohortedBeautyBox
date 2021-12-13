@@ -1,0 +1,193 @@
+<div class="container">
+	{% if section.settings.site_heading != blank%}
+	<h2 class="site_heading">{{ section.settings.site_heading }}</h2>
+	{% endif %}
+<div class="row category-list category-item-list">
+	{% for block in section.blocks %} 	
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
+<!-- Begin product image -->
+<div class="image">
+<a href="{{ block.settings.link }}">
+
+	<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
+</a>
+</div>
+<!-- End product image -->
+
+<!-- Begin product description -->
+<div class="details">
+<a href="{{ block.settings.link }}" class="clearfix">
+<h4 class="title">{{ block.settings.title }}</h4>
+</a>
+</div>
+<!-- End product description -->
+</div>
+{% endfor %}
+	</div>
+</div>
+<style>
+	.you-may-also .slick-arrow {
+    box-shadow: 0px 0px 16px #00000029;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    color: #000 !important;
+    z-index: 1;
+    opacity: 1 !important;
+    background: #fff;
+}
+.you-may-also .slick-next {
+    right: -15px;
+}
+.you-may-also .slick-prev {
+    left: -15px;
+}
+.you-may-also .category-list .item {
+    clear: unset !important;
+}
+.you-may-also .slick-prev:before {
+    content: "PREV"!important;
+    font-size: 12px;
+    font-family: Austin;
+    color: #000;
+    opacity: 1;
+    line-height: inherit;
+}
+.you-may-also .slick-arrow {
+    box-shadow: 0px 0px 16px #00000029;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    color: #000 !important;
+    z-index: 1;
+    opacity: 1 !important;
+    background: #fff;
+}
+.you-may-also .slick-next:before {
+    content: "NEXT"!important;
+    font-size: 12px;
+    font-family: Austin;
+    color: #000;
+    opacity: 1;
+    line-height: inherit;
+}
+.you-may-also .item:nth-child(2n+1) {
+    clear: unset;
+}
+/* .category-item-list .slick-next:before {
+		  content: url("{{'arrow-right.png' | asset_img_url:'25x20'}}") !important;
+		}
+		.category-item-list .slick-prev:before {
+		  content: url("{{'arrow-left.png' | asset_img_url:'25x20'}}") !important;
+		} */
+@media(max-width:767px){
+	
+.slick-next:before, .slick-prev:before {
+    opacity: 1;
+}
+}
+</style>
+
+<script>
+	$('.category-item-list').slick({
+	  dots: false,
+	  arrow: true,
+	  speed: 300,
+	  infinite: true,
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+		responsive: [
+	  {
+		breakpoint: 1024,
+		settings: {
+		  slidesToShow:3,
+		  slidesToScroll: 1,
+		  infinite: true,
+		  arrow: true,
+		  dots: false
+		}
+	  },
+	  {
+		breakpoint: 600,
+		settings: {
+		  slidesToShow: 1,
+		  centermode: true,
+		  centerpadding: '100px',
+		  dots: false,
+		  arrow: false,
+		  slidesToScroll: 1
+		}
+	  },
+	  {
+		breakpoint: 480,
+		settings: {
+		  slidesToShow: 1,
+		  centermode: true,
+		  centerpadding: '50px',
+		  arrow: false,
+		  dots: false,
+		  slidesToScroll: 1
+		}
+	  }
+	  // You can unslick at a given breakpoint now by adding:
+	  // settings: "unslick"
+	  // instead of a settings object
+	]
+	});
+  </script>
+
+
+	{% schema %}
+	{
+	  "name": "You May  Also Like",
+	  "class": "you-may-also collection-box",
+	  "max_blocks": 20,
+	  "settings": [
+	  {
+		"type": "text",
+		"id": "site_heading",
+		"label": "Heading"
+	  }
+		  
+	  ],
+	  "blocks": [
+		{
+		  "type": "image",
+		  "name": "Collection Image",
+		  "settings": [
+		  
+		  {
+			"type": "image_picker",
+			"id": "featured_image",
+			"label": "Select Slider Image"
+		  },
+		  {
+			"type": "text",
+			"id": "title",
+			"label": "Heading",
+			"default": "Heading"
+		  },
+		  {
+			"type": "url",
+			"id": "link",
+			"label": "Collection Link"
+		  }
+
+		  
+		  ]
+		}
+	  ],
+	  "presets": [
+		{
+		  "name": "You May  Also Like",
+		  "category": "You May  Also Like",
+		  "blocks": [
+			{ 
+			  "type": "image"
+			}
+			
+		  ]
+		}
+	  ]
+	}
+	{% endschema %}

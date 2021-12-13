@@ -51,11 +51,13 @@
       </div>
 </div>
 <style>
-  .feature-collection-main .product-image {
+.feature-collection-main .product-image {
     display: block;
     position: relative;
     transition: width 2s;
+    cursor: pointer;
 }
+
 .feature-collection-main .feature-item:hover .product-image::before{
   opacity: .5;
   transition: width 2s;
@@ -138,7 +140,7 @@
 {% schema %}
   {
     "name": "Feature Collection", 
-    "class": "feature-collection-main",
+    "class": "feature-collection-mainn",
     "settings": [
 {
         "type": "text",

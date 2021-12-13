@@ -48,7 +48,7 @@
                           </a>
                           {% endif %}
                         </div>
-                      </div>
+
                       <div class="more-views-wrapeee">
                         <div class="more-views">
                           <div id="item-thumbnails" class="item-thumbnails hidden-buttons">
@@ -65,13 +65,28 @@
                      
                     </div>
                   </div>
+                     <div style="display: none;" class="product-image-main">
+
+                        <div class="product-slider-mob">
+                          {% for image in product.images %}
+                    <div class="product-slider-item">
+                      <a href="{{ image | img_url: 'master' }}" class="{% if settings.product_gallery_style == 'zoom' %}cloud-zoom-gallery colorbox-group{% else %}colorbox-group{% endif %}" title=""{% if settings.product_gallery_style == 'zoom' %} rel="useZoom: 'image-zoom', smallImage: '{{ image | img_url: '1024x1024' }}'"{% endif %}>
+                        <img src="{{ image | img_url: 'master' }}" alt="" />
+                      </a>
+                    </div>
+                    {% endfor %}
+                    </div>
+                      </div>
+                  </div>
                   <div class="col-md-6 col-sm-6 col-xs-12 pro-left">
                     <div class="product-box-left">
                       <div class="product-name">
                         <h1>{{ product.title }}</h1>
                       </div>
                       <div class="ratings">
-                        <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+                        <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span><a href="https://www.reviews.co.uk/company-reviews/store/cohorted?utm_source=cohorted&utm_medium=widget&utm_campaign=badge-ribbon">
+                          All Reviews
+                        </a>
                       </div>
                       {% assign variant = product.selected_or_first_available_variant %}
                       <div class="price-box">
@@ -84,13 +99,13 @@
                               <img src="{{ 'pro-icon-1.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
                             </li>
                             <li>
-                              <img src="{{ 'pro-icon-2.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
+                              <img src="{{ 'pro-icon-2.png' | asset_img_url: 'master'}}"> <span>VEGAN</span>
                             </li>
                             <li>
-                              <img src="{{ 'pro-icon-3.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
+                              <img src="{{ 'pro-icon-3.png' | asset_img_url: 'master'}}"> <span>NATURAL</span>
                             </li>
                             <li>
-                              <img src="{{ 'pro-icon-4.png' | asset_img_url: 'master'}}"> <span>CRUELTY FREE</span>
+                              <img src="{{ 'pro-icon-4.png' | asset_img_url: 'master'}}"> <span>CERTIFIED</span>
                             </li>
                           </ul>
                         </div>
@@ -105,7 +120,7 @@
                         <fieldset>
                           <label>
                             <input type="radio" name="radio-button" value="css" checked />
-                            <span>SUBSCRIBE AND SAVE £12.99 - ORDER WILL SHIP EVERY MONTH</span>
+                            <span><p>SUBSCRIBE AND SAVE £12.99 - ORDER WILL SHIP EVERY MONTH</p></span>
                           </label>
                          
                         </fieldset>

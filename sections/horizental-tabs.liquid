@@ -1,163 +1,112 @@
 <div class="container-tab">
-	<div id="verticalTab">	
+	<div id="horizentalTab">	
 	<div class="product-tabs-parent">
-		<ul class="resp-tabs-list">
+		<div class="resp-tabs-list">
 			<h2 class="site_heading">{{ section.settings.heading }}</h2>
-		<li>{{ section.settings.text_head }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
-		<li>{{ section.settings.text_head2 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
-		<li>{{ section.settings.text_head3 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
-		<li>{{ section.settings.text_head4 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
-		<li>{{ section.settings.text_head5 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></li>
-		</ul>
+<button class="accordion">{{ section.settings.text_head }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+<div class="panel">
+  <p>{{ section.settings.text }}</p>
+</div>
+
+<button class="accordion">{{ section.settings.text_head2 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+<div class="panel">
+  <p>	{{ section.settings.text2 }}</p>
+</div>
+
+<button class="accordion ">{{ section.settings.text_head3 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+<div class="panel">
+  <p>{{ section.settings.text3 }}</p>
+</div>
+
+<button class="accordion">{{ section.settings.text_head4 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+<div class="panel">
+  <p>{{ section.settings.text4 }}</p>
+</div>	
+
+<button class="accordion">{{ section.settings.text_head5 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+<div class="panel">
+  <p>{{ section.settings.text5 }}</p>
+</div>
+
+
+		</div>
 		<div class="resp-tabs-container">
-			<h2 style="display:none;" class="site_heading">{{ section.settings.heading }}</h2>
-	
-			<div class="text-container-wrapper">
-				{{ section.settings.text }}
-				  </div>
-				  <div class="text-container-wrapper">
-					{{ section.settings.text2 }}
-					  </div>
-					  <div class="text-container-wrapper">
-						{{ section.settings.text3 }}
-						  </div>
-						  <div class="text-container-wrapper">
-							{{ section.settings.text4 }}
-							  </div>
-							  <div class="text-container-wrapper">
-								{{ section.settings.text5 }}
-								  </div>
+			<img src="{{ section.settings.image  | img_url:'master'}}">
+
+
 		</div>
 		</div>
 		</div></div>
 	
-	
 		  <style>
-			.product-tabs .resp-vtabs .resp-tabs-container {
-		border: none !important;
-		width: 100%;
-		background: transparent radial-gradient(closest-side at 50% 50%, #FFFFFF00 0%, #E4E4E466 100%) 0% 0% no-repeat padding-box;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		padding: 70px;
-	}
-	.product-tabs .resp-vtabs .resp-tabs-list li img {
-		opacity: .3;
-	}
-	.product-tabs .resp-vtabs .resp-tabs-list li {
-		padding: 0;
-		border: none !important;
-		border-bottom: 1px solid #dcdcdc7d!important;
-		padding: 30px 0px !important;
-		text-align: left;
-		font: normal normal normal 28px/40px Austin;
-		letter-spacing: 1.4px;
-		color: #DCDCDC;
-		text-transform: capitalize;
-		display: grid;
-		grid-template-columns: 1fr 30px;
-		align-items: center;
-	}
-	body .product-tabs .resp-tab-item.resp-tab-active img {
-		opacity: 1;
-	}
-	
-	body .product-tabs .resp-tab-item.resp-tab-active {
-		color: #000 !important;
-		border-bottom: 1px solid #000!important;
-	}
-	.product-tabs .resp-tabs-container .text-container-wrapper {
-		width: 100%;
-		padding-right: 0 !important;
-		text-align: center;
-	}
-	.product-tabs .resp-tabs-container .text-container-wrapper p {
-		color: #464646;
-		font: normal normal normal 18px/28px Avenir Next LT Pro;
-		text-align: left;
-	}
-	
-	.resp-vtabs ul.resp-tabs-list {
-		width: 100%;
-		border: none;
-		padding: 70px;
-	}
-	.product-tabs-parent {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-	
-		body {
-		background: #ffffff;
-		font-family: 'AVENIR LT STD 45 BOOK';
-	}
-	.product-tabs {
-		padding: 70px 0;
-	}
+			  #horizentalTab .resp-tabs-list {
+    padding: 60px;
+}
+.product-tabs-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+button.accordion {
+    padding: 0;
+    border: none !important;
+    border-bottom: 1px solid #dcdcdc7d!important;
+    padding: 30px 20px !important;
+    text-align: left;
+    font: normal normal normal 28px/40px Austin;
+    letter-spacing: 1.4px;
+    color: #A7A7A7;
+    text-transform: capitalize;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+}
+button.accordion.active {
+    color: #000 !important;
+    border-bottom: 1px solid #fff!important;
+}
+button.accordion img {
+    opacity: .3;
+}
+
+button.accordion.active img {
+    opacity: 1;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+  }
+  .panel p {
+    color: #464646;
+    font: normal normal normal 18px/28px Avenir Next LT Pro;
+    text-align: left;
+	padding: 0 20px;
+}
 	@media(max-width:768px){
-		.product-tabs {
-		padding: 20px 0;
-	}
-		.product-tabs .resp-vtabs .resp-tabs-container {
-		display: flex;
-		padding: 20px;
-		flex-wrap: wrap;
-	}
-	.site_heading{
-		display: block !important;
-	}
-	h2.resp-accordion {
-		display: flex;
-		width: 100%;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		background: transparent !important;
-		border: none !important;
-	}
-	span.resp-arrow {
-		display: none;
-	}
-	.product-tabs-parent {
-		grid-template-columns: 1fr !important;
-	}
-	.resp-vtabs .resp-tab-content {
-		border: none;
-		padding-left: 0;
-	}
-	h2.resp-accordion:first-child {
-		border-top: none !important;
-	}
-	h2.resp-accordion {
-		width: 100%;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		background: transparent !important;
-		border: none !important;
-		padding: 20px 0px !important;
-		text-align: left;
-		font: normal normal normal 15px/21px 'Austin';
-		color: #A7A7A7;
-		text-transform: capitalize;
-		display: grid;
-		grid-template-columns: 1fr 30px;
-		align-items: center;
-		border-bottom: 1px solid #dcdcdc7d!important;
-	}
-	h2.resp-accordion.resp-tab-active {
-		color: #000 !important;
-		border: none !important;
-	}
-	.product-tabs .resp-tabs-container .text-container-wrapper p {
+
+		
+	#horizentalTab .resp-tabs-list {
+    padding: 0 20px;
+}
+	.panel p {
 		font: normal normal normal 12px/16px Avenir Next LT Pro;
 		letter-spacing: .6px;
 	}
-	.resp-accordion img {
-		width: 22px;
-		opacity: .5;
-	}
-	.resp-tab-active img {
+	button.accordion img {
+    opacity: .5;
+    width: 22px;
+}																																																		
+	.product-tabs-parent {
+    display: grid;
+    grid-template-columns: 1fr !important;
+}
+button.accordion {
+    padding: 20px 0px !important;
+    font: normal normal normal 15px/21px 'Austin';
+}
+	.button.accordion.active img {
 		opacity: 1;
 	}
 	.resp-tabs-container .site_heading {
@@ -168,13 +117,28 @@
 	}
 		  </style>
 	
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
 		
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+			  panel.style.display = "none";
+			} else {
+			  panel.style.display = "block";
+			}
+		  });
+		}
+		</script>
 		
 		  {% schema %}
 		
 		  {
 			"name": "Horizontal Tabs",
-			"class": "product-tabs tabs",
+			"class": "product-tabs horizental-tabs",
 			
 			"settings": [
 			{
@@ -183,6 +147,11 @@
 				"label": "Heading",
 				"default": "Why Cohorted?"
 			  },
+			  {
+				"type": "image_picker",
+				"id": "image",
+				"label": "Select Image"			  },
+			  
 			
 		
 			{
