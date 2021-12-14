@@ -84,8 +84,12 @@ a.primary-btn-new {
 		top: 100% !important;
 		transform: translateY(10px);
 		box-shadow: none;
+		z-index: 1;
 		}
 	
+		.claim-slider .slick-list {
+    padding: 0 20% 0 20% !important;
+}
 	.claim-slider .slick-dots li {
 		width: 150px;
 		height: 20px;
@@ -139,9 +143,15 @@ a.primary-btn-new {
 }
 
 	@media(max-width:767px){
+		.claim-slider .slick-list {
+    padding: 0 0% 0 0% !important;
+}
 		.content-item h4.title-h4 {
     font: normal normal normal 21px/29px Austin;
     letter-spacing: 1.6px;
+}
+.claim-slider .slick-arrow {
+    transform: translateY(20px) !important;
 }
 .content-item {	
     display: block;
@@ -191,7 +201,7 @@ a.primary-btn-new {
         $('.slider-content-items').slick({
 		  dots: true,
 		  arrow: true,
-		  centerPadding: '200px',
+		  centerPadding: '0',
 		  centerMode: true,
 		  speed: 300,
 		  slidesToShow: 1,

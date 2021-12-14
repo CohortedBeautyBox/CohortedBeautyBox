@@ -7,10 +7,10 @@
           <div class="page-title">
             <h1>{{ 'customer.account.title' | t }}</h1>
           </div>
-          <h2>{{ customer.name }}</h2>
-<p><a href="/tools/checkout/front_end/login" class="text-link under-line-link">Manage My Subscriptions</a></p>
-          <p class="email note">{{ customer.email }}</p>
+          <h2><span>{{ customer.name.first }}{{ customer.name.last }}</span><span>{{ customer.name }}</span></h2>
+          <p class="email note">Email: {{ customer.email }}</p>
           <div class="address note">
+            <p class="address-ordr">Address:</p>
             {% if customer.default_address != nil %}
             <p>{{ customer.default_address.address1 }}</p>
             {% if customer.default_address.address2 != "" %}
@@ -18,17 +18,20 @@
             {% endif %}
             <p>{{ customer.default_address.city}}, {% if address.province_code %}{{customer.default_address.province_code}}, {% endif %}{{customer.default_address.country}}</p>
             <p>{{ customer.default_address.zip}}</p>
-            <p>{{ customer.default_address.phone }}</p>
+            <div class="buttons-set-new">
+              <a id="view_address" href="/account/addresses" class=""><span>{{ 'customer.account.view_addresses' | t }}</span></a>
+              </div>
+            <p class="buttons-phone">Phone Number: {{ customer.default_address.phone }}</p><br>
             {% endif %}
-            <div class="buttons-set">
-            <a id="view_address" href="/account/addresses" class="sf-roll-button alt-button pull-left"><span>{{ 'customer.account.view_addresses' | t }}</span><span>{{ 'customer.account.view_addresses' | t }}</span></a>
-            </div>
+            <a href="/tools/checkout/front_end/login" class="primary-btn"><img src="{{ 'noun_edit_260487.svg' | asset_url }}">Manage My Subscriptions</a>
+            <a href="#" class="secondary-btn"><img src="{{ 'noun_Coins_481828.svg' | asset_url }}"> CHECK MY POINTS</a>
           </div>
         </div>
         <div id="customer_orders" class="col-sm-8 col-xs-12">
+          <h2>My Orders</h2>
+
           <div class="customer-bg-color">
-          <h2>MY ORDERS</h2>
-          {% paginate customer.orders by 20 %}
+          {% paginate customer.orders by 10 %}
             {% if customer.orders.size != 0 %}
             <table>
             <thead>
@@ -67,3 +70,83 @@
   </div>
 </div>
 
+<style>
+
+  @media(max-width:767px){
+    .row.account-page-styles {
+    margin-top: 25px;
+}
+.customer-bg-color table::-webkit-scrollbar {
+width: 5px;
+}
+.customer-bg-color table::-webkit-scrollbar-thumb {
+background-color: #000;
+outline: 1px solid #e4e4E466;
+}
+#customer_sidebar {
+    padding: 20px;
+}
+#customer_sidebar .page-title h1 {
+    font: normal normal normal 24px/32px Austin;
+}
+#customer_sidebar h2 {
+    font: normal normal normal 18px/50px Austin;;
+}
+div#customer_sidebar p {
+    font-size: 12px;
+    line-height: 20px;
+}
+#customer_sidebar a {
+    font: normal normal normal 15px/40px Austin;
+    height: 50px;
+}
+a#view_address span {
+    font-size: 12px;
+}
+p.buttons-phone {
+    margin-bottom: 15px;
+}
+#customer_orders {
+    padding-left: 0px!important;
+}
+#customer_orders .text-center {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#customer_orders .text-center p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+ul.pagination.clearfix li:first-child a {
+    font-size: 13px;
+    padding: 0;
+    margin-right: 5px;
+}
+.pagination>li>a, .pagination>li>span {
+    padding: 0 0px;
+    margin: 0 2px;
+    background: 0 0;
+    width: 35px;
+    opacity: 1;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+.customer-bg-color {
+    overflow-x: scroll;
+}
+.customer-bg-color table {
+    width: 1000px;
+}
+.customer-bg-color {
+    padding-bottom: 40px;
+}
+ul.pagination.clearfix li:last-child a {
+    font-size: 12px;
+    margin-right: 5px;
+}
+.pagination {
+    margin: 15px 0 0 0;
+}
+  }
+</style>

@@ -1179,6 +1179,28 @@
         "type": "image",
         "id": "payment_image_6.png",
         "label": "Payment logo 6 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_7_enable",
+        "label": "Payment logo 7 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_7.png",
+        "label": "Payment logo 7 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_8_enable",
+        "label": "Payment logo 8 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_8.png",
+        "label": "Payment logo 8 image"
       }
     ]
   },

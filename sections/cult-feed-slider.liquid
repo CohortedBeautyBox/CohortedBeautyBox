@@ -1,269 +1,294 @@
- 
-<div style="background-color:{{ section.settings.bag-color }};" class="testimoni-main">
-	<div class="container">
-		{% if block.settings.title != 'blank'%}
-		<div class="text-container-wrapper full-width">
-		  <h2>{{ section.settings.title }}</h2>
-		  {{ section.settings.text }}
-		  <a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+	
+	<div style="background-color:{{ section.settings.bag-color }};" class="testimoni-main">
+		<div class="container">
+			{% if block.settings.title != 'blank'%}
+			<div class="text-container-wrapper full-width">
+			<h2>{{ section.settings.title }}</h2>
+			{{ section.settings.text }}
+			<a class="{{ section.settings.btn_class }}" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+				</div>
+				{% endif %}
+				
+			<div class="feature-collection cult-collection">   
+				{% for block in section.blocks %} 	
+			<div class="feature-item">
+				{% if block.settings.featured_image != 'blank'%}
+			<div class="product-image">
+				<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
+			</div>
+			<div class="slider-content">
+				<h3>Cult Feed</h3>
+				<p>Explore eloquent opinion pieces on lifestyle, fashion, beauty and more..</p>
 			</div>
 			{% endif %}
-			
-		   <div class="feature-collection cult-collection">   
-			{% for block in section.blocks %} 	
-		  <div class="feature-item">
-			  {% if block.settings.featured_image != 'blank'%}
-		<div class="product-image">
-			<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
-		  </div>
-		  <div class="slider-content">
-			  <h3>Cult Feed</h3>
-			  <p>Explore eloquent opinion pieces on lifestyle, fashion, beauty and more..</p>
-		  </div>
-		  {% endif %}
-	  </div> 
-	  {% endfor %}
-		   </div>
-		  </div>
-	</div>
-	<style>
-.cult-slider .feature-item {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 35% 1fr;
-    justify-content: center;
-}
-.slider-content p {
-    font-size: 32px;
-    line-height: 40px;
-    color: #464646;
-}
-.slider-content h3 {
-    font: normal normal normal 80px/80px 'Austin';
-    text-transform: capitalize;
-}
-.slider-content {
-    text-align: left;
-}
-		.testimonial-slider .slick-next:before {
-		  content: url("{{'arrow-right.png' | asset_img_url:'25x20'}}") !important;
-		}
-		.testimonial-slider .slick-prev:before {
-		  content: url("{{'arrow-left.png' | asset_img_url:'25x20'}}") !important;
-		}
-		.slick-arrow {
-		  line-height: 68px;
-	  }
-	  .slick-prev {
-    left: 20px;
-    background: #fff !important;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    z-index: 99;
-    top: 55% !important;
-}
-		.slick-next:before, .slick-prev:before {
-		  color: #000;
-		}
-		.slick-next {
-		  right: 20px;
-		  background: #fff !important;
-		  border-radius: 50px;
-		  width: 50px;
-		  height: 50px;
-		  z-index: 99;
-		  top: 55% !important;
-		}
-		.testimoni-main .secondary-btn {
-		width: auto;
-		padding-left: 40px;
-		padding-right: 40px;
-		margin-top: 30px;
-	}
-	.testimonial-slider .text-container-wrapper {
-		width: 100%;
+		</div> 
+		{% endfor %}
+			</div>
+			</div>
+		</div>
+		<style>
+				.cult-slider .custom_paging {
+		max-width: 65%;
+		margin: 0 0 0 auto;
+		position: absolute;
+		right: 0;
 		text-align: center;
-		padding-right: 0;
-		padding-bottom: 50px;
-		padding-top: 50px;
+		left: 0;
+		bottom: 120px;
+	}
+	.cult-slider .custom_paging li.slick-active {
+		margin: 20px 0;
+	}
+	.cult-slider .feature-item {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 35% 1fr;
+		justify-content: center;
+	}
+	.slider-content p {
+		font-size: 32px;
+		line-height: 40px;
+		color: #464646;
+	}
+	.slider-content h3 {
+		font: normal normal normal 80px/80px 'Austin';
+		text-transform: capitalize;
+	}
+	.slider-content {
+		text-align: left;
+	}
+			.testimonial-slider .slick-next:before {
+			content: url("{{'arrow-right.png' | asset_img_url:'25x20'}}") !important;
+			}
+			.testimonial-slider .slick-prev:before {
+			content: url("{{'arrow-left.png' | asset_img_url:'25x20'}}") !important;
+			}
+			.slick-arrow {
+			line-height: 68px;
+		}
+		.slick-prev {
+		left: 20px;
+		background: #fff !important;
+		border-radius: 50px;
+		width: 50px;
+		height: 50px;
+		z-index: 99;
+		top: 55% !important;
+	}
+			.slick-next:before, .slick-prev:before {
+			color: #000;
+			}
+			.slick-next {
+			right: 20px;
+			background: #fff !important;
+			border-radius: 50px;
+			width: 50px;
+			height: 50px;
+			z-index: 99;
+			top: 55% !important;
+			}
+			.testimoni-main .secondary-btn {
+			width: auto;
+			padding-left: 40px;
+			padding-right: 40px;
+			margin-top: 30px;
+		}
+		.testimonial-slider .text-container-wrapper {
+			width: 100%;
+			text-align: center;
+			padding-right: 0;
+			padding-bottom: 50px;
+			padding-top: 50px;
+		}
+		.cult-slider .slick-dots {
+		bottom: 140px !important;
+	}
+	.cult-slider ul li a {
+		font: normal normal normal 24px/29px Orelo SemiWide Medium;
+		letter-spacing: 1.2px;
+	}
+	.cult-slider .slick-dots li:last-child {
+		visibility: visible;
+	}
+	.cult-slider .slick-dots li:first-child {
+		visibility: visible;
+	}
+	.cult-slider .slick-dots li {
+		visibility: hidden;
+	}
+	.inner-logo-slider {
+		margin-bottom: 70px;
+	}
+	.cult-slider .text-container-wrapper {
+		width: 80%;
+		margin: auto;
+	}
+		@media(max-width:767px){
+			.cult-slider .custom_paging {
+    max-width: 80%;
+    bottom: -45px;
+    margin: 0 auto;
+}
+.cult-slider .custom_paging li.slick-active {
+    margin: 0px auto;
+}
+			.cult-slider .text-container-wrapper {
+		width: 100%;
+	}
+			.cult-slider .feature-item {
+		grid-template-columns: 1fr !important;
+	}
+	.inner-logo-slider {
+		margin-bottom: 40px;
 	}
 	.cult-slider .slick-dots {
-    bottom: 140px !important;
-}
-.cult-slider ul li a {
-    font: normal normal normal 24px/29px Orelo SemiWide Medium;
-    letter-spacing: 1.2px;
-}
-.cult-slider .slick-dots li:last-child {
-    visibility: visible;
-}
-.cult-slider .slick-dots li:first-child {
-    visibility: visible;
-}
-.cult-slider .slick-dots li {
-    visibility: hidden;
-}
-.inner-logo-slider {
-    margin-bottom: 70px;
-}
-.cult-slider .text-container-wrapper {
-    width: 80%;
-	margin: auto;
-}
-	@media(max-width:767px){
-		.cult-slider .text-container-wrapper {
-    width: 100%;
-}
-		.cult-slider .feature-item {
-    grid-template-columns: 1fr !important;
-}
-.inner-logo-slider {
-    margin-bottom: 40px;
-}
-.cult-slider .slick-dots {
-    bottom: -40px !important;
-}
-.slider-content {
-    text-align: center;
-}
-.slider-content h3 {
-    font: normal normal normal 21px/30px 'Austin';
-}
-.slider-content p {
-    font-size: 12px;
-    line-height: 20px;
-    margin-bottom: 20px;
-}
-.cult-slider ul li a {
-    font: normal normal normal 18px/29px Orelo SemiWide Medium;
-}
-	  #shopify-section-template--14211130196073__1638522509f8d1321f .product-box-inner {
-		flex-direction: column-reverse;
+		bottom: -40px !important;
 	}
-	.cult-slider .slick-prev.slick-arrow {
-    left: -10px;
-    top: 100% !important;
-    transform: translateY(4px);
-}
-	.cult-slider .slick-next.slick-arrow {
-	right: -10px;
-    top: 100% !important;
-    transform: translateY(4px);
+	.slider-content {
+		text-align: center;
 	}
-	.app-testimonial-slider .testimoni-main {
-    padding: 0 0 70px 0;
-}
+	.slider-content h3 {
+		font: normal normal normal 21px/30px 'Austin';
 	}
-	  </style>
-	<script>
-	  $('.cult-collection').slick({
-		dots: true,
-		arrow: true,
-		speed: 300,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		customPaging : function(slider, i) {
-		var thumb = $(slider.$slides[i]).data();
-		return '<a>'+i+'</a>';
-		},
-		  responsive: [
-		{
-		  breakpoint: 1024,
-		  settings: {
-			slidesToShow: 4,
-			slidesToScroll: 4,
-			infinite: true,
-			dots: false
-		  }
-		},
-		{
-		  breakpoint: 600,
-		  settings: {
-			slidesToShow: 2,
-			slidesToScroll: 2
-		  }
-		},
-		{
-		  breakpoint: 480,
-		  settings: {
+	.slider-content p {
+		font-size: 12px;
+		line-height: 20px;
+		margin-bottom: 20px;
+	}
+	.cult-slider ul li a {
+		font: normal normal normal 18px/29px Orelo SemiWide Medium;
+	}
+		#shopify-section-template--14211130196073__1638522509f8d1321f .product-box-inner {
+			flex-direction: column-reverse;
+		}
+		.cult-slider .slick-prev.slick-arrow {
+		left: -10px;
+		top: 100% !important;
+		transform: translateY(4px);
+	}
+		.cult-slider .slick-next.slick-arrow {
+		right: -10px;
+		top: 100% !important;
+		transform: translateY(4px);
+		}
+		.app-testimonial-slider .testimoni-main {
+		padding: 0 0 70px 0;
+	}
+		}
+		</style>
+		<script>
+		$('.cult-collection').slick({
+			dots: true,
+			arrow: true,
+			speed: 300,
 			slidesToShow: 1,
-			slidesToScroll: 1
-		  }
-		}
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
-	  ]
-	  });
-	</script>
-	
-	
-	{% schema %}
-	{
-	  "name": "Cult Image slider",
-	  "class": "testimonial-slider cult-slider",
-	  "max_blocks": 100,
-	  "settings": [
-	  {
-		"type": "text",
-		"id": "title",
-		"label": "Heading",
-		"default": "Heading"
-	  },
-	{
-	  "type": "html",
-	  "id": "text",
-	  "label": "Text",
-	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-	},
-	{
-		"id": "link",
-		"type": "url",
-			 "label": "Button Link"
-	  },
-	  {
-		"id": "linktext",
-		"type": "text",
-		"label": "Button Text"		  },
-			  {
-				"type": "text",
-				"id": "btn_class",
-				"label": "Button Class"
-				  },
-			  
-	{
-		"type": "color",
-		"id": "bag-color",
-		"label": "Background Color"
-	  }
-	  ],
-	  "blocks": [
-		{
-		  "type": "image",
-		  "name": "Slider Image",
-		  "settings": [
-		  
-		  {
-			"type": "image_picker",
-			"id": "featured_image",
-			"label": "Select Slider Image"
-		  }
-		  ]
-		}
-	  ],
-	  "presets": [
-		{
-		  "name": "Cult Image slider",
-		  "category": "Cult Image slider",
-		  "blocks": [
-			{ 
-			  "type": "image"
+			slidesToScroll: 1,
+			dotsClass: 'custom_paging',
+			customPaging: function (slider, i) {
+			//FYI just have a look at the object to find available information
+			//press f12 to access the console in most browsers
+			//you could also debug or look in the source
+			console.log(slider);
+			return  '<span class="active_slide">' +(i + 1) + '</span><span class="divide-count">/</span><span class="total_slide">' + slider.slideCount +'</span>';
+		},
+			responsive: [
+			{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				infinite: true,
+				dots: false
 			}
-			
-		  ]
+			},
+			{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+			},
+			{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+		});
+		</script>
+
+		
+		
+		{% schema %}
+		{
+		"name": "Cult Image slider",
+		"class": "testimonial-slider cult-slider",
+		"max_blocks": 100,
+		"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Heading",
+			"default": "Heading"
+		},
+		{
+		"type": "html",
+		"id": "text",
+		"label": "Text",
+		"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+		},
+		{
+			"id": "link",
+			"type": "url",
+				"label": "Button Link"
+		},
+		{
+			"id": "linktext",
+			"type": "text",
+			"label": "Button Text"		  },
+				{
+					"type": "text",
+					"id": "btn_class",
+					"label": "Button Class"
+					},
+				
+		{
+			"type": "color",
+			"id": "bag-color",
+			"label": "Background Color"
 		}
-	  ]
-	}
-	{% endschema %}
-	
+		],
+		"blocks": [
+			{
+			"type": "image",
+			"name": "Slider Image",
+			"settings": [
+			
+			{
+				"type": "image_picker",
+				"id": "featured_image",
+				"label": "Select Slider Image"
+			}
+			]
+			}
+		],
+		"presets": [
+			{
+			"name": "Cult Image slider",
+			"category": "Cult Image slider",
+			"blocks": [
+				{ 
+				"type": "image"
+				}
+				
+			]
+			}
+		]
+		}
+		{% endschema %}
+		

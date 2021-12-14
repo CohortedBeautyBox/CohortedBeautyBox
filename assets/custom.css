@@ -598,7 +598,7 @@ span.line {
   text-decoration: underline;
   line-height: 24px;
   font-size: 15px;
-  font-family: 'Austin';
+  font-family: 'AVENIR LT STD 45 BOOK';
 }
 .product-info .spr-icon.spr-icon-star-empty {
   opacity: 1;
@@ -1035,6 +1035,50 @@ body .box-related .price-box span {
   font: normal normal normal 21px/29px Austin;
   letter-spacing: 1.05px;
 } 
+
+/* collection page */
+.cms-collection .col-main.col-sm-9.col-sm-push-3 {
+  left: 0;
+  width: 100%;
+}
+.cms-collection .sorter .view-mode {
+  display: none;
+}
+.cms-collection .col-left.sidebar.col-sm-3.col-sm-pull-9 {
+  display: none;
+}
+div#products-viewmode:before {
+  display: none;
+}
+.cms-collection .category-products #products-viewmode {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.cms-collection .category-products #products-viewmode .col-lg-4 {
+  width: 100%;
+  clear: unset !important;
+}
+body .quick-view a {
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50px;
+} 
+.quick-view a i {
+  width: 50px;
+  line-height: 50px;
+}
+body .detail-view a {
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50px;
+} 
+.detail-view a i {
+  width: 50px;
+  line-height: 50px;
+}
+
+/* end */
+
 .cms-collection .price {
   color: #000000;
   font: normal normal normal 21px/29px Austin;
@@ -1661,11 +1705,15 @@ div#nova-mobile-menu {
 }
 
 @media (max-width:767px) {
+  body .account-login h1 {
+    font: normal normal normal 30px/40px Austin!important;
+}
   .resp-tabs-container .site_heading {
     margin-bottom: 10px;
     text-align: left;
     width: 100%;
 }
+
   #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
     top: 50%!important;
     transform: translateY(-50%) !important;

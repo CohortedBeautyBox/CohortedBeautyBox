@@ -1,8 +1,9 @@
 {% if paginate.pages > 1 %}
   <div class="text-center">
+    <p>Showing 1 to <span>{{ customer.orders.size }}</span> of entries</p>
     <ul class="pagination clearfix">
     {% if paginate.previous %}
-    	<li><a href="{{ paginate.previous.url }}" class="prev"><i class="fa fa-angle-left"></i></a></li>
+    	<li><a href="{{ paginate.previous.url }}" class="prev">Prev</a></li>
     {% else %}
       <li><span><i class="fa fa-angle-left"></i></span></li>
     {% endif %}
@@ -18,7 +19,7 @@
 
       {% endfor %}
     {% if paginate.next %}
-    	<li><a href="{{ paginate.next.url }}" class="next"><i class="fa fa-angle-right"></i></a></li>
+    	<li><a href="{{ paginate.next.url }}" class="next">Next</a></li>
     {% else %}
     	<li><span><i class="fa fa-angle-right"></i></span></li>
     {% endif %}
