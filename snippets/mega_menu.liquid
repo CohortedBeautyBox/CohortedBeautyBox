@@ -16,7 +16,8 @@
         <div class="novaworks-navigation">
           <div class="novaworks-main-menu">
             <ul id="novaworks-nav" class="megamenu">
-              {% for link in linklists['main-menu'].links %}
+           
+              {% for link in linklists[section.settings.main_list].links %}
               {% assign cat = link.title | downcase %}
               <li class="level0 level-top{% if link.active %} active{% endif %}{% if items_list_1 contains cat or items_list_2 contains cat or linklists[link.handle] != empty %}{% if items_list_1 contains cat or items_list_2 contains cat %} parent{% else %} parent-dropdown{% endif %}{% endif %}">
                 <a href="{{link.url}}" class="level-top">

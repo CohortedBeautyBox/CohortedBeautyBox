@@ -1,30 +1,33 @@
 
 <div class="main-container">
   <div class="container">
-    <div class="page-title">
-      <h1>{{ 'customer.addresses.title' | t }}</h1>
+    <div class="page-title display_flex">
+      <h1>{{ 'customer.addresses.title' | t }}   <a onclick="Shopify.CustomerAddress.toggleNewForm(); return false;" href="#" class="btn btn-default"><span>{{ 'customer.addresses.add_new' | t }}</span></a> </h1>
+         
     </div>
     <div class="page-content">
       <div class="row">
         {% if customer.addresses.size > 0 %}
-        <div class="col-sm-6 col-xs-12">
+        <div class="col-sm-12 col-xs-12">
           <div id="address_tables">
             {% paginate customer.addresses by 10 %}
 
             {% for address in customer.addresses %}
-            <div class="address_table">
+            <div class="address_table col-sm-4 col-xs-12">
               <div id="view_address_{{address.id}}" class="customer_address">
                 <h4 class="address_title">
                   {{ address.street }}
                   {% if address == customer.default_address %}<span class="default_address note">{{ 'customer.addresses.default' | t }}</span>{% endif %}
                 </h4>
                 <div class="view_address">
-                  <p>{{ address.first_name }} {{address.last_name }}</p>
+                  <div class="address-inner">
+                  <p><strong>Address:</strong> {{ address.first_name }} {{address.last_name }}</p>
                   <p>{{ address.company }}</p>
                   <p>{{ address.street }}</p>
                   <p>{{ address.city }} {% if address.province_code %}, {{ address.province_code }}{% endif %}</p>
                   <p>{{ address.country }} {{ address.zip }}</p>
-                  <p>{{ address.phone }}</p>
+                </div>
+                  <p class="phone-inner"><strong>Phone:</strong> {{ address.phone }}</p>
                 </div>
                 <hr>
                 <p class="buttons-set no-margin">
@@ -98,10 +101,7 @@
           </div>
         </div>
         {% endif %}
-        <div class="col-sm-6 col-xs-12">
-          <div class="buttons-set no-margin">
-            <a onclick="Shopify.CustomerAddress.toggleNewForm(); return false;" href="#" class="btn btn-default"><span>{{ 'customer.addresses.add_new' | t }}</span></a>
-          </div>
+        <div class="col-sm-6 col-xs-12">       
           {% form 'customer_address', customer.new_address %}
           <div id="add_address" class="customer_address edit_address" {% unless form.errors %} style="display:none;"{% endunless %}>
             {{ form.errors | default_errors }}
@@ -178,3 +178,67 @@
   new Shopify.CountryProvinceSelector('address_country_{{address.id}}', 'address_province_{{address.id}}', {hideElement: 'address_province_container_{{address.id}}'});
   {% endfor %}
 </script>
+
+<style>
+  .display_flex h1 {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.page-title.display_flex a {
+    height: 40px;
+    font-family: 'Austin';
+    padding: 0 20px;
+} 
+h4.address_title {
+    font-family: 'Austin';
+}
+.customer_address {
+    background: #F1F1F1;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+}
+h4.address_title {
+    font-family: 'Austin';
+} 
+.customer_address a {
+    font-family: 'Austin';
+    width: 80px;
+}
+.customer_address hr {
+    border-top: 1px solid #000;
+}
+.customer_address.edit_address .action_bottom button {
+    font-family: 'Austin';
+    font-size: 15px;
+}
+.customer_address.edit_address .action_bottom .or {
+    display: none;
+}
+@media(max-width:767px){
+  .display_flex h1 {
+    font: normal normal normal 32px/66px Austin;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+div#address_tables .address_table {
+    padding: 0;
+}
+.customer_address {
+    padding: 30px 20px;
+    margin-bottom: 20px;
+}
+.customer_address.edit_address .action_bottom {
+    display: flex;
+    grid-gap: 15px;
+    margin-top: 10px;
+}
+.customer_address.edit_address .action_bottom button {
+    font-size: 12px !important;
+}
+.customer_address.edit_address table tr {
+    display: grid;
+}
+}
+</style>

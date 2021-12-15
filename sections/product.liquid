@@ -90,8 +90,17 @@
 {% endschema %}
 
 <style>
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 .product-slider-item img {
     width: 100%;
+}
+.resp-tabs-container img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.pro-bottom-icons img {
+    max-width: 24px;
 }
 .product-slider-mob .slick-arrow {
     box-shadow: 0px 0px 16px #00000029;
@@ -103,6 +112,11 @@
     opacity: 1 !important;
     background: #fff;
 }
+.product-template-main .ratings a {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 25px;
+}   
 .product-slider-mob .slick-next {
     right: 10px;
 }
@@ -338,7 +352,7 @@
     font-size: 27px;
     font-weight: 300;
 }
-.product-template-main .add-to-cart button.button {
+.product-template-main .add-to-cart button.button, .product-template-main .add-to-cart a {
     float: left;
     letter-spacing: 0.9px;
     font: normal normal normal 18px/50px Austin;
@@ -375,7 +389,10 @@ div#product-images {
     font-style: normal !important;
     font-family: 'AVENIR LT STD 45 BOOK';
 }
-
+.add-to-box .add-to-cart {
+    display: flex;
+    grid-gap: 15px;
+}
 @media (max-width:768px) {
     .product-template-main .more-views-wrapeee {
     margin-bottom: -80px;
@@ -437,8 +454,9 @@ button.addtocart.button.btn-cart.cartbutton {
     margin: 0 !important;
     justify-content: space-between;
 }
-.product-template-main .add-to-cart button.button {
+.product-template-main .add-to-cart button.button, .product-template-main .add-to-cart a {
     width: 100%;
+    margin-bottom: 10px;
 }
 .pro-bottom-icons {
     border-bottom: 1px solid #00000094;

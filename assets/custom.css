@@ -255,14 +255,21 @@ body #top-search {
 .top-header-new  .header-links {
   padding-right: 20px;
 }
- #top-search form input {
+#top-search form input {
   color: #000;
   font-size: 19px;
   margin-top: 0!important;
   outline: 0 none!important;
-  padding: 5px 80px 5px 0;
-  line-height: 50px;
-  background-color: #fff !important;
+  padding: 5px 80px 5px 50px;
+  line-height: 70px;
+  background-color: #fff!important;
+  border-bottom: 1px solid #dcdcdc;
+}
+#top-search form {
+  padding: 0 0;
+}
+.sticky-wrapper #top-search-trigger i.fa.fa-times {
+  color: #000!important;
 }
 .top-header-new {
   display: flex !important;
@@ -625,12 +632,12 @@ div#new-feed {
 }
 div#shopify-section-footer-new {
   position: relative;
-  z-index: 1;
+  z-index: 9;
 }
 div#shopify-section-instagram-section {
   background: #ffff;
   position: relative;
-  z-index: 1;
+  z-index: 9;
 }
 #new-feed .insta-header {
   margin-bottom: 40px;
@@ -902,9 +909,7 @@ a.selected-currency {
 #novaworks-nav li.level0 {
   margin-top: 0;
 }
-#novaworks-nav .level0:nth-child(1) {
-  display: none;
-}
+
 h2.title_phn {
   display: none;
 }
@@ -1062,19 +1067,37 @@ body .quick-view a {
   height: 50px !important;
   width: 50px !important;
   border-radius: 50px;
+  background: #fff;
+  box-shadow: 0px 0px 16px #00000029;
 } 
 .quick-view a i {
   width: 50px;
   line-height: 50px;
+  color: #000;
 }
 body .detail-view a {
   height: 50px !important;
   width: 50px !important;
   border-radius: 50px;
+  background: #fff;
+  box-shadow: 0px 0px 16px #00000029;
 } 
+.slider-items .owl-buttons div.owl-prev {
+  left: 15px;
+}
+.slider-items .owl-buttons div.owl-next {
+  right: 15px;
+}
+.owl-theme .owl-controls .owl-buttons div a {
+  opacity: 1;
+  width: 50px;
+  border-radius: 50px;
+  line-height: 50px;
+}
 .detail-view a i {
   width: 50px;
   line-height: 50px;
+  color: #000;
 }
 
 /* end */
@@ -1327,6 +1350,9 @@ h2.site_heading {
   margin-bottom: 50px;
 }
 @media(min-width:1500px){
+  .activesticky {
+    left: 80px !important;
+}                     
   #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
     bottom: unset;
     top: 2%;
@@ -1382,12 +1408,14 @@ img.image_box_2, img.image_box_3 {
 }
 .info-boxs p {
   height: 130px;
+  padding: 0 40px;
 }
 }
 @media (max-width:1399px) {
   .banner-content h3 {
     font: italic normal normal 27px/40px Austin !important;
 }
+
 .banner-content h2 {
   font: normal normal normal 65px/70px Austin !important;
 }
@@ -1513,9 +1541,16 @@ ul.content-with-image-slider-section-buttons a {
   .text-box h3.subtitle {
     font: italic normal normal 60px/60px 'Austin';
 }
-#novaworks-nav .level0:nth-child(1) {
-  display: flex;
-} 
+#advent-page-design-one-2021 .rich-content h5 {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'Avenir LT Std 45 Book';
+  margin-bottom: 40px;
+  text-transform: initial;
+}
+#shopify-section-template--14211130196073__1638522509f8d1321f .description-before.visibilty-hide {
+  display: none;
+}
 ul#sidebar-nav-menu {
   margin-top: 15px;
 }
@@ -1708,6 +1743,15 @@ div#nova-mobile-menu {
   body .account-login h1 {
     font: normal normal normal 30px/40px Austin!important;
 }
+.content-with-image-slider-section .slick-slide img {
+  height: 375px;
+}
+.content-with-image-slider-section .slick-next {
+  right: 10px;
+}
+.content-with-image-slider-section .slick-prev {
+    left: 10px;
+}
   .resp-tabs-container .site_heading {
     margin-bottom: 10px;
     text-align: left;
@@ -1866,6 +1910,7 @@ h2.title_des {
 .info-boxs p {
     height: 100%;
     margin-bottom: 20px;
+    padding: 0;
 }
 .is-sticky .container.nova-header {
   background: #000;

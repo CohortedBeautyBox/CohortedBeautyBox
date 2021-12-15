@@ -1,6 +1,7 @@
 <div class="shopify_explorer__content">
 	<div class="container">
 	  <div class="faq-inner">
+		<div class="faq-menu-top">
 		<div class="faq-menu">
 		  {%- for block in section.blocks -%}
 		  {%- case block.type -%}
@@ -9,7 +10,7 @@
 		  {%- endcase -%}
 		  {%- endfor -%}
 		</div>
-  
+  </div>
 		<div class="faq-main">
 		  {%- assign expand_questions = section.settings.expand_questions -%}
 		  {%- for block in section.blocks -%}
@@ -26,7 +27,6 @@
 			</div>
 		  </div>
 		  {%- when 'text' -%}
-		  <h3 class="shopify_explorer_faq__separator h3">{{ block.settings.single_title | escape }}</h3>
 		  <div class="single-text">  {{ block.settings.text_single }}</div>
 		  {%- endcase -%}
 		  {%- endfor -%}
@@ -47,6 +47,7 @@
   h3.shopify_explorer_faq__question.h5.link.active .plus {
 	  display: none;
   }
+
   </style>
   <script>
 	$(function(){
@@ -96,11 +97,6 @@
 			  "type": "text",
 			  "name": "Single Text",
 			  "settings": [
-			  {
-				  "type": "text",
-				  "id": "single_title",
-				  "label": "Heading"
-				},
 			  
 				{
 					"type": "richtext",

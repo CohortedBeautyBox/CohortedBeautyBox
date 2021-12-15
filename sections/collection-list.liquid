@@ -16,7 +16,14 @@
       {%- endif -%}
 
       <a href="{{ collection.url }}">
-        <img src="{{ collection_image | img_url: '480x' }}" alt="">
+        
+        {% if block.settings.collection_image_new != blank %} 
+        <img src="{{ block.settings.collection_image_new | img_url: 'master' }}" alt="{{ collection_image.alt }}" 
+        id="FeaturedImage-{{ section.id }}" class="product-featured-img"> 
+	{% else %}
+  <img src="{{ collection_image | img_url: 'master' }}" alt="{{ collection_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img">
+
+							{% endif %}
         <span>{{ collection.title }} <img style="width:30px; height:18px;" src="{{ section.settings.icon | img_url: '30x' }}"></span>
       </a>
     </div>
@@ -36,7 +43,14 @@
       {%- endif -%}
 
       <a href="{{ collection.url }}">
-        <img src="{{ collection_image | img_url: '480x' }}" alt="">
+        {% if block.settings.collection_image_new != blank %} 
+        <img src="{{ block.settings.collection_image_new | img_url: 'master' }}" alt="{{ collection_image.alt }}" 
+        id="FeaturedImage-{{ section.id }}" class="product-featured-img"> 
+	{% else %}
+  <img src="{{ collection_image | img_url: 'master' }}" alt="{{ collection_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img">
+
+							{% endif %}
+
         <span>{{ collection.title }} <img style="width:30px; height:18px;" src="{{ section.settings.icon | img_url: '30x' }}"></span>
       </a>
     </div>
@@ -118,7 +132,13 @@
             "label": "Collection",
             "id": "collection",
             "type": "collection"
-          }
+          },
+          {
+            "type": "image_picker",
+            "id": "collection_image_new",
+            "label": "Select Collection Image"
+    }
+          
         ]
       }
     ],
