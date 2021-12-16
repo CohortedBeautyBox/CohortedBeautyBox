@@ -8,10 +8,16 @@
 			  </div>
 
 			  {% for block in section.blocks %}  
-			  <li><div class="point-box">
+			  <li>
+          <div class="point-box">
 				  <div class="number-box">{{ block.settings.link }}</div>
 				  <div>{{ block.settings.linktext }}</div>
-			  </div></li>
+
+          {% if block.settings.linktext2 != blank %} 
+          <a href="{{ block.settings.link2 }}">{{ block.settings.linktext2 }}</a>
+          {% endif %} 
+			  </div>
+      </li>
 			  {% endfor %}
 			
 		</ul>
@@ -19,6 +25,15 @@
 	</div>
   </div>
   <style>
+   .point-box a {
+    font: normal normal normal 15px/60px Austin;
+    letter-spacing: 0.75px;
+    width: 100%;
+    background: #FFF5EF;
+    margin-top: 30px;
+    display: inline-block;
+    color: #000;
+}
 	  .reward-earn-points {
     background: #F1F1F1;
 	padding: 80px 0;
@@ -47,7 +62,7 @@ ul.grid-point-list {
     background: #fff;
     width: 100%;
     justify-content: center;
-    height: 309px;
+    height: 370px;
     align-items: center;
     display: flex;
     font-size: 15px;
@@ -64,9 +79,19 @@ ul.grid-point-list {
     margin-top: 20px;
 	margin-bottom: 0;
 }
+@media(max-width:991px){
+  ul.grid-point-list li {
+    width: 50%;
+}
+}
 @media(max-width:767px){
+  
 	.reward-earn-points {
     padding: 40px 0;
+}
+
+.point-box a {
+    font: normal normal normal 12px/40px Austin;  
 }
 ul.grid-point-list li {
     width: 50%;
@@ -87,7 +112,7 @@ ul.grid-point-list li {
     margin-bottom: 10px;
 }
 .point-box {
-    height: 180px;
+    height: 100%;
 }
 .point-box p{
 font-size: 12px;
@@ -126,7 +151,18 @@ line-height: 16px;}
 		  {
 			"id": "linktext",
 			"type": "html",
-			"label": "Point Box Content"		  }
+			"label": "Point Box Content"		  
+    },
+    {
+			"id": "linktext2",
+			"type": "text",
+			"label": "Button Text"		  
+    },
+    {
+			"id": "link2",
+			"type": "url",
+			"label": "Button Link"		  
+    }
 		]
 	  }
 	],

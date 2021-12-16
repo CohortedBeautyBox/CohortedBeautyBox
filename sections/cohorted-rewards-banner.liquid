@@ -1,18 +1,24 @@
 <div class="rew_banner">
 	<div class="container">
 <div class="banner_inner">
+
+  <div class="banner_inner_fixced">
 	<div class="banner_login_box">
   <h3>My Account</h3>
   <div class="icon-text">
-	  <img src="">
+	  <span><img src="{{ 'coin-blac.svg' | asset_url }}"></span>
 	  <h5>Earn Points For Every Purchase You Make.</h5>
   </div>
-  <div class="account-buttons">  <a href=""> <img src="">SIGN UP </a>
-	<a class="white" href=""> <img src="">MY ACCOUNT </a></div>
+  <div class="account-buttons">  <a href=""> <img src="{{ 'sign-up.svg' | asset_url }}">SIGN UP </a>
+	<a class="white" href=""> <img src="{{ 'user.svg' | asset_url }}">MY ACCOUNT </a></div>
 
 	</div>
+  </div>
 	<div class="img-right">
-		<img src="{{ 'Share-Rewards-Promo-Banner.jpg' | asset_img_url: 'master' }}">
+   
+		<img class="show-desktop" src="{{ 'Share-Rewards-Promo-Banner.jpg' | asset_img_url: 'master' }}">
+    <img class="show-mob" src="{{ 'reward_mob.jpg' | asset_img_url: 'master' }}">
+
 	</div>
 </div>
 	</div>
@@ -20,15 +26,23 @@
   <style>
 	.banner_inner {
   display: grid;
-  grid-template-columns: 438px 1fr;
-  grid-gap: 50px;
+  grid-template-columns: 35% 1fr;
+  grid-gap: 70px;
   margin-bottom: 80px;
+}
+a.white img {
+    width: 30px;
+}
+.rew_banner .container {
+    padding: 0 80px;
+}
+.account-buttons img {
+    width: 25px;
 }
 .banner_login_box {
   background: #FFF5EF 0% 0% no-repeat padding-box;
-  margin: 0 50px;
   height: max-content;
-  padding: 40px 20px;
+  padding: 40px 30px;
   text-align: left;
 }
 .banner_login_box h3 {
@@ -36,14 +50,15 @@
   line-height: 32px;
   font-family: 'Austin';
   text-transform: capitalize;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000;
   padding-bottom: 15px;
   display: block;
   margin-bottom: 25px;
 }
 .icon-text {
-  display: flex;
-  grid-gap: 15px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 50px 1fr;
 }
 .page-title.new h5 {
   font-size: 15px;
@@ -52,35 +67,65 @@
   color: #1A1A1A;
   margin-top: 0;
 }
-.icon-text img {
-  background-color: #fff;
-  height: 40px;
-  width: 40px;
-  border-radius: 40px;
-  align-items: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.icon-text span img {
+    width: 25px;
+}
+.rew_banner {
+    padding-top: 20px;
+}
+.icon-text span {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.img-right img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 .icon-text h5 {
-  margin-top: 0;
-  font-family: 'Austin';
-  font-size: 24px;
-  line-height: 28px;
+    margin-top: 0;
+    font-family: 'Austin';
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: capitalize;
 }
 .account-buttons a {
-  height: 65px;
-  border: 1px solid #000;
-  display: block;
-  width: 100%;
-  text-align: center;
-  line-height: 65px;
-  font-family: 'Austin';
-  font-size: 18px;
-  margin-bottom: 15px;
+    height: 65px;
+    border: 1px solid #000;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    line-height: 65px;
+    font-family: 'Austin';
+    font-size: 18px;
+    margin-bottom: 15px;
+    justify-content: center;
+    color: #000;
+    grid-gap: 10px;
 }
 .account-buttons .white {
-  background: #fff;
+    background: #fff;
+    border-color: #fff;
+}
+@media(max-width:991px){
+  .rew_banner .container {
+    padding: 0 40px;
+}
 }
 @media(max-width:767px){
+  .rew_banner .container {
+    padding: 0 20px !important;
+}
+img.show-desktop {
+    display: none;
+}
   .text-container-wrapper.full-width h2 {
     margin-bottom: 25px;
 }
@@ -107,6 +152,7 @@
     margin-top: 0;
     font-size: 18px;
     line-height: 16px;
+    align-items: center;
 }
 .account-buttons a {
     height: 50px;

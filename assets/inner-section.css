@@ -1,4 +1,35 @@
 /* order page */
+#shopify-section-template--14211130196073__1638524901f24602b4 .rich-content h5 {
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: initial;
+}
+#shopify-section-template--14211130196073__1638522509f8d1321f .secondary-btn.white {
+    display: none;
+}
+#shopify-section-template--14211130196073__1638522509f8d1321f .product-feature-image img {
+    height: fit-content;
+}
+#cohorted-rewards .rich-content {
+    padding: 0 0;
+    max-width: 100%;
+}
+#cohorted-rewards .page-title {
+    padding: 0px 0;
+}
+#cohorted-earn-points .rich-text-main {
+    padding-top: 0;
+}
+#cohorted-earn-points .rich-content {
+    padding: 0 0;
+    max-width: 100%;
+}
+#cohorted-earn-points .page-title {
+    padding: 0px 0;
+}
+#cohorted-rewards .rich-text-main {
+    padding-top: 0;
+}
 .slider-items-products.box-collateral.box-related {
     display: none;
 }
@@ -194,10 +225,11 @@ span.total.money {
     font-family: 'AVENIR LT STD 45 BOOK';
 }
 .customer-bg-color table th {
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     text-transform: uppercase;
     letter-spacing: .6px;
+    font-family: 'Poppins', sans-serif !important;
 }
 .customer-bg-color table tr {
     height: 60px;
@@ -527,7 +559,7 @@ html {
     left: 0;
     text-align: left;
     max-width: 50%;
-    transform: translateY(0px);
+    transform: translateY(-50px);
     padding: 100px;
 }
 .banner-content h3 {
@@ -644,7 +676,7 @@ h3.shopify_explorer_faq__question.h5.link span {
 }
 @media (max-width:1460px) {
     .banner-content h2 {
-        font: normal normal normal 65px/70px Austin!important;
+        font: normal normal normal 60px/60px Austin!important;
     }
     .banner-content h3 {
         font: italic normal normal 27px/40px Austin!important;
@@ -660,6 +692,7 @@ h3.shopify_explorer_faq__question.h5.link span {
 	}
 	.banner-content {
 		max-width: 50%;
+        transform: translateY(-20px);
 	}
 	.text-container-wrapper.full-width h2 {
 		font-size: 60px;

@@ -35,6 +35,10 @@ body {
 /* .content-with-image-slider-section .slick-arrow {
   line-height: 80px !important;
 } */
+.toolbar .sorter {
+   display: flex;
+  justify-content: flex-end;
+}
 .content-part {  
   width: 50%;
 }
@@ -1207,7 +1211,7 @@ ul#novaworks-nav li.level-top a.level-top {
   text-align: center;
   font: normal normal normal 80px/110px 'Austin';
   letter-spacing: 0px;
-  color: #1A1A1A;
+  color: #000;
   text-transform: capitalize;
 }
 .page-title {
@@ -1549,7 +1553,7 @@ ul.content-with-image-slider-section-buttons a {
   text-transform: initial;
 }
 #shopify-section-template--14211130196073__1638522509f8d1321f .description-before.visibilty-hide {
-  display: none;
+  display: none; 
 }
 ul#sidebar-nav-menu {
   margin-top: 15px;

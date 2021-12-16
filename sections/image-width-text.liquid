@@ -10,7 +10,9 @@
 			<h2>{{ section.settings.title }}</h2>
 			<div class="description-before"><span></span>{{ section.settings.text }}</div>
 			<div class="description-before visibilty-hide"><span></span>
+
 				<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a></div>
+		
 			
 		  </div>
 		  {% endif %}
