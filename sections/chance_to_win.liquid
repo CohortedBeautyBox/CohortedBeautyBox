@@ -1,0 +1,243 @@
+<div class="section-full-banner">
+	<div class="banner-inner-content">
+		<div class="banner-image">
+			{% if section.settings.feature_image != blank %}
+			<img class="show-desktop" src="{{ section.settings.feature_image | img_url:'master'}}">
+			{% endif %}
+			{% if section.settings.feature_mobile != blank %}
+			<img class="show-mob" src="{{ section.settings.feature_mobile | img_url:'master'}}">
+			{% else %}
+			<img class="show-mob" src="{{ section.settings.feature_image | img_url:'master'}}">
+			{% endif %}
+		</div>
+		<div class="{% if section.settings.banner_right %}banner_right {% else %} banner_left {% endif %} banner-content container">
+			<h3 style="color:{{ section.settings.title_color }};"> <i>{{ section.settings.sub_title }}</i></h3>
+			<h2 style="color:{{ section.settings.title_color }};">{{ section.settings.title }}</h2>
+			<div class="description-banner"><div style="color:{{ section.settings.text_color }};">
+				{{ section.settings.text }} </div></div>
+	
+				{% if section.settings.linktext != blank %}
+				<a class="popup_open {% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+				{% endif %}
+				 
+				{% if section.settings.feature_image2 != blank %}
+				<div class="app-links">			 
+					<a href="{{ section.settings.link2 }}"><img src="{{ section.settings.feature_image2 | img_url:'master'}}"></a>
+					<a href="{{ section.settings.link3 }}"><img src="{{ section.settings.feature_image3 | img_url:'master'}}"></a>
+				</div>
+				{% endif %}
+	
+				<div class="app-url">
+					{% if section.settings.enable_apps %}
+					<h5 style="color:{{ section.settings.text_color }};">Get it on:</h5>
+					<div class="link-images">
+						<a target="_blank" href="https://apps.apple.com/in/app/cohorted-cult/id1564440229"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/app-store.jpg?v=1638854192"></a> 
+						<a target="_blank" href="https://play.google.com/store/apps/details?id=com.cohorted.cult"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/google-paly.jpg?v=1638854192"></a>
+					</div>
+					{% endif %}
+				</div>
+	
+	
+		  </div>
+	</div>
+	  </div>
+	  
+	  {% if section.settings.klaviyo_form != blank %}
+	  <div style="display:none;" class="klaviyo_form_custom popup-main">
+	
+		<div class="popup-inner">
+			<div class="close_icon">
+				<img src="{{ 'close_icon.png' | asset_img_url: 'master'}}">
+			</div>
+			{{ section.settings.klaviyo_form }}
+		</div>
+	</div>
+	  {% endif %}
+	  <style>
+		  .show-mob{display: none;}
+	
+		  .banner_right {
+		left: unset;
+		right: 0;
+	}
+	
+	.full-with-banner .app-links img {
+		max-width: 170px;
+	}
+	.full-with-banner .app-links {
+		display: flex;
+		align-items: center;
+		grid-gap: 20px;
+		margin-top: 30px;
+	}
+	@media(max-width:1024px){
+	.banner-content {
+    max-width: 100%;
+}
+}
+	@media(max-width:991px){
+		.banner-content {
+    position: relative;
+}
+.banner-inner-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+	}
+		  @media(max-width:767px){
+			.banner-content h3 {
+		font: italic normal normal 18px/30px Austin!important;
+	}
+	.banner-content h2 {
+		font: normal normal normal 32px/32px Austin!important;
+	}
+			.show-mob{display: block;}  
+			.show-desktop{display: none;}  
+			.banner-content {
+		max-width: 100%;
+	}
+	.banner-content {
+		padding: 50px 30px;
+	}
+	.banner-content .secondary-btn {
+		width: 160px;
+	}
+	.description-banner div {
+		letter-spacing: .6px;
+		font-size: 12px;
+		line-height: 21px;
+	}
+		  }
+		
+	  </style>
+	  <script>
+		  $('.popup_open').on('click',function(event){
+	event.preventDefault();
+	$('.popup-main').addClass('popup_open');
+	});
+	
+	$('.close_icon').on('click',function(event){
+	event.preventDefault();
+	$('.popup-main').removeClass('popup_open');
+	});
+	
+	  </script>
+	 
+	  {% schema %}
+	  {
+		"name": "Chance To Win banner",
+		"class":"full-with-banner",
+		"settings": [
+		{
+			"type": "checkbox",
+			"id": "banner_right",
+			"label": "Content Right",
+			"default": false
+			  },
+		{
+			"type": "image_picker",
+			"id": "feature_image",
+			"label": "Select Banner Image"
+			  },		  
+			  {
+				"type": "image_picker",
+				"id": "feature_mobile",
+				"label": "Select Mobile Image"
+				  },
+			  
+			  {
+				"type": "text",
+				"id": "sub_title",
+				"label": "Sub Title"
+				  },
+			  {
+				"type": "text",
+				"id": "title",
+				"label": "Title"
+				  },
+				  {
+					"type": "html",
+					"id": "text",
+					"label": "Text"
+				  },
+				  {
+					"id": "link",
+					"type": "url",
+						 "label": "Button Link"
+				  },
+				  {
+					"id": "klaviyo_form",
+					"type": "html",
+					"label": "Klavyo form field"		  
+				},
+				  {
+					"id": "linktext",
+					"type": "text",
+					"label": "Button Text"		  
+				},
+				{
+					"type": "select",
+					"id": "sectionOrder",
+					"options": [
+					  { "value": "orderOne", "label": "Primary Button"},
+					  { "value": "orderTwo", "label": "secondary Button"},
+					  { "value": "orderThree", "label": "secondary White Button"}
+					],
+					"label": "Button Color"
+					},
+			  {
+				"type": "color",
+				"id": "bg_color",
+				"label": "BG Color"
+				  },
+				  {
+					"type": "color",
+					"id": "title_color",
+					"label": "Title Color"
+					  },
+					  {
+						"type": "color",
+						"id": "text_color",
+						"label": "Text Color"
+						  },
+						  {
+							"id": "feature_image2",
+							"type": "image_picker",
+							"label": "Select App Image"		  
+						},
+						{
+						"id": "link2",
+						"type": "url",
+						"label": "App Link"
+						},
+						{
+							"id": "feature_image3",
+							"type": "image_picker",
+							"label": "Select App Image"		  
+						},
+						{
+						"id": "link3",
+						"type": "url",
+						"label": "App Link"
+						},
+						  {
+							"type": "checkbox",
+							"id": "enable_apps",
+							"label": "Enable Apps Buttons",
+							"default": false
+							  }
+	
+						
+		  
+		],
+		"presets": [
+		  {
+			"name": "Chance To Win banner",
+			"category": "Banner"
+		  }
+		]
+	  }
+	  {% endschema %}
+	  

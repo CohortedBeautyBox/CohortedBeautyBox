@@ -3,16 +3,10 @@
 <div style="background-image: url({% if collection.image %}{{ collection.image | img_url: 'original' }}{% else %}{{ 'header_default_img.jpg' | asset_url }}{% endif %})" class="parallax-box parrallax-page-title alt-bg parallax-shop" data-stellar-background-ratio="0.4">
   <div class="parallax-title-content">
     <h1>{{ collection.title | escape }}</h1>
-    <div class="breadcrumbs">
-      <ul>
-        <li class="home">
-          <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span><span> &gt; </span>
-        </li>
-        <li><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span></li>
-      </ul>
-    </div>
+   
   </div>
 </div>
+   <div class="ollecton_title"><h1>{{ collection.title | escape }}</h1></div> 
 <div class="main-container">
   <div class="novaworks-main-content">
     <div class="main container">
@@ -20,6 +14,15 @@
         <div class="{% if settings.display_sidebar_cat_page %}col-main col-sm-9 col-sm-push-3{% else %}col-main col-sm-12{% endif %}">
           <div class="category-products">
             <div class="toolbar">
+              <div class="breadcrumbs">
+                <ul>
+                  <li class="home">
+                    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                      <img 332r23v src="{{ 'arro-svg.svg' | asset_url }}"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">{{ 'general.breadcrumbs.home' | t }}</span></a></span><span>|</span>
+                  </li>
+                  <li><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span></li>
+                </ul>
+              </div>
               <div class="sorter">
                 <div class="sort-by">
                   <span class="current">
@@ -109,7 +112,14 @@
     </div>
   </div>
 </div>
-
+<style>
+  li.home img {
+    height: 14px;
+    position: relative;
+    top: 7px;
+    margin-right: 6px;
+}
+</style>
 <script>
   Shopify.queryParams = {};
   if (location.search.length) {

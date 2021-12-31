@@ -5,7 +5,7 @@
   {% endif %}
   <a class="product-image" href="{{product.url | within: collection}}" title="{{product.title}}">
     <div class="product-img-additional back">
-      <img src="{% if product.images.size >= 1%}{{ product.featured_image | product_img_url: 'large' }}{% else %}{{ 'No_Image_2.png' | asset_url }}{% endif %}" alt="{{product.title}}">
+      <a class="collection-image" href="{{product.url | within: collection}}"> <img src="{% if product.images.size >= 1%}{{ product.featured_image | product_img_url: 'large' }}{% else %}{{ 'No_Image_2.png' | asset_url }}{% endif %}" alt="{{product.title}}"></a>
     </div>
   </a>
   <div class="product-hover-box hidden-xs">
@@ -50,10 +50,22 @@
   {% else %}
   <span class="regular-price"><span class="price">{{ price }}</span></span>
   {% endif %}
-  {{ 'products.product.sold_out_html' | t }}
+  <span class="sold-out">{{ 'products.product.sold_out_html' | t }}</span>
   {% endif %}
 </div>
+<div class="buy-now"><a class="secondary-btn" href="{{dynamic_products.url}}">Buy Now</a></div>	
 <div class="novaworks-quick-act">
   {% include 'wishlist-button' %}
   <a href="javascript:;" title="Add to cart" onclick="ajaxcart({{product.selected_or_first_available_variant.id}})" class="ajaxcart_simple button-ajax-cart-id-{{product.selected_or_first_available_variant.id}}"><i class="fa fa-shopping-cart"></i></a>
 </div>
+<style>
+  .item .buy-now .secondary-btn {
+    height: 40px;
+    line-height: 40px !important;
+}
+@media(max-width:767px){
+  h3.product-name {
+    height: 60px;
+}
+}
+</style>

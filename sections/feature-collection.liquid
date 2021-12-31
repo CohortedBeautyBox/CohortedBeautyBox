@@ -1,7 +1,7 @@
 
 {%- assign collection = collections[section.settings.collection] -%}
  
-<div class="feature-collection-main">
+<div class="feature-collection-main feature_collection__{{ section.id }}">
 <div class="container">
     <div class="text-container-wrapper">
       <h2>{{ section.settings.title }}</h2>
@@ -14,8 +14,9 @@
       <div class="feature-item">
        
 	<div class="product-image">
-     <img class="grid-view-item__image lazyload" src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt | escape }}">
-     <a class="secondary-btn white" href="{{ product.url }}"> Buy Now  {{ product.price | money}}</a>
+    <a class="image_inner" href="{{ product.url }}"><img class="grid-view-item__image lazyload" src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.featured_image.alt | escape }}"></a>
+     <a class="secondary-btn white" href="{{ product.url }}"> Buy Now <span class="line-b"></span>
+      {{ product.price | money}}</a>
       </div>
       <div class="h4 grid-view-item__title"><a href="{{ product.url }}">{{ product.title }}</a>
         <div class="price-box">
@@ -55,11 +56,11 @@
     transition: width 2s;
     cursor: pointer;
 }
-.feature-collection-main .feature-item:hover .product-image::before{
+.feature-collection-main .feature-item:hover .image_inner::before{
   opacity: .5;
   transition: width 2s;
 }
-.product-image::before {
+.product-image .image_inner::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -67,6 +68,12 @@
     background: #000;
     left: 0;
     opacity: 0;
+}
+a.image_inner {
+    position: relative;
+    display: block;
+    transition: width 2s;
+    cursor: pointer;
 }
   .feature-collection-main .slick-arrow {
     box-shadow: 0px 0px 16px #00000029;
@@ -87,15 +94,39 @@
     right: 0;
     transition: width 2s;
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+span.line-b {
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    display: block;
 }
 .feature-item:hover .secondary-btn.white {
     transform: translateY(-90px);
     transition: width 2s;
     opacity: 1;
 }
+.feature_collection__{{ section.id }} .slick-next, .feature_collection__{{ section.id }} .slick-prev {
+    top: 35%;
+}
+@media(max-width:767px){
+
+  .feature_collection__{{ section.id }} .slick-next, .slick-prev {
+    top: 35%;
+}
+.feature-collection-main .slick-arrow {
+    height: 50px !important;
+    width: 50px;
+    line-height: 55px !important;
+}
+}
 </style>
 <script>
-  $('.feature-collection').slick({
+  $('.feature-collection').slick({ 
     dots: true,
     arrow: true,
     speed: 300,

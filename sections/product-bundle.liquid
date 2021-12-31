@@ -15,6 +15,7 @@
 					{% for block in section.blocks %}  
 					{%- assign dynamic_products = all_products[block.settings.featured_product] -%} 		
 					<li><div class="product-box daynamic">
+						<div class="product-box-image">
 					  {% assign featured_image = dynamic_products.selected_or_first_available_variant.featured_image | default: dynamic_products.featured_image %}
 					  {% if block.settings.feature_image != blank %}  
 					  <img src="{{ block.settings.feature_image | img_url: 'master' }}">
@@ -55,6 +56,7 @@
 						
 					  </div>
 					</div>
+				</div>
 					<!-- <div class="buy-now"><a class="secondary-btn" href="{{dynamic_products.url}}">Buy Now</a></div>						</div> -->
 				  </li>
 					{% endfor %}
@@ -75,10 +77,14 @@
 	  speed: 300,
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
-	  customPaging : function(slider, i) {
-		var thumb = $(slider.$slides[i]).data();
-		return '<a>'+i+'</a>';
-	  },
+	  dotsClass: 'custom_paging',
+    customPaging: function (slider, i) {
+        //FYI just have a look at the object to find available information
+        //press f12 to access the console in most browsers
+        //you could also debug or look in the source
+        console.log(slider);
+        return  '<span class="active_slide">' +(i + 1) + '</span><span class="divide-count">/</span><span class="total_slide">' + slider.slideCount +'</span>';
+    },
 		responsive: [
 	  {
 		breakpoint: 1024,
@@ -110,6 +116,14 @@
 
 
   <style>
+	  #chance-to-win .grid-point-listd {
+    justify-content: center;
+}
+.product-box-image {
+    background: #fff;
+    max-width: 70%;
+    margin: 0 auto;
+}
 	  .bundle-div .slick-dots {
     bottom: -23px!important;
     left: 10px;
@@ -123,11 +137,7 @@
 .product-bundle .product-box.daynamic {
     margin-bottom: 13px;
 }
-.product-bundle .product-box.daynamic img {
-    background-color: #fff;
-    margin: 0 auto;
-    max-width: 70%;
-}
+
 li.slick-active a {
     font-weight: bold;
 
@@ -184,15 +194,20 @@ letter-spacing: 1.05px;
 }
 .bundle-div .slick-prev.slick-arrow {
     left: 15px;
-    top: 100% !important;
+    top: 92% !important;
     transform: translateX(150px);
     z-index: 1;
 }
 .bundle-div .slick-next.slick-arrow {
     right: 15px;
-    top: 100% !important;
+    top: 92% !important;
     transform: translateX(-150px);
 }
+ul.custom_paging li span {
+    margin-top: 0px!important;
+    font: normal normal normal 24px/29px Orelo SemiWide Medium;
+    letter-spacing: 1.2px;
+    color: #a7a7a7;
 }
 
 .slick-next:before, .slick-prev:before {
@@ -209,6 +224,13 @@ letter-spacing: 1.05px;
 		.product-bundle .product-feature-image {
     width: 100%;
 }
+.product-box-image {
+    max-width: 80%;
+}
+ul.grid-point-listd {
+    padding:0;
+}
+
 .product-bundle .product-box.daynamic img {
     max-width: 90%;
 }
@@ -219,7 +241,7 @@ letter-spacing: 1.05px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 0;
-    padding-top: 20px;
+    padding-top: 0;
 }
 .bundle-div h2 {
     font: normal normal normal 32px/32px'Austin';
@@ -227,12 +249,12 @@ letter-spacing: 1.05px;
     padding-top: 20px;
 }
 .bundle-div .slick-next.slick-arrow {
-    transform: translateX(-40px);
-	top: 95% !important;
+	transform: translateX(-20px);
+    top: 90% !important;
 }
 .bundle-div .slick-prev.slick-arrow {
-    transform: translateX(40px);
-	top: 95% !important;
+    transform: translateX(20px);
+    top: 90% !important;
 }
 .bundle-div .slick-dots {
     bottom: -3px!important;

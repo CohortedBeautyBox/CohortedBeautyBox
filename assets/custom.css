@@ -26,11 +26,39 @@ body {
   font-family: 'AVENIR LT STD 45 BOOK' !important;
 }
 
-
 .content-with-image-slider-section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+.sort-by.hover ul li a {
+  text-transform: uppercase;
+  font-size: 12px !important;
+  font-family: 'AVENIR LT STD 45 BOOK';
+  letter-spacing: 1px;
+}
+.product-view .product-name h1 {
+  font-family: 'Austin';
+  color: #000;
+}
+.product-shop .price-box .regular-price .price {
+  color: #000;
+  font-size: 22px;
+  line-height: 40px;
+  font-family: 'AVENIR LT STD 45 BOOK';
+}
+span.sold-out {
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  letter-spacing: 0;
+  padding: 5px 10px;
+  right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.h4.grid-view-item__title a {
+  color: #000;
 }
 /* .content-with-image-slider-section .slick-arrow {
   line-height: 80px !important;
@@ -221,6 +249,7 @@ ul.content-with-image-slider-section-buttons a {
     height: 100%;
     width: 100%;
     z-index: 1;
+    left: 0;
 }
 .text-container-wrapper h2 {
     font-family: 'Austin';
@@ -255,6 +284,12 @@ body #top-search {
 }
 .top-header {
     display: none;
+}
+.top-header.top-header-new .fa.fa-angle-down {
+  color: #000 !important;
+}
+.is-sticky .top-header.top-header-new .fa.fa-angle-down {
+  color: #fff !important;
 }
 .top-header-new  .header-links {
   padding-right: 20px;
@@ -322,11 +357,27 @@ body .is-sticky .cart-contents span {
 }
 #novaworks-nav a {
   font-size: 12px!important;
-  color: #000;
+  color: #000!important;
   font-family: 'Avenir LT Std 45 Book';
 }
-div#undefined-sticky-wrapper {
+form.variants.clearfix .add-to-cart button.button {
+  font-size: 18px;
+  font-family: Austin;
+  padding: 0 40px;
+}
+#cboxClose, .fancybox-close {
+  bottom: unset;
+  right: 0;
+  top: 0;
+}
+.owl-theme .owl-controls .owl-page span {
+  background: #000000;
+}
+.nav-container {
     border-bottom: 1px solid #DCDCDC;
+}
+.is-sticky .nav-container {
+  border-bottom: 1px solid transparent;
 }
 div#undefined-sticky-wrapper {
   height: auto !important;
@@ -699,12 +750,15 @@ div#shopify-section-instagram-section {
 #footer_c .line-ft {
   display: none;
 }
-.input-box a.button {
-  position: absolute; 
-  top: 20px;
+.input-box .button {
+  position: absolute;
+  top: 0;
   right: 0;
-  background: transparent !important;
+  background: 0 0!important;
   text-indent: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 input.email {
   height: 50px;
@@ -720,7 +774,7 @@ input.email::placeholder {
 .input-box {
   position: relative;
 }
-.input-box a.button img {
+.input-box .button img {
   width: 21px;
 }
 #footer_c ul li a i {
@@ -804,6 +858,12 @@ form.footer-form {
   align-items: center;
   justify-content: flex-end;
 }
+a.level-top:hover {
+  color: #eed3c6!important;
+}
+#novaworks-nav li.level0 ul li a:hover span.title_group {
+  color: #e5aea9 !important;
+} 
 p.help a {
   font-size: 12px;
   text-transform: uppercase;
@@ -822,14 +882,14 @@ p.bag {
 }
 body .cart-contents span {
   font-size: 10px;
-  height: 15px;
-  line-height: 13px;
+  height: 17px;
+  line-height: 14px;
   right: 0;
   text-align: center;
   top: 14px;
   color: #000;
-  width: 15px;
-  background: transparent !important;
+  width: 17px;
+  background: 0 0!important;
   border: 1px solid #000;
   z-index: 999;
 }
@@ -855,7 +915,7 @@ body .cart-contents span {
   padding: 0;
 }
 .container.nova-header {
-  padding: 0 40px;
+  padding: 0 30px;
 }
 .cms-index .spr-badge-caption {
   display: none;
@@ -985,8 +1045,10 @@ li.level-top.parent-dropdown:hover .level0.sub-wrappers {
 
 .mega_menu_item a div {
   font-size: 16px;
-  font-family: 'Austin';
+  font-family: Austin;
   margin: 15px 0;
+  letter-spacing: 0.8px;
+  line-height: 22px;
 }
 .mega_menu_left h3 {
   padding: 0 14px;
@@ -1039,6 +1101,33 @@ body .box-related .price-box span {
   font: normal normal normal 21px/29px Austin;
   letter-spacing: 1.05px;
 }
+.cms-collection .price-box {
+  margin-top: 10px;
+}
+.toolbar {
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toolbar .sorter .direction {
+display: none;
+}
+.sorter .sort-by {
+  margin-right: 0;
+}
+.sorter .current {
+  border-color: transparent !important;
+}
+.home span[itemprop="title"] {
+  color: #A7A7A7 !important;
+}
+.breadcrumbs ul {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'AVENIR LT STD 45 BOOK';
+  text-align: left;
+}
 .cms-collection .price-box .special-price .price {
   color: #000000;
   font: normal normal normal 21px/29px Austin;
@@ -1062,10 +1151,12 @@ div#products-viewmode:before {
 .cms-collection .category-products #products-viewmode {
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
 }
 .cms-collection .category-products #products-viewmode .col-lg-4 {
   width: 100%;
   clear: unset !important;
+  padding:0;
 }
 body .quick-view a {
   height: 50px !important;
@@ -1111,7 +1202,15 @@ body .detail-view a {
   font: normal normal normal 21px/29px Austin;
   letter-spacing: 1.05px;
 } 
-
+.ollecton_title h1 {
+  margin: 0;
+  font: normal normal normal 80px/110px Austin;
+  letter-spacing: 0px;
+  color: #1A1A1A;
+  text-transform: capitalize;
+  border-bottom: 1px solid #DCDCDC;
+  padding: 20px 20px;
+}
 .cms-collection .novaworks-quick-act{display: none;}
 .row.category-list .item {
   position: relative;
@@ -1127,13 +1226,10 @@ body .detail-view a {
   width: 100%;
   overflow: hidden;
 }
-.cms-collection .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a {
-  font: normal normal normal 21px/29px Austin;
-  letter-spacing: 1.05px;
-}
-.box-related .product-name a {
-  font: normal normal normal 21px/29px Austin;
-  letter-spacing: 1.05px;
+
+body .spr-icon {
+  width: 1em;
+  height: 1em;
 }
 .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a:hover img {
   transform: scale(1.1);
@@ -1255,7 +1351,8 @@ ul#novaworks-nav li.level-top a.level-top {
   height: 50px;
   line-height: 37px;
   font-size: 12px;
-  text-indent: 10px;
+  text-indent: 5px;
+  color: #fff;
 }
 #contactForm .form-list li.wide .input-box textarea {
   font-size: 12px;
@@ -1281,23 +1378,26 @@ ul#novaworks-nav li.level-top a.level-top {
 .input-box input, .input-box select {
   height: 65px;
   line-height: 55px;
-  text-indent: 20px;
+  text-indent: 5px;
   color: #000;
   font-size: 15px;
   font-family: 'AVENIR LT STD 45 BOOK';
   width: 100%;
   appearance: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
 }
 .select-inp:before {
   content: "";
   position: absolute;
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
   background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/down-arrow.png?v=1638259587);
-  right: 20px;
+  right: 15px;
   top: 20px;
   background-size: contain;
-}
+} 
 #contactForm .buttons-set {
   margin-top: 50px;
   display: flex;
@@ -1318,6 +1418,7 @@ select#customer-services option {
 }
 .input-box input::placeholder {
   color: #A7A7A7;
+  text-transform: uppercase;
 }
 .cms-page.contact .insta-header {
   border-top: 1px solid #ccc;
@@ -1352,6 +1453,12 @@ h2.site_heading {
   text-transform: capitalize;
   color: #000000;
   margin-bottom: 50px;
+}
+.sorter .sort-by .current span {
+  color: #464646;
+  font-family: 'AVENIR LT STD 45 BOOK';
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 @media(min-width:1500px){
   .activesticky {
@@ -1416,6 +1523,7 @@ img.image_box_2, img.image_box_3 {
 }
 }
 @media (max-width:1399px) {
+ 
   .banner-content h3 {
     font: italic normal normal 27px/40px Austin !important;
 }
@@ -1436,6 +1544,10 @@ img.image_box_2, img.image_box_3 {
     line-height: 40px;
     font-size: 13px;
     appearance: none;
+}
+.input-box .button {
+  height: 52px;
+  line-height: 52px;
 }
 .slider-info p {
   max-width: 585px;
@@ -1475,12 +1587,17 @@ img.image_box_2, img.image_box_3 {
   line-height: 65px;
   font-size: 17px;
 }
+.klaviyo-form-Tm9c7e.form-win-signup-nn.klaviyo-form.form-version-cid-1 {
+} 
 }
 
 @media (max-width:1199px) {
   #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
     max-width: 100% !important;
     top: 0 !important;
+}
+.logo-content-part p {
+  margin-bottom: 15px;
 }
 .row.category-list .image img {
   height: 370px;
@@ -1634,6 +1751,9 @@ body .sticky-wrapper.is-sticky .nav-container {
   .logo-image-slider-section-with-background .slick-arrow {
     visibility: hidden;
 }
+.collection-show-mob .slick-list {
+  padding: 0 20% 0 0!important;
+}
 .row.category-list .image img {
   height: 100%;
 }
@@ -1680,9 +1800,8 @@ div#nova-mobile-menu {
 .show-mob {display:block;}
 .hide-phone {display:none;}
 .collection-show-mob {
-  display: flex !important;
+  display: block !important;
   width: 100%;
-  overflow-x: scroll;
 }
 .collection-show-mob .collection-list-li img {
   width: 100%;
@@ -1691,10 +1810,10 @@ div#nova-mobile-menu {
 .collection-show-inner {
   display: flex;
 }
-.collection-show-mob .collection-list-li {
+/* .collection-show-mob .collection-list-li {
   display: flex !important;
   width: 390px  !important;
-}
+} */
 .collection-list-ul .hide-collection-mob {
   display: none;
 }
@@ -1744,11 +1863,48 @@ div#nova-mobile-menu {
 }
 
 @media (max-width:767px) {
+  .collection-show-mob .collection-list-li img {
+    height: 375px;
+}
+  .collapsible .plus-right {
+    width: 60px !important;
+}
+
+  #sidebar-nav-menu li:nth-child(2) ul {
+    margin-top: 15px;
+}
+#sidebar-nav-menu li:nth-child(2) ul li a {
+  padding: 7px 0 !important; 
+}
+ul.links.collapsible.account-links {
+  margin: 10px 0 !important;
+}
+ul.links.collapsible.account-links li a {
+  padding: 7px 0 !important;
+}
+.novaworks-mobile-navbar ul#sidebar-nav-menu a {
+  font-size: 12px !important;
+}
+  .you-may-also .slick-next, .slick-prev {
+    top: 40%;
+}
+.ollecton_title h1 {
+  font: normal normal normal 32px/32px Austin;
+}
   body .account-login h1 {
     font: normal normal normal 30px/40px Austin!important;
 }
+.breadcrumbs ul span {
+  line-height: normal;
+  font-size: 12px !important;
+  text-align: left;
+  margin-left: 0;
+}
+.toolbar {
+  margin: 0 0 15px;
+}
 .content-with-image-slider-section .slick-slide img {
-  height: 375px;
+  height: 375px !important;
 }
 .content-with-image-slider-section .slick-next {
   right: 10px;
@@ -1788,7 +1944,7 @@ div#nova-mobile-menu {
   grid-gap: 10px;
 }
 .link-images img {
-  max-width: 100% !important;
+  max-width: 165px !important;
 }
   .socail_title {
     display: block;
@@ -2049,9 +2205,9 @@ ul.content-with-image-slider-section-buttons a {
 .container {
   padding: 0 20px;
 }
-.collection-show-mob .collection-list-li {
+/* .collection-show-mob .collection-list-li {
   width: 380px!important;
-}
+} */
 .collection-list-li a span {
   font-size: 14px;
 }
@@ -2157,6 +2313,7 @@ div#new-feed {
   font-size: 32px;
   text-align: center;
   font-style: italic;
+  margin-bottom: 8px;
 }
 #footer_d .paypal-logo {
   text-align: center;

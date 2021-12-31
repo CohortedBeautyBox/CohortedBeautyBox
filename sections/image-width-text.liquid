@@ -34,9 +34,10 @@
 	</div>
   </div>
   <style>
-.overlap_heading { 
+.overlap_heading {
     position: relative;
-    left: -100px;
+    left: -19px;
+    transform:translateX(-80px);
 }
 .enable_gradiant {
     background: transparent linear-gradient(0deg, #E4E4E466 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box !important;
@@ -44,7 +45,16 @@
 .margin_bottom {
     margin-bottom: 70px;
 }
+@media(max-width:1199px){
+	.overlap_heading {
+    transform: translateX(-46px);
+}
+
+}
 @media(max-width:767px){
+	.overlap_heading {
+    transform: translateX(0);
+}
 	 .enable_gradiant {
     background: #E4E4E466 !important;
     margin-top: 50px;

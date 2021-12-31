@@ -19,6 +19,12 @@
       "no_results_html": "Your search for <strong>{{ search }}<\/strong> did not yield any results. Try searching for something else.",
       "results_title": "Search Results"
     },
+    "newsletter_form": {
+      "newsletter_email": "Join our mailing list",
+      "email_placeholder": "Email address",
+      "confirmation": "Thanks for subscribing",
+      "submit": "Subscribe"
+    },
     "meta": {
       "tagged": "tagged",
       "page": "Page"

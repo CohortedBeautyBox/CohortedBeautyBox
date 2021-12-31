@@ -20,6 +20,41 @@
 
 	</div>
 	<style>
+body #loyaltylion .lion-rules-list {
+    gap: 30px;
+}
+.lion-rule-item {
+    counter-increment: css-counter 1;
+    border: none;
+}
+.lion-rule-item__icon::before {
+    content: "0" counter(css-counter);
+    position: absolute;
+    top: 62px;
+    left: 0;
+    color: #1a1a1a;
+    right: 0;
+    font: normal normal normal 32px/84px 'Austin';
+    margin-bottom: 20px;
+    letter-spacing: 3.2px;
+    text-align: center;
+}
+#loyaltylion .lion-rule-item__icon {
+    width: 80px;
+    height: 80px;
+}
+#loyaltylion .lion-rule-item__title {
+    letter-spacing: 1.2px;
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Austin' !important;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+}
 
 .slider-content-item {
     position: relative;
@@ -127,7 +162,7 @@ a.primary-btn-new {
   position: relative;
   padding: 0 12px;
   counter-increment: css-counter 1;
-}
+}   
 .slider-content-item .content-item::before {
   content: "0" counter(css-counter);
   position: absolute;

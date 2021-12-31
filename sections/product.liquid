@@ -182,7 +182,9 @@
     height: 100%;
     position: relative;
     top: -90px;
-    right: 12px;
+    overflow: hidden;
+    padding-left: 30px;
+    padding-right: 15px;
 }
 .product-template-main .ratings {
     display: flex;
@@ -294,6 +296,9 @@
     margin: 0;
     max-width: 100%;
 }
+.cms-product .slick-next, .slick-prev {
+    top: 40%;
+}
 /* pretty radio */
  label > input[type="radio"] {
   display: none;
@@ -383,6 +388,25 @@ div#product-images {
     max-width: 100%;
     text-align: right;
 }
+/* width */
+.bx-viewport::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track */
+.bx-viewport::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.bx-viewport::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.bx-viewport::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 .arw_tab_title .tab_sub_title h2.title {
     color: #000000;
     font-size: 18px;
@@ -462,6 +486,10 @@ button.addtocart.button.btn-cart.cartbutton {
     border-bottom: 1px solid #00000094;
     padding-bottom: 15px;
 }
+.beauty_box .text-container-wrapper {
+    width: 100%;
+}
+
 .resp-tabs-container img {
     margin-top: 20px;
 }
@@ -472,7 +500,7 @@ button.addtocart.button.btn-cart.cartbutton {
     margin-bottom: 0;
 }
 .product-template-main .pro-left {
-    padding: 0px 40px;
+    padding: 0px 30px;
 }
 .pro-bottom-icons ul {
     margin-top: 30px;
@@ -487,6 +515,9 @@ button.addtocart.button.btn-cart.cartbutton {
     position: relative;
     z-index: 9;
     padding: 0;
+}
+.product-template-main .button-qty span {
+    font-size: 24px;
 }
 .pro-subscribe span {
     align-items: baseline;

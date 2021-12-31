@@ -1,12 +1,971 @@
 <div class="main-container home-content-container">
+    <div style="padding: 0; "class="rich-content">
+		<h5 class="content"><div class="page-title new earn-title">
+      <h1>Cohorted Rewards</h1>
+      <h5 style="text-align: center;">EARN POINTS WITH YOUR PURCHASES</h5>
+    </div></h5>
+	  </div>
+      {% if customer %}
+ <!-- section five start -->
+ <div id="shopify-section-template--14226357846121__1639657862ebbf4e54" class="shopify-section Cohorted_rew_banner"><div class="rew_banner my-point-stats">
+	<div class="container">
+<div class="banner_inner">
+
+  <div class="banner_inner_fixced">
+	<div class="banner_login_box">
+  <h3>My Account</h3>
+  <div class="icon-text">
+	  <span><img src="//cdn.shopify.com/s/files/1/2635/3958/t/7/assets/coin-blac.svg?v=5639326418427022365"></span>
+	  <h5>Welcome Back, {{ customer.first_name }} !
+		<p>You have {{ customer.metafields.loyaltylion.points_total }} points</p>
+	  </h5>
+	 
+  </div>
+  <div class="account-buttons">  <a class="secoundry-btn" href="/account"> <img src="//cdn.shopify.com/s/files/1/2635/3958/t/7/assets/arro-svg.svg?v=321993373499746874">BACK TO MY ORDERS </a>
+
+	<a class="secondary-btn hover" href="#shopify-section-template--14226357846121__163965928753d48295"> <img src="//cdn.shopify.com/s/files/1/2635/3958/t/7/assets/gift-icon.png?v=13676276165781751504">REDEEM YOUR GIFTS </a></div>
+
+	</div>
+  </div>
+	<div class="img-right">
+		<h3>My Points Status</h3>
+
+		<div class="customer-history">
+			<div data-lion-history-table=""></div>
+			
+		 </div>
+	</div>
+</div>
+	</div>
+  </div>
+  <style>
+	 body .lion-history-table tr:nth-child(even) {
+    background: #f1f1f1 !important;
+}
+a.secondary-btn.hover:hover {
+    background: #000 !important;
+}
+body #loyaltylion .lion-history-table__header-cell {
+    background: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0px 20px 0px 20px;
+    border-bottom: 1px solid #f1f1f1;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif !important;
+    height: 60px;
+    line-height: 60px;
+    color: #000;
+}
+body #loyaltylion .lion-history-table__bubble {
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 0 12px !important;
+    height: 35px;
+    line-height: 35px;
+}
+body #loyaltylion .lion-history-table {
+    border: 1px solid rgb(241 241 241);
+    background-color: #f1f1f1;
+}
+table.lion-history-table tr td {
+    padding: 0 20px !important;
+}
+table.lion-history-table tr {
+    height: 60px;
+    line-height: 60px;
+}
+	  .account-buttons .secondary-btn {
+    color: #fff;
+}
+
+	 a.secondary-btn {
+    color: #fff;
+}
+	  .img-right h3 {
+    font: normal normal normal 30px/32px Austin;
+    letter-spacing: 0;
+    color: #000;
+    text-transform: capitalize;
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.img-right .customer-bg-color {
+    background: #f1f1f1 0 0 no-repeat padding-box;
+    border: 1px solid #F1F1F1;
+	padding: 0;
+}
+.customer-bg-color table th {
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif !important;
+}
+.customer-bg-color table th, .customer-bg-color table td {
+    padding: 0 20px;
+}
+span.status-pending {
+    background: #FEF2DB;
+    color: #F1B17B;
+    padding: 8px 10px;
+}
+span.status-approved {
+    background: #EAFAF3;
+    color: #5E9285;
+    padding: 8px 10px;
+}
+.img-right .customer-bg-color table tr {
+    border-bottom: none;
+}
+.img-right tr.odd {
+    background: #fff;
+}
+	  .icon-text h5 p {
+    font-size: 13px;
+    line-height: normal;
+}
+	.banner_inner {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  grid-gap: 70px;
+  margin-bottom: 80px;
+}
+a.white img {
+    width: 30px;
+}
+.rew_banner .container {
+    padding: 0 80px;
+}
+.account-buttons img {
+    width: 25px;
+}
+.banner_login_box {
+  background: #FFF5EF 0% 0% no-repeat padding-box;
+  height: max-content;
+  padding: 40px 30px;
+  text-align: left;
+}
+.banner_login_box h3 {
+  font-size: 30px;
+  line-height: 32px;
+  font-family: 'Austin';
+  text-transform: capitalize;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  display: block;
+  margin-bottom: 25px;
+}
+.icon-text {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 50px 1fr;
+}
+.page-title.new h5 {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'AVENIR LT STD 45 BOOK';
+  color: #1A1A1A;
+  margin-top: 0;
+}
+.icon-text span img {
+    width: 25px;
+}
+.rew_banner {
+    padding-top: 20px;
+}
+.icon-text span {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.img-right img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.icon-text h5 {
+    margin-top: 0;
+    font-family: 'Austin';
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+.account-buttons a {
+    height: 65px;
+    border: 1px solid #000;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    line-height: 65px;
+    font-family: 'Austin';
+    font-size: 18px;
+    margin-top: 15px;
+    justify-content: center;
+    color: #000;
+    grid-gap: 10px;
+}
+.account-buttons .white {
+    background: #fff;
+    border-color: #fff;
+}
+.account-buttons .secoundry-btn img {
+    width: 16px;
+}
+@media(max-width:991px){
+  .rew_banner .container {
+    padding: 0 40px;
+}
+}
+@media(max-width:767px){
+	.my-point-stats .img-right {
+    overflow-x: scroll;
+}
+body #shopify-section-template--14206859477097__16382738427338abde  .reward-earn-points .text-container-wrapper{
+    width:100% !important;
+}
+.rew_banner.my-point-stats {
+    padding-top: 0;
+}
+.my-point-stats .banner_inner {
+    grid-gap: 40px;
+}
+.my-point-stats .img-right .customer-bg-color {
+    overflow-x: scroll;
+}
+.my-point-stats .img-right table {
+    width: 900px;
+}
+
+  .rew_banner .container {
+    padding: 0 20px !important;
+}
+img.show-desktop {
+    display: none;
+}
+  .text-container-wrapper.full-width h2 {
+    margin-bottom: 25px;
+}
+.rich-text .page-title {
+    display: none;
+}
+.earn-title{
+    display: none;
+}
+.banner_login_box {
+    background: #FFF5EF 0% 0% no-repeat padding-box;
+    margin: 0 0px;
+    height: max-content;
+    padding: 10px 20px;
+    text-align: left;
+}
+.banner_inner {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-gap: 20px;
+    margin-bottom: 50px;
+}
+.banner_login_box h3 {
+    font-size: 24px;
+}
+.icon-text h5 {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 16px;
+    align-items: center;
+}
+.account-buttons a {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+}
+.icon-text {
+    margin-bottom: 20px;
+}
+
+}
+</style>
+  </div>
+ <!-- section five end -->
+<!-- section first -->
+{% else %}
+<div class="rew_banner">
+	<div class="container">
+<div class="banner_inner">
+
+  <div class="banner_inner_fixced">
+	<div class="banner_login_box">
+  <h3>My Account</h3>
+  <div class="icon-text">
+	  <span><img src="{{ 'coin-blac.svg' | asset_url }}"></span>
+	  <h5>Earn Points For Every Purchase You Make.</h5>
+  </div>
+  <div class="account-buttons">  <a href="/account/register"> <img src="{{ 'sign-up.svg' | asset_url }}">SIGN UP </a>
+	<a class="white" href="/account/login"> <img src="{{ 'user.svg' | asset_url }}">MY ACCOUNT </a></div>
+
+	</div>
+  </div>
+	<div class="img-right">
+   
+		<img class="show-desktop" src="{{ 'Share-Rewards-Promo-Banner.jpg' | asset_img_url: 'master' }}">
+    <img class="show-mob" src="{{ 'reward_mob.jpg' | asset_img_url: 'master' }}">
+
+	</div>
+</div>
+	</div>
+  </div>
+  <style>
+	.banner_inner {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  grid-gap: 70px;
+  margin-bottom: 80px;
+}
+a.white img {
+    width: 30px;
+}
+.rew_banner .container {
+    padding: 0 80px;
+}
+.account-buttons img {
+    width: 25px;
+}
+.banner_login_box {
+  background: #FFF5EF 0% 0% no-repeat padding-box;
+  height: max-content;
+  padding: 40px 30px;
+  text-align: left;
+}
+.banner_login_box h3 {
+  font-size: 30px;
+  line-height: 32px;
+  font-family: 'Austin';
+  text-transform: capitalize;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  display: block;
+  margin-bottom: 25px;
+}
+.icon-text {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 50px 1fr;
+}
+.page-title.new h5 {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'AVENIR LT STD 45 BOOK';
+  color: #1A1A1A;
+  margin-top: 0;
+}
+.icon-text span img {
+    width: 25px;
+}
+.rew_banner {
+    padding-top: 20px;
+}
+.icon-text span {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.img-right img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.icon-text h5 {
+    margin-top: 0;
+    font-family: 'Austin';
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+.account-buttons a {
+    height: 65px;
+    border: 1px solid #000;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    line-height: 65px;
+    font-family: 'Austin';
+    font-size: 18px;
+    margin-bottom: 15px;
+    justify-content: center;
+    color: #000;
+    grid-gap: 10px;
+}
+.account-buttons .white {
+    background: #fff;
+    border-color: #fff;
+}
+@media(max-width:991px){
+  .rew_banner .container {
+    padding: 0 40px;
+}
+}
+@media(max-width:767px){
+  .rew_banner .container {
+    padding: 0 20px !important;
+}
+img.show-desktop {
+    display: none;
+}
+  .text-container-wrapper.full-width h2 {
+    margin-bottom: 25px;
+}
+.rich-text .page-title.new {
+    display: none;
+}
+.banner_login_box {
+    background: #FFF5EF 0% 0% no-repeat padding-box;
+    margin: 0 0px;
+    height: max-content;
+    padding: 10px 20px;
+    text-align: left;
+}
+.banner_inner {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-gap: 20px;
+    margin-bottom: 50px;
+}
+.banner_login_box h3 {
+    font-size: 24px;
+}
+.icon-text h5 {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 16px;
+    align-items: center;
+}
+.account-buttons a {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+}
+.icon-text {
+    margin-bottom: 20px;
+}
+
+}
+</style>
+<!-- section first end -->
+{%endif%}
+
+<!-- section secound -->
+<div id="shopify-section-template--14206859477097__16382738427338abde" class="shopify-section">
+<div class="reward-earn-points">
+	<div class="container">
+		<ul class="grid-point-list">
+			<div class="text-container-wrapper">
+				<h2>How To Earn Points</h2>
+				<div class="description-before"><span></span><p>Earn points for every purchase you make. There are exclusive rewards for the following actions too so make sure you collect those points and grab yourself some great rewards!</p></div>
+			  </div>
+
+              <div id="rw-box-section-1">
+                <div data-lion-rules-list=""></div>
+                </div>
+			  
+			
+		</ul>
+
+	</div>
+  </div>
+  <style>
+      #loyaltylion .lion-rules-list {
+    background-color: initial;
+    gap: 30px;
+    grid-template-rows: repeat(2,[row-start] 1fr [row-end]);
+    -ms-grid-columns: ([col-start] 1fr [col-end])[3];
+    grid-template-columns: repeat(4,[col-start] 1fr [col-end]);
+    position: relative;
+}
+.reward-earn-points .text-container-wrapper {
+    width: 50% !important;
+    text-align: left;
+    padding-right: 50px;
+    left: 0;
+    position: absolute;
+    top: 10%;
+    padding-left: 50px;
+    transform: translateY(-10px);
+}
+
+.lion-rules-list:before {
+    content: '';
+    grid-row: row-start 1/row-end 1;
+    grid-column: col-start/col-start 3;
+}
+      .lion-rule-item__icon.lion-icon.lion-icon__rule.lion-icon__rule--signup {
+    position: relative;
+}
+      .reward-earn-points {
+    background: #F1F1F1;
+    padding: 80px 0;
+    position: relative;
+}
+body #loyaltylion .lion-rule-item__completed:before {
+    background-color: #000 !important;
+}
+body .lion-rule-item__icon {
+    background-image: none !important;
+}
+body .lion-rule-item__icon {
+    position: relative;
+}
+body .lion-rule-item__content {
+    background: #fff;
+    height: 370px;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 20px !important;
+    flex-wrap: wrap;
+    text-align: center;
+    border: none !important;
+    min-height: auto !important;
+    border-radius: 0 !important;
+    grid-gap: 10px;
+    display: flex !important;
+}
+body .lion-rule-item--authenticated .lion-rule-item__content {
+    display: block !important;
+}
+body .lion-rule-item__actions button {
+    font: normal normal normal 15px/60px Austin !important;
+    letter-spacing: 0.75px !important;
+    width: 100%;
+    background: #FFF5EF !important;
+    margin-top: 30px;
+    display: inline-block !important;
+    color: #000 !important;
+    padding: 0 20px!important;
+
+}
+body .lion-rule-item__icon {
+    width: 80px !important;
+    height: 80px !important;
+    box-shadow: 0px 15px 24px #dcdcdc;
+    border-radius: 80px;
+    font: normal normal normal 32px/84px 'Austin';
+    margin-bottom: 0px;
+    letter-spacing: 3.2px;
+    text-align: center;
+}
+body .lion-rule-item__points span {
+    font-family: 'AVENIR LT STD 45 BOOK';
+    color: #000;
+    text-transform: uppercase;
+}
+body #loyaltylion .lion-rule-item__title {
+    letter-spacing: 1.2px;
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Austin' !important;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+    height: 90px;
+    overflow: hidden;
+}
+body .lion-rule-item {
+    position: relative;
+    counter-increment: css-counter 1;
+}
+#loyaltylion .lion-rule-item__completed {
+    justify-content: center;
+}
+body #loyaltylion .lion-reward-item__actions:not(:empty), #loyaltylion .lion-rule-item__actions:not(:empty) {
+    margin-top: 0px;
+    flex-grow: unset;
+    width: 100%;
+}
+body .lion-rule-item__icon::before {
+    content: "0" counter(css-counter);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1a1a1a;
+    right: 0;
+    font: normal normal normal 32px/84px 'Austin';
+    margin-bottom: 20px;
+    letter-spacing: 3.2px;
+    text-align: center;
+    transform: translateY(0px);
+}
+@media(max-width:1199px){
+body #loyaltylion .lion-rule-item__title {
+    font-size: 22px;
+    line-height: 30px;
+}
+.my-point-stats .container {
+    padding: 0 40px;
+}
+body .lion-rule-item__actions button {
+    font: normal normal normal 11px/50px Austin !important;
+}
+.background-inner-content .text-container-wrapper.full-width {
+    width: 90%; 
+}
+.my-point-stats .banner_inner {
+    display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr !important;
+}
+.my-point-stats .rew_banner .container {
+    padding: 0 40px !important;
+}
+}
+@media(max-width:991px){
+  ul.grid-point-list li {
+    width: 50%;
+}
+.reward-earn-points .text-container-wrapper {
+    padding-right: 50px;
+    left: 0;
+    position: relative;
+    top: 0;
+    padding-left: 20px;
+    transform: translateY(0px);
+    width: 100%;
+}
+.lion-rules-list:before {
+    display: none;
+}
+#loyaltylion .lion-rules-list {
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+}
+}
+@media(max-width:767px){
+    .my-point-stats .banner_inner {
+        grid-gap: 35px;
+}
+body #loyaltylion .lion-reward-item__icon {
+    height: 180px !important;
+}
+body .lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 12px !important;
+    background: #000 !important;
+    line-height: 40px;
+}
+	.reward-earn-points {
+    padding: 40px 0;
+}
+.lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 10px !important;
+    padding: 0 !important;
+}
+.product-box-inner {
+    display: block !important;
+}
+#loyaltylion .lion-history-table {
+    width: 750px;
+}
+body #loyaltylion .lion-rules-list {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 0 !important;
+    gap: 15px!important;
+}
+body #loyaltylion .lion-rule-item__title {
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+body .lion-rule-item__icon {
+    width: 40px !important;
+    height: 40px !important;
+}
+body .lion-rule-item__icon::before {
+    font: normal normal normal 12px/45px 'Austin';
+    transform: translateY(0px);
+}
+
+body .lion-rule-item__content {
+    height: 100%;
+    flex-direction: initial;
+    padding: 15px !important; 
+}
+body #loyaltylion .lion-rule-item__title {
+    height: 50px;
+}
+body #loyaltylion .lion-reward-item__actions:not(:empty), #loyaltylion .lion-rule-item__actions:not(:empty) {
+    margin-top: 0;
+}
+body .lion-rule-item__points span {
+    font-size: 12px;
+    line-height: 16px;
+}
+body .lion-rule-item__actions button {
+    font: normal normal normal 10px/50px Austin !important;
+    letter-spacing: .5px !important;
+    padding: 0 10px!important;
+    margin-top: 10px !important;
+}
+body .lion-rule-item__actions button {
+    margin-top: 0px;
+}
+}
+  </style>
+  
+  </div>
+<!-- section secound end -->
+
+<!-- section third  -->
+<div id="shopify-section-template--14226357846121__163965928753d48295" class="shopify-section products-with-image">
+    <div class="redeem-gifts">
+        <div class="container">
+            
+    
+            <div class="text-container-wrapper full-width">
+                <h2 class="desktop">Redeem Your Gifts</h2>
+                <h2 style="display:none;" class="mob">Most Loved Curations</h2>
+                <div class="description-before desktop"><p>We’re constantly adding new and exclusive rewards you can redeem your points for. Check out our most popular gifts below!</p></div>
+                <div style="display:none;" class="description-before mob"><p>Our most loved boxes are available to buy now! These Cohorted exclusives are guaranteed to make you feel as good as you’ll look. Access and discover our bespoke beauty boxes today. There’s a reason they are our bestsellers…</p></div>
+              </div>
+              
+    
+              <div class="product-box-inner">
+            <div data-lion-rewards-list=""></div>
+            <div class="product-feature-image">
+                <img src="//cdn.shopify.com/s/files/1/2635/3958/files/product-right-image.jpg?v=1638278933">
+            </div>
+        </div>
+    
+        </div>
+      </div>
+     
+      
+      
+      <style>
+.lion-preview-explainer-modal .lion-action-button {
+    font-family: 'Austin' !important;
+    font-weight: normal !important;
+    background: #000 !important;
+    padding: 10px 30px !important;
+}
+body #loyaltylion .lion-rewards-list {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 40px 0 0 !important;
+}
+body #loyaltylion .lion-reward-item__content, #loyaltylion .lion-rule-item__content {
+    padding: 0;
+}
+body #loyaltylion .lion-reward-item__icon {
+    background-size: cover;
+    width: 100%;
+    height: 260px;
+    background-color: #e9e7e6;
+    background-position: center;
+}
+#lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 15px !important;
+    font-family: Austin !important;
+    background: #a7a7a7 0 0 no-repeat padding-box !important;
+    line-height: 40px;
+    height: 55px;
+    margin-top: 15px;
+    width: 90%;
+    font-weight: normal !important;
+}
+.lion-rewards-list .lion-reward-item {
+    margin-bottom: 25px;
+}
+.lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 15px !important;
+    background: #a7a7a7 0 0 no-repeat padding-box !important;
+    line-height: 50px;
+    height: 60px;
+    margin-top: 20px;
+    width: 100%;
+}
+.lion-reward-item--customer .lion-reward-item__title {
+    bottom: 100px !important;
+}
+.lion-rewards-list .lion-reward-item__content .lion-reward-item__meta {
+    margin-top: 20px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'AVENIR LT STD 45 BOOK';
+}
+.lion-rewards-list .lion-reward-item__fill{
+    background-color: #ffffff;
+}
+.lion-rewards-list .lion-reward-item__title {
+    background: #000 !important;
+    color: #fff !important;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 30px;
+    position: absolute;
+    font-family: 'Austin';
+    font-weight: normal !important;
+    bottom: 0;
+    right: 10px;
+    transform: translateY(-40px);
+    font-size: 13px !important;
+}
+button.lion-action-button.lion-action-button--tile span {
+    font-family: 'Austin';
+    font-weight: normal;
+}
+@media(min-width:1500px){
+    .reward-earn-points .text-container-wrapper {
+    width: 30%;
+    top:15%;
+}
+}
+@media(max-width:1499px){
+    .reward-earn-points .text-container-wrapper {
+    width: 50% !important;
+}
+}
+          @media(max-width:767px){
+            body .reward-earn-points .text-container-wrapper {
+    width: 100% !important;
+}
+            .redeem-gifts .product-box-inner {
+        margin-top: 0;
+    }
+    .redeem-gifts .desktop {
+    display: none;
+}
+#shopify-section-template--14226357846121__163965928753d48295 .product-feature-image {
+    padding: 40px 0 !important;
+}
+.redeem-gifts .mob {
+    display: block !important;
+}
+    body #loyaltylion .lion-rewards-list{
+        padding: 0 0px 0 0 !important;
+    }
+    .lion-reward-item--customer .lion-reward-item__title {
+    bottom: 80px !important;
+    right: -10px;
+}
+    .redeem-gifts .grid-point-listd {
+        padding: 0px 0;
+        grid-gap: 10px;	
+    }
+          }
+      </style></div>
+<!-- section third end -->
+
+<!-- section four start -->
+<div id="shopify-section-template--14226357846121__163965958408d1bb25" class="shopify-section"><div class="background-image-with-text">
+	<div class="container">
+<div style="background-image: url(//cdn.shopify.com/s/files/1/2635/3958/files/Share-Friends-Background.png?v=1637820715); background-color: !important;" class="background-inner-content">
+	<div class="text-container-wrapper full-width">
+		<h2 style="color:#ffffff;">Share The Rewards</h2>
+		<div class="description-before"><div style="color:#ffffff;">
+			Refer your friends with your own unique referral link. You can refer as many friends as you'd like, at anytime. Earn 100 points when they spend over £25 at Cohorted. </div></div>
+		<a id="secondary-btn" class="secondary-btn white">REFER FRIENDS</a>
+	  </div>
+</div>
+	</div>
+  </div>
+  <style>
+  .background-inner-content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+}
+.text-container-wrapper.full-width {
+    padding-top: 20px;
+}
+.background-inner-content .text-container-wrapper.full-width {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.description-before {
+    margin-bottom: 40px;
+}
+.description-before div {
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: .75px;
+}
+
+.full-width .description-before {
+    text-align: center;
+}
+.text-container-wrapper.full-width h2 {
+    text-align: center;
+    font-size: 80px;
+    line-height: 112px;
+    letter-spacing: 4px;
+}
+@media(max-width:767px){
+	.background-inner-content .text-container-wrapper.full-width {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.background-inner-content {
+    padding-top: 50px;
+    padding-bottom: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.background-image-with-text h2 {
+    margin-top: 0;
+	font-size: 30px;
+    line-height: 52px;
+    letter-spacing: 0;
+}
+.description-before div {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: .6px;
+}
+
+}
+</style>
+  
+  </div>
+ <!-- section four end -->
+
+
+
     <div id="reward-page-styles">
-<section id="banner-gift-nn"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/reward-banner.jpg?v=1617291041" alt="Cohorted Rewards" />
+<!-- <section id="banner-gift-nn"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/reward-banner.jpg?v=1617291041" alt="Cohorted Rewards" />
 <div class="col-sm-12 col-lg-5 col-md-5 banner-caption-nn">
 <h1>Cohorted Rewards</h1>
 <h2>Earn points with your purchases</h2>
 </div>
-</section>
-<div id="cohorted-how-to-1-nn">
+</section> -->
+<!-- <div id="cohorted-how-to-1-nn">
 <div class="col-sm-12 col-lg-5 col-md-5 intro-block-1-nn-left"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/welcome-back.jpg?v=1617291041" alt="Cohorted" /></div>
 <div class="col-sm-12 col-lg-7 col-md-7 intro-block-1-nn-right">
 <div class="text-box-nn-1">
@@ -18,8 +977,8 @@
 </div>
 </div>
 <div class="clear"></div>
-</div>
-<div id="cohorted-how-to-2-nn">
+</div> -->
+<!-- <div id="cohorted-how-to-2-nn">
 <div class="col-sm-12 col-lg-5 col-md-5 intro-block-1-nn-right">
 <div class="text-box-nn-1">
 <h2>How to earn points</h2>
@@ -31,11 +990,11 @@
 </div>
 <div class="col-sm-12 col-lg-7 col-md-7 intro-block-1-nn-left"><img src="https://cdn.shopify.com/s/files/1/2635/3958/files/earn-points.jpg?v=1617291041" alt="Cohorted" /></div>
 <div class="clear"></div>
-</div>
-<div id="rw-box-section-1">
+</div> -->
+<!-- <div id="rw-box-section-1">
 <div data-lion-rules-list=""></div>
-</div>
-<div id="cs-products-section-1">
+</div> -->
+<!-- <div id="cs-products-section-1">
 <div class="text-box-nn-1">
 <h2>Redeem Your Gifts</h2>
 <div class="mb-padd-nnnn">
@@ -44,8 +1003,8 @@
 </div>
 <div data-lion-rewards-list=""></div>
 <div class="clear"></div>
-</div>
-<div id="cohorted-highlighted-box-1">
+</div> -->
+<!-- <div id="cohorted-highlighted-box-1">
 <div class="col-sm-12 col-lg-4 col-md-4 intro-block-1-nn-right">
 <div class="text-box-nn-1">
 <h2>Share The Rewards</h2>
@@ -58,6 +1017,13 @@
 </div>
 <div class="col-sm-12 col-lg-8 col-md-8 cohorted-highlighted-image-container"><img class="highlighted-image-large" src="https://cdn.shopify.com/s/files/1/2635/3958/files/reward-large.jpg?v=1617291042" alt="Cohorted" /> <img class="highlighted-image-small" src="https://cdn.shopify.com/s/files/1/2635/3958/files/reward-small.jpg?v=1617291042" alt="Cohorted" /></div>
 <div class="clear"></div>
+</div> -->
 </div>
 </div>
-</div>
+
+<script>
+    $('#secondary-btn').on('click', function(){
+$('[data-rule-id="143385"] .lion-action-button').trigger('click');
+});
+</script>
+

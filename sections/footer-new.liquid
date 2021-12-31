@@ -14,7 +14,7 @@
                     <h2 class="title_phn">Join Us On The CohortedCult App</h2>
                     <small>Your new destination for all things beauty, fashion and more...</small>
                     </div>
-                    <a class="secondary-btn white" href="#">DOWNLOAD NOW!</a>
+                    <a class="secondary-btn white" href="/pages/cohorted-apps">DOWNLOAD NOW!</a>
                     </div>
                   <p class="text-center">{{ settings.footer_top_text }}</p>
                  
@@ -89,7 +89,33 @@
                     </h3>
                   </div>
                   <div class="widget-text">
-                    {{ settings.shop_contact_infos }}	
+                    {% if settings.footer_newsletter_enable %}
+                    <div class="site-footer__newsletter footer-form">
+                      {% form 'customer' %}
+                        {{ form.errors | default_errors }}
+                        {% if form.posted_successfully? %}
+                          <p class="form--success">{{ 'general.newsletter_form.confirmation' | t }}</p>
+                        {% else %}
+                         <p>Subscribe to the UK's number one luxury beauty box today and receive full-sized premium beauty products straight to your door each month.</p>>
+                          <div class="input-box">
+                            <input type="hidden" name="contact[tags]" value="newsletter">
+                            <input type="email"
+                              name="contact[email]"
+                              id="Email"
+                              class="input-group__field newsletter__input"
+                              value="{% if customer %}{{ customer.email }}{% endif %}"
+                              placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                              autocorrect="off"
+                              autocapitalize="off">
+                              <button type="submit" class="button newsletter__submit" name="commit" id="Subscribe">
+                                <img src="https://cdn.shopify.com/s/files/1/2635/3958/files/arrow-right_49313eb1-b17b-4ba2-9bdb-3f590ef7cd6b_30x.png?v=1637748503">
+                              </button>
+                           
+                          </div>
+                        {% endif %}
+                      {% endform %}
+                    </div>
+                    {% endif %}	
                     <div class="socail_title">FOLLOW US</div>
                     <ul class="footer icon">
                       {% if settings.footer_facebook_link != '' %}

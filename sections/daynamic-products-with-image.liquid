@@ -23,7 +23,7 @@
 				{% if block.settings.feature_image != blank %}  
 				<a href="{{ dynamic_products.url }}"><img src="{{ block.settings.feature_image | img_url: 'master' }}">
 				{% else %}
-				<img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt }}" 
+				<a href="{{ dynamic_products.url }}"><img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt }}" 
 				id="FeaturedImage-{{ section.id }}" class="product-featured-img"></a>
 				
 		

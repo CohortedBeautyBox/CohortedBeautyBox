@@ -1099,10 +1099,10 @@
         "default": "SHOP LOCATION"
       },
       {
-        "type": "textarea",
-        "id": "shop_contact_infos",
-        "label": "Contact infomation",
-        "default": "<p><span class=\"active-text\">1234 Heaven Stress, Beverly Hill OldYork- United State<\/span><\/p><p>Phone: (800) 0123 4567 890<\/p><p>Email: Support@greenwebcorp.com<\/p>"
+        "type": "checkbox",
+        "id": "footer_newsletter_enable",
+        "label": "Footer newsletter enable",
+        "default": true
       },
       {
         "type": "header",

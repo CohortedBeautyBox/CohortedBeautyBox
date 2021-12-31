@@ -36,7 +36,9 @@
   {{ 'responsive.css' | asset_url | stylesheet_tag }}
   {{ 'custom.css' | asset_url | stylesheet_tag }}
   {{ 'inner-section.css' | asset_url | stylesheet_tag }}
-  
+  {% if page.handle == 'rewards'%}
+  {{ 'reward.css' | asset_url | stylesheet_tag }}
+  {% endif %}
   {{ 'slick.css' | asset_url | stylesheet_tag }}
   {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
   

@@ -30,7 +30,7 @@
       {%- endif -%}
     </div>
     <div class="free-ship-text">
-      <p>FREE SHIPPING ON ORDERS $50+</p>
+      <p>FREE SHIPPING ON ORDERS £50+</p>
     </div>
     {% if cart.item_count > 0 %}
     <div class="cart-drawer-content">
@@ -40,13 +40,13 @@
           <div class="row">
             <div class="cart-block">
             {% if item.image != blank %}
-            <div class="col-5 col-md-5">
+            <div class="col-4 col-xs-3 col-md-4">
               <a href="{{ item.url | within: collections.all }}">
                 {{ item | img_url: '140x140' | img_tag: item.title }}
               </a>
             </div>
             {% endif %}
-            <div class="col-7 col-md-7">
+            <div class="col-8 col-xs-9 col-md-8">
               <a href="{{ item.url }}">{{ item.product.title }}</a>
               
               <div class="cartdrawerquantity">
@@ -68,7 +68,7 @@
                   </div>
               </div>
               <span class="cart-remove" data-variantid="{{ item.variant_id }}" onclick="drawerRemove(this)">
-                <small>{{ 'cart.general.remove' | t }}</small>
+                <small>{% render 'icon-close' %}</small>
               </span>
             </div>
             </div>
@@ -105,6 +105,12 @@
     {% endif %}
   </div>
 </div>
+<style>
+  span.cart-remove svg {
+    height: 12px;
+    width: 12px;
+}
+</style>
 {% schema %}
   {
     "name": "Cart Drawer",

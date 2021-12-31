@@ -15,12 +15,12 @@
 				   name="q"
 				   id="Search"
 				   value="{{ search.terms | escape }}"
-				   placeholder="{{ 'general.search.placeholder' | t }}">
+				   placeholder="Search Cohorted...">
 		  </form>
 		</div>
 	  </div>
 	  <ul id="sidebar-nav-menu">
-		 {% for link in linklists['main-menu'].links %}
+		 {% for link in linklists[section.settings.main_list].links %}
 			
 			{% assign avtive = '' %}
 			{% if link.active %}{% assign avtive = 'active' %}{% endif %}
@@ -163,15 +163,17 @@
 			  {% endif %}
 			</li>
 			{% endfor %}
-        <li class="mobile_help collapsible"><a class="collapsible-wrapper" href="#">Help</a></li>
+        <li class="mobile_help collapsible"><a class="collapsible-wrapper" href="/pages/faqs-1">Help</a></li>
         <li class="collapsible">
           {% if shop.customer_accounts_enabled %}
-          <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"></span>
-          <a href="#" class="collapsible-wrapper">Account</a>
-          <ul class="links collapsible" data-expanded="{% if avtive != '' %}1{% else %}0{% endif %}">
-            <li class="first"><a href="/account" title="My Account">My Account</a></li>
+          <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"><img src="{{ 'drop-down-arrow.png' | asset_img_url: '10x10'}}"></span>
+          <a href="/account" class="collapsible-wrapper">Account</a>
+          <ul class="links collapsible account-links" data-expanded="{% if avtive != '' %}1{% else %}0{% endif %}">
+            <li class="first">
+		
+				<a href="/account" title="My Account">My Account</a></li>
             {% if settings.enable_wishlist %}
-            <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li>
+            <li><a href="/pages/wish-list" title="My Wishlist">My Wishlist</a></li> 
             {% endif %}
             <li><a href="/checkout" title="Checkout">Checkout</a></li>
 
@@ -191,27 +193,28 @@
           {% endif %}
         </li>
       </ul>
+	  <div class="mobile_social_media">
+		<div class="mobile_social_media_title">FOLLOW US</div>
+		<ul class="mobile_social">
+		  {% if settings.footer_facebook_link != '' %}
+		  <li><a href="{{settings.footer_facebook_link}}">Facebook</a></li>
+		  {% endif %}
+		  {% if settings.footer_twitter_link != '' %}
+		  <li><a href="{{settings.footer_twitter_link}}">Twitter</a></li>
+		  {% endif %}
+		  {% if settings.footer_pinterest_link != '' %}
+		  <li><a href="{{settings.footer_pinterest_link}}">Pinterest</a></li>
+		  {% endif %}
+		  {% if settings.footer_instagram_link != '' %}
+		  <li><a href="{{settings.footer_instagram_link}}">Instagram</a></li>
+		  {% endif %}
+		  {% if settings.footer_googleplus_link != '' %}
+		  <li><a href="{{settings.footer_googleplus_link}}">Google Plus</a></li>
+		  {% endif %}
+		</ul>		
+	  </div>
   </nav>
-  <div class="mobile_social_media">
-    <div class="mobile_social_media_title">FOLLOW US</div>
-    <ul class="mobile_social">
-      {% if settings.footer_facebook_link != '' %}
-      <li><a href="{{settings.footer_facebook_link}}">Facebook</a></li>
-      {% endif %}
-      {% if settings.footer_twitter_link != '' %}
-      <li><a href="{{settings.footer_twitter_link}}">Twitter</a></li>
-      {% endif %}
-      {% if settings.footer_pinterest_link != '' %}
-      <li><a href="{{settings.footer_pinterest_link}}">Pinterest</a></li>
-      {% endif %}
-      {% if settings.footer_instagram_link != '' %}
-      <li><a href="{{settings.footer_instagram_link}}">Instagram</a></li>
-      {% endif %}
-      {% if settings.footer_googleplus_link != '' %}
-      <li><a href="{{settings.footer_googleplus_link}}">Google Plus</a></li>
-      {% endif %}
-    </ul>		
-  </div>
+  
 </div>
 <style>
 	div#mobile-search {
@@ -245,16 +248,17 @@
     border: none !important;
     font-family: 'Avenir LT Std 45 Book' !important;
 }
-	input#Search {
-		background: 0 0;
-		/* height: 30px; */
-		font-size: 13px;
-		color: #c0bebb;
-		letter-spacing: .03em;
-		padding: 5px 15px;
-		border: none;
-		width: 100%;
-	}
+input#Search {
+    background: 0 0;
+    font-size: 13px;
+    color: #c0bebb;
+    letter-spacing: .03em;
+    padding: 0px 10px;
+    border: none;
+    width: 100%;
+    position: relative;
+    top: 2px;
+}
 	span.plus-right img {
 	  position: absolute;
 	  top: 20px;

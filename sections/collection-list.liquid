@@ -27,13 +27,13 @@
         <span>{{ collection.title }} <img style="width:30px; height:18px;" src="{{ section.settings.icon | img_url: '30x' }}"></span>
       </a>
     </div>
-    {%- endfor -%}
+    {%- endfor -%} 
 
     <div class="collection-show-mob">
       <div class="collection-show-inner">
       {% for block in section.blocks %}
     {%- assign collection = collections[block.settings.collection] -%} 
-    <div class="collection-list-li">
+    <div class="collection-list-li show-collection-mob">
       {%- if collection.image -%}
       {%- assign collection_image = collection.image -%}
       {%- elsif collection.products.first and collection.products.first.images != empty -%}
@@ -63,9 +63,9 @@
 
 
 <script>
-  $('.collection-show-mob-1').slick({
-    dots: true,
-    arrow: true,
+  $('.collection-show-inner').slick({
+    dots: false,
+    arrows: false,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -75,14 +75,19 @@
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        infinite: true,
-        dots: true
+        infinite: false,
+        dots: false
       }
     },
     {
       breakpoint: 600,
       settings: {
+        dots: false,
+        arrows: false,
         slidesToShow: 1,
+        autoplay:true,
+        infinite: true,
+        autoplaySpeed:1500,
         slidesToScroll: 1
       }
     },
@@ -90,6 +95,11 @@
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        autoplay:true,
+        infinite: true,
+        autoplaySpeed:1500,
         slidesToScroll: 1
       }
     }

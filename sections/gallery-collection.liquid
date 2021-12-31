@@ -19,8 +19,13 @@
                         {% if section.settings.icons_url_1 != blank %}
                         <div class="social-links-new">
                           <span class="title-follow">Follow Elle L on</span>
-                          <span><a href="{ section.settings.icons_url_1'}}">  <img class="social_icons" src="{{ section.settings.image_box_4 | img_url:'master'}}"></a></span>
-                          <span><a href="{ section.settings.icons_url_2'}}">  <img class="social_icons" src="{{ section.settings.image_box_5 | img_url:'master'}}"></a></span>
+                          <span>
+                            <a href="{{ section.settings.icons_url_1 }}"> 
+                             <img class="social_icons" src="{{ section.settings.image_box_4 | img_url:'master'}}">
+                            </a></span>
+                          <span><a href="{{ section.settings.icons_url_2 }}">  
+                            <img class="social_icons" src="{{ section.settings.image_box_5 | img_url:'master'}}">
+                          </a></span>
                         </div>
                         {% endif %}
 

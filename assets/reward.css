@@ -1,0 +1,405 @@
+/* reward points css */
+#loyaltylion .lion-rules-list {
+    background-color: initial;
+    gap: 30px;
+}
+h3.lion-integrated-page-section__heading-text {
+    font-size: 50px !important;
+    color: #000 !important;
+    font-family: 'Austin';
+    text-transform: capitalize;
+}
+.lion-newsletter-signup-action {
+    width: 100%;
+}
+.reward-earn-points .text-container-wrapper {
+    width: 50%;
+    text-align: left;
+    padding-right: 50px;
+    left: 0;
+    position: absolute;
+    top: 10%;
+    padding-left: 50px;
+    transform: translateY(-10px);
+}
+#loyaltylion .lion-header {
+    padding: 20px 0;
+}
+
+      .lion-rule-item__icon.lion-icon.lion-icon__rule.lion-icon__rule--signup {
+    position: relative;
+}
+      .reward-earn-points {
+    background: #F1F1F1;
+    padding: 80px 0;
+    position: relative;
+}
+body #loyaltylion .lion-rule-item__completed:before {
+    background-color: #000 !important;
+}
+body .lion-rule-item__icon {
+    background-image: none !important;
+}
+body .lion-rule-item__icon {
+    position: relative;
+}
+body .lion-rule-item__content {
+    background: #fff;
+    height: 390px;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 20px !important;
+    flex-wrap: wrap;
+    text-align: center;
+    border: none !important;
+    min-height: auto !important;
+    border-radius: 0 !important;
+    grid-gap: 10px;
+    display: flex !important;
+}
+body .lion-rule-item--authenticated .lion-rule-item__content {
+    display: block !important;
+}
+body .lion-rule-item__actions button {
+    font: normal normal normal 15px/60px Austin !important;
+    letter-spacing: 0.75px !important;
+    width: 100%;
+    background: #f3e4db!important;
+    margin-top: 30px;
+    display: inline-block !important;
+    color: #000 !important;
+    padding: 0 20px!important; 
+
+}
+body .lion-rule-item__icon {
+    width: 80px !important;
+    height: 80px !important;
+    box-shadow: 0px 15px 24px #dcdcdc;
+    border-radius: 80px;
+    font: normal normal normal 32px/84px 'Austin';
+    margin-bottom: 0px;
+    letter-spacing: 3.2px;
+    text-align: center;
+}
+body .lion-rule-item__points span {
+    font-family: 'AVENIR LT STD 45 BOOK';
+    color: #000;
+    text-transform: uppercase;
+}
+body #loyaltylion .lion-rule-item__title {
+    letter-spacing: 1.2px;
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Austin' !important;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+    height: 90px;
+    overflow: hidden;
+}
+body .lion-rule-item {
+    position: relative;
+    counter-increment: css-counter 1;
+}
+#loyaltylion .lion-rule-item__completed {
+    justify-content: center;
+}
+body #loyaltylion .lion-reward-item__actions:not(:empty), #loyaltylion .lion-rule-item__actions:not(:empty) {
+    width: 100%;
+}
+#loyaltylion .lion-reward-item__actions:not(:empty), #loyaltylion .lion-rule-item__actions:not(:empty) {
+    display: block;
+}
+
+#loyaltylion .lion-integrated-page-section__heading-text:after, #loyaltylion .lion-integrated-page-section__heading-text:before {
+    background: #e3e3e300;
+}
+#loyaltylion .lion-integrated-page-section__heading {
+    margin-bottom: 50px;
+}
+.lion-preview-explainer-modal .lion-action-button {
+    font-family: 'Austin' !important;
+    font-weight: normal !important;
+    background: #000 !important;
+    padding: 10px 30px !important;
+}
+.lion-rule-item__content {
+    background: #e4e4e494!important;
+}
+body .lion-rule-item__icon::before {
+    content: "0" counter(css-counter);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1a1a1a;
+    right: 0;
+    font: normal normal normal 32px/84px 'Austin';
+    margin-bottom: 20px;
+    letter-spacing: 3.2px;
+    text-align: center;
+    transform: translateY(0px);
+}
+@media(max-width:1199px){
+body #loyaltylion .lion-rule-item__title {
+    font-size: 22px;
+    line-height: 30px;
+}
+.my-point-stats .container {
+    padding: 0 40px;
+}
+body .lion-rule-item__actions button {
+    font: normal normal normal 11px/50px Austin !important;
+}
+.background-inner-content .text-container-wrapper.full-width {
+    width: 90%; 
+}
+.my-point-stats .banner_inner {
+    display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr !important;
+}
+.my-point-stats .rew_banner .container {
+    padding: 0 40px !important;
+}
+}
+@media(max-width:991px){
+  ul.grid-point-list li {
+    width: 50%;
+}
+.reward-earn-points .text-container-wrapper {
+    padding-right: 50px;
+    left: 0;
+    position: relative;
+    top: 0;
+    padding-left: 20px;
+    transform: translateY(0px);
+    width: 100%;
+}
+.lion-rules-list:before {
+    display: none;
+}
+#loyaltylion .lion-rules-list {
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+}
+}
+@media(max-width:767px){
+    .my-point-stats .banner_inner {
+        grid-gap: 35px;
+}
+body #loyaltylion .lion-reward-item__icon {
+    height: 180px !important;
+}
+body .lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 12px !important;
+    background: #000 !important;
+    line-height: 40px;
+}
+	.reward-earn-points {
+    padding: 40px 0;
+}
+.lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 10px !important;
+    padding: 0 !important;
+}
+.product-box-inner {
+    display: block !important;
+}
+#loyaltylion .lion-history-table {
+    width: 100%;
+}
+body #loyaltylion .lion-rules-list {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 0 !important;
+    gap: 15px!important;
+}
+body #loyaltylion .lion-rule-item__title {
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+body .lion-rule-item__icon {
+    width: 40px !important;
+    height: 40px !important;
+}
+body .lion-rule-item__icon::before {
+    font: normal normal normal 12px/45px 'Austin';
+    transform: translateY(0px);
+}
+
+body .lion-rule-item__content {
+    height: 100%;
+    flex-direction: initial;
+    padding: 15px !important; 
+}
+body #loyaltylion .lion-rule-item__title {
+    height: 50px;
+}
+
+body .lion-rule-item__points span {
+    font-size: 12px;
+    line-height: 16px;
+}
+body .lion-rule-item__actions button {
+    font: normal normal normal 10px/50px Austin !important;
+    letter-spacing: .5px !important;
+    padding: 0 10px!important;
+    margin-top: 10px !important;
+}
+body .lion-rule-item__actions button {
+    margin-top: 0px;
+}
+}
+
+
+/* reward css */
+
+
+body #loyaltylion .lion-rewards-list {
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 20px;
+    padding: 0 0px 0 0!important;
+}
+body #loyaltylion .lion-reward-item__content, #loyaltylion .lion-rule-item__content {
+    padding: 0;
+}
+body #loyaltylion .lion-reward-item__icon {
+    background-size: cover;
+    width: 100%;
+    height: 260px;
+    background-color: #e9e7e6;
+    background-position: center;
+}
+#lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 15px !important;
+    font-family: Austin !important;
+    background: #a7a7a7 0 0 no-repeat padding-box !important;
+    line-height: 40px;
+    height: 55px;
+    margin-top: 15px;
+    width: 90%;
+    font-weight: normal !important;
+}
+.lion-rewards-list .lion-reward-item {
+    margin-bottom: 25px;
+}
+.lion-rewards-list .lion-action-button.lion-action-button--tile {
+    font-size: 15px !important;
+    background: #a7a7a7 0 0 no-repeat padding-box !important;
+    line-height: 50px;
+    height: 60px;
+    margin-top: 20px;
+    width: 100%;
+}
+.lion-reward-item--customer .lion-reward-item__title {
+    bottom: 100px !important;
+}
+.lion-rewards-list .lion-reward-item__content .lion-reward-item__meta {
+    margin-top: 20px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'AVENIR LT STD 45 BOOK';
+}
+.lion-rewards-list .lion-reward-item__fill{
+    background-color: #ffffff;
+}
+.lion-rewards-list .lion-reward-item__title {
+    background: #000 !important;
+    color: #fff !important;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 30px;
+    position: absolute;
+    font-family: 'Austin';
+    font-weight: normal !important;
+    bottom: 0;
+    right: 10px;
+    transform: translateY(-40px);
+    font-size: 13px !important;
+}
+button.lion-action-button.lion-action-button--tile span {
+    font-family: 'Austin';
+    font-weight: normal;
+}
+@media(min-width:1500px){
+    .reward-earn-points .text-container-wrapper {
+    width: 30%;
+    top:15%;
+}
+}
+@media(max-width:1499px){
+    .reward-earn-points .text-container-wrapper {
+    width: 50% !important;
+}
+}
+          @media(max-width:767px){
+            .redeem-gifts .product-box-inner {
+        margin-top: 0;
+    }
+	body .reward-earn-points .text-container-wrapper{
+		width:100% !important;
+	}
+    .redeem-gifts .desktop {
+    display: none;
+}
+body #loyaltylion .lion-rewards-list {
+    grid-template-columns: repeat(2,1fr) !important;
+}
+#shopify-section-template--14226357846121__163965928753d48295 .product-feature-image {
+    padding: 40px 0 !important;
+}
+.redeem-gifts .mob {
+    display: block !important;
+}
+    body #loyaltylion .lion-rewards-list{
+        padding: 0 0px 0 0 !important;
+    }
+    .lion-reward-item--customer .lion-reward-item__title {
+    bottom: 80px !important;
+    right: -10px;
+}
+    .redeem-gifts .grid-point-listd {
+        padding: 0px 0;
+        grid-gap: 10px;	
+    }
+          }
+
+
+		  /* history table css */
+		  body #loyaltylion .lion-history-table {
+			border: 1px solid rgb(241 241 241);
+			background-color: #f1f1f1;
+		}																											table.lion-history-table tr {
+			height: 60px;
+			line-height: 60px;
+		}
+		body #loyaltylion .lion-history-table__header-cell {
+			background: #f1f1f1;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 700;
+			padding: 0px 20px 0px 20px;
+			border-bottom: 1px solid #f1f1f1;
+			font-weight: 800;
+			font-family: 'Poppins', sans-serif !important;
+			height: 60px;
+			line-height: 60px;
+			color: #000;
+		}
+		#loyaltylion .lion-history-table__row {
+			background-color: #fff;
+		}
+		body #loyaltylion .lion-history-table__bubble {
+			border-radius: 4px;
+			font-size: 13px;
+			padding: 0 12px !important;
+			height: 35px;
+			line-height: 35px;
+		}										
