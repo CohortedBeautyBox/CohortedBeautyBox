@@ -28,7 +28,7 @@ body {
 .product-feature-image img {
   height: 100%;
   object-fit: cover;
-  max-height: 883px;
+  max-height: 1000px;
 }
 .top-header-new {
   padding-right: 55px;
@@ -123,7 +123,15 @@ img.company_img {
 }
 .account-login input {
   border: 1px solid #ccc !important;
-  border-radius: 4px !important;
+}
+.fieldset .legend {
+  margin: -30px 0 0;
+  font-family: 'Austin';
+  font-size: 18px;
+}
+.account-login #customer_login {
+  margin-top: 70px !important;
+  display: block;
 }
 .content-with-image-slider-section {
   display: flex;
@@ -351,11 +359,11 @@ ul.content-with-image-slider-section-buttons a {
     left: 0;
 }
 .text-container-wrapper h2 {
-    font-family: 'Austin';
-    text-transform: capitalize;
+    font-family: Austin;
+    text-transform: initial;
     font-size: 90px;
     line-height: 100px;
-    letter-spacing: 0;
+    letter-spacing: 2.5px;
     color: #000;
 }
 .description-before span:before {
@@ -1438,9 +1446,11 @@ ul#novaworks-nav li.level-top a.level-top {
 }
 .info-boxs p {
   height: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
   font-size: 12px;
   line-height: 20px;
+  max-width: 70%;
+  margin: auto;
 }
 
 .form-list li {
@@ -1454,8 +1464,13 @@ ul#novaworks-nav li.level-top a.level-top {
   color: #fff;
 }
 #contactForm .form-list li.wide .input-box textarea {
-  font-size: 12px;
+  font-size: 15px;
   text-indent: 10px;
+  color: #000;
+}
+#contactForm .form-list li.wide .input-box textarea::placeholder {
+  
+  color: #A7A7A7;
 }
 .info-boxs a {
   font-size: 15px;
@@ -1483,9 +1498,18 @@ ul#novaworks-nav li.level-top a.level-top {
   font-family: 'AVENIR LT STD 45 BOOK';
   width: 100%;
   appearance: none;
-  color: #fff;
   background: transparent;
-  border: 1px solid #fff;
+}
+
+.account-create input {
+  border: 1px solid #d3d1d1;
+  color: #000;
+}
+.account-create .btn.btn-default.clear-both {
+  font-family: 'Austin';
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 3px 30px;
 }
 .select-inp:before {
   content: "";
@@ -1508,9 +1532,6 @@ select#customer-services option {
 }
 .form-list li:last-child {
   grid-column: 1 / span 2;
-}
-#contactForm .form-list li.wide .input-box textarea {
-  color: #A7A7A7;
 }
 #contactForm .form-list label {
   display: none;
@@ -1611,6 +1632,9 @@ img.image_box_2, img.image_box_3 {
   ul#novaworks-nav li.level0.level-top.active.parent-dropdown a.level-top {
     margin-top: 0px !important;
   }
+  #shopify-section-template--14213728829545__16387904240d1d1d7b .full-width .description-before {
+    padding-left: 50px;
+}
   ul#novaworks-nav li.level0.level-top.parent-dropdown a {
     margin-top: 0px !important;
   }
@@ -1703,6 +1727,9 @@ img.image_box_2, img.image_box_3 {
   #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
     max-width: 100% !important;
     top: 0 !important;
+}
+#shopify-section-template--14208435028073__1638357391737d4189 .description-before {
+  max-width: 100% !important; 
 }
 .logo-content-part p {
   margin-bottom: 15px;
@@ -1810,7 +1837,7 @@ body .sticky-wrapper.is-sticky .nav-container {
   background-color: #fff !important;
 }
 .content-part h2 {
-  font-size: 70px;
+  font-size: 70px; 
   line-height: 80px;
 }
 .text-container p {
@@ -1917,6 +1944,7 @@ body .text-container-wrapper.full-width h2 {
 body .overlap_heading {
   left: 0;
 }
+
 .collection-list-li a span {
   font-size: 16px;
 }
@@ -2020,6 +2048,13 @@ div#nova-mobile-menu {
 @media (max-width:767px) {
   .collection-show-mob .collection-list-li img {
     height: 375px;
+}
+.account-login #customer_login {
+  margin-top: 40px !important;
+  display: block;
+}
+#shopify-section-template--14213545427049__1638782894dccefd5a .banner-content .secondary-btn {
+  width: auto;
 }
 body#challenge .shopify-challenge__container {
   margin-bottom: 80px;
@@ -2234,9 +2269,12 @@ h2.title_des {
   padding: 10px 20px !important;
 }
 .info-boxs p {
-    height: 100%;
-    margin-bottom: 20px;
-    padding: 0;
+  height: 100%;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  max-width: 70%;
+  margin: 0 auto; 
 }
 .is-sticky .container.nova-header {
   background: #000;

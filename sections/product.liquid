@@ -414,12 +414,89 @@ div#product-images {
     font-family: 'AVENIR LT STD 45 BOOK';
 }
 .add-to-box .add-to-cart {
+    display: grid;
+    grid-gap: 5px;
+}
+.subscription-product .add-to-box .add-to-cart {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+.subscription-product .add-to-box .add-to-qty {
+margin: 0;
+}
+/* product bundle css */
+.bsub-widget__wrapper {
+    padding: 0 0 20px 0;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 14px;
+}
+.bsub-widget__group-header .bsub-widget__image {
+    width: 3em;
+    height: 3em;
+}
+input:checked+.bsub-widget__group-header {
+    border-color: #eed3c6;
+    color: #eed3c6;
+    font-weight: 700;
+}
+.bsub-widget__group-header {
+    display: flex!important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 4px 1rem;
+    transition: .3s;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: #fff;
+    grid-gap: 20px;
+    cursor: pointer;
+}
+.bold-ro__modal-content h3 {
+    font-family: 'Austin';
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+form#bold-add-to-existing select {
+    height: 48px;
+    margin: 10px 0;
+} 
+.bold-ro__modal-inner button {
+    font-family: 'Austin';
+    background: #000;
     display: flex;
-    grid-gap: 15px;
+    width: 140px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}  
+.bsub-widget__group-header:hover {
+    box-shadow: 0 0 2px 2px rgb(238 211 198);
+    border: 1px solid rgb(238 211 198);
+}
+.bsub-widget__group-label {
+    width: 100%;
+}
+@media(max-width:1199px){
+    form.variants.clearfix .add-to-cart button.button {
+    font-size: 13px;
+    padding: 0 15px;
+}
+.product-template-main .add-to-cart button.button, .product-template-main .add-to-cart a {
+    font: normal normal normal 13px/50px Austin;
+}
 }
 @media (max-width:768px) {
     .product-template-main .more-views-wrapeee {
     margin-bottom: -80px;
+}
+.subscription-product .add-to-box .add-to-cart {
+    width: 100%;
+    grid-template-columns: 1fr !important;
 }
 .you-may-also .slick-prev {
     left: 0;
