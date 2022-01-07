@@ -12,15 +12,27 @@
 		<h2 style="display:none;" class="site_heading">{{ section.settings.heading }}</h2>
 
 		<div class="text-container-wrapper">
+			{%- if section.settings.teamPhoto != blank -%}
+				<img class="company_img" src="{{ section.settings.teamPhoto | img_url: 'master' }}" alt="Team photo">
+			{%- endif -%}
 			{{ section.settings.text }}
 			  </div>
 			  <div class="text-container-wrapper">
+				{%- if section.settings.teamPhoto1 != blank -%}
+				<img class="company_img" src="{{ section.settings.teamPhoto1 | img_url: 'master' }}" alt="Team photo">
+			{%- endif -%}
 				{{ section.settings.text2 }}
 				  </div>
 				  <div class="text-container-wrapper">
+					{%- if section.settings.teamPhoto3 != blank -%}
+					<img class="company_img" src="{{ section.settings.teamPhoto3 | img_url: 'master' }}" alt="Team photo">
+				{%- endif -%}
 					{{ section.settings.text3 }}
 					  </div>
 					  <div class="text-container-wrapper">
+						{%- if section.settings.teamPhoto4 != blank -%}
+						<img class="company_img" src="{{ section.settings.teamPhoto4 | img_url: 'master' }}" alt="Team photo">
+					{%- endif -%}
 						{{ section.settings.text4 }}
 						  </div>
 	</div>
@@ -179,7 +191,11 @@ h2.resp-accordion.resp-tab-active {
 			"label": "Heading",
 			"default": "Why Cohorted?"
 		  },
-		
+		  {
+			"type": "image_picker",
+			"id": "teamPhoto",
+			"label": "Image"
+		   },
 		{
 		  "type": "html",
 		  "id": "text",
@@ -192,7 +208,11 @@ h2.resp-accordion.resp-tab-active {
 			"label": "Tab Heading 1",
 			"default": "Tab Heading"
 		  },
-
+		  {
+			"type": "image_picker",
+			"id": "teamPhoto1",
+			"label": "Image"
+		   },
 		
 		{
 		  "type": "html",
@@ -208,7 +228,11 @@ h2.resp-accordion.resp-tab-active {
 			"default": "Tab Heading"
 		  },
 
-	
+		  {
+			"type": "image_picker",
+			"id": "teamPhoto3",
+			"label": "Image"
+		   },
 		
 		{
 		  "type": "html",
@@ -222,7 +246,11 @@ h2.resp-accordion.resp-tab-active {
 			"label": "Tab Heading 3",
 			"default": "Tab Heading"
 		  },
-
+		  {
+			"type": "image_picker",
+			"id": "teamPhoto4",
+			"label": "Image"
+		   },
 		  {
 			"type": "text",
 			"id": "text_head4",

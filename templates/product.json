@@ -1,12 +1,252 @@
 {
-    "sections": {
-      "main": {
-        "type": "product",
-        "settings": {
-        }
+  "sections": {
+    "main": {
+      "type": "product",
+      "settings": {
+        "text-box": "Title"
       }
     },
-    "order": [
-      "main"
-    ]
-  }
+    "1639141991c6e99c43": {
+      "type": "beauty-box",
+      "disabled": true,
+      "blocks": {
+        "163914199120393d3e-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/website-01.jpg",
+            "job_title": "Subscribe To Your Box",
+            "job_position": "Monthly curation of premium beauty products across cosmetics, skincare, haircare and fragrance. Minimum of five luxury products per month. A monthly copy of our Cohorted Beauty Box Booklet Mini Magazine. Reliable dispatch straight to your door in bespoke 100% recyclable packaging. Exclusive offers and discounts available to Cohorted subscribers.",
+            "linktext": "",
+            "link": "",
+            "sectionOrder": "orderOne"
+          }
+        },
+        "8e0df266-bde3-4d44-8193-0506625239d4": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/website-02.jpg",
+            "job_title": "Order & Dispatch",
+            "job_position": "The Cohorted Beauty Box subscription works one month in advance. This means that you will receive your first beauty box between the 5th and the 15th of the following month. For example, if you sign up in January your first box will be the February edition. All of our boxes are hand-wrapped in 100% sustainable packaging. For your peace of mind, we send all of our boxes using 48 hour recorded delivery.",
+            "linktext": "",
+            "link": "",
+            "sectionOrder": "orderOne"
+          }
+        },
+        "fc50b8e7-0dd6-406f-8db2-a07c85daadce": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/website-03.jpg",
+            "job_title": "Billing & Cancellation",
+            "job_position": "Payment for your first Beauty Box will be taken when you sign up. You will then be billed on a rolling monthly basis between the 1st and 3rd of each month until a request for cancellation is submitted. Our subscription is completely flexible allowing you to cancel or pause your subscription at any time. You can simply process the request from your Subscription Dashboard or send a request to our customer service team before the last day of each month.",
+            "linktext": "",
+            "link": "",
+            "sectionOrder": "orderOne"
+          }
+        }
+      },
+      "block_order": [
+        "163914199120393d3e-0",
+        "8e0df266-bde3-4d44-8193-0506625239d4",
+        "fc50b8e7-0dd6-406f-8db2-a07c85daadce"
+      ],
+      "settings": {
+        "title": "How Our Monthly Beauty Box Works",
+        "text": "",
+        "bag-color": ""
+      }
+    },
+    "1639142167d1b443f0": {
+      "type": "moving-text",
+      "blocks": {
+        "1639142167a6f0c8f0-0": {
+          "type": "select",
+          "settings": {
+            "linktext": "Cruelty free"
+          }
+        },
+        "1639142167a6f0c8f0-1": {
+          "type": "select",
+          "settings": {
+            "linktext": "Vegan"
+          }
+        },
+        "c78442b5-b771-4634-96ec-5e67649c697c": {
+          "type": "select",
+          "settings": {
+            "linktext": "No Harsh Chemicals"
+          }
+        },
+        "379e5b6c-3c66-41e6-87b9-db1a58edbb0f": {
+          "type": "select",
+          "settings": {
+            "linktext": "Certified"
+          }
+        },
+        "7d5236d2-a367-4934-8dd0-a8d3ef1add72": {
+          "type": "select",
+          "settings": {
+            "linktext": "Cruelty free"
+          }
+        },
+        "5f28881d-f089-4a0b-9ba7-552413170d46": {
+          "type": "select",
+          "settings": {
+            "linktext": "Vegan"
+          }
+        },
+        "b60b6045-37f8-4004-b13b-c8bd6b75b342": {
+          "type": "select",
+          "settings": {
+            "linktext": "Vegan"
+          }
+        },
+        "323cb270-f2b6-4ba2-be43-4062c9c9f9b5": {
+          "type": "select",
+          "settings": {
+            "linktext": "No Harsh Chemicals"
+          }
+        }
+      },
+      "block_order": [
+        "1639142167a6f0c8f0-0",
+        "1639142167a6f0c8f0-1",
+        "c78442b5-b771-4634-96ec-5e67649c697c",
+        "379e5b6c-3c66-41e6-87b9-db1a58edbb0f",
+        "7d5236d2-a367-4934-8dd0-a8d3ef1add72",
+        "5f28881d-f089-4a0b-9ba7-552413170d46",
+        "b60b6045-37f8-4004-b13b-c8bd6b75b342",
+        "323cb270-f2b6-4ba2-be43-4062c9c9f9b5"
+      ],
+      "settings": {
+        "hide_mob": false
+      }
+    },
+    "16391422773c4a5c5b": {
+      "type": "horizental-tabs",
+      "settings": {
+        "heading": "Product Description",
+        "image": "shopify:\/\/shop_images\/best-brand.jpg",
+        "text_head": "What to expect?",
+        "text": "<p>• A monthly curation of premium beauty products across cosmetics, skincare, haircare and fragrance.<br> • A minimum of 5 luxury products per month.<br> • A monthly copy of our Cohorted Beauty Box Magazine. <br>• Reliable dispatch straight to your door in bespoke 100% sustainable packaging.<br> • Exclusive offers and discounts are available to Cohorted subscribers.<\/p>",
+        "text_head2": "What Brands Shoul I Expect?",
+        "text2": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "text_head3": "Order & Dispatch",
+        "text3": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "text_head4": "Billing & Cancellation",
+        "text4": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "text_head5": "Shipping & Returns",
+        "text5": "<p>We normally aim to dispatch all orders within one working day, however in the run up to really busy periods like Christmas we may take up to 3-5 days for some orders due to the high volumes. Shipping Courier: All parcels will now be sent out using a Tracked 48 hour service. If your parcel does not arrive on time please contact your local post office in order to find out why they have not delivered your parcel. It is possible that they haven't left a calling card and are currently holding it for you. Our Returns Policy: Our Returns Policy forms part of, and must be read in conjunction with, our Terms and Conditions of Sale. We reserve the right to change this Returns Policy at any time. It is important that you check your order or items upon receipt and always before use. If any errors occur or issues arise then these need to be reported to us immediately so we can investigate.<\/p>"
+      }
+    },
+    "16391423899723c788": {
+      "type": "collection-box",
+      "disabled": true,
+      "blocks": {
+        "1639142389e3e93037-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/nars.png",
+            "title": "CLASSIC BEAUTY BOXES",
+            "link": "shopify:\/\/collections\/classic-beauty-boxes"
+          }
+        },
+        "b4532751-0cdd-4a8e-8c90-7191c53af1c0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/wow.png",
+            "title": "LIMITED EDITION BOXES",
+            "link": "shopify:\/\/collections\/limited-edition-beauty-boxes"
+          }
+        },
+        "22764b98-a1ca-43e9-9f3f-3c64ee6e952c": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/you-may-also-like-col.png",
+            "title": "LETTERBOX GIFTS",
+            "link": "shopify:\/\/collections\/letterbox-gifts"
+          }
+        }
+      },
+      "block_order": [
+        "1639142389e3e93037-0",
+        "b4532751-0cdd-4a8e-8c90-7191c53af1c0",
+        "22764b98-a1ca-43e9-9f3f-3c64ee6e952c"
+      ],
+      "settings": {
+        "site_heading": "You May Also Like"
+      }
+    },
+    "163937970160ab7dc8": {
+      "type": "you-may-also-like",
+      "blocks": {
+        "1639379701a6dac2a2-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/product-col-2.jpg",
+            "title": "CLASSIC BEAUTY BOXES",
+            "link": "shopify:\/\/collections\/classic-beauty-boxes"
+          }
+        },
+        "feebf331-c6ba-47be-bd71-c1abe360b53b": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/product-col-3.jpg",
+            "title": "LIMITED EDITION BOXES",
+            "link": "shopify:\/\/collections\/limited-edition-beauty-boxes"
+          }
+        },
+        "64cfddc1-84cb-41f2-b3f3-2e16b37f3b9c": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/product-col-1.jpg",
+            "title": "LETTERBOX GIFTS",
+            "link": "shopify:\/\/collections\/letterbox-gifts"
+          }
+        },
+        "6d6d7248-7b9e-4869-9341-47203771471f": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/product-col-5.jpg",
+            "title": "Cohorted Advent Calendars",
+            "link": "shopify:\/\/collections\/cohorted-advent-calendars"
+          }
+        },
+        "47e1f3d5-dc3b-4090-80e9-d26807f0c792": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/product-col-4.jpg",
+            "title": "Cohorted Gift Cards",
+            "link": "shopify:\/\/collections\/cohorted-gift-cards"
+          }
+        },
+        "26dfc95b-29d3-4849-a01b-e4b78027a3f7": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/product-col-6.jpg",
+            "title": "Subscription Box Collection",
+            "link": "shopify:\/\/collections\/subscription-box-collection"
+          }
+        }
+      },
+      "block_order": [
+        "1639379701a6dac2a2-0",
+        "feebf331-c6ba-47be-bd71-c1abe360b53b",
+        "64cfddc1-84cb-41f2-b3f3-2e16b37f3b9c",
+        "6d6d7248-7b9e-4869-9341-47203771471f",
+        "47e1f3d5-dc3b-4090-80e9-d26807f0c792",
+        "26dfc95b-29d3-4849-a01b-e4b78027a3f7"
+      ],
+      "settings": {
+        "site_heading": "You May Also Like"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1639141991c6e99c43",
+    "1639142167d1b443f0",
+    "16391422773c4a5c5b",
+    "16391423899723c788",
+    "163937970160ab7dc8"
+  ]
+}

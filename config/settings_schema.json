@@ -2706,6 +2706,16 @@
     ]
   },
   {
+    "name":"Kalaviyo Form",
+    "settings":[
+      {
+        "id": "klaviyo_form",
+        "type": "html",
+        "label": "Klavyo form field"		  
+      }
+    ]
+  },
+  {
     "name": "Money options",
     "settings": [
       {

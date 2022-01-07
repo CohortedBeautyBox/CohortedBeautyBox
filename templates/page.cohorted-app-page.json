@@ -1,12 +1,233 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  } 
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "1638853446a36bc1a2": {
+      "type": "full-with-banner",
+      "settings": {
+        "banner_right": false,
+        "feature_image": "shopify:\/\/shop_images\/Landing_Page_Banner_1a79ddb0-9d49-42fc-82bc-1cdcc4bc5e45.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/Landing_Page_Banner-mob.jpg",
+        "sub_title": "",
+        "title": "Experience Cohorted on the go from your Smartphone or iPad.",
+        "text": "Discover a sustainable digital version of our Beauty Box magazine, as well as exclusive offers and competitions. Access the latest beauty, lifestyle, empowerment and fashion articles from our online publisher",
+        "link": "",
+        "linktext": "",
+        "sectionOrder": "orderOne",
+        "bg_color": "",
+        "title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "link2": "",
+        "link3": "",
+        "enable_apps": true
+      }
+    },
+    "1638857029ea64b0c9": {
+      "type": "normal-image-with-text",
+      "settings": {
+        "section_order": "",
+        "title": "Introducing a new sleek and simple way to experience the Cohorted brand on the go.",
+        "text": "<p>Discover a variety of features including Cohorted Cult articles and exclusive offers, incentives and competitions; all from the comfort of your smartphone and tablet! Plus, gain exclusive access to the newly launched ‘Unfiltered by Cohorted’ Podcast, featuring inspirational and accomplished guests in each episode. Prepare for taboo breaking, thought provoking discussions covering health, wellbeing, empowerment, relationships, careers and more.<\/p>",
+        "feature_image": "shopify:\/\/shop_images\/10-UX-UI-app-presentation-mockup.png",
+        "bg_color": "",
+        "enable_gradiant": false,
+        "feature_image2": "shopify:\/\/shop_images\/app-store-black.jpg",
+        "link": "https:\/\/apps.apple.com\/in\/app\/cohorted-cult\/id1564440229",
+        "feature_image3": "shopify:\/\/shop_images\/google-paly-black.jpg",
+        "link2": "https:\/\/play.google.com\/store\/apps\/details?id=com.cohorted.cult"
+      }
+    },
+    "1638857748ff33f45d": {
+      "type": "inner-logo-slider",
+      "blocks": {
+        "041b98b4-8d1d-4348-924f-a761c3d7e88e": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "b355e386-b41f-48fc-b37b-c05bb10708ba": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_3.png"
+          }
+        },
+        "431d0287-78fa-4e55-94ef-e754e8876a47": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_4.png"
+          }
+        },
+        "e69042bf-9839-45f4-a6a7-c3e3865a0e85": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_1.png"
+          }
+        },
+        "3b5c7ebf-62db-411c-be2c-ff40983d4edd": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_2.png"
+          }
+        },
+        "5b973aa9-195c-439d-8256-b16e4c837815": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Health-Wellbeing.png"
+          }
+        }
+      },
+      "block_order": [
+        "041b98b4-8d1d-4348-924f-a761c3d7e88e",
+        "b355e386-b41f-48fc-b37b-c05bb10708ba",
+        "431d0287-78fa-4e55-94ef-e754e8876a47",
+        "e69042bf-9839-45f4-a6a7-c3e3865a0e85",
+        "3b5c7ebf-62db-411c-be2c-ff40983d4edd",
+        "5b973aa9-195c-439d-8256-b16e4c837815"
+      ],
+      "settings": {
+        "section_title": "As Seen In",
+        "bg_color": "#f1f1f1"
+      }
+    },
+    "1638862135daec9df9": {
+      "type": "app-review-slider",
+      "blocks": {
+        "7069b644-660c-4a7a-bbf0-9077773595ef": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution<\/p><p><\/p>",
+            "short_name": "El",
+            "author": "Emma Louge",
+            "review_bg": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "646c4c3f-b7a2-46d7-8ef2-6b9946228890": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution<\/p>",
+            "short_name": "El",
+            "author": "Emma Louge",
+            "review_bg": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "6dc56408-45ad-4ae7-b028-6dc96e316810": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution<\/p>",
+            "short_name": "El",
+            "author": "Emma Louge",
+            "review_bg": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "ca4eeb0d-3473-4ebd-bd9b-807147d6aba3": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution<\/p>",
+            "short_name": "El",
+            "author": "Emma Louge",
+            "review_bg": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "d242e40f-a509-4011-9749-c211df3b90a5": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution<\/p>",
+            "short_name": "El",
+            "author": "Emma Louge",
+            "review_bg": "#000000",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "7069b644-660c-4a7a-bbf0-9077773595ef",
+        "646c4c3f-b7a2-46d7-8ef2-6b9946228890",
+        "6dc56408-45ad-4ae7-b028-6dc96e316810",
+        "ca4eeb0d-3473-4ebd-bd9b-807147d6aba3",
+        "d242e40f-a509-4011-9749-c211df3b90a5"
+      ],
+      "settings": {
+        "title": "Cohorted Cult Happy Users",
+        "text": "<p>Number of users 3,200<\/p>",
+        "link": "",
+        "linktext": "",
+        "btn_class": "",
+        "bag-color": "#000000"
+      }
+    },
+    "16388689694e3cadba": {
+      "type": "cult-feed-slider",
+      "blocks": {
+        "1638868969eba3318c-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/1_1.png"
+          }
+        },
+        "b435f11f-2ab1-4aae-bb4a-597eff76b22c": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/1_1.png"
+          }
+        },
+        "f7d2eef7-03ac-4662-ab3a-b2a804daa94e": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/1_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "1638868969eba3318c-0",
+        "b435f11f-2ab1-4aae-bb4a-597eff76b22c",
+        "f7d2eef7-03ac-4662-ab3a-b2a804daa94e"
+      ],
+      "settings": {
+        "title": "Discover your new destination for All Things Beauty, and more..",
+        "text": "<p>The Cohorted Cult app includes a sustainable, digital version of the Cohorted Beauty Box Magazine. Providing customers with relevant information about their beauty box curations in a digital space enables us to reduce our carbon footprint by 384,000 pounds and our water consumption by 817,200 gallons per year.<br><br> Customers who download the app will be able to purchase limited and past editions of Cohorted Beauty Boxes, join the waiting list for the much-anticipated Cohorted 2021 Advent Calendar, participate in the new Cohorted Rewards Programme and join Cohorted’s Beauty Lounge.<\/p>",
+        "link": "",
+        "linktext": "",
+        "btn_class": "",
+        "bag-color": ""
+      }
+    },
+    "16388681667bdd04d2": {
+      "type": "normal-image-with-text",
+      "settings": {
+        "section_order": "",
+        "title": "Make the most of this new\u000bplatform and get your Cohorted fix whenever, wherever.",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "feature_image": "shopify:\/\/shop_images\/Phone-01.png",
+        "bg_color": "",
+        "enable_gradiant": false,
+        "feature_image2": "shopify:\/\/shop_images\/app-store-black.jpg",
+        "link": "https:\/\/apps.apple.com\/in\/app\/cohorted-cult\/id1564440229",
+        "feature_image3": "shopify:\/\/shop_images\/google-paly-black.jpg",
+        "link2": "https:\/\/play.google.com\/store\/apps\/details?id=com.cohorted.cult"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1638853446a36bc1a2",
+    "1638857029ea64b0c9",
+    "1638857748ff33f45d",
+    "1638862135daec9df9",
+    "16388689694e3cadba",
+    "16388681667bdd04d2"
+  ]
+}

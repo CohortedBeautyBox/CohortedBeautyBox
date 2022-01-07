@@ -6,25 +6,31 @@
         "090a2923-1937-4a24-af5f-d78417d7ce09": {
           "type": "slider_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+            "image": "shopify:\/\/shop_images\/Header-slider-image-01.jpg"
           }
         },
         "92c1809e-a3e2-47a1-9338-4c08e79d8a88": {
           "type": "slider_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+            "image": "shopify:\/\/shop_images\/Header-slider-image-02.jpg"
           }
         },
         "930d9fc9-37a3-48d0-8db2-9bca89f47ff9": {
           "type": "slider_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+            "image": "shopify:\/\/shop_images\/Header-slider-image-03.jpg"
           }
         },
         "d25060f9-2342-49fc-bffa-3576438d48c5": {
           "type": "slider_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/life-style-product-here_e5390466-ef7e-4d19-af1f-b97047ed7ad0.jpg"
+            "image": "shopify:\/\/shop_images\/home_slide_2.jpg"
+          }
+        },
+        "79252f68-8aa5-48cc-8f18-7b752d337b71": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Header-slider-image-05.jpg"
           }
         }
       },
@@ -32,15 +38,16 @@
         "090a2923-1937-4a24-af5f-d78417d7ce09",
         "92c1809e-a3e2-47a1-9338-4c08e79d8a88",
         "930d9fc9-37a3-48d0-8db2-9bca89f47ff9",
-        "d25060f9-2342-49fc-bffa-3576438d48c5"
+        "d25060f9-2342-49fc-bffa-3576438d48c5",
+        "79252f68-8aa5-48cc-8f18-7b752d337b71"
       ],
       "settings": {
         "section_title": "Beauty Picked <br>Just For You",
         "text": "<p>The Cohorted Beauty Box is a curation of hand-picked premium products selected by our beauty experts. It contains a secret selection of beauty must-haves, enclosed in an elegant all-black exterior, with 100% sustainable packaging.<\/p>",
         "button_primary": "SHOP BEAUTY BOXES",
-        "button_primary_url": "#",
+        "button_primary_url": "shopify:\/\/products\/glam-and-go-party-edit",
         "button_secondary": "SUBSCRIBE NOW",
-        "button_secondary_url": "#"
+        "button_secondary_url": "shopify:\/\/pages\/black-edition-new"
       }
     },
     "1637663171009ad60c": {
@@ -92,7 +99,8 @@
         "5bd8542f-2172-4d6c-991a-bab53473a10b"
       ],
       "settings": {
-        "section_title": "FEATURED IN:"
+        "section_title": "FEATURED IN:",
+        "bg_color": "#000000"
       }
     },
     "16376651973aa099d6": {
@@ -100,9 +108,9 @@
       "settings": {
         "text": "<p>We're an activist-driven beauty box & shop, curated for a modern, progressive life. Always clean, cruelty-free, and oh-so vegan.<\/p>",
         "button_primary": "SHOP BEAUTY BOXES",
-        "button_primary_url": "#",
+        "button_primary_url": "shopify:\/\/products\/cohorted-subscription-beauty-box",
         "button_secondary": "SUBSCRIBE OUR BEAUTY BOX",
-        "button_secondary_url": "#"
+        "button_secondary_url": "shopify:\/\/pages\/black-edition-new"
       }
     },
     "163766681042642122": {
@@ -111,45 +119,51 @@
         "1637666810b0d36d5e-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "classic-beauty-boxes"
-          }
-        },
-        "1637666810b0d36d5e-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "letterbox-gifts"
+            "collection": "subscription-box-collection",
+            "collection_image_new": "shopify:\/\/shop_images\/beauty-boxes-01.jpg"
           }
         },
         "1637666810b0d36d5e-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "ovali-collection"
+            "collection": "classic-beauty-boxes",
+            "collection_image_new": "shopify:\/\/shop_images\/beauty-boxes-02-Classic-Box.jpg"
           }
         },
         "d083f8d6-c75f-411b-a4f8-97ed2bacaaf1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "the-essentials-edit"
+            "collection": "limited-edition-beauty-boxes",
+            "collection_image_new": "shopify:\/\/shop_images\/beauty-boxes-03-Limited-Edition_1.jpg"
+          }
+        },
+        "1637666810b0d36d5e-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "letterbox-gifts",
+            "collection_image_new": "shopify:\/\/shop_images\/beauty-boxes-04-Letterbox-Gifts.jpg"
           }
         },
         "b8293ce4-182d-4787-94e1-c6df9138d291": {
           "type": "featured_collection",
           "settings": {
-            "collection": "beauty-for-conservation-makeup-bags"
+            "collection": "cohorted-gift-cards",
+            "collection_image_new": "shopify:\/\/shop_images\/beauty-boxes-05-Gift-cards.jpg"
           }
         },
         "e635f5c9-25ec-43c8-afcb-5c267823de87": {
           "type": "featured_collection",
           "settings": {
-            "collection": "cohorted-advent-calendars"
+            "collection": "cohorted-advent-calendars",
+            "collection_image_new": "shopify:\/\/shop_images\/beauty-boxes-06-Advent-Calendar.jpg"
           }
         }
       },
       "block_order": [
         "1637666810b0d36d5e-0",
-        "1637666810b0d36d5e-1",
         "1637666810b0d36d5e-2",
         "d083f8d6-c75f-411b-a4f8-97ed2bacaaf1",
+        "1637666810b0d36d5e-1",
         "b8293ce4-182d-4787-94e1-c6df9138d291",
         "e635f5c9-25ec-43c8-afcb-5c267823de87"
       ],
@@ -163,19 +177,21 @@
       "type": "gallery-collection",
       "settings": {
         "image_box_1": "shopify:\/\/shop_images\/20210825-produtos-pre-maquiagem-que-voc-precisa-testar-kylier-20210518222954-2.jpg",
-        "title": "Cohorted Sustainability",
+        "title": "Cohorted <br> Sustainability",
         "text": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,<\/p>",
         "url_text": "Learn More",
-        "url": "#",
+        "url": "shopify:\/\/pages\/about-us-page",
         "image_box_2": "shopify:\/\/shop_images\/20210825-cohorted_187571009_744233156192476_1719330821901752303_n.jpg",
-        "image_box_3": "shopify:\/\/shop_images\/20210825-cohorted_187571009_744233156192476_1719330821901752303_n.png"
+        "image_box_3": "shopify:\/\/shop_images\/20210825-cohorted_187571009_744233156192476_1719330821901752303_n.png",
+        "icons_url_1": "",
+        "icons_url_2": ""
       }
     },
     "163775437718cb5645": {
       "type": "feature-collection",
       "settings": {
         "title": "Shop Our Collections",
-        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p><\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><br><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
         "collection": "classic-beauty-boxes"
       }
     },
@@ -205,23 +221,58 @@
           "settings": {
             "linktext": "Certified"
           }
+        },
+        "a406d3ec-398a-4d77-b77a-d5371870f203": {
+          "type": "select",
+          "settings": {
+            "linktext": "Cruelty free"
+          }
+        },
+        "7013d166-4eee-4207-b8aa-841449ab935e": {
+          "type": "select",
+          "settings": {
+            "linktext": "Vegan"
+          }
+        },
+        "3a38963d-7862-4554-83c4-3974f64c4dea": {
+          "type": "select",
+          "settings": {
+            "linktext": "No Harsh Chemicals"
+          }
+        },
+        "356c70ed-5d6e-4600-afd8-d4bb7a281c43": {
+          "type": "select",
+          "settings": {
+            "linktext": "Certified"
+          }
         }
       },
       "block_order": [
         "1637759844be2bb37b-0",
         "1637759844be2bb37b-1",
         "f703b981-5738-4a4e-bb79-c2f7b27acbf6",
-        "f6e0b31d-f6be-46f5-9a49-f491be52ec57"
+        "f6e0b31d-f6be-46f5-9a49-f491be52ec57",
+        "a406d3ec-398a-4d77-b77a-d5371870f203",
+        "7013d166-4eee-4207-b8aa-841449ab935e",
+        "3a38963d-7862-4554-83c4-3974f64c4dea",
+        "356c70ed-5d6e-4600-afd8-d4bb7a281c43"
       ],
       "settings": {
-        "text-box": "Title"
+        "hide_mob": false
       }
     },
     "16378198083e5d0414": {
       "type": "featured-product",
       "settings": {
         "featured_product": "cohorted-subscription-beauty-box",
-        "background_info": "shopify:\/\/shop_images\/Share-Friends-Background_b95973e7-7529-4263-9530-dde9f563dfad.png"
+        "featured_image": "shopify:\/\/shop_images\/best-brand-2.jpg",
+        "background_info": "shopify:\/\/shop_images\/Share-Friends-Background.jpg",
+        "info_bg": "",
+        "text_color": "",
+        "linktext": "COMPLETE SUBSCRIPTION",
+        "link2": "shopify:\/\/pages\/black-edition-new",
+        "link": "shopify:\/\/products\/cohorted-subscription-beauty-box",
+        "sectionOrder": "orderThree"
       }
     }
   },

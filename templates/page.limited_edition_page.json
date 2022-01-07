@@ -1,12 +1,231 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "16387897538447c15d": {
+      "type": "content-with-image-slider",
+      "blocks": {
+        "a5e39408-e9b4-4d84-b95b-dc4b2b5ce160": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/harvey-nichs-limited-edition-page.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "a5e39408-e9b4-4d84-b95b-dc4b2b5ce160"
+      ],
+      "settings": {
+        "section_title": "What Are Limited Edition Boxes?",
+        "text": "<p>Our Limited Edition beauty boxes are our specially curated edits, perfect for anyone at any time. Whether you’re looking for a special gift for a special someone, or a self-care treat for yourself, our themed boxes and exclusive brand collaborations are chock-full of beauty favourites. With more exclusive brand and influencer collaborations to come, stay one step ahead in the beauty game!<\/p>",
+        "button_primary": "",
+        "button_primary_url": "",
+        "button_secondary": "SHOP OUR COLLECTIONS",
+        "button_secondary_url": "shopify:\/\/collections\/limited-edition-beauty-boxes"
+      }
+    },
+    "163879007037e23484": {
+      "type": "logo-image-slider",
+      "blocks": {
+        "52778550-4472-4501-a56d-534d0a79ce34": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "942af07a-231c-442f-b629-d58c832c0b7f": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_3.png"
+          }
+        },
+        "21305678-ae10-4bb5-bb16-c9a691d13d0c": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_4.png"
+          }
+        },
+        "abb5b6fc-b7cc-4958-bac1-5970f0b33245": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_1.png"
+          }
+        },
+        "c1759797-688e-4036-8f92-8e13ff90aa9f": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_2.png"
+          }
+        },
+        "552eca8d-377a-40b2-b3d9-d285a90c8f86": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Health-Wellbeing.png"
+          }
+        }
+      },
+      "block_order": [
+        "52778550-4472-4501-a56d-534d0a79ce34",
+        "942af07a-231c-442f-b629-d58c832c0b7f",
+        "21305678-ae10-4bb5-bb16-c9a691d13d0c",
+        "abb5b6fc-b7cc-4958-bac1-5970f0b33245",
+        "c1759797-688e-4036-8f92-8e13ff90aa9f",
+        "552eca8d-377a-40b2-b3d9-d285a90c8f86"
+      ],
+      "settings": {
+        "section_title": "FEATURED IN:",
+        "bg_color": "#000000"
+      }
+    },
+    "1638790421f26aed50": {
+      "type": "daynamic-products-with-image",
+      "blocks": {
+        "16387904211cb409ea-0": {
+          "type": "select",
+          "settings": {
+            "featured_product": "the-april-2021-beauty-box-curation",
+            "feature_image": "shopify:\/\/shop_images\/my-little-treat.jpg"
+          }
+        },
+        "110ff182-a429-437c-b4c6-a840cda0799d": {
+          "type": "select",
+          "settings": {
+            "featured_product": "nars",
+            "feature_image": "shopify:\/\/shop_images\/nars.jpg"
+          }
+        },
+        "f223129f-29c9-4d25-b316-52cb87ff0dec": {
+          "type": "select",
+          "settings": {
+            "featured_product": "hair-repair-beauty-box",
+            "feature_image": "shopify:\/\/shop_images\/hair-repair.jpg"
+          }
+        },
+        "609a6214-95b7-4298-a38d-3367df4ad226": {
+          "type": "select",
+          "settings": {
+            "featured_product": "glow-go-beauty-box",
+            "feature_image": "shopify:\/\/shop_images\/glow.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "16387904211cb409ea-0",
+        "110ff182-a429-437c-b4c6-a840cda0799d",
+        "f223129f-29c9-4d25-b316-52cb87ff0dec",
+        "609a6214-95b7-4298-a38d-3367df4ad226"
+      ],
+      "settings": {
+        "section_order": "",
+        "title": "Some Of Our Favourites",
+        "text": "<p>From ultimate self-care curations to thoughtful beauty gifts for someone else, our favourite Limited Edition Beauty Boxes are as popular as ever! Whether you are a skincare fanatic, make-up enthusiast or go crazy for cosmetics, Cohorted have well and truly got you covered. Both sustainable and luxe, our beauty boxes come thoughtfully packaged, expertly picked, and competitively priced. Enter the world of stellar skincare, make-up must-haves and holy-grail haircare.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/limited-edition-beauty-boxes",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/guilherme-almeida.jpg",
+        "swipe_coloum": true
+      }
+    },
+    "16387904240d1d1d7b": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "",
+        "title": "Just For You Edit",
+        "overlap_heading": false,
+        "text": "<p>Give the gift of luxury beauty with a hand-crafted curation of make-up and skincare in our ‘Just For You’ Limited Edition Beauty Box. All packaged in a slick 100% recyclable gift box and delivered straight to their letterbox. Only the best brands make it into our beauty boxes, so you can always count on us.<br><br> Whether you’re treating your mum, grandma, aunt or friend, there’s a little something for everyone to pamper, indulge and spoil themselves after a tough year. Gift the ultimate luxury beauty box curation worth £424+ for just £50, and let the glowing begin.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/limited-edition-beauty-boxes",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/ltd-page-jfy-01.jpg",
+        "bg_color": "",
+        "enable_gradiant": true,
+        "swipe_column": false,
+        "margin_bottom": false
+      }
+    },
+    "163879137232318117": {
+      "type": "daynamic-products-with-image",
+      "blocks": {
+        "1638791372e72a27f7-0": {
+          "type": "select",
+          "settings": {
+            "featured_product": "hair-repair-beauty-box",
+            "feature_image": "shopify:\/\/shop_images\/hair-repair.jpg"
+          }
+        },
+        "a46ef5ec-3aef-480e-8f4b-319dde939925": {
+          "type": "select",
+          "settings": {
+            "featured_product": "harvey-nichols-perfume-gift-box",
+            "feature_image": "shopify:\/\/shop_images\/HarveyNichols_1.jpg"
+          }
+        },
+        "0f2467d2-4af7-4c01-a35f-e2f455105c0a": {
+          "type": "select",
+          "settings": {
+            "featured_product": "limited-edition-mystery-box",
+            "feature_image": "shopify:\/\/shop_images\/cohorted.jpg"
+          }
+        },
+        "1fc31cbc-f691-48e2-8d1d-fa2b8305958b": {
+          "type": "select",
+          "settings": {
+            "featured_product": "monuskin-vit-c-limited-edition-beauty-box",
+            "feature_image": "shopify:\/\/shop_images\/Monuskin-vit-c-box-tile.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1638791372e72a27f7-0",
+        "a46ef5ec-3aef-480e-8f4b-319dde939925",
+        "0f2467d2-4af7-4c01-a35f-e2f455105c0a",
+        "1fc31cbc-f691-48e2-8d1d-fa2b8305958b"
+      ],
+      "settings": {
+        "section_order": "2",
+        "title": "Top Selling Classics",
+        "text": "<p>Our best-selling boxes are packed full of cult classics and under-the-radar products which will vamp up any beauty collection. From brand exclusive to combo curations, these Cohorted exclusives offer an opportunity to trial the best of luxury beauty without the investment. And even better, if a monthly subscription isn’t your thing, you can purchase these monthly boxes as a one-off! Access and discover our themed Limited Edition curations today. You can thank us later…<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/limited-edition-beauty-boxes",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/ekaterina-mitkina.jpg",
+        "swipe_coloum": true
+      }
+    },
+    "1638791834e33046a4": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "1",
+        "title": "Limited Edition 'Check Your Tits' Tote Bag",
+        "overlap_heading": true,
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "linktext": "SUBSCRIBE NOW",
+        "link": "shopify:\/\/collections\/limited-edition-beauty-boxes",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/LargePic2.jpg",
+        "bg_color": "",
+        "enable_gradiant": true,
+        "swipe_column": false,
+        "margin_bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16387897538447c15d",
+    "163879007037e23484",
+    "1638790421f26aed50",
+    "16387904240d1d1d7b",
+    "163879137232318117",
+    "1638791834e33046a4"
+  ]
+}

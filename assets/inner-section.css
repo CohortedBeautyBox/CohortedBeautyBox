@@ -1320,7 +1320,10 @@ h3.shopify_explorer_faq__separator {
         font-size: 22px;
     }
     .row.category-list .image img {
-        height: 360px;
+        height: 375px;
+    }
+    .redeem-gifts ul.grid-point-listd img {
+        margin: 0 auto;
     }
     .row.category-list .item {
         width: 100%;

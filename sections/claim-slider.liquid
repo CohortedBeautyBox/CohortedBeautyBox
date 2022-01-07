@@ -1,10 +1,17 @@
+<style>
+	.slider-content-item .content-item::before {
+    content: attr(data-number)  !important;
+}
+</style>
+
 <div class="slider-content">
 	<h2 class="site_heading">{{ section.settings.title_main }}</h2>
 		<div class="slider-content-items">
 			{% for block in section.blocks %} 	
     <div class="slider-content-item">
 		<img class="testimonila-image" src="{{ block.settings.featured_image | img_url: 'master' }}" >
-		<div class="content-item">
+		<div class="content-item" data-number="{% if forloop.index < 9%}0{% endif %}{{forloop.index}}">
+		
 			<h4 class="title-h4">{{ block.settings.title }}</h4>
 			<p class="paragraph">{{ block.settings.paragraph }}</p>
 			{% if block.settings.linktext != blank %}
@@ -238,6 +245,7 @@ a.primary-btn-new {
 		  arrow: true,
 		  centerPadding: '0',
 		  centerMode: true,
+		  
 		  speed: 300,
 		  slidesToShow: 1,
 		  slidesToScroll: 1,
@@ -311,7 +319,6 @@ a.primary-btn-new {
 				"type": "header",
 				"content": "Slide Content"		  
 				},
-			
 				{
 					"type": "text",
 					"id": "title",

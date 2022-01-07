@@ -41,7 +41,13 @@
   {% endif %}
   {{ 'slick.css' | asset_url | stylesheet_tag }}
   {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
-  
+  <style>
+    .insta-header {
+    width: 100% !important; 
+}
+
+    </style>
+    
   <!-- Javascript -->
 
   {{ 'jquery.min.js' | asset_url | script_tag }}
@@ -170,7 +176,8 @@
 
   {% render 'shogun-head' %}
   {% include "loyaltylion" %}
-  {%- render 'bold-subscription-widget' -%}
+  {{ 'bsub.js' | asset_url | script_tag }} 
+{{ 'bsub.scss.css' | asset_url | stylesheet_tag }}
 </head>
 
 <body id="{{ page_title | handleize }}" class="{% if template contains 'index' %}header-transparent{% else %}header-black-inner{% endif %} cms-home-v2 cms-{{template}}{% if template contains 'index' or template contains 'collection' or template contains 'product' or template contains 'customers' %} white-nav{% endif %}">
@@ -251,6 +258,27 @@
           });
           });
           </script>	
-
+ {% if settings.klaviyo_form != blank %}
+ <div style="display:none;" class="klaviyo_form_custom popup-main">
+    <div class="popup-inner">
+      <div class="close_icon">
+        <img src="{{ 'close_icon.png' | asset_img_url: 'master'}}">
+      </div>
+      {{ settings.klaviyo_form }}
+    </div>
+</div>
+ {% endif %}
+  <style>
+{% if customer %}
+    .lion-rewards-list .lion-action-button.lion-action-button--tile {
+      background: #000 !important;
+  }
+  {% else %}
+    .lion-rewards-list .lion-action-button.lion-action-button--tile {
+      background: #a7a7a7 0 0 no-repeat padding-box !important;
+  }
+  {% endif %}
+</style>
 </body>
+
 </html>

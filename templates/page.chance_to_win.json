@@ -1,12 +1,159 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "16406959185be4dc9b": {
+      "type": "chance_to_win",
+      "settings": {
+        "banner_right": false,
+        "feature_image": "shopify:\/\/shop_images\/lamer_bg.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/lemo_phn.jpg",
+        "sub_title": "",
+        "title": "LAMER",
+        "text": "<p>Born from the sea, the illustrious and beloved La Mer skin care line inspires a cult-like devotion. Each product is infused with the brand’s unique Miracle Broth, created by aerospace physicist Dr Max Huber, which contains highly active natural ingredients such as nutrient-rich algae, protective antioxidant extracts and semi-precious stones. <br><br> Celebrated by notable figures throughout the whole world, their products possess the power to visibly transform the skin, improving hydration and firmness while restoring radiance for a younger appearance.<\/p>",
+        "link": "",
+        "klaviyo_form": "<h2>Enter To Win The Luxe La Mer Prize Bundle. Ready Set Win.<\/h2>\n<div class=\"klaviyo-form-Tm9c7e form-win-signup-nn\"><\/div>",
+        "linktext": "JOIN TO WIN",
+        "sectionOrder": "orderTwo",
+        "bg_color": "",
+        "title_color": "#1a1a1a",
+        "text_color": "#1a1a1a",
+        "link2": "",
+        "link3": "",
+        "enable_apps": false
+      }
+    },
+    "163894878105e30c94": {
+      "type": "full-with-banner",
+      "disabled": true,
+      "settings": {
+        "banner_right": false,
+        "feature_image": "shopify:\/\/shop_images\/lamer_bg.jpg",
+        "sub_title": "",
+        "title": "LAMER",
+        "text": "<p>Born from the sea, the illustrious and beloved La Mer skin care line inspires a cult-like devotion. Each product is infused with the brand’s unique Miracle Broth, created by aerospace physicist Dr Max Huber, which contains highly active natural ingredients such as nutrient-rich algae, protective antioxidant extracts and semi-precious stones. <br><br> Celebrated by notable figures throughout the whole world, their products possess the power to visibly transform the skin, improving hydration and firmness while restoring radiance for a younger appearance.<\/p>",
+        "link": "shopify:\/\/pages\/contact-us",
+        "linktext": "JOIN TO WIN",
+        "sectionOrder": "orderTwo",
+        "bg_color": "",
+        "title_color": "#1a1a1a",
+        "text_color": "#1a1a1a",
+        "link2": "",
+        "link3": "",
+        "enable_apps": false
+      }
+    },
+    "main": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Enter To Win The Luxe La Mer Prize Bundle.",
+        "text": "<p>Ready, set, win... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Read full terms to join.<\/p><p>\n<\/p><h5>Closing date: 31st October, 2021<\/h5>",
+        "linktext": "Join Now",
+        "link": "",
+        "sectionOrder": "orderTwo"
+      }
+    },
+    "16389508601785a557": {
+      "type": "product-bundle",
+      "blocks": {
+        "47a95844-2f5b-4e0e-9dd4-a50fd12ba965": {
+          "type": "select",
+          "settings": {
+            "featured_product": "12-wishes-advent-calendar-2020",
+            "feature_image": "shopify:\/\/shop_images\/bundle.png"
+          }
+        },
+        "774a286e-ea73-450f-977d-5143d94d8f18": {
+          "type": "select",
+          "settings": {
+            "featured_product": "autumn-feels-limited-edition-beauty-box",
+            "feature_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker.png"
+          }
+        },
+        "c7a28f3e-8229-4a43-8332-25f4f3e81ebc": {
+          "type": "select",
+          "settings": {
+            "featured_product": "the-april-2021-beauty-box-curation",
+            "feature_image": "shopify:\/\/shop_images\/bundle.png"
+          }
+        },
+        "c827c5e6-3ba6-422e-9b07-a2902eda14fe": {
+          "type": "select",
+          "settings": {
+            "featured_product": "black-edition-beauty-box",
+            "feature_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_3.png"
+          }
+        }
+      },
+      "block_order": [
+        "47a95844-2f5b-4e0e-9dd4-a50fd12ba965",
+        "774a286e-ea73-450f-977d-5143d94d8f18",
+        "c7a28f3e-8229-4a43-8332-25f4f3e81ebc",
+        "c827c5e6-3ba6-422e-9b07-a2902eda14fe"
+      ],
+      "settings": {
+        "section_order": "",
+        "title": "Enter To Win The Luxe La Mer Prize Bundle.",
+        "text": "<p>Ready, set, win... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Read full terms to join.<\/p>\n<h5>\nCLOSING DATE: 31ST OCTOBER, 2021\nJOIN NOW\nEnter <\/h5>",
+        "linktext": "Join Now",
+        "link": "shopify:\/\/pages\/contact-us",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/20181121-shutterstock_1236438265.jpg",
+        "swipe_coloum": false
+      }
+    },
+    "163895480607acfd90": {
+      "type": "Image-block",
+      "blocks": {
+        "1638954806b45af381-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/blog-1.jpg",
+            "job_title": "MINDFUL CHEF",
+            "job_position": "GET 25% OFF DISCOUNT - USE CODE: COHORTED",
+            "linktext": "ENTER NOW!",
+            "link": "https:\/\/www.mindfulchef.com\/cohorted",
+            "sectionOrder": "orderTwo"
+          }
+        },
+        "5b3b1b06-bd8e-4791-83ab-54264d05d3fd": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/blog-2.jpg",
+            "job_title": "EMMA HARDIE",
+            "job_position": "ENTER TO WIN THE EMMA HARDIE GIVEAWAY NOW.",
+            "linktext": "ENTER NOW!",
+            "link": "\/pages\/win",
+            "sectionOrder": "orderTwo"
+          }
+        },
+        "805f3adb-dd23-4dab-a040-20b91be55657": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/blog-3.jpg",
+            "job_title": "THOM ELZNER",
+            "job_position": "GET FREE GUA SHA STONE - USE CODE: COHORSTONE",
+            "linktext": "ENTER NOW!",
+            "link": "https:\/\/thomelznerskincare.com\/",
+            "sectionOrder": "orderTwo"
+          }
+        }
+      },
+      "block_order": [
+        "1638954806b45af381-0",
+        "5b3b1b06-bd8e-4791-83ab-54264d05d3fd",
+        "805f3adb-dd23-4dab-a040-20b91be55657"
+      ],
+      "settings": {
+        "title": "Discover More on Cohorted Cult",
+        "text": "",
+        "bag-color": ""
+      }
+    }
+  },
+  "order": [
+    "16406959185be4dc9b",
+    "163894878105e30c94",
+    "main",
+    "16389508601785a557",
+    "163895480607acfd90"
+  ]
+}

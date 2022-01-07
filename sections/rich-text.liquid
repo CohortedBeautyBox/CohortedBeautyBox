@@ -10,7 +10,7 @@
 		{% if section.settings.linktext != blank %}
 		<li>
 			
-			<a class="{% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+			<a class="popup_open {% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}" {% if section.settings.link != blank %} href="{{ section.settings.link }}"{% endif %}>{{ section.settings.linktext }}</a>
 		 
 		</li>
 		{% endif %}

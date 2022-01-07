@@ -1,12 +1,184 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "163852250355a2c0cb": {
+      "type": "full-with-banner",
+      "settings": {
+        "banner_right": false,
+        "feature_image": "shopify:\/\/shop_images\/advent-bg.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/slider-mob.jpg",
+        "sub_title": "",
+        "title": "Available Now",
+        "text": "THE UK'S LUXURY 12 DOOR ADVENT<br> CALENDAR WORTH £463.50",
+        "link": "shopify:\/\/products\/cohorted-beauty-advent-calendar-2021",
+        "linktext": "PRE-ORDER",
+        "sectionOrder": "orderThree",
+        "bg_color": "",
+        "title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "link2": "",
+        "link3": "",
+        "enable_apps": false
+      }
+    },
+    "1638522509f8d1321f": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "2",
+        "title": "A Cohorted Christmas Is Coming",
+        "overlap_heading": true,
+        "text": "<p>Cohorted's 12 Wishes Beauty Advent Calendar was the first of its kind and we are back this year, bigger and better than before. The countdown to Christmas will be as exciting as ever, brimming with luxe beauty items tried and tested by our team of experts. <br> <br> Expect your 2021 Cohorted Beauty Advent Calendar to be filled with beauty bestsellers and undiscovered heroes from our favourite cult and discovery brands.<br><br> Pre Order Now and don’t forget to sign up to our newsletter and keep an eye on your inbox for exclusive discounts, updates and product reveals…<\/p>",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderThree",
+        "feature_image": "shopify:\/\/shop_images\/20-off.jpg",
+        "bg_color": "",
+        "enable_gradiant": false,
+        "swipe_column": false,
+        "margin_bottom": false
+      }
+    },
+    "1638524901f24602b4": {
+      "type": "rich-text",
+      "settings": {
+        "title": "And There's More",
+        "text": "All Advent Calendar shoppers will also be in with the amazing chance to own the ultimate Christmas party fashion <br>statement. One lucky recipient – and only one – will receive a ‘Cohorted Beauty Advent Calendar VIP PASS’ to <br>redeem a luxury Jacquemus leather cross-body bag, worth £610.00.",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne",
+        "feature_image": "shopify:\/\/shop_images\/Mobile-bag-section-jacqumus.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/jacque_img.jpg"
+      }
+    },
+    "1638534690ef66020a": {
+      "type": "Image-slider",
+      "blocks": {
+        "163853469016dc5530-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/3.jpg"
+          }
+        },
+        "6e3844c8-f200-4149-ab4c-f229224727db": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/5.jpg"
+          }
+        },
+        "4751907d-9ede-4ceb-823c-c552544f7a8b": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/2.jpg"
+          }
+        },
+        "3c3f0c83-1cb2-4c27-997e-3b29c7af273f": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/4.jpg"
+          }
+        },
+        "c4d7dae4-7d8c-4c46-acd7-df6f77b2f196": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/1.jpg"
+          }
+        },
+        "f106f977-6d31-4f71-9d5b-a0aec3d46bb7": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "163853469016dc5530-0",
+        "6e3844c8-f200-4149-ab4c-f229224727db",
+        "4751907d-9ede-4ceb-823c-c552544f7a8b",
+        "3c3f0c83-1cb2-4c27-997e-3b29c7af273f",
+        "c4d7dae4-7d8c-4c46-acd7-df6f77b2f196",
+        "f106f977-6d31-4f71-9d5b-a0aec3d46bb7"
+      ],
+      "settings": {
+        "title": "Our Previous Calendar",
+        "text": "<p>Take a look at last years 2020 Cohorted 12 Wishes Beauty Advent Calendar.<\/p>",
+        "link": "https:\/\/cult.cohorted.co.uk\/beauty\/cohorted-2021-advent-calendar",
+        "linktext": "EXPLORE OUR 2020 CALENDAR",
+        "btn_class": "secondary-btn",
+        "bag-color": "#ffffff"
+      }
+    },
+    "16385350825a317ec7": {
+      "type": "review-slider",
+      "blocks": {
+        "1594d439-08a3-48cb-9282-465510aa9948": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Cohorted advent calendar was the absolute bomb dot com!! The cost of this Verso serum was more than what I paid for the 12-day advent calendar! Since the advent calendar, I purchased the Verso X Cohorted box and I’m shook at the value. If you haven’t heard of Cohorted, they are a UK based luxury subscription box.​<\/p>",
+            "author": "- @beautybyhiuy",
+            "review_bg": "#171717",
+            "text_color": "#ffffff"
+          }
+        },
+        "919bd180-f179-43f5-85bf-5f8ae32b4c84": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Cohorted are fantastic and I joined the list as soon as I heard about the release of their first calendar.​​<\/p>",
+            "author": "- @emmainessence",
+            "review_bg": "#171717",
+            "text_color": "#ffffff"
+          }
+        },
+        "3ba418b1-f669-481a-9e71-28cead7e5914": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Is anyone else as excited as me about their advent calendar? My long anticipated Cohorted 12 Wishes arrived today. Look how big it is and it’s quite heavy. Swipe to see the beautiful print on the front. I’m not going to burst any bubbles except to say in one drawer there is 3 products​.<\/p>",
+            "author": "- @lindseyprry",
+            "review_bg": "#171717",
+            "text_color": "#ffffff"
+          }
+        },
+        "a0d8de26-8a0b-4a64-8575-cad88080164b": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Cohorted advent calendar was the absolute bomb dot com!! The cost of this Verso serum was more than what I paid for the 12-day advent calendar! Since the advent calendar, I purchased the Verso X Cohorted box and I’m shook at the value. If you haven’t heard of Cohorted, they are a UK based luxury subscription box.​<\/p>",
+            "author": "- @beautybyhiuy",
+            "review_bg": "#171717",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "1594d439-08a3-48cb-9282-465510aa9948",
+        "919bd180-f179-43f5-85bf-5f8ae32b4c84",
+        "3ba418b1-f669-481a-9e71-28cead7e5914",
+        "a0d8de26-8a0b-4a64-8575-cad88080164b"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "text": "<p>Discover what others have said about our last years 2020 Cohorted 12 Wishes Beauty Advent Calendar.<\/p>",
+        "link": "",
+        "linktext": "",
+        "btn_class": "",
+        "bag-color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163852250355a2c0cb",
+    "1638522509f8d1321f",
+    "1638524901f24602b4",
+    "1638534690ef66020a",
+    "16385350825a317ec7"
+  ]
+}

@@ -113,11 +113,11 @@
                         </div>
                         <div class="pro-discription">
                           
-                          <p>{{ product.description | strip_html | truncatewords: 31 }}</p>
+                          <p>{{ product.description | strip_html | truncatewords: 32 }}</p>
                           <a href="#shopify-section-template--14219375804521__16391422773c4a5c5b">MORE INFORMATION</a>
                         </div>
                        
-                        <div class="pro-subscribe">
+<!--                         <div class="pro-subscribe">
                         <fieldset>
                           <label>
                             <input type="radio" name="radio-button" value="css" checked />
@@ -125,7 +125,7 @@
                           </label>
                          
                         </fieldset>
-                      </div>
+                      </div> -->
 
                         {% if variant.price < variant.compare_at_price %}
                         <p class="old-price">
@@ -166,6 +166,7 @@
                             {% endif %}
                             <div class="ro_widget"></div>
                             {% include 'product-personalizer' %}
+                            {% render 'bsub-widget' %}
                             <div class="add-to-qty">
                               <div class="desc-qty button-qty"><span>-</span></div>
                               <input type="text" name="quantity" id="quantity" maxlength="12" value="1" title="Qty" class="input-text qty" />
@@ -232,11 +233,11 @@
                    <div class="pro-bottom-icons">
 <ul>
   <li>
-    <img src="{{ 'gift_icon.png' | asset_img_url: 'master'}}"><span>100% sustainable packaging</span>   
+    <img src="{{ 'gift_icon.svg' | asset_url}}"><span>100% sustainable packaging</span>   
   </li>
-    <li> <img src="{{ 'time_.png' | asset_img_url: 'master'}}"><span>48 hour recorded delivery</span>   
+    <li> <img src="{{ 'time.svg' | asset_url}}"><span>48 hour recorded delivery</span>   
     </li>
-      <li> <img src="{{ 'expert.png' | asset_img_url: 'master'}}"><span>Expect to see a range of both well known and niche luxury brands.</span>
+      <li> <img src="{{ 'expert.svg' | asset_url}}"><span>Expect to see a range of both well known and niche luxury brands.</span>
     
   </li>
 </ul>

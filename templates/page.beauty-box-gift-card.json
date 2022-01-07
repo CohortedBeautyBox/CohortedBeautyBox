@@ -1,12 +1,54 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "1638769070a6861167": {
+      "type": "full-with-banner",
+      "settings": {
+        "banner_right": true,
+        "feature_image": "shopify:\/\/shop_images\/gift_bg.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/gift_mob_bg.jpg",
+        "sub_title": "",
+        "title": "Cohorted Gift Cards",
+        "text": "Shopping for someone special but not sure what to give them? Why not give them the gift of choice with the Cohorted Gift Card. <br><br>Our beauty box gift cards are delivered by email and include all the instructions you need to redeem at the checkout with no additional processing fees.",
+        "link": "https:\/\/www.cohorted.co.uk\/products\/gift-card",
+        "linktext": "GIVE A GIFT CARDS",
+        "sectionOrder": "orderThree",
+        "bg_color": "",
+        "title_color": "#ffffff",
+        "text_color": "#fefefe",
+        "link2": "",
+        "link3": "",
+        "enable_apps": false
+      }
+    },
+    "1638769902d5013264": {
+      "type": "gallery-collection",
+      "settings": {
+        "image_box_1": "shopify:\/\/shop_images\/gift_beauty_left.jpg",
+        "title": "Give The Gift of Beauty",
+        "text": "<p>Available in a value of your choice. Cohorted gift cards can be emailed to the giver and printed out as a foldable card, or emailed directly to the receiver so they can hand-pick their favourite beauty must-haves.<br><br> The perfect gift for an ultimate beauty junkie. Our beauty box gift cards can be used in conjunction with other methods of payment and more than one can be added to your account at any time! Redeemable against any of our exclusive one-off beauty boxes, our virtual gift cards are delivered instantly to your inbox and can even include a personalised message. Why not chose the most personal and versatile beauty gift?<\/p>",
+        "url_text": "SHOP GIFT CARDS",
+        "url": "https:\/\/www.cohorted.co.uk\/products\/gift-card",
+        "image_box_2": "shopify:\/\/shop_images\/gift_card_8293ddfa-638e-424d-8b34-ca72a8d0032b.jpg",
+        "image_box_3": "shopify:\/\/shop_images\/gift_card_bottom.jpg",
+        "icons_url_1": "",
+        "icons_url_2": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1638769070a6861167",
+    "1638769902d5013264"
+  ]
+}

@@ -1,12 +1,118 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "16384470659823301d": {
+      "type": "full-with-banner",
+      "settings": {
+        "banner_right": false,
+        "feature_image": "shopify:\/\/shop_images\/intro_banner_amb.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/mobile-2.jpg",
+        "sub_title": "Our Beauty Ambassador",
+        "title": "Introducing Elle L",
+        "text": "The UK‘s No1 luxury beauty box provider; Cohorted is delighted to announce a new exciting adventure with model and music artist in the making, Elle L. Previously, Elle L has walked at London Fashion Week, also modelling for Balmain. Working with the likes of Skinade and Skinceuticals, Elle L is currently the voice of the Lacoste Pour Femme and she is also an advocate for MQ Mental Health.",
+        "link": "shopify:\/\/collections\/all",
+        "linktext": "GET IN TOUCH",
+        "sectionOrder": "orderThree",
+        "bg_color": "",
+        "title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "link2": "",
+        "link3": "",
+        "enable_apps": false
+      }
+    },
+    "1638447534c0aa94b4": {
+      "type": "gallery-collection",
+      "settings": {
+        "image_box_1": "shopify:\/\/shop_images\/trulu_img.jpg",
+        "title": "From Yours <br>Truly, Elle L...",
+        "text": "<p>‘‘I’m a music artist a year in the making – I also model and direct. My style is described as future pop! My latest single Circles is the new sound of Lacoste’s ‘Beautifully Unexpected’ campaign and I recently debuted my first live performance on radio with BBC introducing. I’ve been in the studio for the last couple of months so there is lots of new music coming soon and I am so excited to share it with you alongside my favourite beauty tips, experiences and products!!<br> <br> Keep an eye on this page so you can find out all about my very own curation for Cohorted. I‘ll also be filling you in on some exclusive news over the next few months so stay tuned...”<\/p>",
+        "url_text": "",
+        "url": "",
+        "image_box_2": "shopify:\/\/shop_images\/elle-left.jpg",
+        "image_box_3": "shopify:\/\/shop_images\/elle--right.jpg",
+        "image_box_4": "shopify:\/\/shop_images\/sportify.png",
+        "icons_url_1": "https:\/\/open.spotify.com\/artist\/5isdI7QHDw17vE2MZW3lwO",
+        "image_box_5": "shopify:\/\/shop_images\/music.png",
+        "icons_url_2": "https:\/\/www.cohorted.co.uk\/pages\/brand-ambassador#"
+      }
+    },
+    "1638453264d1647179": {
+      "type": "instgram-gallery",
+      "blocks": {
+        "163845326433410b21-0": {
+          "type": "select",
+          "settings": {
+            "insta_img": "shopify:\/\/shop_images\/facebook.jpg",
+            "insta_title": "Facebook",
+            "linktext": "@ellelmusic",
+            "link": "https:\/\/www.facebook.com\/ellelmusic"
+          }
+        },
+        "163845326433410b21-1": {
+          "type": "select",
+          "settings": {
+            "insta_img": "shopify:\/\/shop_images\/instagram.jpg",
+            "insta_title": "Instagram",
+            "linktext": "@ellel__",
+            "link": "https:\/\/www.instagram.com\/ellel__\/"
+          }
+        },
+        "c63a357e-0eba-4374-84ce-12a47da4be2d": {
+          "type": "select",
+          "settings": {
+            "insta_img": "shopify:\/\/shop_images\/twitter.jpg",
+            "insta_title": "Twitter",
+            "linktext": "@ellel__",
+            "link": "https:\/\/twitter.com\/ellel__"
+          }
+        }
+      },
+      "block_order": [
+        "163845326433410b21-0",
+        "163845326433410b21-1",
+        "c63a357e-0eba-4374-84ce-12a47da4be2d"
+      ],
+      "settings": {
+        "text-box": "Socialise with Elle L"
+      }
+    },
+    "16384515505552c361": {
+      "type": "full-with-banner",
+      "settings": {
+        "banner_right": false,
+        "feature_image": "shopify:\/\/shop_images\/exclusive-img.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/mobile-1.jpg",
+        "sub_title": "Coming Soon",
+        "title": "Exclusive Beauty Boxes Inspired by ELLE L...",
+        "text": "",
+        "link": "shopify:\/\/collections\/all",
+        "linktext": "MESSAGE US TO NOTIFY",
+        "sectionOrder": "orderThree",
+        "bg_color": "",
+        "title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "link2": "",
+        "link3": "",
+        "enable_apps": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16384470659823301d",
+    "1638447534c0aa94b4",
+    "1638453264d1647179",
+    "16384515505552c361"
+  ]
+}

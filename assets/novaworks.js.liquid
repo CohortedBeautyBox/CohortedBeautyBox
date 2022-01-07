@@ -99,6 +99,7 @@ jQuery(function() {
 
   /* Quick view Add to cart */
   jQuery(document).on('click','.add-to-cart button.btn-cart', function () {
+
     try {
       jQuery.ajax( {
         type: 'POST',
@@ -110,11 +111,12 @@ jQuery(function() {
         },
         success : function(data) {
           jQuery.colorbox.close();
-          jQuery('#nova-notification .notification-content').html("The product <span>"+data.title+"</span> was added to your shopping cart.<br><a href=\"/cart\" class=\"button-readmore\">View Cart</a>");
-          jQuery('#nova-notification').stop().fadeIn('slow', function(){
-            setTimeout(function(){ jQuery('#nova-notification').stop().fadeOut('slow'); }, 4000);
-          }); 
-          updateMiniCart();
+          carthtmldata();
+//           jQuery('#nova-notification .notification-content').html("The product <span>"+data.title+"</span> was added to your shopping cart.<br><a href=\"/cart\" class=\"button-readmore\">View Cart</a>");
+//           jQuery('#nova-notification').stop().fadeIn('slow', function(){
+//             setTimeout(function(){ jQuery('#nova-notification').stop().fadeOut('slow'); }, 4000);
+//           }); 
+         // updateMiniCart();
         }
       });
     } catch (e) {}
@@ -426,16 +428,16 @@ jQuery(function() {
   });
 
   /* Menu */
-  jQuery('#mobile-menu').slicknav({
-    openedSymbol: '-',
-    closedSymbol: '+',
-    prependTo: '#nova-mobile-menu',
-    allowParentLinks: true
-  });
-  jQuery(".megamenu").megamenu({
-    'animation': 'fade',
-    'mm_timeout': 150
-  });
+//   jQuery('#mobile-menu').slicknav({
+//     openedSymbol: '-',
+//     closedSymbol: '+',
+//     prependTo: '#nova-mobile-menu',
+//     allowParentLinks: true
+//   });
+//   jQuery(".megamenu").megamenu({
+//     'animation': 'fade',
+//     'mm_timeout': 150
+//   });
   /* End Menu */
   // Top dropdown
   jQuery(".top-dropdown").mouseenter(function() {
@@ -449,21 +451,27 @@ jQuery(function() {
   });
   // Shopping cart dropdown		
   jQuery("#cart").on('click','.cart-contents',function(e) {
-    jQuery(".shopping-bag").toggleClass("show");
+    if(window.location.pathname != "/cart"){
+    jQuery('.cart-drawer').addClass('open_cartdrawer');
+  jQuery('.cart-overlay').show();
     e.preventDefault();
-  });
-  jQuery(document).mouseup(function (e){
-    var container = $('.shopping-bag, .cart-contents');
-    if (!container.is(e.target) && container.has(e.target).length === 0){
-      container.removeClass('show');
     }
   });
+//   jQuery(document).mouseup(function (e){
+//     var container = $('.shopping-bag, .cart-contents');
+//     if (!container.is(e.target) && container.has(e.target).length === 0){
+//       container.removeClass('show');
+//     }
+//   });
   //Top Search Trigger
-  jQuery("#top-search-trigger").click(function(e){
-    jQuery('body').toggleClass('top-search-open');
-    jQuery('#cart .shopping-bag').toggleClass('show', false);
-    e.preventDefault();
-  });
+    jQuery("#top-search-trigger").click(function(e){
+      jQuery('body').toggleClass('top-search-open');
+      if(window.location.pathname == "/cart"){
+        jQuery('.cart-drawer').removeClass('open_cartdrawer');
+        jQuery('.cart-overlay').hide();
+      }
+      e.preventDefault();
+    });
   //Top Search dropdown		
   jQuery("#top-search1").hover(function() {
     jQuery(".form-search3", this).transition({opacity:1});
@@ -628,11 +636,12 @@ function ajaxcart(id) {
         },
         success : function(data) {
           jQuery('.button-ajax-cart-id-'+id).removeClass('adding').html(addtocart_default_text);  
-          jQuery('#nova-notification .notification-content').html("The product <span>"+data.title+"</span> was added to your shopping cart.<br><a href=\"/cart\" class=\"button-readmore\">View Cart</a>");
-          jQuery('#nova-notification').stop().fadeIn('slow', function(){
-            setTimeout(function(){ jQuery('#nova-notification').stop().fadeOut('slow'); }, 4000);
-          }); 
-          updateMiniCart();
+//           jQuery('#nova-notification .notification-content').html("The product <span>"+data.title+"</span> was added to your shopping cart.<br><a href=\"/cart\" class=\"button-readmore\">View Cart</a>");
+//           jQuery('#nova-notification').stop().fadeIn('slow', function(){
+//             setTimeout(function(){ jQuery('#nova-notification').stop().fadeOut('slow'); }, 4000);
+//           }); 
+          //updateMiniCart();
+          carthtmldata();
         }
       });
     } catch (e) {}

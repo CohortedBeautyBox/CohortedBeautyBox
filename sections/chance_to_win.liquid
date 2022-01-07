@@ -17,7 +17,7 @@
 				{{ section.settings.text }} </div></div>
 	
 				{% if section.settings.linktext != blank %}
-				<a class="popup_open {% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {%else%} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+				<a class="popup_open {% if section.settings.sectionOrder == 'orderOne' %}primary-btn {% elsif section.settings.sectionOrder == 'orderTwo'%} secondary-btn {% else %} secondary-btn white{% endif%}"  href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
 				{% endif %}
 				 
 				{% if section.settings.feature_image2 != blank %}
@@ -42,17 +42,7 @@
 	</div>
 	  </div>
 	  
-	  {% if section.settings.klaviyo_form != blank %}
-	  <div style="display:none;" class="klaviyo_form_custom popup-main">
-	
-		<div class="popup-inner">
-			<div class="close_icon">
-				<img src="{{ 'close_icon.png' | asset_img_url: 'master'}}">
-			</div>
-			{{ section.settings.klaviyo_form }}
-		</div>
-	</div>
-	  {% endif %}
+	 
 	  <style>
 		  .show-mob{display: none;}
 	
@@ -112,18 +102,7 @@
 		  }
 		
 	  </style>
-	  <script>
-		  $('.popup_open').on('click',function(event){
-	event.preventDefault();
-	$('.popup-main').addClass('popup_open');
-	});
-	
-	$('.close_icon').on('click',function(event){
-	event.preventDefault();
-	$('.popup-main').removeClass('popup_open');
-	});
-	
-	  </script>
+	  
 	 
 	  {% schema %}
 	  {
@@ -167,11 +146,7 @@
 					"type": "url",
 						 "label": "Button Link"
 				  },
-				  {
-					"id": "klaviyo_form",
-					"type": "html",
-					"label": "Klavyo form field"		  
-				},
+				 
 				  {
 					"id": "linktext",
 					"type": "text",

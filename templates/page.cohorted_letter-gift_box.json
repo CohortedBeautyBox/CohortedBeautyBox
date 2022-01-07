@@ -1,12 +1,308 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "163877272481d9133f": {
+      "type": "content-with-image-slider",
+      "blocks": {
+        "c0373655-33a9-4c53-b3ac-625235d82ddd": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lbox-whatare.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c0373655-33a9-4c53-b3ac-625235d82ddd"
+      ],
+      "settings": {
+        "section_title": "What Are <br> Letterbox Gifts?",
+        "text": "<p>The Cohorted Letterbox Gift Edits are your answer to finding that special little something for any occasion big or small. Designed to be delivered straight to your loved ones, our letterbox curations are a perfect pick me up and one stop shop for a hassle free gifting experience. <\/p><p>Cohorted have curated a thoughtful selection of bespoke gifts for a variety of occasions, guaranteed to leave a lasting impression on your favourite person. Discover new ways of self-care for the mind, body and soul, whilst celebrating special moments and special people.<\/p>",
+        "button_primary": "",
+        "button_primary_url": "",
+        "button_secondary": "SHOP OUR COLLECTIONS",
+        "button_secondary_url": "shopify:\/\/collections\/letterbox-gifts"
+      }
+    },
+    "16387731112e2de415": {
+      "type": "logo-image-slider",
+      "blocks": {
+        "a5a2f72c-2b52-42be-adcd-74725646f542": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "2eea7656-b215-4bd2-99ec-e25ca8df971c": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_3.png"
+          }
+        },
+        "2b8200fd-37fb-4717-8d06-c4c17476b037": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_4.png"
+          }
+        },
+        "7c7f15d6-0d97-4b52-85eb-43a6464e0f8c": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_1.png"
+          }
+        },
+        "f284787b-ca31-4181-b8e2-419daaec8903": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_2.png"
+          }
+        },
+        "e839cd03-1716-426a-a3c3-9fb554ce4c1a": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Health-Wellbeing.png"
+          }
+        }
+      },
+      "block_order": [
+        "a5a2f72c-2b52-42be-adcd-74725646f542",
+        "2eea7656-b215-4bd2-99ec-e25ca8df971c",
+        "2b8200fd-37fb-4717-8d06-c4c17476b037",
+        "7c7f15d6-0d97-4b52-85eb-43a6464e0f8c",
+        "f284787b-ca31-4181-b8e2-419daaec8903",
+        "e839cd03-1716-426a-a3c3-9fb554ce4c1a"
+      ],
+      "settings": {
+        "section_title": "FEATURED IN:",
+        "bg_color": "#000000"
+      }
+    },
+    "163877344534ed97f4": {
+      "type": "daynamic-products-with-image",
+      "blocks": {
+        "16387734451b1eeaef-0": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-girl-youve-got-this"
+          }
+        },
+        "433af300-0e1b-4762-ba85-15eb63e30214": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-youre-all-kinds-of-wonderful"
+          }
+        },
+        "b2ba8061-62d6-41cb-9d76-6fab46766742": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-just-because"
+          }
+        },
+        "4cd298fb-7990-47cf-b7ed-41e236cb4dca": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-girls-night-in"
+          }
+        }
+      },
+      "block_order": [
+        "16387734451b1eeaef-0",
+        "433af300-0e1b-4762-ba85-15eb63e30214",
+        "b2ba8061-62d6-41cb-9d76-6fab46766742",
+        "4cd298fb-7990-47cf-b7ed-41e236cb4dca"
+      ],
+      "settings": {
+        "section_order": "",
+        "title": "Discover Letterbox Gifts",
+        "text": "<p>The Cohorted Letterbox Gift Edit team research and source trending beauty and lifestyle products, saving you the stress of finding that perfect present. Accessible to all, we want to make gifting simple and sublime.<br><br>All gift boxes are delicately packaged with sustainable shredded paper in our 100% recyclable boxes and bio-degradable, eco-friendly polymailer.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/letterbox-gifts",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/guilherme-almeida.jpg",
+        "swipe_coloum": true
+      }
+    },
+    "16387754498f083ad8": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "",
+        "title": "Thinking Of You",
+        "overlap_heading": false,
+        "text": "<p>Let someone know they’re in your thoughts with our Thinking of You gift boxes. Put a smile on a loved one’s face as they relax and re-charge with a selection of luxury products.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/letterbox-gifts",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/lbox-discover-lg.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "enable_gradiant": true,
+        "swipe_column": false,
+        "margin_bottom": false
+      }
+    },
+    "16387777604af63ad2": {
+      "type": "daynamic-products-with-image",
+      "blocks": {
+        "1638777760f422c382-0": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-girl-youve-got-this"
+          }
+        },
+        "b5b99681-7282-4831-8300-54b0651ef519": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-youre-all-kinds-of-wonderful"
+          }
+        },
+        "e97d2ff3-7334-46b8-9f25-a7b6fab8aace": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-just-because"
+          }
+        },
+        "d69f924b-5d59-4f1c-ae46-1024b9fe757e": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-girls-night-in"
+          }
+        }
+      },
+      "block_order": [
+        "1638777760f422c382-0",
+        "b5b99681-7282-4831-8300-54b0651ef519",
+        "e97d2ff3-7334-46b8-9f25-a7b6fab8aace",
+        "d69f924b-5d59-4f1c-ae46-1024b9fe757e"
+      ],
+      "settings": {
+        "section_order": "2",
+        "title": "Discover Mindfulness & Wellness",
+        "text": "<p>Designed to bring you back into balance, it’s time to slow down and focus on you; feeling good often comes from the inside out.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/letterbox-gifts",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/ekaterina-mitkina.jpg",
+        "swipe_coloum": true
+      }
+    },
+    "16387785522aececcd": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "",
+        "title": "Mindfulness & Wellness",
+        "overlap_heading": false,
+        "text": "<p>Championing the importance of wellbeing in our everyday lives, our Mindfulness &amp; Wellness Letterbox Edit curations have got you covered.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/letterbox-gifts",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/lbox-mind-lg.jpg",
+        "bg_color": "",
+        "enable_gradiant": true,
+        "swipe_column": false,
+        "margin_bottom": false
+      }
+    },
+    "16387822761c99fae5": {
+      "type": "daynamic-products-with-image",
+      "blocks": {
+        "163878227635cc7691-0": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-girl-youve-got-this"
+          }
+        },
+        "99fe8b30-6fac-4236-8204-592ab4f5985f": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-youre-all-kinds-of-wonderful"
+          }
+        },
+        "ab1596eb-05e7-47ae-aca6-a86dd6193715": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-just-because"
+          }
+        },
+        "52ee5810-ac5b-4869-ba63-9baca2fd951f": {
+          "type": "select",
+          "settings": {
+            "featured_product": "letterbox-gifts-girls-night-in"
+          }
+        }
+      },
+      "block_order": [
+        "163878227635cc7691-0",
+        "99fe8b30-6fac-4236-8204-592ab4f5985f",
+        "ab1596eb-05e7-47ae-aca6-a86dd6193715",
+        "52ee5810-ac5b-4869-ba63-9baca2fd951f"
+      ],
+      "settings": {
+        "section_order": "",
+        "title": "Discover Special Occasions",
+        "text": "<p>Surprise your loved ones with a thoughtful gift that ticks all boxes.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/letterbox-gifts",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/guilherme-almeida.jpg",
+        "swipe_coloum": true
+      }
+    },
+    "16387826401c255163": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "",
+        "title": "Special Occasions",
+        "overlap_heading": false,
+        "text": "<p>Celebrate the key milestones in life with our Special Occasions gift boxes. Whether it’s a birthday, wedding or new home, our selection of unique gift curations offer a happy unboxing experience for all.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/letterbox-gifts",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/lbox-discover-lg.jpg",
+        "bg_color": "",
+        "enable_gradiant": true,
+        "swipe_column": false,
+        "margin_bottom": true
+      }
+    },
+    "1638782894dccefd5a": {
+      "type": "full-with-banner",
+      "settings": {
+        "banner_right": false,
+        "feature_image": "shopify:\/\/shop_images\/lbox-gifts-lg.jpg",
+        "feature_mobile": "shopify:\/\/shop_images\/lbox-gifts-mob.jpg",
+        "sub_title": "",
+        "title": "Letterbox Gifts",
+        "text": "<p>We want to be the destination that customers think of and can trust, to deliver a perfect gift to share with someone else. A gift that isn’t too grand, isn’t underwhelming, and isn’t overpriced. Rather, It’s just right and captures the moment, and best of all fits perfect through a letterbox. Cohorted’s ‘Letterbox Box <br><br> Gifts’ is the perfect solution to provide a thoughtful gift, conveniently and affordably.<\/p>",
+        "link": "shopify:\/\/collections\/letterbox-gifts",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "sectionOrder": "orderThree",
+        "bg_color": "",
+        "title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "link2": "",
+        "link3": "",
+        "enable_apps": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163877272481d9133f",
+    "16387731112e2de415",
+    "163877344534ed97f4",
+    "16387754498f083ad8",
+    "16387777604af63ad2",
+    "16387785522aececcd",
+    "16387822761c99fae5",
+    "16387826401c255163",
+    "1638782894dccefd5a"
+  ]
+}

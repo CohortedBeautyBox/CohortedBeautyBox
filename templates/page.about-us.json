@@ -1,12 +1,249 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "1638875053193e0792": {
+      "type": "about-banner",
+      "settings": {
+        "banner_right": false,
+        "feature_image1": "shopify:\/\/shop_images\/Header-left-small-image.jpg",
+        "feature_image2": "shopify:\/\/shop_images\/Header-middle-image.jpg",
+        "feature_image3": "shopify:\/\/shop_images\/Header-right-small-image.jpg",
+        "sub_title": "About Cohorted",
+        "title": "UK's No.1 Premium <br>Beauty Subscription Box",
+        "title_color": "#000000",
+        "text_color": "#000000",
+        "title_bottom": "Be You Be Beautiful",
+        "text_bottom": "<p>Cohorted brings the magic of product discovery online by connecting everyday beauty lovers with a taste for premium, to leading beauty brands that you can fall in love with, if not already… From our No1 premium subscription beauty box to our Limited-Edition curations, our team of beauty enthusiasts promise to bring you the best in beauty discovery for you to trial.<\/p>",
+        "link": "shopify:\/\/pages\/black-edition-new",
+        "linktext": "SUBSCRIBE NOW",
+        "sectionOrder": "orderTwo"
+      }
+    },
+    "163888165379bb4f07": {
+      "type": "tabs",
+      "settings": {
+        "featured_image": "shopify:\/\/shop_images\/Who-we-are.jpg",
+        "title": "Who we are",
+        "text": "We wanted to deliver more than the average beauty box. Simply put, we wanted to be better. To offer quality brands that people would love and feature products that were more substantial than a hand scrub sample. That's why our beauty boxes bring you full size beauty products from the very best brands.\n<br> <br> We launched Cohorted in 2016 with a passion to provide premium products that you could actually experience and fall in love with… Fast forward to today and Cohorted has become the go-to discovery destination for consumers who want to connect with both new and established premium beauty brands. Our curations help you find something new and different to add to your beauty regime",
+        "featured_image2": "shopify:\/\/shop_images\/20210824-subscribe-bb-new.jpg",
+        "title2": "What we do",
+        "text2": "<p>We curate and create premium beauty experiences. From our award-winning monthly subscription beauty box to our personalised sustainable beauty bags and limited-edition releases. We deliver premium beauty products, content and advice with brand experience and customer focus at the centre of everything we do.<\/p>",
+        "featured_image3": "shopify:\/\/shop_images\/20211004-pexels-cottonbro-4056458.jpg",
+        "title3": "What we value",
+        "text3": "<p>We advocate “Be You Be Beautiful”. Because we believe in encouraging individuality and embracing beauty in all forms. We believe in empowering our customers by providing a platform to celebrate new beauty trends and movements. As a company, we value our environmental footprint and strive to be as sustainable as possible. Our Beauty for Conservation® movement champions sustainable beauty and supports charitable efforts that help us all take a step closer towards a more sustainable future.<\/p>"
+      }
+    },
+    "16388776275d3259b1": {
+      "type": "team-section",
+      "blocks": {
+        "16388776271695518f-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Cohorted-team-01-Jordan-Cole-Co-Founder.jpg",
+            "job_title": "Jordan Cole",
+            "job_position": "Founder"
+          }
+        },
+        "e0746ac5-05dd-4323-bb3f-0d653503d338": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Anthony-Pruden-01-1.jpg",
+            "job_title": "Anthony Pruden",
+            "job_position": "Co-Founder"
+          }
+        },
+        "9c1a8b3c-795e-4520-86c2-99e8909c8a43": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Rose-Whitelam-02.jpg",
+            "job_title": "Rose Whitelam",
+            "job_position": "Bussiness Development Manager"
+          }
+        },
+        "973b58a2-7af7-481d-8d65-bc919b1db62c": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/David-Cook-02-1.jpg",
+            "job_title": "David Cook",
+            "job_position": "Logistics & Distribution Manager"
+          }
+        },
+        "9eee0416-963a-432f-b733-a1ec178efcbe": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Cohorted-team-05-Office-Manager.jpg",
+            "job_title": "Name",
+            "job_position": "Office Manager"
+          }
+        },
+        "cfbe0a96-a4f6-4e3f-9f05-9235197ab9f3": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Cohorted-team-06-Content-team-leader.jpg",
+            "job_title": "Amelia Silvestri",
+            "job_position": "Content team leader"
+          }
+        },
+        "88795eae-00c7-4097-a887-2423535d4226": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Cohorted-team-07-digital-marketing-manager.jpg",
+            "job_title": "Name",
+            "job_position": "Digital marketing manager"
+          }
+        },
+        "29f7c265-eeab-4521-8e3f-e4b57df5bcb8": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Leah-Kerr-01-2.jpg",
+            "job_title": "Leah Kerr",
+            "job_position": "Photographer"
+          }
+        },
+        "0460dbe0-8cfd-4340-b9fb-008aa772c8bf": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/Tori-Hartin-01-1.jpg",
+            "job_title": "Tori Hartin",
+            "job_position": "Social Media & PR manager"
+          }
+        }
+      },
+      "block_order": [
+        "16388776271695518f-0",
+        "e0746ac5-05dd-4323-bb3f-0d653503d338",
+        "9c1a8b3c-795e-4520-86c2-99e8909c8a43",
+        "973b58a2-7af7-481d-8d65-bc919b1db62c",
+        "9eee0416-963a-432f-b733-a1ec178efcbe",
+        "cfbe0a96-a4f6-4e3f-9f05-9235197ab9f3",
+        "88795eae-00c7-4097-a887-2423535d4226",
+        "29f7c265-eeab-4521-8e3f-e4b57df5bcb8",
+        "0460dbe0-8cfd-4340-b9fb-008aa772c8bf"
+      ],
+      "settings": {
+        "title": "Cohorted Team",
+        "text": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<\/p>",
+        "bag-color": ""
+      }
+    },
+    "163887936877b0dfc2": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Loved by...",
+        "text": "<p>The Cohorted Beauty Box is loved and trusted by beauty experts across the UK. Here are just a few of the magazines and blogs that our beauty box has been featured in:<\/p>",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "1638879485405f909c": {
+      "type": "inner-logo-slider",
+      "blocks": {
+        "b826b9d2-dc7f-496b-8fe0-328263001d64": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "9986e9e2-8643-446f-9c1f-d5beab96f67d": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_3.png"
+          }
+        },
+        "73b0ee6b-2640-44e0-8d9b-4c9885f44c22": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_4.png"
+          }
+        },
+        "61406be6-2e52-41f4-b685-639f11abcf33": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_1.png"
+          }
+        },
+        "b4debd4e-2dd6-44a0-a668-43983489d2fd": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_2.png"
+          }
+        },
+        "88b0a542-c58c-4f12-91dc-94f3f23b06be": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Health-Wellbeing.png"
+          }
+        }
+      },
+      "block_order": [
+        "b826b9d2-dc7f-496b-8fe0-328263001d64",
+        "9986e9e2-8643-446f-9c1f-d5beab96f67d",
+        "73b0ee6b-2640-44e0-8d9b-4c9885f44c22",
+        "61406be6-2e52-41f4-b685-639f11abcf33",
+        "b4debd4e-2dd6-44a0-a668-43983489d2fd",
+        "88b0a542-c58c-4f12-91dc-94f3f23b06be"
+      ],
+      "settings": {
+        "section_title": "",
+        "bg_color": "#ffffff"
+      }
+    },
+    "1638880827df2fcbb5": {
+      "type": "collection-box",
+      "blocks": {
+        "1638880827a358b2b6-0": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/panel-1_d67ea1a4-dae3-4235-8226-59da96dc0c4d.jpg",
+            "title": "Sustainable Beauty Boxes.",
+            "link": "shopify:\/\/pages\/black-edition-new"
+          }
+        },
+        "0cafb621-1955-4fb8-be97-c49c7a5d2fea": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/panel-2_0d9318fd-249e-42cc-80d6-7151fe01d9e8.jpg",
+            "title": "Classic Beauty Boxes.",
+            "link": "shopify:\/\/pages\/limited-edition-page"
+          }
+        },
+        "c315573f-eeb6-46d0-93df-499a3f13cae5": {
+          "type": "image",
+          "settings": {
+            "featured_image": "shopify:\/\/shop_images\/panel-3_d25662fa-f270-4b0e-9893-3681f8a502da.jpg",
+            "title": "Sustainable Beauty Totes.",
+            "link": "shopify:\/\/collections\/beauty-for-conservation-makeup-bags"
+          }
+        }
+      },
+      "block_order": [
+        "1638880827a358b2b6-0",
+        "0cafb621-1955-4fb8-be97-c49c7a5d2fea",
+        "c315573f-eeb6-46d0-93df-499a3f13cae5"
+      ],
+      "settings": {
+        "site_heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1638875053193e0792",
+    "163888165379bb4f07",
+    "16388776275d3259b1",
+    "163887936877b0dfc2",
+    "1638879485405f909c",
+    "1638880827df2fcbb5"
+  ]
+}

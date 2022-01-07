@@ -1,12 +1,242 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "16383415596fe6c6bb": {
+      "type": "content-with-image-slider",
+      "blocks": {
+        "03177bd7-c4c1-4510-a8ad-1ae292be3347": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Favourite-boxes-03.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "03177bd7-c4c1-4510-a8ad-1ae292be3347"
+      ],
+      "settings": {
+        "section_title": "Classic Beauty <br>Box Collections",
+        "text": "<p>Our Classic Collection features some of our top premium beauty box curations. These timeless edits allow you to discover the latest in luxury beauty and explore previous boxes at any time. Experience the best of Cohorted with our classic beauty box collections, all beautifully packaged in our 100% sustainable boxes. Guaranteed a minimum value of £100, there’s something for every beauty lover out there.<\/p>",
+        "button_primary": "",
+        "button_primary_url": "",
+        "button_secondary": "SHOP OUR COLLECTIONS",
+        "button_secondary_url": "shopify:\/\/collections\/classic-beauty-boxes"
+      }
+    },
+    "1638342917df923dcb": {
+      "type": "logo-image-slider",
+      "blocks": {
+        "c1e7d127-4b02-4ca3-bf2c-4d6450fffbf3": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "b24f9c9d-c416-4dd5-be72-f31d7073566c": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_3.png"
+          }
+        },
+        "0945ce5e-c811-4650-a429-5ab6e323730a": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_4.png"
+          }
+        },
+        "60e703eb-969b-4ff1-ab66-ec2a7526ec06": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_1.png"
+          }
+        },
+        "21c7c73a-eff0-4e1c-be62-aaacbb6d8ede": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download-_2.png"
+          }
+        },
+        "891c992e-2d21-441e-af50-20eae75a5bf6": {
+          "type": "logo_image_slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Health-Wellbeing.png"
+          }
+        }
+      },
+      "block_order": [
+        "c1e7d127-4b02-4ca3-bf2c-4d6450fffbf3",
+        "b24f9c9d-c416-4dd5-be72-f31d7073566c",
+        "0945ce5e-c811-4650-a429-5ab6e323730a",
+        "60e703eb-969b-4ff1-ab66-ec2a7526ec06",
+        "21c7c73a-eff0-4e1c-be62-aaacbb6d8ede",
+        "891c992e-2d21-441e-af50-20eae75a5bf6"
+      ],
+      "settings": {
+        "section_title": "FEATURED IN:",
+        "bg_color": "#000000"
+      }
+    },
+    "1638343271f66fa403": {
+      "type": "share-rewards",
+      "disabled": true,
+      "settings": {
+        "title": "Some Of Our Favourites",
+        "text": "<p>From mixed beauty box edits to exclusive brand collaborations, our favourite classic beauty boxes have proven popular with subscribers and continue to be recognised by leading UK publications.<\/p>",
+        "link": "shopify:\/\/collections",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "bg_color": "#ffffff",
+        "title_color": "",
+        "text_color": "",
+        "btn_class": "secondary-btn"
+      }
+    },
+    "16383494429cc4389e": {
+      "type": "daynamic-products-with-image",
+      "blocks": {
+        "1638349442bb665d20-0": {
+          "type": "select",
+          "settings": {
+            "featured_product": "the-january-2021-beauty-box-curation-1",
+            "feature_image": "shopify:\/\/shop_images\/Favourite-boxes-01.jpg"
+          }
+        },
+        "af9a6693-50c4-4b9d-876e-a482811d0eac": {
+          "type": "select",
+          "settings": {
+            "featured_product": "the-april-2021-beauty-box-curation",
+            "feature_image": "shopify:\/\/shop_images\/Favourite-boxes-02.jpg"
+          }
+        },
+        "8d1e5647-8526-4dab-8197-22310f56ebbd": {
+          "type": "select",
+          "settings": {
+            "featured_product": "monuskin-home-spa-limited-edition-beauty-box",
+            "feature_image": "shopify:\/\/shop_images\/Favourite-boxes-04.jpg"
+          }
+        },
+        "ac5bee6e-00da-4481-996d-8b9afe8b8211": {
+          "type": "select",
+          "settings": {
+            "featured_product": "12-wishes-advent-calendar-2020",
+            "feature_image": "shopify:\/\/shop_images\/Favourite-boxes-03.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1638349442bb665d20-0",
+        "af9a6693-50c4-4b9d-876e-a482811d0eac",
+        "8d1e5647-8526-4dab-8197-22310f56ebbd",
+        "ac5bee6e-00da-4481-996d-8b9afe8b8211"
+      ],
+      "settings": {
+        "section_order": "",
+        "title": "Some Of Our Favourites",
+        "text": "<p>From mixed beauty box edits to exclusive brand collaborations, our favourite classic beauty boxes have proven popular with subscribers and continue to be recognised by leading UK publications.<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/classic-beauty-boxes",
+        "sectionOrder": "orderOne",
+        "feature_image": "shopify:\/\/shop_images\/fav_img.jpg",
+        "swipe_coloum": false
+      }
+    },
+    "16383556045ac15327": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "",
+        "title": "Skincare & Cosmetics",
+        "overlap_heading": false,
+        "text": "<p>Our #ColorWowExclusive edit features the award winning luxurious Dream Coat Supernatural Spray. Achieve lushious locks with a silicone free spray that simultanedously combats frizz, controls moisture levels and smooths each hair fibre. Worth £25.00. Subscribe before August 31st to secure your September Cohorted Beauty Box…<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/classic-beauty-boxes",
+        "sectionOrder": "orderOne",
+        "feature_image": "shopify:\/\/shop_images\/Skincare-_-Cosmetics.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "enable_gradiant": false,
+        "swipe_column": false,
+        "margin_bottom": false
+      }
+    },
+    "1638357391737d4189": {
+      "type": "daynamic-products-with-image",
+      "blocks": {
+        "16383573914a5b86c5-0": {
+          "type": "select",
+          "settings": {
+            "featured_product": "color-wow-beauty-box"
+          }
+        },
+        "eb1f25e3-e5ab-492c-9448-273ccd959e28": {
+          "type": "select",
+          "settings": {
+            "featured_product": "the-march-2021-beauty-box-curation"
+          }
+        },
+        "9fff059c-8198-45c4-b10a-6248b638343b": {
+          "type": "select",
+          "settings": {
+            "featured_product": "the-may-2021-beauty-box-curation"
+          }
+        },
+        "e75413fb-076e-4b0c-a90c-dc775ffbd8f2": {
+          "type": "select",
+          "settings": {
+            "featured_product": "female-forces-beauty-box-edit"
+          }
+        }
+      },
+      "block_order": [
+        "16383573914a5b86c5-0",
+        "eb1f25e3-e5ab-492c-9448-273ccd959e28",
+        "9fff059c-8198-45c4-b10a-6248b638343b",
+        "e75413fb-076e-4b0c-a90c-dc775ffbd8f2"
+      ],
+      "settings": {
+        "section_order": "",
+        "title": "Most Loved Curations",
+        "text": "<p>Our most loved boxes are available to buy now! These Cohorted exclusives are guaranteed to make you feel as good as you’ll look. Access and discover our bespoke beauty boxes today. There’s a reason they are our bestsellers…<\/p>",
+        "linktext": "SHOP OUR COLLECTIONS",
+        "link": "shopify:\/\/collections\/classic-beauty-boxes",
+        "sectionOrder": "orderOne",
+        "feature_image": "shopify:\/\/shop_images\/most_loved.jpg",
+        "swipe_coloum": false
+      }
+    },
+    "163835983050e55d57": {
+      "type": "image-width-text",
+      "settings": {
+        "section_order": "2",
+        "title": "Hair & Accesories",
+        "overlap_heading": true,
+        "text": "<p>Here at Cohorted, our beauty boxes cover all bases and we are here to do the hard work for you. Tried and tested by Cohorted’s in-house beauty experts, our curations are guaranteed to take your beauty game to the next level. Drawing on our industry knowledge and trends, we bring you the best in beauty through our beauty box collections.<\/p>",
+        "linktext": "SUBSCRIBE NOW",
+        "link": "shopify:\/\/collections\/classic-beauty-boxes",
+        "sectionOrder": "orderTwo",
+        "feature_image": "shopify:\/\/shop_images\/feamle-founder_3bfc432f-7473-4420-8640-e14f25d7e6a5.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "enable_gradiant": false,
+        "swipe_column": false,
+        "margin_bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16383415596fe6c6bb",
+    "1638342917df923dcb",
+    "1638343271f66fa403",
+    "16383494429cc4389e",
+    "16383556045ac15327",
+    "1638357391737d4189",
+    "163835983050e55d57"
+  ]
+}

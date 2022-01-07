@@ -1,12 +1,160 @@
 {
-	"sections": {
-	  "main": {
-		"type": "rich-text",
-		"settings": {
-		}
-	  }
-	},
-	"order": [
-	  "main"
-	]
-  }
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<div class=\"page-title new\">\n      <h1>Cohorted Rewards<\/h1>\n<h5>EARN POINTS WITH YOUR PURCHASES<\/h5>\n    <\/div>",
+        "linktext": "",
+        "link": "",
+        "sectionOrder": "orderOne"
+      }
+    },
+    "1639657862ebbf4e54": {
+      "type": "my-point-status",
+      "settings": {
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+      }
+    },
+    "16396579347eaa7f0f": {
+      "type": "reward-earn-points",
+      "blocks": {
+        "16396579346b213cc2-0": {
+          "type": "select",
+          "settings": {
+            "link": "01",
+            "linktext": "<h5>CREATE AN ACCOUNT<\/h5>\n<p>EARN 300 POINTS<\/p>",
+            "linktext2": "LEARN MORE",
+            "link2": "#"
+          }
+        },
+        "16396579346b213cc2-1": {
+          "type": "select",
+          "settings": {
+            "link": "02",
+            "linktext": "<h5>MAKE A PURCHASE<\/h5>\n<p>EARN 5 POINTS PER £1<\/p>",
+            "linktext2": "LEARN MORE",
+            "link2": "#"
+          }
+        },
+        "4298b3cb-aafb-4ce4-b95f-1ab5b3cc50d7": {
+          "type": "select",
+          "settings": {
+            "link": "03",
+            "linktext": "<h5>JOIN OUR NEWSLETTER<\/h5>\n<p>EARN 50 POINTS<\/p>",
+            "linktext2": "LEARN MORE",
+            "link2": "#"
+          }
+        },
+        "b8d7a557-f350-4f16-b027-3b35b308f70a": {
+          "type": "select",
+          "settings": {
+            "link": "04",
+            "linktext": "<h5>FOLLOW US ON INSTAGRAM<\/h5>\n<p>EARN 100 POINTS<\/p>",
+            "linktext2": "LEARN MORE",
+            "link2": "#"
+          }
+        },
+        "9a95a7bd-0811-4a0e-a8f7-709bbb66099c": {
+          "type": "select",
+          "settings": {
+            "link": "05",
+            "linktext": "<h5>HAPPY BIRTHDAY<\/h5>\n<p>EARN 100 POINTS<\/p>",
+            "linktext2": "LEARN MORE",
+            "link2": "#"
+          }
+        },
+        "f6f8687f-1945-4230-8808-6f77fd8298cc": {
+          "type": "select",
+          "settings": {
+            "link": "06",
+            "linktext": "<h5>REFER FRIENDS<\/h5>\n<p>EARN 100 POINTS<\/p>",
+            "linktext2": "LEARN MORE",
+            "link2": "#"
+          }
+        }
+      },
+      "block_order": [
+        "16396579346b213cc2-0",
+        "16396579346b213cc2-1",
+        "4298b3cb-aafb-4ce4-b95f-1ab5b3cc50d7",
+        "b8d7a557-f350-4f16-b027-3b35b308f70a",
+        "9a95a7bd-0811-4a0e-a8f7-709bbb66099c",
+        "f6f8687f-1945-4230-8808-6f77fd8298cc"
+      ],
+      "settings": {
+        "title": "How To Earn Points",
+        "text": "<p>Earn points for every purchase you make. There are exclusive rewards for the following actions too so make sure you collect those points and grab yourself some great rewards!<\/p>"
+      }
+    },
+    "163965928753d48295": {
+      "type": "products-with-image",
+      "blocks": {
+        "16396592875eba01ba-0": {
+          "type": "select",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/20_20333286-a1cf-48cf-baac-b34c0e8e0ea0.png",
+            "link": "",
+            "linktext": "GET 5% OFF - REDEEM FOR 200 POINTS"
+          }
+        },
+        "16396592875eba01ba-1": {
+          "type": "select",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/20_20333286-a1cf-48cf-baac-b34c0e8e0ea0.png",
+            "link": "",
+            "linktext": "GET 10% OFF - REDEEM FOR 500 POINTS"
+          }
+        },
+        "72918b92-1626-41e2-9a88-67751320c2e8": {
+          "type": "select",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/20_20333286-a1cf-48cf-baac-b34c0e8e0ea0.png",
+            "link": "",
+            "linktext": "GET 15% OFF - REDEEM FOR 700 POINTS"
+          }
+        },
+        "2fca8125-6b08-4590-97fc-4cd4b2d89f00": {
+          "type": "select",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/20_20333286-a1cf-48cf-baac-b34c0e8e0ea0.png",
+            "link": "",
+            "linktext": "GET 20% OFF - REDEEM FOR 1000 POINTS"
+          }
+        }
+      },
+      "block_order": [
+        "16396592875eba01ba-0",
+        "16396592875eba01ba-1",
+        "72918b92-1626-41e2-9a88-67751320c2e8",
+        "2fca8125-6b08-4590-97fc-4cd4b2d89f00"
+      ],
+      "settings": {
+        "title": "Redeem Your Gifts",
+        "text": "<p>We’re constantly adding new and exclusive rewards you can redeem your points for. Check out our most popular gifts below!<\/p>",
+        "feature_image": "shopify:\/\/shop_images\/product-right-image.jpg"
+      }
+    },
+    "163965958408d1bb25": {
+      "type": "share-rewards",
+      "settings": {
+        "feature_image": "shopify:\/\/shop_images\/Share-Friends-Background.png",
+        "title": "Share The Rewards",
+        "text": "Refer your friends with your own unique referral link. You can refer as many friends as you'd like, at anytime. Earn 100 points when they spend over £25 at Cohorted.",
+        "link": "#",
+        "linktext": "REFER FRIENDS",
+        "bg_color": "",
+        "title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "btn_class": "secondary-btn white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1639657862ebbf4e54",
+    "16396579347eaa7f0f",
+    "163965928753d48295",
+    "163965958408d1bb25"
+  ]
+}

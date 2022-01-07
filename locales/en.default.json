@@ -145,6 +145,8 @@
       "note": "Add special instructions for your order...",
       "update": "Update",
       "checkout": "Check Out",
+      "subtotal": "Subtotal",
+      "continue_browsing_html": "<a href='{{ url }}'>Continue shopping<\/a>",
       "empty": "Your cart is currently empty."
     },
     "label": {

@@ -26,7 +26,7 @@
     "welcome_msg": "",
     "enable_fixed_top_menu": true,
     "megamenu1": "",
-    "megamenu2": "Shop, Chance To Win",
+    "megamenu2": "Shop,",
     "megamenupage1": "mega-menu",
     "megamenupage2": "mega-menu-win",
     "megamenupage3": "",
@@ -112,22 +112,22 @@
     "footer_twitter_link": "https:\/\/twitter.com\/cohorted",
     "footer_pinterest_link": "https:\/\/uk.pinterest.com\/cohorted\/",
     "footer_instagram_link": "https:\/\/www.instagram.com\/cohorted\/",
+    "footer_lindin_link": "https:\/\/uk.linkedin.com\/in\/cohorted",
     "footer_googleplus_link": "",
     "footer_column1_title": "Products",
-    "footer_column1_linklist": "products",
-    "footer_column2_title": "Account Links",
-    "footer_column2_linklist": "account-links",
+    "footer_column1_linklist": "products-new",
+    "footer_column2_title": "Account",
+    "footer_column2_linklist": "account-links-new",
     "footer_column3_title": "Key Information",
-    "footer_column3_linklist": "key-information",
+    "footer_column3_linklist": "key-information-new",
     "footer_column4_title": "STAY IN TOUCH",
-    "shop_contact_infos": "<p>Subscribe to the UK's number one luxury beauty box today and receive full-sized premium beauty products straight to your door each month.<\/p>\n<form class=\"footer-form\" method=\"post\" action=\"\" name=\"mc-embedded-subscribe-form\">\n            <div class=\"block-content\">\n              <div class=\"input-box\">\n\t\t\t    <input type=\"email\" name=\"email\" class=\"email\" placeholder=\"EMAIL ADDRESS\">\n                <a class=\"button\" href=\"https:\/\/www.cohorted.co.uk\/pages\/black-edition\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2635\/3958\/files\/arrow-right_49313eb1-b17b-4ba2-9bdb-3f590ef7cd6b_30x.png?v=1637748503\"><\/a>\n                <div class=\"clear\"><\/div>\n              <\/div>\n            <\/div>\n          <\/form>",
     "copyright": "&copy; 2020-21 Cohorted (trading name of Cohorted Communications Ltd). All Rights Reserved.",
     "payment_1_enable": true,
     "payment_2_enable": true,
     "payment_3_enable": true,
     "payment_4_enable": true,
-    "payment_5_enable": false,
-    "payment_6_enable": false,
+    "payment_5_enable": true,
+    "payment_6_enable": true,
     "show_shipping_calculator": true,
     "shipping_calculator_heading": "Shipping rates calculator",
     "shipping_calculator_default_country": "United Kingdom",
@@ -171,6 +171,7 @@
     "home_newsletter_mailchimp": "https:\/\/cohorted.us5.list-manage.com\/subscribe\/post?u=24468d9101ab11c2dc8129bd9&amp;id=f689be3271",
     "newsletter_description": "Subscribe now to CLAIM YOUR MARC JACOBS FREE GIFT worth £12.50. Use code COHORTEDGIFTME",
     "newsletter_expires": "30",
+    "klaviyo_form": "<h2>Enter To Win The Luxe La Mer Prize Bundle. Ready Set Win.<\/h2>\n<div class=\"klaviyo-form-Tm9c7e form-win-signup-nn\"><\/div>",
     "show_multiple_currencies": true,
     "currency_format": "money_format",
     "supported_currencies": "GBP USD EUR CAD AUD DKK SEK ZAR EGP AED HKD",
@@ -189,6 +190,7 @@
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#000000",
     "checkout_error_color": "#c40a0a",
+    "shop_contact_infos": "<p>Subscribe to the UK's number one luxury beauty box today and receive full-sized premium beauty products straight to your door each month.<\/p>\n<form class=\"footer-form\" method=\"post\" action=\"\" name=\"mc-embedded-subscribe-form\">\n            <div class=\"block-content\">\n              <div class=\"input-box\">\n\t\t\t    <input type=\"email\" name=\"email\" class=\"email\" placeholder=\"EMAIL ADDRESS\">\n                <a class=\"button\" href=\"https:\/\/www.cohorted.co.uk\/pages\/black-edition\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2635\/3958\/files\/arrow-right_49313eb1-b17b-4ba2-9bdb-3f590ef7cd6b_30x.png?v=1637748503\"><\/a>\n                <div class=\"clear\"><\/div>\n              <\/div>\n            <\/div>\n          <\/form>",
     "checkout_use_header_image": false,
     "checkout_logo": "",
     "checkout_use_body_background_image": false,
@@ -436,14 +438,45 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "text": "FREE SHIPPING ON ORDERS $50+",
+          "text": "FREE SHIPPING ON ORDERS £50+",
           "bg_color": "#000000",
           "text_color": "#fff5ef"
         }
       },
       "header-new": {
         "type": "header-new",
-        "settings": {}
+        "blocks": {
+          "2a3697fa-696d-457f-a03f-46053f891f82": {
+            "type": "link_list",
+            "settings": {
+              "title": "Shop",
+              "image1": "shopify:\/\/shop_images\/mega-img-1.jpg",
+              "menutitle1": "SUBSCRIPTION BEAUTY BOX",
+              "link1": "shopify:\/\/pages\/black-edition-new",
+              "image2": "shopify:\/\/shop_images\/mega-img-2.jpg",
+              "menutitle2": "CLASSIC BEAUTY BOXES",
+              "link2": "shopify:\/\/pages\/design-study-seven",
+              "image3": "shopify:\/\/shop_images\/mega-img-3.jpg",
+              "menutitle3": "LIMITED EDITION BOXES",
+              "link3": "shopify:\/\/pages\/limited-edition-page",
+              "image4": "shopify:\/\/shop_images\/mega-img-4.jpg",
+              "menutitle4": "LETTERBOX GIFTS",
+              "link4": "shopify:\/\/pages\/cohorted-letter-gift-box",
+              "image5": "shopify:\/\/shop_images\/mega-img-5.jpg",
+              "menutitle5": "COHORTED GIFT CARDS",
+              "link5": "shopify:\/\/pages\/cohorted-gift-cards-new",
+              "image6": "shopify:\/\/shop_images\/mega-img-6.jpg",
+              "menutitle6": "2021 ADVENT CALENDAR (COMING SOON)",
+              "link6": "shopify:\/\/pages\/advent-page-design-one"
+            }
+          }
+        },
+        "block_order": [
+          "2a3697fa-696d-457f-a03f-46053f891f82"
+        ],
+        "settings": {
+          "main_list": "main-new"
+        }
       },
       "instagram-section": {
         "type": "instagram-section",
@@ -454,6 +487,492 @@
       "footer-new": {
         "type": "footer-new",
         "settings": {}
+      },
+      "faq-section": {
+        "type": "faq-section",
+        "blocks": {
+          "7179fbb4-caa5-4b44-b45d-fcb56ec350ac": {
+            "type": "separator",
+            "settings": {
+              "title": "General"
+            }
+          },
+          "9bd12b4e-66a0-4de0-b531-84a93acf1494": {
+            "type": "question",
+            "settings": {
+              "title": "Question About General Tab Here?",
+              "answer": "<p>Question About General Tab Here?<\/p>"
+            }
+          },
+          "a3cc753c-29dd-470c-b40b-0073799f3220": {
+            "type": "question",
+            "settings": {
+              "title": "Question About General Tab Here?",
+              "answer": "<p>Question About General Tab Here?<\/p>"
+            }
+          },
+          "9b8956af-6b2f-4b9c-a06a-275b48c68adf": {
+            "type": "question",
+            "settings": {
+              "title": "Question About General Tab Here?",
+              "answer": "<p>Question About General Tab Here?<\/p>"
+            }
+          },
+          "ac1a45a0-f499-4c0a-abf4-84c08402688a": {
+            "type": "question",
+            "settings": {
+              "title": "Question About General Tab Here?",
+              "answer": "<p>Question About General Tab Here?<\/p>"
+            }
+          },
+          "09c0ec3e-e910-4e21-b1a9-91ff9a464b46": {
+            "type": "separator",
+            "settings": {
+              "title": "Delivery & Returns"
+            }
+          },
+          "206fa0fc-2762-4e4d-801f-fba57a527f82": {
+            "type": "question",
+            "settings": {
+              "title": "How much is postage\/packaging and how long does delivery take?",
+              "answer": "<p>How much is postage\/packaging and how long does delivery take?<\/p>"
+            }
+          },
+          "0813bb87-2d29-4a75-a4e6-034df0f47559": {
+            "type": "question",
+            "settings": {
+              "title": "Shipping Courier",
+              "answer": "<p>Shipping Courier<\/p>"
+            }
+          },
+          "dd20c8a9-bae9-41bd-a832-8ad46b304533": {
+            "type": "question",
+            "settings": {
+              "title": "Our Returns Policy",
+              "answer": "<p>Our Returns Policy<\/p>"
+            }
+          },
+          "784955f8-3177-4aa7-aab2-6af8fd50374f": {
+            "type": "question",
+            "settings": {
+              "title": "Your statutory rights",
+              "answer": "<p>Your statutory rights<\/p>"
+            }
+          },
+          "e91f397b-d018-492d-a990-a3806b3d1abc": {
+            "type": "question",
+            "settings": {
+              "title": "Right to Cancel",
+              "answer": "<p>Right to Cancel<\/p>"
+            }
+          },
+          "4452833b-4b1a-4b4c-88e4-7a9e5b62ad0e": {
+            "type": "question",
+            "settings": {
+              "title": "Effects of Cancellation",
+              "answer": "<p>Effects of Cancellation<\/p>"
+            }
+          },
+          "5889ef69-fa03-47ac-9a93-85a692ac5b2a": {
+            "type": "question",
+            "settings": {
+              "title": "What should I do if I receive an incorrect item?",
+              "answer": "<p>What should I do if I receive an incorrect item?<\/p>"
+            }
+          },
+          "dc20a013-156d-4307-8ed2-e79e35dee940": {
+            "type": "question",
+            "settings": {
+              "title": "What should I do if my item is damaged?",
+              "answer": "<p>What should I do if my item is damaged?<\/p>"
+            }
+          },
+          "4fa03288-3698-40cc-8f46-5409f38b5c87": {
+            "type": "question",
+            "settings": {
+              "title": "How do I report a fault with my product?",
+              "answer": "<p>How do I report a fault with my product?<\/p>"
+            }
+          },
+          "5a2deaf7-2145-4b50-8b0d-0e8b9863446d": {
+            "type": "question",
+            "settings": {
+              "title": "Will you refund my postage costs to return an item?",
+              "answer": "<p>Will you refund my postage costs to return an item?<\/p>"
+            }
+          },
+          "d56e3ee7-1347-4c0f-a13d-af64689fee69": {
+            "type": "question",
+            "settings": {
+              "title": "Complaints",
+              "answer": "<p>Complaints<\/p>"
+            }
+          },
+          "20f1469b-3088-4542-b5fc-29cd23679fcd": {
+            "type": "question",
+            "settings": {
+              "title": "Return of Goods",
+              "answer": "<p>Return of Goods<\/p>"
+            }
+          },
+          "e3427396-08ec-40f2-8334-7f00d6448abb": {
+            "type": "separator",
+            "settings": {
+              "title": "Privacy Policy"
+            }
+          },
+          "13a7272c-bbd1-4842-977e-122730f9d519": {
+            "type": "question",
+            "settings": {
+              "title": "Protecting your personal details on our website.",
+              "answer": "<p>Protecting your personal details on our website.<\/p>"
+            }
+          },
+          "ff4a5bb0-d353-49a1-ab5e-ca45277d887d": {
+            "type": "question",
+            "settings": {
+              "title": "Collecting Information",
+              "answer": "<p>Collecting Information<\/p>"
+            }
+          },
+          "4a03ac66-6401-4b5e-b016-c8428d1fff9c": {
+            "type": "separator",
+            "settings": {
+              "title": "Competition Terms"
+            }
+          },
+          "d320b81b-e8db-4549-9a40-cdb9ff1f7b30": {
+            "type": "question",
+            "settings": {
+              "title": "These terms and conditions",
+              "answer": "<p>These terms and conditions<\/p>"
+            }
+          },
+          "57c8fc21-e875-4923-a824-f21c2ee2e0a5": {
+            "type": "question",
+            "settings": {
+              "title": "The promoter of each competition",
+              "answer": "<p>The promoter of each competition<\/p>"
+            }
+          },
+          "a85258b0-9df3-4314-9af3-1c419d2e708c": {
+            "type": "question",
+            "settings": {
+              "title": "Eligibility rules for our competitions",
+              "answer": "<p>Eligibility rules for our competitions<\/p>"
+            }
+          },
+          "09d3fb10-c43e-4776-a33c-0d7c8f53fcaa": {
+            "type": "question",
+            "settings": {
+              "title": "Entry and Entry and methods",
+              "answer": "<p>Entry and Entry and methods<\/p>"
+            }
+          },
+          "c60e7b65-ce13-43ec-b1f3-fbcfbc4c535d": {
+            "type": "question",
+            "settings": {
+              "title": "Prizes",
+              "answer": "<p>Prizes<\/p>"
+            }
+          },
+          "f64c7a61-b6dd-4355-b9cb-ccc3b12fde1f": {
+            "type": "question",
+            "settings": {
+              "title": "Holiday Prizes",
+              "answer": "<p>Holiday Prizes<\/p>"
+            }
+          },
+          "4ca342f5-98c0-4de2-b138-3f789efc0425": {
+            "type": "question",
+            "settings": {
+              "title": "Event Prizes",
+              "answer": "<p>Event Prizes<\/p>"
+            }
+          },
+          "b3e1a819-522e-4405-8f19-2c38eef312d1": {
+            "type": "question",
+            "settings": {
+              "title": "Unclaimed Prizes",
+              "answer": "<p>Unclaimed Prizes<\/p>"
+            }
+          },
+          "051d071c-bbbb-43fc-9c59-261fb9acc96c": {
+            "type": "question",
+            "settings": {
+              "title": "Publicity and Personal Information",
+              "answer": "<p>Publicity and Personal Information<\/p>"
+            }
+          },
+          "9e03bcd6-daa1-4dd4-b975-13c78d78807e": {
+            "type": "question",
+            "settings": {
+              "title": "Photographs and Videos",
+              "answer": "<p>Photographs and Videos<\/p>"
+            }
+          },
+          "caaebe74-429f-4004-8a58-0599e35f6279": {
+            "type": "question",
+            "settings": {
+              "title": "Prize Draws",
+              "answer": "<p>Prize Draws<\/p>"
+            }
+          },
+          "15a08f01-907f-44ad-8d58-c92d642b06a7": {
+            "type": "question",
+            "settings": {
+              "title": "Copyright",
+              "answer": "<p>Copyright<\/p>"
+            }
+          },
+          "e1088fb3-e80b-48b5-b058-bc760fd6a477": {
+            "type": "question",
+            "settings": {
+              "title": "Minors",
+              "answer": "<p>Minors<\/p>"
+            }
+          },
+          "20d081b7-aaf4-40de-858c-4cc430a90e22": {
+            "type": "question",
+            "settings": {
+              "title": "Tampering and other matters",
+              "answer": "<p>Tampering and other matters<\/p>"
+            }
+          },
+          "e258deab-663c-4487-881c-ea39559c7e6f": {
+            "type": "question",
+            "settings": {
+              "title": "Leave for participation",
+              "answer": "<p>Leave for participation<\/p>"
+            }
+          },
+          "26245c04-3a13-4716-8634-dbeb255c981d": {
+            "type": "question",
+            "settings": {
+              "title": "Termination of competition",
+              "answer": "<p>Termination of competition<\/p>"
+            }
+          },
+          "8b642309-b4cb-4051-a653-9bf4a4914313": {
+            "type": "question",
+            "settings": {
+              "title": "Decisions final",
+              "answer": "<p>Decisions final<\/p>"
+            }
+          },
+          "eaefd8cf-bcf1-4fab-a0d7-e5b34796d1ad": {
+            "type": "question",
+            "settings": {
+              "title": "Failure to enforce terms and conditions",
+              "answer": "<p>Failure to enforce terms and conditions<\/p>"
+            }
+          },
+          "08434252-81a2-44f2-8852-9bf4bf21854a": {
+            "type": "question",
+            "settings": {
+              "title": "Exclusion of liability",
+              "answer": "<p>Exclusion of liability<\/p>"
+            }
+          },
+          "b8ccee20-2fa5-4a99-a559-33ccbb587aaa": {
+            "type": "question",
+            "settings": {
+              "title": "Laws",
+              "answer": "<p>Laws<\/p>"
+            }
+          },
+          "cee390ea-596d-4669-9a41-076da4a49ae8": {
+            "type": "separator",
+            "settings": {
+              "title": "Full Beauty Box Terms"
+            }
+          },
+          "372b14b1-bbd9-441a-83ba-286c205fdcd7": {
+            "type": "question",
+            "settings": {
+              "title": "Beauty box terms & conditions",
+              "answer": "<p>Beauty box terms & conditions<\/p>"
+            }
+          },
+          "70c54743-aaa8-4ffe-84a9-701efeb82f6b": {
+            "type": "question",
+            "settings": {
+              "title": "Use of the website",
+              "answer": "<p>Use of the website<\/p>"
+            }
+          },
+          "dbabd43c-349a-4cb0-b172-f80d4b9e9ca8": {
+            "type": "question",
+            "settings": {
+              "title": "Registrations & Passwords",
+              "answer": "<p>Registrations & Passwords<\/p>"
+            }
+          },
+          "066261eb-f1b1-4fe4-a5ef-555604b830df": {
+            "type": "question",
+            "settings": {
+              "title": "Additional terms & Conditions",
+              "answer": "<p>Additional terms & Conditions<\/p>"
+            }
+          },
+          "e20bf41d-dd8c-428b-93fa-5af0ab39f622": {
+            "type": "question",
+            "settings": {
+              "title": "Membership",
+              "answer": "<p>Membership<\/p>"
+            }
+          },
+          "a5f97a74-fee4-4f5e-a721-8164876d7b74": {
+            "type": "question",
+            "settings": {
+              "title": "Order & Contracts",
+              "answer": "<p>Order & Contracts<\/p>"
+            }
+          },
+          "79533ec0-2a52-43f0-bec7-bada17c1be59": {
+            "type": "question",
+            "settings": {
+              "title": "Consumer rights & Cancelations",
+              "answer": "<p>Consumer rights & Cancelations<\/p>"
+            }
+          },
+          "a82ce3ce-ae51-4d3c-bcee-e66017c4ff06": {
+            "type": "question",
+            "settings": {
+              "title": "Product information; Limitations on quantities",
+              "answer": "<p>Product information; Limitations on quantities<\/p>"
+            }
+          },
+          "29b6aa37-d322-47a2-9bf7-ae1b45707d5b": {
+            "type": "question",
+            "settings": {
+              "title": "Disclaimers",
+              "answer": "<p>Disclaimers<\/p>"
+            }
+          },
+          "0c364428-705d-40ae-9fa5-04bb0f7eef25": {
+            "type": "question",
+            "settings": {
+              "title": "Indermnification",
+              "answer": "<p>Indermnification<\/p>"
+            }
+          },
+          "69e6756d-62c8-45b2-886b-0ef6495c97ff": {
+            "type": "question",
+            "settings": {
+              "title": "Limitation of Liability",
+              "answer": "<p>Limitation of Liability<\/p>"
+            }
+          },
+          "a1dab6d9-d9f8-44f4-b796-2c262ac5953a": {
+            "type": "question",
+            "settings": {
+              "title": "Copyright infringement; Notice and take down procedures",
+              "answer": "<p>Copyright infringement; Notice and take down procedures<\/p>"
+            }
+          },
+          "ba36e7bf-7d39-4942-b606-e29cf8868fd3": {
+            "type": "question",
+            "settings": {
+              "title": "Waiver; Remedies; Variations, Entire agreement",
+              "answer": "<p>Waiver; Remedies; Variations, Entire agreement<\/p>"
+            }
+          },
+          "c18ab998-2d41-4b97-84c8-c253ce29bfd9": {
+            "type": "separator",
+            "settings": {
+              "title": "Other Questions?"
+            }
+          },
+          "a43b22d3-7941-4420-b0e0-c24c0593d4e1": {
+            "type": "text",
+            "settings": {
+              "text_single": "<p>If you have any other questions, please email us at <a href=\"mailto:customerservice@cohorted.co.uk\" target=\"_blank\" title=\"mailto:customerservice@cohorted.co.uk\">customerservice@cohorted.co.uk<\/a> with your questions, and we will do our best to reply as quickly as we can!<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "7179fbb4-caa5-4b44-b45d-fcb56ec350ac",
+          "9bd12b4e-66a0-4de0-b531-84a93acf1494",
+          "a3cc753c-29dd-470c-b40b-0073799f3220",
+          "9b8956af-6b2f-4b9c-a06a-275b48c68adf",
+          "ac1a45a0-f499-4c0a-abf4-84c08402688a",
+          "09c0ec3e-e910-4e21-b1a9-91ff9a464b46",
+          "206fa0fc-2762-4e4d-801f-fba57a527f82",
+          "0813bb87-2d29-4a75-a4e6-034df0f47559",
+          "dd20c8a9-bae9-41bd-a832-8ad46b304533",
+          "784955f8-3177-4aa7-aab2-6af8fd50374f",
+          "e91f397b-d018-492d-a990-a3806b3d1abc",
+          "4452833b-4b1a-4b4c-88e4-7a9e5b62ad0e",
+          "5889ef69-fa03-47ac-9a93-85a692ac5b2a",
+          "dc20a013-156d-4307-8ed2-e79e35dee940",
+          "4fa03288-3698-40cc-8f46-5409f38b5c87",
+          "5a2deaf7-2145-4b50-8b0d-0e8b9863446d",
+          "d56e3ee7-1347-4c0f-a13d-af64689fee69",
+          "20f1469b-3088-4542-b5fc-29cd23679fcd",
+          "e3427396-08ec-40f2-8334-7f00d6448abb",
+          "13a7272c-bbd1-4842-977e-122730f9d519",
+          "ff4a5bb0-d353-49a1-ab5e-ca45277d887d",
+          "4a03ac66-6401-4b5e-b016-c8428d1fff9c",
+          "d320b81b-e8db-4549-9a40-cdb9ff1f7b30",
+          "57c8fc21-e875-4923-a824-f21c2ee2e0a5",
+          "a85258b0-9df3-4314-9af3-1c419d2e708c",
+          "09d3fb10-c43e-4776-a33c-0d7c8f53fcaa",
+          "c60e7b65-ce13-43ec-b1f3-fbcfbc4c535d",
+          "f64c7a61-b6dd-4355-b9cb-ccc3b12fde1f",
+          "4ca342f5-98c0-4de2-b138-3f789efc0425",
+          "b3e1a819-522e-4405-8f19-2c38eef312d1",
+          "051d071c-bbbb-43fc-9c59-261fb9acc96c",
+          "9e03bcd6-daa1-4dd4-b975-13c78d78807e",
+          "caaebe74-429f-4004-8a58-0599e35f6279",
+          "15a08f01-907f-44ad-8d58-c92d642b06a7",
+          "e1088fb3-e80b-48b5-b058-bc760fd6a477",
+          "20d081b7-aaf4-40de-858c-4cc430a90e22",
+          "e258deab-663c-4487-881c-ea39559c7e6f",
+          "26245c04-3a13-4716-8634-dbeb255c981d",
+          "8b642309-b4cb-4051-a653-9bf4a4914313",
+          "eaefd8cf-bcf1-4fab-a0d7-e5b34796d1ad",
+          "08434252-81a2-44f2-8852-9bf4bf21854a",
+          "b8ccee20-2fa5-4a99-a559-33ccbb587aaa",
+          "cee390ea-596d-4669-9a41-076da4a49ae8",
+          "372b14b1-bbd9-441a-83ba-286c205fdcd7",
+          "70c54743-aaa8-4ffe-84a9-701efeb82f6b",
+          "dbabd43c-349a-4cb0-b172-f80d4b9e9ca8",
+          "066261eb-f1b1-4fe4-a5ef-555604b830df",
+          "e20bf41d-dd8c-428b-93fa-5af0ab39f622",
+          "a5f97a74-fee4-4f5e-a721-8164876d7b74",
+          "79533ec0-2a52-43f0-bec7-bada17c1be59",
+          "a82ce3ce-ae51-4d3c-bcee-e66017c4ff06",
+          "29b6aa37-d322-47a2-9bf7-ae1b45707d5b",
+          "0c364428-705d-40ae-9fa5-04bb0f7eef25",
+          "69e6756d-62c8-45b2-886b-0ef6495c97ff",
+          "a1dab6d9-d9f8-44f4-b796-2c262ac5953a",
+          "ba36e7bf-7d39-4942-b606-e29cf8868fd3",
+          "c18ab998-2d41-4b97-84c8-c253ce29bfd9",
+          "a43b22d3-7941-4420-b0e0-c24c0593d4e1"
+        ],
+        "settings": {
+          "expand_questions": false
+        }
+      },
+      "rich-text": {
+        "type": "rich-text",
+        "settings": {
+          "title": "",
+          "text": "<div class=\"page-title\">\n      <h1>Need Help? Just Ask<\/h1>\n<h5>The best way to get help is with our customer service team. Please email <br> <a href=\"mailto:customerservice@cohorted.co.uk\" customerservice>customerservice@cohorted.co.uk<\/a> we will get back to you within 24 hours of your email.<\/h5>\n    <\/div>",
+          "linktext": "",
+          "link": "",
+          "sectionOrder": "orderOne"
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "enabled_progress_bar": false,
+          "progressbar_first_text": "You are {{remaining_amount}} away from free shipping!",
+          "progressbar_second_text": "Congratulations! You are eligible for free shipping!",
+          "cart_free_shipping_threshold": "499"
+        }
       }
     },
     "content_for_index": []

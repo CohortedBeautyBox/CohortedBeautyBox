@@ -11,8 +11,9 @@
         "sectionOrder": "orderOne"
       }
     },
-    "16389655410a4e7ed5": {
+    "16413028070565fce5": {
       "type": "full-with-banner",
+      "disabled": true,
       "settings": {
         "banner_right": false,
         "feature_image": "shopify:\/\/shop_images\/1_2.jpg",
@@ -20,9 +21,9 @@
         "sub_title": "",
         "title": "COHORTED <br>BEAUTY BOX",
         "text": "<span class=\"space\"><\/span><p>LUXURY MONTHLY COHORTED BEAUTY BOX<\/p>",
-        "link": "shopify:\/\/products\/cohorted-subscription-beauty-box",
+        "link": "https:\/\/www.cohorted.co.uk\/products\/cohorted-subscription-beauty-box",
         "linktext": "SUBSCRIBE NOW",
-        "sectionOrder": "orderTwo",
+        "sectionOrder": "orderOne",
         "bg_color": "",
         "title_color": "",
         "text_color": "",
@@ -33,40 +34,41 @@
         "enable_apps": false
       }
     },
-    "163896678780d582a2": {
+    "16413030915f41d066": {
       "type": "logo-image-slider",
+      "disabled": true,
       "blocks": {
-        "d6c14f5a-7bc6-43d6-895f-40d9c3dd494b": {
+        "1496ef5d-b0b1-44ed-a601-00b3518d98fe": {
           "type": "logo_image_slider",
           "settings": {
             "image": "shopify:\/\/shop_images\/download_2x_a8ece73e-b54b-40c0-8b3d-253f813cde59.png"
           }
         },
-        "f362523e-51bf-4a38-a148-0c900e09ee6f": {
+        "5a777a05-258a-4d72-93e5-695046b49be1": {
           "type": "logo_image_slider",
           "settings": {
             "image": "shopify:\/\/shop_images\/download-_3_2x_0de676d5-cfad-4647-a44f-580ab686a598.png"
           }
         },
-        "10ece4ec-076f-4dfc-ad42-efec45d9d32a": {
+        "10fb153c-5550-440e-a3cc-c48c4f4bf124": {
           "type": "logo_image_slider",
           "settings": {
             "image": "shopify:\/\/shop_images\/download-_4_2x_144c7be8-c495-45f2-baab-b1d9cddb2f57.png"
           }
         },
-        "f81e541c-23e5-4560-9f62-4227e5835bf9": {
+        "f969f634-baa2-4ecd-89d6-591f9237cce2": {
           "type": "logo_image_slider",
           "settings": {
             "image": "shopify:\/\/shop_images\/download-_1_2x_f7a19f3c-ca77-411f-a01a-afc351f88aa7.png"
           }
         },
-        "4ed9e5be-cf53-4230-a748-109662324cb3": {
+        "0838cabf-d646-4d1b-92e3-fd736139189d": {
           "type": "logo_image_slider",
           "settings": {
             "image": "shopify:\/\/shop_images\/download-_2_2x_28f21771-5032-446f-a051-aea28c396a28.png"
           }
         },
-        "0c4a5ed3-99bf-442a-8c2e-7987dfa65231": {
+        "776b5910-dfeb-40d7-a051-5ff114749bc7": {
           "type": "logo_image_slider",
           "settings": {
             "image": "shopify:\/\/shop_images\/Health-Wellbeing_2x_c29accfa-930b-405a-a721-8cb7fd5d2f24.png"
@@ -74,25 +76,26 @@
         }
       },
       "block_order": [
-        "d6c14f5a-7bc6-43d6-895f-40d9c3dd494b",
-        "f362523e-51bf-4a38-a148-0c900e09ee6f",
-        "10ece4ec-076f-4dfc-ad42-efec45d9d32a",
-        "f81e541c-23e5-4560-9f62-4227e5835bf9",
-        "4ed9e5be-cf53-4230-a748-109662324cb3",
-        "0c4a5ed3-99bf-442a-8c2e-7987dfa65231"
+        "1496ef5d-b0b1-44ed-a601-00b3518d98fe",
+        "5a777a05-258a-4d72-93e5-695046b49be1",
+        "10fb153c-5550-440e-a3cc-c48c4f4bf124",
+        "f969f634-baa2-4ecd-89d6-591f9237cce2",
+        "0838cabf-d646-4d1b-92e3-fd736139189d",
+        "776b5910-dfeb-40d7-a051-5ff114749bc7"
       ],
       "settings": {
         "section_title": "FEATURED IN:",
         "bg_color": "#000000"
       }
     },
-    "16390282269ef979c9": {
+    "164130328596be1f1f": {
       "type": "beauty-box",
+      "disabled": true,
       "blocks": {
-        "1639028226b4abae84-0": {
+        "1641303285c454ccf4-0": {
           "type": "image",
           "settings": {
-            "featured_image": "shopify:\/\/shop_images\/website-01.jpg",
+            "featured_image": "shopify:\/\/shop_images\/beauty-boxes-01.jpg",
             "job_title": "Subscribe To Your Box",
             "job_position": "Monthly curation of premium beauty products across cosmetics, skincare, haircare and fragrance. Minimum of five luxury products per month. A monthly copy of our Cohorted Beauty Box Booklet Mini Magazine. Reliable dispatch straight to your door in bespoke 100% recyclable packaging. Exclusive offers and discounts available to Cohorted subscribers.",
             "linktext": "",
@@ -100,7 +103,7 @@
             "sectionOrder": "orderOne"
           }
         },
-        "f02ed97d-d02b-4b37-947e-b1571275588b": {
+        "9c83130b-6885-44ff-8eb3-6cc363624fd4": {
           "type": "image",
           "settings": {
             "featured_image": "shopify:\/\/shop_images\/website-02.jpg",
@@ -111,7 +114,7 @@
             "sectionOrder": "orderOne"
           }
         },
-        "e90dca5c-c1b2-493e-9d0d-a41dcf9df276": {
+        "50f8b0c2-2af8-4fac-a76f-3e294b6e0843": {
           "type": "image",
           "settings": {
             "featured_image": "shopify:\/\/shop_images\/website-03.jpg",
@@ -124,9 +127,9 @@
         }
       },
       "block_order": [
-        "1639028226b4abae84-0",
-        "f02ed97d-d02b-4b37-947e-b1571275588b",
-        "e90dca5c-c1b2-493e-9d0d-a41dcf9df276"
+        "1641303285c454ccf4-0",
+        "9c83130b-6885-44ff-8eb3-6cc363624fd4",
+        "50f8b0c2-2af8-4fac-a76f-3e294b6e0843"
       ],
       "settings": {
         "title": "How Our Monthly Beauty Box Works",
@@ -134,82 +137,17 @@
         "bag-color": ""
       }
     },
-    "16391141386293b53f": {
-      "type": "moving-text",
-      "blocks": {
-        "163911413829d10082-0": {
-          "type": "select",
-          "settings": {
-            "linktext": "Cruelty free"
-          }
-        },
-        "163911413829d10082-1": {
-          "type": "select",
-          "settings": {
-            "linktext": "Vegan"
-          }
-        },
-        "f085b2bb-ba64-4d22-a1a8-efc934e50ef0": {
-          "type": "select",
-          "settings": {
-            "linktext": "No Harsh Chemicals"
-          }
-        },
-        "94333532-5bc9-474e-9426-dd814f714ad4": {
-          "type": "select",
-          "settings": {
-            "linktext": "Certified"
-          }
-        },
-        "837df347-c6df-404d-9b46-75fe7b87953f": {
-          "type": "select",
-          "settings": {
-            "linktext": "Cruelty free"
-          }
-        },
-        "c7a8f7bc-e710-4e02-869f-dce326e6b988": {
-          "type": "select",
-          "settings": {
-            "linktext": "Vegan"
-          }
-        },
-        "2e29037f-1097-43be-a7aa-3385babbcd4e": {
-          "type": "select",
-          "settings": {
-            "linktext": "No Harsh Chemicals"
-          }
-        },
-        "15019603-cbef-4647-b51c-bd1e31fa6419": {
-          "type": "select",
-          "settings": {
-            "linktext": "Certified"
-          }
-        }
-      },
-      "block_order": [
-        "163911413829d10082-0",
-        "163911413829d10082-1",
-        "f085b2bb-ba64-4d22-a1a8-efc934e50ef0",
-        "94333532-5bc9-474e-9426-dd814f714ad4",
-        "837df347-c6df-404d-9b46-75fe7b87953f",
-        "c7a8f7bc-e710-4e02-869f-dce326e6b988",
-        "2e29037f-1097-43be-a7aa-3385babbcd4e",
-        "15019603-cbef-4647-b51c-bd1e31fa6419"
-      ],
-      "settings": {
-        "hide_mob": true
-      }
-    },
-    "163896721136b4a0a2": {
+    "1641303565f7915582": {
       "type": "image-width-text",
+      "disabled": true,
       "settings": {
         "section_order": "1",
         "title": "What's In The Box?",
         "overlap_heading": true,
         "text": "<p>The Cohorted Beauty Box is the UK’s leading luxury subscription box. Each month, you will receive a curation of hand-picked, premium products, approved by our in-house beauty experts. <br><br>From makeup and skincare to fragrance and haircare, experiment with cult-favourite brands and products and discover the latest in luxury beauty. The Cohorted Beauty Box is the ultimate premium beauty experience. Guaranteed a minimum of six products worth £100+, your monthly delivery will arrive in our 100% sleek and sustainable packaging and won’t disappoint.<br><br> Available across the UK and internationally, our beauty box curations are the perfect monthly pick-me-up.<\/p>",
         "linktext": "SUBSCRIBE NOW",
-        "link": "shopify:\/\/products\/cohorted-subscription-beauty-box",
-        "sectionOrder": "orderTwo",
+        "link": "https:\/\/www.cohorted.co.uk\/products\/cohorted-subscription-beauty-box",
+        "sectionOrder": "orderOne",
         "feature_image": "shopify:\/\/shop_images\/irene-forte-black-edition-Sub-box-image.jpg",
         "feature_mobile": "shopify:\/\/shop_images\/LAURA_MOB.jpg",
         "bg_color": "",
@@ -218,16 +156,17 @@
         "margin_bottom": false
       }
     },
-    "1638967674655f8add": {
+    "164130370557f1321c": {
       "type": "image-width-text",
+      "disabled": true,
       "settings": {
         "section_order": "",
         "title": "This Month's <br>Sneak Peek",
         "overlap_heading": false,
         "text": "<p>Our #ColorWowExclusive edit features the award winning luxurious Dream Coat Supernatural Spray. Achieve lushious locks with a silicone free spray that simultanedously combats frizz, controls moisture levels and smooths each hair fibre. <br><br>Worth £25.00. Subscribe before August 31st to secure your September Cohorted Beauty Box…<\/p>",
         "linktext": "SUBSCRIBE NOW",
-        "link": "shopify:\/\/products\/cohorted-subscription-beauty-box",
-        "sectionOrder": "orderTwo",
+        "link": "https:\/\/www.cohorted.co.uk\/products\/cohorted-subscription-beauty-box",
+        "sectionOrder": "orderOne",
         "feature_image": "shopify:\/\/shop_images\/skincare.jpg",
         "feature_mobile": "shopify:\/\/shop_images\/WOW_MOB.jpg",
         "bg_color": "",
@@ -236,21 +175,23 @@
         "margin_bottom": false
       }
     },
-    "1638968515399efa42": {
+    "164130386752483941": {
       "type": "featured-product",
+      "disabled": true,
       "settings": {
         "featured_product": "cohorted-subscription-beauty-box",
         "featured_image": "shopify:\/\/shop_images\/box.png",
-        "info_bg": "rgba(0,0,0,0)",
+        "info_bg": "",
         "text_color": "#000000",
         "linktext": "COMPLETE SUBSCRIPTION",
-        "link2": "shopify:\/\/products\/cohorted-subscription-beauty-box",
-        "link": "shopify:\/\/products\/cohorted-subscription-beauty-box",
+        "link2": "https:\/\/www.cohorted.co.uk\/products\/cohorted-subscription-beauty-box",
+        "link": "https:\/\/www.cohorted.co.uk\/products\/cohorted-subscription-beauty-box",
         "sectionOrder": "orderTwo"
       }
     },
-    "1638971776e4cf39bd": {
+    "1641304281e0bace5b": {
       "type": "rich-text",
+      "disabled": true,
       "settings": {
         "title": "Cohorted Beauty Box May Unboxing With Lady Writes",
         "text": "<p>Get a Sneak Peek inside May's Cohorted Beauty Subscription Beauty Box. This one is the Wellness edit which contains £175 worth of products!<\/p>",
@@ -259,15 +200,17 @@
         "sectionOrder": "orderOne"
       }
     },
-    "163903161040ef94b7": {
+    "164135692318331207": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/video_bg_0d827526-28c3-4d65-863b-70632020d6ee.jpg",
         "link": "https:\/\/www.youtube.com\/watch?v=n3irfR9KXxY&t=3s"
       }
     },
-    "1639050927e8716946": {
+    "16413570077e71d263": {
       "type": "product-tabs",
+      "disabled": true,
       "settings": {
         "heading": "Why Cohorted?",
         "teamPhoto": "shopify:\/\/shop_images\/logo_black.png",
@@ -284,106 +227,109 @@
         "text4": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that i<\/p>"
       }
     },
-    "1639041953b0f8a75d": {
+    "16413573725ccb0296": {
       "type": "claim-slider",
+      "disabled": true,
       "blocks": {
-        "163904195246b4da45-0": {
+        "164135737246e91699-0": {
           "type": "image",
           "settings": {
-            "featured_image": "shopify:\/\/shop_images\/slide-crew.jpg",
+            "featured_image": "shopify:\/\/shop_images\/slide-crew_1.jpg",
             "title": "Claim Your Free Gift",
             "paragraph": "When you subscribe to the Beauty Box, we'll send you this free gift, completely free of charge! Get your FREE L'OCCITANE LTD Immortelle Precieuse 8ml, today when you purchase a subscription. Use the code COHORTEDGIFTME at checkout to redeem.",
             "linktext": "Subscribe Now To Get Your Free gift",
-            "link": "shopify:\/\/products\/cohorted-subscription-beauty-box",
+            "link": "https:\/\/www.cohorted.co.uk\/products\/cohorted-subscription-beauty-box",
             "sectionOrder": "orderOne"
           }
         },
-        "3f3c0289-d0df-4a01-b0b7-9a4140329943": {
+        "e1f353a1-acb3-49d9-be40-7f7bc7e77a47": {
           "type": "image",
           "settings": {
             "featured_image": "shopify:\/\/shop_images\/02_447c1162-0bb1-48bf-8af0-a859b6d82d86.jpg",
             "title": "Cohorted Rewards",
             "paragraph": "The wait is over, as our exclusive reward scheme is coming this summer! We want to give back to our subscribers and so have lined up some incredible exclusive offers, incentives, competitions and rewards. From beauty and fashion, to lifestyle and culture, discover our reward scheme partners today and let the benefits roll in.",
             "linktext": "Coming Soon",
-            "link": "shopify:\/\/products\/cohorted-subscription-beauty-box",
+            "link": "https:\/\/www.cohorted.co.uk\/products\/cohorted-subscription-beauty-box",
             "sectionOrder": "orderOne"
           }
         },
-        "9042478c-d339-4dc3-8255-5059b37a3f6e": {
+        "eeb49df0-8ace-462f-920a-71ae0c6be7aa": {
           "type": "image",
           "settings": {
             "featured_image": "shopify:\/\/shop_images\/03_0f8b6516-38a6-49e4-9794-c196d9ae1875.jpg",
             "title": "Previous Beauty Boxes",
             "paragraph": "Missed a previous beauty box curation? Looking for a special gift for a special someone? Don’t worry, we’ve got you covered here at Cohorted.\nDiscover the latest in beauty and explore our past’ beauty box curations. Whether you’re looking for a brand exclusive beauty box or a limited edition curation chock-full of beauty favourites, all boxes are beautifully packaged and arrive in our 100% sustainable beauty boxes.",
             "linktext": "Our Previous Boxes",
-            "link": "#",
+            "link": "",
             "sectionOrder": "orderOne"
           }
         }
       },
       "block_order": [
-        "163904195246b4da45-0",
-        "3f3c0289-d0df-4a01-b0b7-9a4140329943",
-        "9042478c-d339-4dc3-8255-5059b37a3f6e"
+        "164135737246e91699-0",
+        "e1f353a1-acb3-49d9-be40-7f7bc7e77a47",
+        "eeb49df0-8ace-462f-920a-71ae0c6be7aa"
       ],
       "settings": {
         "title_main": "Heading Title Here"
       }
     },
-    "16390259833e7d0b4c": {
+    "1641358339983a3001": {
       "type": "feature-collection",
+      "disabled": true,
       "settings": {
         "title": "Shop Also Our Collections",
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
         "collection": "classic-beauty-boxes"
       }
     },
-    "1639026138bfd78aca": {
+    "16413584148d5e2f48": {
       "type": "moving-text",
+      "disabled": true,
       "blocks": {
-        "16390261385a6de30b-0": {
+        "1641358414bd668f82-0": {
           "type": "select",
           "settings": {
             "linktext": "Cruelty free"
           }
         },
-        "16390261385a6de30b-1": {
+        "1641358414bd668f82-1": {
           "type": "select",
           "settings": {
             "linktext": "Vegan"
           }
         },
-        "9c5411e2-19c0-4c46-906d-30071981d0fa": {
+        "ab34c569-03ed-4cd0-93f5-619a9d76c077": {
           "type": "select",
           "settings": {
             "linktext": "No Harsh Chemicals"
           }
         },
-        "d0602dae-d0ad-4985-8b06-52b666657767": {
+        "c69cc22b-e8e9-478d-8052-e55684e4f065": {
           "type": "select",
           "settings": {
             "linktext": "Certified"
           }
         },
-        "7b13e791-8c24-4a59-abb4-ed5c5e3d6694": {
+        "5faab42e-d974-42af-a5e2-bc44ca6070f3": {
           "type": "select",
           "settings": {
             "linktext": "Cruelty free"
           }
         },
-        "20e55393-b611-44f7-8db2-19903cb4fea0": {
+        "51a694ee-61a4-4d36-a705-95299f92ef9b": {
           "type": "select",
           "settings": {
             "linktext": "Vegan"
           }
         },
-        "62c1a0ab-ca58-4f26-b876-572dd8cd0db3": {
+        "9cf1d7ae-8344-4cdd-b04c-93d7a4bca7fc": {
           "type": "select",
           "settings": {
             "linktext": "No Harsh Chemicals"
           }
         },
-        "52720ed1-9035-4364-8886-f374ca6dd3d7": {
+        "af404515-bd31-4039-9d7d-dd711bf663d0": {
           "type": "select",
           "settings": {
             "linktext": "Certified"
@@ -391,24 +337,25 @@
         }
       },
       "block_order": [
-        "16390261385a6de30b-0",
-        "16390261385a6de30b-1",
-        "9c5411e2-19c0-4c46-906d-30071981d0fa",
-        "d0602dae-d0ad-4985-8b06-52b666657767",
-        "7b13e791-8c24-4a59-abb4-ed5c5e3d6694",
-        "20e55393-b611-44f7-8db2-19903cb4fea0",
-        "62c1a0ab-ca58-4f26-b876-572dd8cd0db3",
-        "52720ed1-9035-4364-8886-f374ca6dd3d7"
+        "1641358414bd668f82-0",
+        "1641358414bd668f82-1",
+        "ab34c569-03ed-4cd0-93f5-619a9d76c077",
+        "c69cc22b-e8e9-478d-8052-e55684e4f065",
+        "5faab42e-d974-42af-a5e2-bc44ca6070f3",
+        "51a694ee-61a4-4d36-a705-95299f92ef9b",
+        "9cf1d7ae-8344-4cdd-b04c-93d7a4bca7fc",
+        "af404515-bd31-4039-9d7d-dd711bf663d0"
       ],
       "settings": {
         "hide_mob": false
       }
     },
-    "163902629760ffb8c7": {
+    "164135856945a0f5dd": {
       "type": "featured-product",
+      "disabled": true,
       "settings": {
         "featured_product": "cohorted-subscription-beauty-box",
-        "featured_image": "shopify:\/\/shop_images\/best-brand-2.jpg",
+        "featured_image": "shopify:\/\/shop_images\/product-col-6.jpg",
         "background_info": "shopify:\/\/shop_images\/Share-Friends-Background.jpg",
         "info_bg": "",
         "text_color": "",
@@ -421,19 +368,18 @@
   },
   "order": [
     "main",
-    "16389655410a4e7ed5",
-    "163896678780d582a2",
-    "16390282269ef979c9",
-    "16391141386293b53f",
-    "163896721136b4a0a2",
-    "1638967674655f8add",
-    "1638968515399efa42",
-    "1638971776e4cf39bd",
-    "163903161040ef94b7",
-    "1639050927e8716946",
-    "1639041953b0f8a75d",
-    "16390259833e7d0b4c",
-    "1639026138bfd78aca",
-    "163902629760ffb8c7"
+    "16413028070565fce5",
+    "16413030915f41d066",
+    "164130328596be1f1f",
+    "1641303565f7915582",
+    "164130370557f1321c",
+    "164130386752483941",
+    "1641304281e0bace5b",
+    "164135692318331207",
+    "16413570077e71d263",
+    "16413573725ccb0296",
+    "1641358339983a3001",
+    "16413584148d5e2f48",
+    "164135856945a0f5dd"
   ]
 }
