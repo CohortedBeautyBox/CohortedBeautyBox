@@ -10,6 +10,9 @@
     font-family: 'Austin';
     letter-spacing: 1px;
 }
+#contact-us .main.home-content.contact-content.container {
+    padding-bottom: 0 !important;
+}
 /* refer to friend */
     .lion-referral-widget-main__heading {
     font: normal normal normal 42px/58px Austin;
@@ -100,7 +103,19 @@ display:none;
 #cohorted-corporate-gifting .home-content-container .container {
     padding: 0 0px;
 }
+.cms-page .page-content {
+    margin-top: 50px;
+}
+/* .cms-page .page-title {
+    display: none;
+} */
 @media(max-width:767px){
+    /* body .slick-track .logo-slider-item:nth-child(4) img {
+        width: unset;
+        object-fit: unset;
+        height: unset;
+        position: unset;
+    } */
     .cult-slider .text-container-wrapper p {
         max-width: 100% !important;
     }
@@ -383,12 +398,89 @@ label.needsclick.kl-private-reset-css-Xuajs1 .needsclick.kl-private-reset-css-Xu
   }
 
   @media(max-width:1199px){
+    .info-boxs p {
+        height: 100%;
+        padding: 0 0px;
+    }
+    #product-area-mkpb .container {
+        width: 100%!important;
+        margin: 0 auto;
+        padding: 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #product-area-mkpb .product-item-box {
+        max-width: 100%;
+        width: 100%;
+    }
+    #product-area-mkpb .container h2 {
+        grid-column: 1 / -1;
+    }
+    section#product-area-mkpb .clear {
+        display: none;
+    }
+    #product-area-mkpb center {
+        grid-column: 1 / -1;
+    }
+    #product-area-mkpb {
+        padding: 20px 30px 0px;
+    }
+    #personalise-bag h2 {
+        padding-right: 60px;
+        margin: 60px 0 60px!important;
+    }
+    .product-info-new h2 {
+        font: normal normal normal 14px/22px Austin;
+    }
+    .product-info-new .price-box span {
+        font: normal normal normal 14px/22px Austin!important;
+    }
+    .review-images {
+        padding-bottom: 20px;
+    }
+    #shopify-section-template--14213728829545__1638791834e33046a4 .overlap_heading {
+        transform: translateX(-46px);
+    }
+    #shopify-section-template--14226357846121__163965928753d48295 .text-container-wrapper.full-width {
+        padding-bottom: 30px;
+    }
+    
+    #shopify-section-template--14226357846121__163965928753d48295 {
+    padding-top: 20px !important;
+    }
+    .products-with-image {
+        padding: 50px 0 !important;
+    }
+    .block_contact {
+        margin-bottom: 0px;
+    }
+    .banner-content h2 {
+        font: normal normal normal 50px/50px Austin !important;
+    }
+    .banner-content {
+        padding: 40px !important;
+    }
+    .section-insta h2 {
+        font: normal normal normal 60px/82px 'Austin';
+        margin-bottom: 30px;
+    }
+    .banner-content h2 {
+        font: normal normal normal 50px/50px Austin!important;
+    }
     #shopify-section-template--14211130196073__1638522509f8d1321f .full-width .description-before {
-        padding-left: 50px !important;
-        }
+        padding-left: 50px!important;
+        margin-bottom: 0 !important;
+    }
         #shopify-section-template--14211130196073__1638522509f8d1321f .product-feature-image img {
-            height: 100% !important;
-            max-height: 820px;
+            height: 100%!important;
+            max-height: 700px;
+            object-position: left;
+        }
+        #shopify-section-template--14211130196073__1638522509f8d1321f .text-container-wrapper.full-width {
+            padding-bottom: 0;
+        }
+        div#shopify-section-template--14211130196073__1638524901f24602b4 {
+            padding-top: 0;
         }
 }
 @media(max-width:991px){
@@ -397,6 +489,11 @@ label.needsclick.kl-private-reset-css-Xuajs1 .needsclick.kl-private-reset-css-Xu
         font-size: 12px!important;
         line-height: 16px!important;
         text-transform: uppercase !important;
+    }
+    .app-links {
+        text-align: left;
+        display: flex;
+        grid-gap: 10px;
     }
     
 	.close_icon img {
@@ -707,12 +804,24 @@ body:not(.top-search-open) #cart, body:not(.top-search-open) .header-logo, body:
     margin-top: 30px;
 }
 .collapsible .plus-right {
-    width: 40px !important;
+    width:50% !important;
     height: 40px !important;
 }
 ul.mobile_social li {
     display: flex;
-    width: 100%;
+    width: auto;
+}
+.shopify-challenge__container .shopify-challenge__button {
+    float: unset!important;
+    background: #000;
+    color: #fff;
+    font-family: 'Austin';
+    padding: 0 30px;
+    margin-top: 20px !important;
+    letter-spacing: 1px;
+}
+#challenge #shopify-section-header-new {
+    margin-bottom: 40px;
 }
 ul.mobile_social {
     display: flex;
@@ -1195,6 +1304,30 @@ h3.product-name a {
 .breadcrumbs ul span {
     margin-left: 0;
 }
+#limited-edition-beauty-boxes-monthly-beauty-amp-makeup-subscription-bo .product-box-inner {
+    margin: 0px 0;
+}
+.page-content .RapidocsNormal {
+    margin-bottom: 15px;
+}
+.page-content ol li span {
+    font-family: 'Austin';
+    font-size: 20px !important;
+    display: block;
+    margin: 20px 0;
+}
+.page-content p strong {
+    font-family: 'Austin';
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+.third-block-conserv {
+    margin-bottom: 0;
+}
+#shopify-section-template--14216526561385__163895480607acfd90 p.job_position {
+    height: 40px;
+}
 @media (max-width:1460px) {
     h3.product-name a {
         font: normal normal normal 18px/23px Austin;    
@@ -1212,7 +1345,7 @@ h3.product-name a {
         font: normal normal normal 70px/70px Austin;
       }
 	.banner-content {
-		padding: 50px;
+		padding: 80px;
 	}
 	.banner-content {
 		max-width: 50%;
@@ -1248,6 +1381,13 @@ h3.product-name a {
 	}
 }
 @media(max-width:991px){
+    .inner-logo-slider {
+        margin-bottom: 0 !important;
+    }
+    .monials-item {
+        margin-bottom: 60px;
+    }
+   
     .banner-content h2 {
         font: normal normal normal 45px/50px Austin!important;
     }
@@ -1273,6 +1413,9 @@ h3.shopify_explorer_faq__separator {
 }
 }
 @media(max-width:767px){
+    ul.mobile_social li {
+        padding-right: 15px;
+    }
     #customer_orders p:first-child, .order-havent p {
         font-size: 16px;
     }

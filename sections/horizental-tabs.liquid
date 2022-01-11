@@ -1,255 +1,290 @@
 <div class="container-tab">
 	<div id="horizentalTab">	
-	<div class="product-tabs-parent">
+	  <div class="product-tabs-parent">
 		<div class="resp-tabs-list">
-			<h2 class="site_heading">{{ section.settings.heading }}</h2>
-<button class="accordion">{{ section.settings.text_head }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
-<div class="panel">
-  <p>{{ product.description }}</p>
-</div>
-
-<button class="hide-non-subscription accordion">{{ section.settings.text_head2 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
-<div class="panel">
-  <p>	{{ section.settings.text2 }}</p> 
-</div>
-
-<button class="hide-non-subscription accordion ">{{ section.settings.text_head3 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
-<div class="panel">
-  <p>{{ section.settings.text3 }}</p>
-</div>
-
-<button class="hide-non-subscription accordion">{{ section.settings.text_head4 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
-<div class="panel">
-  <p>{{ section.settings.text4 }}</p>
-</div>	
-
-<button class="accordion">{{ section.settings.text_head5 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
-<div class="panel">
-  <p>{{ section.settings.text5 }}</p>
-</div>
-
-
+		  <h2 class="site_heading">{{ section.settings.heading }}</h2>
+		  <div class="acc">
+			<div class="acc__card">
+			  <button class="accordion acc__title">{{ section.settings.text_head }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+			  <div class="panel tab-description acc__panel">
+				<p>{{ product.description }}</p>
+			  </div>
+			</div>
+			<div class="acc__card">
+			  <button class="hide-non-subscription accordion acc__title">{{ section.settings.text_head2 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+			  <div class="panel acc__panel">
+				<p>	{{ section.settings.text2 }}</p> 
+			  </div>
+			</div>
+			<div class="acc__card">
+			  <button class="hide-non-subscription accordion acc__title">{{ section.settings.text_head3 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+			  <div class="panel acc__panel">
+				<p>{{ section.settings.text3 }}</p>
+			  </div>
+			</div>
+			<div class="acc__card">
+			  <button class="hide-non-subscription accordion acc__title">{{ section.settings.text_head4 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+			  <div class="panel acc__panel">
+				<p>{{ section.settings.text4 }}</p>
+			  </div>
+			</div>
+			<div class="acc__card">
+			  <button class="accordion acc__title">{{ section.settings.text_head5 }} <img src="{{'arrow-right.png' | asset_img_url:'30x20'}}"></button>
+			  <div class="panel acc__panel">
+				<p>{{ section.settings.text5 }}</p>
+			  </div>
+			</div>
+		  </div>
 		</div>
 		<div class="resp-tabs-container">
-			<img src="{{ section.settings.image  | img_url:'master'}}">
-
-
+		  <img src="{{ section.settings.image  | img_url:'master'}}">
 		</div>
-		</div>
-		</div></div>
-	
-		  <style>
-			  #horizentalTab .resp-tabs-list {
-    padding: 60px;
+	  </div>
+	</div>
+  </div>
+  
+  <style>
+	#horizentalTab .resp-tabs-list {
+	  padding: 60px;
+	}
+	.resp-tabs-container {
+    position: relative;
 }
-.product-tabs-parent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* .resp-tabs-container img {
+    height: 100%;   
+    position: absolute;
+    left: 0;
 }
-button.accordion {
-    padding: 0;
-    border: none !important;
-    border-bottom: 1px solid #dcdcdc7d!important;
-    padding: 30px 20px !important;
-    text-align: left;
-    font: normal normal normal 28px/40px Austin;
-    letter-spacing: 1.4px;
-    color: #A7A7A7;
-    text-transform: capitalize;
-    display: grid;
-    grid-template-columns: 1fr 30px;
-    align-items: center;
-    width: 100%;
-    background: transparent;
-}
-.hide-non-subscription {
-    display: none !important;
-}
-
-.subscription-product .hide-non-subscription{display:grid !important;}
-#horizentalTab .panel {
+.subscription-product .resp-tabs-container img {
+    height: 835px;   
+} */
+	.product-tabs-parent {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	}
+	.resp-tabs-list .tab-description li {
+	  float: unset;
+	  line-height: 22px;
+	  text-align: left;
+	  display: block;
+	  border-bottom: none !important;
+	}
+	button.accordion {
+	  padding: 0;
+	  border: none !important;
+	  border-bottom: 1px solid #dcdcdc7d!important;
+	  padding: 30px 20px !important;
+	  text-align: left;
+	  font: normal normal normal 28px/40px Austin;
+	  letter-spacing: 1.4px;
+	  color: #A7A7A7;
+	  text-transform: capitalize;
+	  display: grid;
+	  grid-template-columns: 1fr 30px;
+	  align-items: center;
+	  width: 100%;
+	  background: transparent;
+	}
+	.hide-non-subscription {
+	  display: none !important;
+	}
+  
+	.subscription-product .hide-non-subscription{display:grid !important;}
+	#horizentalTab .panel {
     margin-bottom: 20px;
     background-color: transparent;
     border: 1px solid #f7f7f7;
     border-radius: 0;
     box-shadow: none;
+    max-height: 300px;
+    overflow-y: auto;
+	overflow-x: hidden;
 }
-button.accordion.active {
-    color: #000 !important;
-    border-bottom: 1px solid #fff!important;
-}
-button.accordion img {
-    opacity: .3;
-}
-
-button.accordion.active img {
-    opacity: 1;
-}
-div#horizentalTab {
-    background: #EBEBEB66 0% 0% no-repeat padding-box;
-}
-.panel {
-    display: none;
-    overflow: hidden;
-  }
-  .panel p {
-    color: #464646;
-    font: normal normal normal 18px/28px Avenir Next LT Pro;
-    text-align: left;
-	padding: 0 20px;
-}
-	@media(max-width:768px){
-
-		
-	#horizentalTab .resp-tabs-list {
-    padding: 0 20px;
-}
-.panel p {
-    font: normal normal normal 12px/16px Avenir Next LT Pro;
-    letter-spacing: .6px;
-    padding: 0;
-}
-	button.accordion img {
-    opacity: .5;
-    width: 22px;
-}																																																		
-	.product-tabs-parent {
-    display: grid;
-    grid-template-columns: 1fr !important;
-}
-button.accordion {
-    padding: 20px 0px !important;
-    font: normal normal normal 15px/21px 'Austin';
-}
-	.button.accordion.active img {
-		opacity: 1;
+	button.accordion.active {
+	  color: #000 !important;
+	  border-bottom: 1px solid #fff!important;
 	}
-	.resp-tabs-container .site_heading {
+	button.accordion img {
+	  opacity: .3;
+	}
+  
+	button.accordion.active img {
+	  opacity: 1;
+	}
+	div#horizentalTab {
+	  background: #EBEBEB66 0% 0% no-repeat padding-box;
+	}
+	.panel {
+	  display: none;
+	  overflow: hidden;
+	}
+	.panel p {
+	  color: #464646;
+	  font: normal normal normal 18px/28px Avenir Next LT Pro;
+	  text-align: left;
+	  padding: 0 20px;
+	}
+	@media(max-width:768px){
+		.resp-tabs-container img {
+    height: 100%;
+    position: relative;
+    left: 0;
+}
+.subscription-product .resp-tabs-container img {
+    height: 100%;   
+}
+	  #horizentalTab .resp-tabs-list {
+		padding: 0 20px;
+	  }
+	  .panel p {
+		font: normal normal normal 12px/16px Avenir Next LT Pro;
+		letter-spacing: .6px;
+		padding: 0;
+	  }
+	  button.accordion img {
+		opacity: .5;
+		width: 22px;
+	  }																																																		
+	  .product-tabs-parent {
+		display: grid;
+		grid-template-columns: 1fr !important;
+	  }
+	  button.accordion {
+		padding: 20px 0px !important;
+		font: normal normal normal 15px/21px 'Austin';
+	  }
+	  .button.accordion.active img {
+		opacity: 1;
+	  }
+	  .resp-tabs-container .site_heading {
 		margin-bottom: 10px;
 		text-align: left;
 		width: 100%;
+	  }
 	}
-	}
-		  </style>
-	
-	<script>
-		var acc = document.getElementsByClassName("accordion");
-		var i;
-		
-		for (i = 0; i < acc.length; i++) {
-		  acc[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var panel = this.nextElementSibling;
-			if (panel.style.display === "block") {
-			  panel.style.display = "none";
-			} else {
-			  panel.style.display = "block";
-			}
-		  });
-		}
-		</script>
-		
-		  {% schema %}
-		
-		  {
-			"name": "Horizontal Tabs",
-			"class": "product-tabs horizental-tabs",
-			
-			"settings": [
+  </style>
+  
+  <script>
+  $(function() {
+	$('.acc__title').click(function(j) {
+	  
+	  var dropDown = $(this).closest('.acc__card').find('.acc__panel');
+	  $(this).closest('.acc').find('.acc__panel').not(dropDown).slideUp();
+	  
+	  if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	  } else {
+		$(this).closest('.acc').find('.acc__title.active').removeClass('active');
+		$(this).addClass('active');
+	  }
+	  
+	  dropDown.stop(false, true).slideToggle();
+	  j.preventDefault();
+	});
+  });
+  </script>
+		  
+			{% schema %}
+		  
 			{
-				"type": "text",
-				"id": "heading",
-				"label": "Heading",
-				"default": "Why Cohorted?"
-			  },
-			  {
-				"type": "image_picker",
-				"id": "image",
-				"label": "Select Image"			  },
+			  "name": "Horizontal Tabs",
+			  "class": "product-tabs horizental-tabs",
 			  
-			
-		
-			{
-				"type": "text",
-				"id": "text_head",
-				"label": "Tab Heading 1",
-				"default": "Tab Heading"
-			  },
+			  "settings": [
+			  {
+				  "type": "text",
+				  "id": "heading",
+				  "label": "Heading",
+				  "default": "Why Cohorted?"
+				},
+				{
+				  "type": "image_picker",
+				  "id": "image",
+				  "label": "Select Image"			  },
+				
+			  
+		  
+			  {
+				  "type": "text",
+				  "id": "text_head",
+				  "label": "Tab Heading 1",
+				  "default": "Tab Heading"
+				},
+				{
+				  "type": "html",
+				  "id": "text",
+				  "label": "Text",
+				  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+				},
+	  
+	  
+			  {
+				  "type": "text",
+				  "id": "text_head2",
+				  "label": "Tab Heading 2",
+				  "default": "Tab Heading"
+				},
+	  
+			  
+				{
+				  "type": "html",
+				  "id": "text2",
+				  "label": "Text 2",
+				  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+				},
+		  
+			  {
+				  "type": "text",
+				  "id": "text_head3",
+				  "label": "Tab Heading 3",
+				  "default": "Tab Heading"
+				},
+				
+			  
+			  {
+				  "type": "html",
+				  "id": "text3",
+				  "label": "Text 3",
+				  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+				},
+	  
+				{
+				  "type": "text",
+				  "id": "text_head4",
+				  "label": "Tab Heading 4",
+				  "default": "Tab Heading"
+				},
+			  
 			  {
 				"type": "html",
-				"id": "text",
-				"label": "Text",
+				"id": "text4",
+				"label": "Text 4",
 				"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
 			  },
-	
-	
-			{
-				"type": "text",
-				"id": "text_head2",
-				"label": "Tab Heading 2",
-				"default": "Tab Heading"
-			  },
-	
-			
+			  {
+				  "type": "text",
+				  "id": "text_head5",
+				  "label": "Tab Heading 5",
+				  "default": "Tab Heading"
+				},
+			  
 			  {
 				"type": "html",
-				"id": "text2",
-				"label": "Text 2",
+				"id": "text5",
+				"label": "Text 5",
 				"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-			  },
-		
-			{
-				"type": "text",
-				"id": "text_head3",
-				"label": "Tab Heading 3",
-				"default": "Tab Heading"
-			  },
-			  
-			
-			{
-				"type": "html",
-				"id": "text3",
-				"label": "Text 3",
-				"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-			  },
-	
-			  {
-				"type": "text",
-				"id": "text_head4",
-				"label": "Tab Heading 4",
-				"default": "Tab Heading"
-			  },
-			
-			{
-			  "type": "html",
-			  "id": "text4",
-			  "label": "Text 4",
-			  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-			},
-			{
-				"type": "text",
-				"id": "text_head5",
-				"label": "Tab Heading 5",
-				"default": "Tab Heading"
-			  },
-			
-			{
-			  "type": "html",
-			  "id": "text5",
-			  "label": "Text 5",
-			  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-			}
-			
-	
-			  
-			  
-				  
-			],
-			"presets": [
-			  {
-				"name": "Horizontal Tabs",
-				"category": "Tabs"
 			  }
-			]
-		  }
-		  {% endschema %}
+			  
+	  
+				
+				
+					
+			  ],
+			  "presets": [
+				{
+				  "name": "Horizontal Tabs",
+				  "category": "Tabs"
+				}
+			  ]
+			}
+			{% endschema %}

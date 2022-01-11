@@ -505,13 +505,13 @@ div#undefined-sticky-wrapper {
     margin: 0 auto;
     height: 40px;
 }
-.slick-track .logo-slider-item:nth-child(4) img {
+/* .slick-track .logo-slider-item:nth-child(4) img {
     width: 136px;
     object-fit: unset;
     height: 26px;
     position: relative;
     top: 8px;
-}
+} */
 /* collection grid */
 
 .collection-list-li img {
@@ -539,6 +539,9 @@ div#undefined-sticky-wrapper {
 }
 .section-column-gallery {
     margin: 100px 0;
+}
+#shopify-section-template--14213444403305__1638769902d5013264 .section-column-gallery {
+  margin-bottom: 20px;
 }
 .gallery-content .row {
   width: 100%;
@@ -788,9 +791,21 @@ span.color {
   margin: 0;
 }
 div#new-feed {
-  margin-top: 100px;
+  margin-top: 50px;
   position: relative;
   z-index: 1;
+}
+div#new-feed::before {
+  content: "";
+  position: absolute;
+  width: 94%;
+  margin: 0 auto;
+  top: 0;
+  height: 1px;
+  background: #A7A7A7;
+  left: 0;
+  right: 0;
+  transform: translateY(-50px);
 }
 div#shopify-section-footer-new {
   position: relative;
@@ -800,6 +815,7 @@ div#shopify-section-instagram-section {
   background: #ffff;
   position: relative;
   z-index: 9;
+  padding-top: 50px;
 }
 #new-feed .insta-header {
   margin-bottom: 40px;
@@ -1038,6 +1054,7 @@ div#nova-mobile-menu svg {
   fill: #000;
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 
 .is-sticky #nova-mobile-menu svg.icon.icon-hamburger{  fill: #fff;}
@@ -1329,11 +1346,22 @@ body .detail-view a {
 } 
 .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a {
   display: block;
-  position: relative;
   width: 100%;
   overflow: hidden;
 }
-
+.you-may-also .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a{
+  position: relative;
+}
+.category-item-list .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a {
+  position: relative;
+}
+.cms-list-collections .col-lg-4.col-md-4.col-sm-4.col-xs-6.item a {
+  position: relative;
+}
+.item .item-product-image-box:hover .product-hover-box a.detail_view {
+  background-color: #000000;
+  opacity: .4;
+}
 body .spr-icon {
   width: 1em;
   height: 1em;
@@ -1342,10 +1370,13 @@ body .spr-icon {
   transform: scale(1.1);
 }
 .row.category-list .image img {
-  height: 470px;
+  /* height: 470px; */
   object-fit: cover;
   transition: transform .5s ease;
   width: 100%;
+}
+.cms-list-collections .row.category-list .image img {
+  min-height: 404px;
 }
 .collection-box {
   margin-top: 50px;
@@ -1405,10 +1436,10 @@ ul#novaworks-nav li.level-top a.level-top {
   padding: 31px 0;
 }
 /* contact page */
-#contact-us .insta-header {
+/* #contact-us .insta-header {
   border-top: 1px solid #dddd;
   padding-top: 60px;
-}
+} */
 
 .page-title h1 {
   text-align: center;
@@ -1449,7 +1480,7 @@ ul#novaworks-nav li.level-top a.level-top {
   margin-bottom: 20px !important;
   font-size: 12px;
   line-height: 20px;
-  max-width: 70%;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -1579,6 +1610,23 @@ h2.site_heading {
   font-family: 'AVENIR LT STD 45 BOOK';
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.product-tabs a:hover, .product-tabs li.active a, .product-tabs li.active a:hover {
+  background-color: #eed3c6;
+}
+.product-tabs a {
+  margin-top: 20px !important;
+}
+div#address_tables {
+  display: flex;
+  flex-wrap: wrap;
+}
+#shopify-section-template--14216801779817__1638968515399efa42 .product-info .save {
+  display: none;
+}
+#shopify-section-template--14216801779817__1638968515399efa42 .product-info .price-box span {
+  font-size: 24px;
+  line-height: 58px;
 }
 @media(min-width:1500px){
   .activesticky {
@@ -1722,8 +1770,50 @@ img.image_box_2, img.image_box_3 {
 .product-template-main .pro-icon ul {
   grid-template-columns: repeat(2,1fr) !important;
 }
+.info-boxs p {
+  max-width: 100% !important;
+}
 }
 @media (max-width:1199px) {
+  div#shopify-section-template--14216801779817__1639041953b0f8a75d {
+    margin-top: 0;
+}
+#customer_sidebar a {
+  font: normal normal normal 14px/40px Austin !important;
+  letter-spacing: .5px !important;
+  height: 50px !important;
+
+}
+#footer_c {
+  border-top: 0 solid transparent;
+}
+ul.footer.icon {
+  position: absolute;
+  margin-top: 40px;
+}
+#shopify-section-template--14216801779817__1639041953b0f8a75d .slick-dots {
+  bottom: -23px!important;
+}
+  #footer_c h3 {
+    margin-top: 10px;
+}
+body .cart-contents span {
+  top: 13px;
+}
+a.cart-contents {
+  padding: 0 0px;
+  margin-right: 0;
+  width: 50px;
+  text-align: left;
+}
+  #contact-us .main.home-content.contact-content.container {
+    padding-top: 30px !important;
+}
+
+  #shopify-section-template--14216801779817__16389655410a4e7ed5 .app-links {
+    display: inline-grid;
+    width: 100%;
+}
   #shopify-section-template--14214856867945__1638853446a36bc1a2 .banner-content {
     max-width: 100% !important;
     top: 0 !important;
@@ -1731,8 +1821,11 @@ img.image_box_2, img.image_box_3 {
 #shopify-section-template--14208435028073__1638357391737d4189 .description-before {
   max-width: 100% !important; 
 }
-.logo-content-part p {
-  margin-bottom: 15px;
+.collection-list-li a span {
+  font-size: 13px;
+}
+.section-column-gallery {
+  margin: 70px 0;
 }
 .row.category-list .image img {
   height: 370px;
@@ -1780,8 +1873,11 @@ ul.content-with-image-slider-section-buttons a {
     letter-spacing: .75px !important;
     border-bottom: 1px solid #DCDCDC;
     padding: 15px 0 !important;
-    text-transform: capitalize !important;
+    text-transform: uppercase !important;
     color: #000 !important;
+}
+span.plus-right img{
+  right: 0;
 }
 .contact-content {
   padding:  80px!important;
@@ -1792,7 +1888,9 @@ ul.content-with-image-slider-section-buttons a {
 }
 .close_btn {
   text-align: right;
-  padding-right: 20px;
+  padding-right: 0;
+  position: relative;
+  top: -10px;
 }
   .text-box h3.subtitle {
     font: italic normal normal 60px/60px 'Austin';
@@ -1841,8 +1939,11 @@ body .sticky-wrapper.is-sticky .nav-container {
   line-height: 80px;
 }
 .text-container p {
-  font-size: 55px;
-  line-height: 60px;
+  font-size: 45px;
+  line-height: 50px;
+}
+.text-with-button-section {
+  margin: 80px 0 80px 0;
 }
 .text-container-wrapper {
   width: 100%;
@@ -1855,22 +1956,22 @@ body .sticky-wrapper.is-sticky .nav-container {
   height: 650px;
 } */
 .text-container-wrapper h2 {
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 70px;
+  line-height: 70px;
 }
+.content-with-image-slider-section .slick-slide img {
+  height: 650px !important;
+} 
 .feature-collection-main .text-container-wrapper h2 {
   font-size: 60px;
 }
-.text-container-wrapper h2 {
-  font-size: 80px;
-  line-height: 90px;
-}
+
 .feature-collection-main .text-container-wrapper {
   width: 80%;
 }
 #footer_a .footer-top {
   padding-top: 10px;
-  border-bottom: 1px solid transparent;
+  /* border-bottom: 1px solid transparent; */
 }
 #footer_d .footer {
   border-top: 1px solid transparent;
@@ -1921,6 +2022,11 @@ li.level0.level-top.active.parent-dropdown {
 }
 }
 @media (max-width:991px) {
+  
+  
+  div#address_tables .col-sm-4 {
+    width: 50%;
+}
   .logo-image-slider-section-with-background .slick-arrow {
     visibility: hidden;
 }
@@ -2033,10 +2139,7 @@ div#nova-mobile-menu {
   font-size: 70px;
   line-height: 70px;
 }
-.text-container-wrapper h2 {
-  font-size: 70px;
-  line-height: 70px;
-}
+
 .text-box h3.subtitle {
   font: italic normal normal 60px/60px 'Austin';
 }
@@ -2046,8 +2149,31 @@ div#nova-mobile-menu {
 }
 
 @media (max-width:767px) {
+  ul.footer.icon {
+    margin-top: 20px;
+}
+#shopify-section-template--14216801779817__1638968515399efa42 .product-info .price-box span {
+  font-size: 16px;
+  line-height: 28px;
+}
+#shopify-section-template--14216801779817__1638968515399efa42 .product-info .price-box {
+  margin-bottom: 15px;
+}
+div#address_tables .col-sm-4 {
+  width: 100%;
+}
+  #shopify-section-template--14216801779817__16389655410a4e7ed5 .app-links {
+    display: flex;
+}
   .collection-show-mob .collection-list-li img {
     height: 375px;
+}
+a.cart-contents {
+  width: 27px;
+}
+
+.product-image {
+  padding: 0 0px;
 }
 .account-login #customer_login {
   margin-top: 40px !important;
@@ -2429,7 +2555,7 @@ img.image_box_1 {
   line-height: 44px;
 }
 .product-image {
-  padding: 0 10px;
+  padding: 0 0px;
 }
 .feature-collection-main .slick-prev {
   left: -10px;
@@ -2447,6 +2573,7 @@ img.image_box_1 {
 .marquee {
   height: 120px;
   margin-bottom: 10px;
+  line-height: 120px;
 }
 .product-info h2 {
   font-family: 'Austin';

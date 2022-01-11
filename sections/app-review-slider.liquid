@@ -36,19 +36,21 @@
 	  $('.review-item-new').slick({
 		dots: false,
 		arrow: false,
-		speed: 300,
+		autoplay: true,
+        autoplaySpeed: 2500,
+        infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		  responsive: [
 		{
 		  breakpoint: 1024,
 		  settings: {
-			slidesToShow: 4,
+			slidesToShow: 2,
 			slidesToScroll: 1,
 			infinite: true,
 			dots: true
 		  }
-		},
+		}, 
 		{
 		  breakpoint: 600,
 		  settings: {
@@ -77,6 +79,7 @@
     border: 1px solid #fff;
     padding: 20px;
     text-align: left;
+	cursor: pointer;
 }
 .app-testimonial-slider .review-wraps {
     margin-bottom: 10px;
@@ -119,6 +122,32 @@ p.play-store {
     text-align: center;
     font-family: 'Austin';
     font-size: 24px;
+}
+@media(max-width:1199px){
+  .title-align h4 {
+    font: normal normal normal 16px/50px 'Austin';
+    margin: 0;
+}
+.profile {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.app-testimonial-slider h2, .app-testimonial-slider i, .app-testimonial-slider p {
+    line-height: 16px;
+    font-size: 12px;  
+}
+.app-testimonial-slider .title-align {
+    margin-bottom: 15px;
+}
+}
+@media(max-width:767px){
+	.app-testimonial-slider .feature-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 }
 	</style>
 	

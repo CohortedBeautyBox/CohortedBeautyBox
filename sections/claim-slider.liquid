@@ -71,16 +71,19 @@ body #loyaltylion .lion-rules-list {
     margin-bottom: 100px;
     margin-top: 70px;
 }
+.claim-slider .slick-dots {
+    bottom: -73px!important;
+}
 .content-item {
     background: #000000 0% 0% no-repeat padding-box;
     max-width: 480px;
-    padding: 20px;
+    padding: 80px 20px 20px 20px;
     text-align: left;
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: -30px;
-	display: none;
-	z-index: 1;
+    display: none;
+    z-index: 1;
 }
 .slick-current.slick-active .content-item {
     display: block;
@@ -99,13 +102,14 @@ p.paragraph {
 a.primary-btn-new {
     border: 1px solid #FFFFFF;
     color: #fff;
-    font: normal normal normal 16px/60px Austin;
+    font: normal normal normal 18px/60px Austin;
     height: 60px;
     display: inline-block;
     padding: 0 30px;
     line-height: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
+	text-transform: uppercase;
 }
 	.claim-slider .slick-next:before {
 			  content: url("{{'arrow-right.png' | asset_img_url:'25x20'}}") !important;
@@ -117,14 +121,14 @@ a.primary-btn-new {
 			.claim-slider .slick-prev.slick-arrow {
     left: 29%;
     top: 100% !important;
-    transform: translateY(10px);
+    transform: translateY(39px);
     z-index: 1;
 	box-shadow: none;
 }
 	.claim-slider .slick-next.slick-arrow {
 		right: 29%;
 		top: 100% !important;
-		transform: translateY(10px);
+		transform: translateY(39px);
 		box-shadow: none;
 		z-index: 1;
 		}
@@ -186,12 +190,14 @@ a.primary-btn-new {
 @media(max-width:1199px){
 .claim-slider .slick-prev.slick-arrow {
     left: 20%;
+	transform: translateY(20px);
 }
 .claim-slider .slick-next.slick-arrow {
     right: 20%;
+	transform: translateY(20px);
 }
 .content-item {
-    top: 10%;
+    top: 5%;
 }
 }
 @media(max-width:991px){
@@ -216,7 +222,7 @@ p.paragraph {
     letter-spacing: 1.6px;
 }
 .claim-slider .slick-arrow {
-    transform: translateY(20px) !important;
+    transform: translateY(-12px) !important;
 }
 .content-item {	
     display: block;
@@ -252,7 +258,7 @@ a.primary-btn-new {
     transform: translateY(0px);
 }
 .claim-slider .slick-next.slick-arrow {
-    right: 5%;
+    right: 30px;
     transform: translateY(0px);
 }
 .claim-slider .slick-dots {

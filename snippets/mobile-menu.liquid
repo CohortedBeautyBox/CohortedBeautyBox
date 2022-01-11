@@ -163,7 +163,7 @@
 			  {% endif %}
 			</li>
 			{% endfor %}
-        <li class="mobile_help collapsible"><a class="collapsible-wrapper" href="/pages/faqs-1">Help</a></li>
+        <li class="mobile_help collapsible"><a class="collapsible-wrapper" href="/pages/contact-us">Help</a></li>
         <li class="collapsible">
           {% if shop.customer_accounts_enabled %}
           <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"><img src="{{ 'drop-down-arrow.png' | asset_img_url: '10x10'}}"></span>
@@ -208,6 +208,9 @@
 		  {% if settings.footer_instagram_link != '' %}
 		  <li><a href="{{settings.footer_instagram_link}}">Instagram</a></li>
 		  {% endif %}
+		  {% if settings.footer_lindin_link != '' %}
+		  <li><a href="{{settings.footer_lindin_link}}">LinkedIn</a></li>
+		  {% endif %}
 		  {% if settings.footer_googleplus_link != '' %}
 		  <li><a href="{{settings.footer_googleplus_link}}">Google Plus</a></li>
 		  {% endif %}
@@ -248,10 +251,13 @@
     border: none !important;
     font-family: 'Avenir LT Std 45 Book' !important;
 }
+input#Search::placeholder {
+    color: #c0bebb;
+}
 input#Search {
     background: 0 0;
     font-size: 13px;
-    color: #c0bebb;
+    color: #000;
     letter-spacing: .03em;
     padding: 0px 10px;
     border: none;
@@ -303,21 +309,21 @@ input#Search {
 		transform: translateX(0px);
 	  }
 	  .novaworks-mobile-navbar nav {
-	  width: 400px;
-	  position: fixed;
-	  left: -400px;
-	  transform: translateX(-400px);
-	  top: 0;
-	  background: #fff;
-	  color: #000;
-	  bottom: 0;
-	  height: 100%;
-	  overflow-x: scroll;
-	  z-index: 999!important;
-	  box-shadow: 0 0 150px rgb(0 0 0 / 10%);
-	  transition: transform .25s cubic-bezier(.165, .84, .44, 1);
-	  padding: 25px 37px 25px 20px;
-  }
+    width: 60%;
+    position: fixed;
+    left: -400px;
+    transform: translateX(-400px);
+    top: 0;
+    background: #fff;
+    color: #000;
+    bottom: 0;
+    height: 100%;
+    overflow-x: scroll;
+    z-index: 999!important;
+    box-shadow: 0 0 150px rgb(0 0 0 / 10%);
+    transition: transform .25s cubic-bezier(.165, .84, .44, 1);
+    padding: 25px 20px 25px 20px;
+}
 	  .novaworks-mobile-navbar ul#sidebar-nav-menu li {
 		position: relative;
 	}
@@ -362,6 +368,11 @@ input#Search {
     padding: 10px 0;
     max-width: 200px;
     white-space: break-spaces;
+}
+@media(max-width:767px){
+	.novaworks-mobile-navbar nav {
+    width: 90%;
+	}
 }
 	</style>
   <script>

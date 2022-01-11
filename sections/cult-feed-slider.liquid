@@ -28,7 +28,7 @@
 		</div>
 		<style>
 				.cult-slider .custom_paging {
-		max-width: 65%;
+		max-width: 64%;
 		margin: 0 0 0 auto;
 		position: absolute;
 		right: 0;
@@ -126,6 +126,14 @@
 		width: 80%;
 		margin: auto;
 	}
+	@media(max-width:1199px){
+		.cult-slider .custom_paging {
+    bottom: 35px;
+}
+.cult-slider {
+        margin-bottom: 50px;
+    }
+	}
 		@media(max-width:767px){
 			.cult-slider .custom_paging {
     max-width: 80%;
@@ -198,8 +206,8 @@
 			{
 			breakpoint: 1024,
 			settings: {
-				slidesToShow: 4,
-				slidesToScroll: 4,
+				slidesToShow: 1,
+				slidesToScroll: 1,
 				infinite: true,
 				dots: false
 			}

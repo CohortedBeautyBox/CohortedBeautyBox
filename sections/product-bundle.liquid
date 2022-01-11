@@ -220,6 +220,18 @@ ul.custom_paging li span {
 		.bundle-div .slick-prev:before {
 		  content: url("{{'arrow-left.png' | asset_img_url:'25x20'}}") !important;
 		}
+		@media(max-width:1199px){
+			.bundle-div .slick-prev.slick-arrow {
+    top: 89% !important;
+    transform: translateX(60px);
+}
+.bundle-div .slick-next.slick-arrow {
+    top: 89% !important;
+    transform: translateX(-80px);
+}.bundle-div h2 {
+    font: normal normal normal 50px/50px 'Austin';
+	}
+		}
 	@media(max-width:767px){
 		.product-bundle .product-feature-image {
     width: 100%;
