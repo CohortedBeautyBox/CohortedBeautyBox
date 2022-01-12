@@ -802,7 +802,7 @@ div#new-feed::before {
   margin: 0 auto;
   top: 0;
   height: 1px;
-  background: #A7A7A7;
+  background: #dcdcdc;
   left: 0;
   right: 0;
   transform: translateY(-50px);
@@ -1628,6 +1628,7 @@ div#address_tables {
   font-size: 24px;
   line-height: 58px;
 }
+
 @media(min-width:1500px){
   .activesticky {
     left: 80px !important;
@@ -1778,6 +1779,14 @@ img.image_box_2, img.image_box_3 {
   div#shopify-section-template--14216801779817__1639041953b0f8a75d {
     margin-top: 0;
 }
+.banner-caption {
+  max-width: 60% !important;
+  top: 6%;
+  left: 3%;
+}
+.banner-image img {
+  min-height: auto;
+} 
 #customer_sidebar a {
   font: normal normal normal 14px/40px Austin !important;
   letter-spacing: .5px !important;
@@ -2152,6 +2161,15 @@ div#nova-mobile-menu {
   ul.footer.icon {
     margin-top: 20px;
 }
+#shopify-section-template--14216801779817__163896721136b4a0a2 .enable_gradiant {
+  margin-top: 0;
+}
+#shopify-section-template--14216801779817__163896721136b4a0a2 .product-box-inner {
+  margin-top: 0;
+}
+body .text-container-wrapper.full-width h2 br {
+  display: none;
+}
 #shopify-section-template--14216801779817__1638968515399efa42 .product-info .price-box span {
   font-size: 16px;
   line-height: 28px;
@@ -2201,7 +2219,7 @@ body#challenge .shopify-challenge__container>form {
 }
 
   #sidebar-nav-menu li:nth-child(2) ul {
-    margin-top: 15px;
+    margin-top: 0;
 }
 #sidebar-nav-menu li:nth-child(2) ul li a {
   padding: 7px 0 !important; 
@@ -2315,7 +2333,7 @@ ul.links.collapsible.account-links li a {
   padding-bottom: 40px;
   text-align: left;
   /* border-bottom: 1px solid #dddddd47; */
-  padding-top: 20px;
+  padding-top: 0px;
 }
 #footer_d .footer {
   border-top: 1px solid #dddddd47 !important;
@@ -2331,8 +2349,8 @@ ul.links.collapsible.account-links li a {
 #contactForm ul.form-list {
   display: flex!important;
   flex-wrap: wrap;
-  grid-gap: 15px !important;
-  margin-top: 0 !important;
+  grid-gap: 15px!important;
+  margin-top: 30px !important;
   padding: 0 15px;
 }
 .page-title h1 {

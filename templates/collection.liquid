@@ -100,8 +100,11 @@
               {% else %}
                 <p class="col-xs-12">There are no products available.</p>
               {% endfor %}
+              {% if paginate.next %}
+              <div id="more"><p> <a class="primary-btn" href="{{ paginate.next.url }}">SHOW MORE COLLECTIONS <img src="{{ 'drop-down-arrow.png' | asset_img_url: '10x10'}}"></a></p></div>
+            {% endif %}
             </div>
-            {% include 'pagination' %}
+
             {% endpaginate %}
           </div>
         </div>
@@ -112,6 +115,48 @@
     </div>
   </div>
 </div>
+<script>
+ // Shortcircuit variable
+let triggered = false;
+
+function ScrollExecute() {
+  // Locate loadmore button
+  let moreButon = $('#more').last();
+  
+  // Get URL from the loadmore button
+  let nextUrl = $(moreButon).find('a').attr("href");
+  
+  // Button position when AJAX call should be made one time
+  if ((($(moreButon).offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
+  
+    // Trigger shortcircuit to ensure AJAX only fires once
+    triggered = true;
+
+    // Make ajax call to next page for load more data
+    $.ajax({
+      url: nextUrl,
+      type: 'GET',
+      beforeSend: function() {
+        moreButon.remove();
+      }
+    })
+    .done(function(data) {
+      // Append data
+      $('#products-viewmode').append($(data).find('#products-viewmode').html());
+
+      // On success, reset shortcircuit
+      triggered = false
+    });
+  }
+}
+
+$(document).ready(function () {
+  $(document).on("click","#more",function(event) {
+    event.preventDefault();
+    ScrollExecute();
+  });
+});
+</script>
 <style>
   li.home img {
     height: 14px;

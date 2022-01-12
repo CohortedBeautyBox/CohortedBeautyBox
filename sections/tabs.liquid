@@ -5,7 +5,7 @@
 	<li data-tab="tab-delivery"><span>What we value</span></li>
 	  </ul>
 	  <div class="tab-slider">
-  <div style="background-image: url('{{ section.settings.featured_image | img_url: 'master' }};');" id="tab-description" class="shopify-tab-content current">
+  <div style="background-image: url('{{ section.settings.featured_image | img_url: 'master' }};');" id="tab-description" class="shopify-tab-content shopify-tab-content-1 current">
 	<div class="tab-content">
 		<div class="text-container-wrapper">
 			<h2>{{ section.settings.title }}</h2>
@@ -14,7 +14,7 @@
 			
 	</div>
   </div>
-  <div style="background-image: url('{{ section.settings.featured_image2 | img_url: 'master' }};');" id="tab-specs" class="shopify-tab-content">
+  <div style="background-image: url('{{ section.settings.featured_image2 | img_url: 'master' }};');" id="tab-specs" class="shopify-tab-content shopify-tab-content-2">
 	<div class="tab-content">
 		<div class="text-container-wrapper">
 			<h2>{{ section.settings.title2 }}</h2>
@@ -22,13 +22,13 @@
 			  </div>
 	</div>
   </div>
-  <div style="background-image: url('{{ section.settings.featured_image3 | img_url: 'master' }};');" id="tab-delivery" class="shopify-tab-content">
+  <div style="background-image: url('{{ section.settings.featured_image3 | img_url: 'master' }};');" id="tab-delivery" class="shopify-tab-content shopify-tab-content-3">
 	<div class="tab-content">
 		<div class="text-container-wrapper">
 			<h2>{{ section.settings.title3 }}</h2>
 			{{ section.settings.text3 }}
 			  </div>
-	</div>  </div>
+	</div>  </div> 
 
 </div>
 
@@ -160,7 +160,7 @@ ul.shopify-tabs > li.current span:before {
 @media(max-width:767px){
 
 	.shopify-tab-content {
-    height: 590px; 
+    height: 560px; 
     object-fit: cover;
     background-position: center;
 }
@@ -188,6 +188,19 @@ ul.shopify-tabs {
 .tabs-main .slick-dots li.slick-active button:before {
     background: #fff!important;
 }
+.shopify-tab-content-3{
+		background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/what-we-value-mob.jpg?v=1641981505) !important;	
+	}
+
+	.shopify-tab-content-2{
+		background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/what-we-do.jpg?v=1641982931) !important;	
+	}
+
+	.shopify-tab-content-1{
+		background-image: url(https://cdn.shopify.com/s/files/1/2635/3958/files/Who-we-are_efedd623-9aea-4d1c-a164-66f07f920415.jpg?v=1641982931) !important;	
+	}
+
+
 }
 
   </style>
