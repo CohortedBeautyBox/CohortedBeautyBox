@@ -118,7 +118,62 @@ display:none;
 #header-section a:hover {
     color: #eed3c6!important;
 }
+.subscription-boxes .item-product-image-box {
+    padding-top: 100%;
+    background-size: cover;
+}
+.subscription-inner {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.subscription-inner p {
+    font-size: 15px;
+    color: #fff;
+    line-height: 16px;
+    margin: 0;
+}
+.subscription-boxes-2 .item-product-image-box {
+    padding-top: 49%;
+}
+.subscription-boxes-2 {
+    grid-column: span 2;
+}
+.subscription-boxes-2 .subscription-inner {
+    padding: 20px;
+}
+.subscription-inner h3 {
+    width: 100%;
+    font: normal normal normal 30px/50px Austin;
+    color: #fff;
+    margin: 10px 0;
+}
+.subscription-boxes-2 .secondary-btn.white {
+    height: 50px;
+    margin-top: 20px;
+    line-height: 50px !important;
+    padding: 0 30px !important;
+}
 @media(max-width:767px){
+    .subscription-inner h3 {
+        width: 100%;
+        font: 22px/30px Austin;
+    }
+    .subscription-boxes {
+        grid-column: span 2;
+    }
+    .subscription-boxes-2 .item-product-image-box {
+        padding-top: 110%;
+    }
     body .overlap_heading {
         padding-top: 0 !important;
     }

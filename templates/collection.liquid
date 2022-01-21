@@ -97,6 +97,28 @@
                 <div class="col-lg-{{ 12 | divided_by:settings.products_per_row }} col-md-4 col-sm-4 col-xs-6 item">
                 {% include 'product-grid-item' with collection.handle %}
                 </div>
+
+              {% if collection.handle == 'classic-beauty-boxes'%}
+              {% if product.metafields.global.collection1.value %}
+              <div class="subscription-boxes col-lg-{{ 12 | divided_by:settings.products_per_row }} col-md-4 col-sm-4 col-xs-6 item">
+               <div style="background-image: url(//cdn.shopify.com/s/files/1/2635/3958/files/Share-Friends-Background.png?v=1637820715);" class="item-product-image-box">
+                <div class="subscription-inner">
+                 {{ product.metafields.global.collection1.value }}
+                </div>
+                </div>
+              </div>
+              {% endif %}
+              
+              {% if product.metafields.global.collection2.value %}
+              <div class="subscription-boxes subscription-boxes-2 col-lg-{{ 12 | divided_by:settings.products_per_row }} col-md-4 col-sm-4 col-xs-6 item">
+                <div style="background-image: url(//cdn.shopify.com/s/files/1/2635/3958/files/Share-Friends-Background.png?v=1637820715);" class="item-product-image-box">
+                <div class="subscription-inner">
+                {{ product.metafields.global.collection2.value }}
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endif %}
               {% else %}
                 <p class="col-xs-12">There are no products available.</p>
               {% endfor %}
