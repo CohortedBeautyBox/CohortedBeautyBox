@@ -8,7 +8,7 @@
           <div class="page-title">
             <h1>{{ 'customer.account.title' | t }}</h1>
           </div>
-            <p><a href="/pages/my-subscriptions" class="text-link">My Subscriptions</a></p>
+            <!-- <p><a href="/pages/my-subscriptions" class="text-link">My Subscriptions</a></p> -->
           <h2><span>{{ customer.name.first }}{{ customer.last_name.first }}</span><span>{{ customer.name }}</span></h2>
           <p class="email note">Email: {{ customer.email }}</p>
           <div class="address note">
@@ -26,7 +26,7 @@
             <p class="buttons-phone">Phone Number: {{ customer.default_address.phone }}</p><br>
             {% endif %}
             <a href="/tools/checkout/front_end/login" class="primary-btn"><img src="{{ 'noun_edit_260487.svg' | asset_url }}">Manage My Subscriptions</a>
-            <a href="/pages/loyalty-lion-rewards" class="secondary-btn hover"><img src="{{ 'noun_Coins_481828.svg' | asset_url }}"> CHECK MY POINTS</a>
+            <a href="/pages/cohorted-rewards" class="secondary-btn hover"><img src="{{ 'noun_Coins_481828.svg' | asset_url }}"> CHECK MY POINTS</a>
           </div>
           </div>
         </div>

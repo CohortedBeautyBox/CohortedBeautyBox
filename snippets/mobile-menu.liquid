@@ -163,7 +163,7 @@
 			  {% endif %}
 			</li>
 			{% endfor %}
-        <li class="mobile_help collapsible"><a class="collapsible-wrapper" href="/pages/contact-us">Help</a></li>
+        <li class="mobile_help collapsible"><a class="collapsible-wrapper" href="/pages/contact-us">Contact</a></li>
         <li class="collapsible">
           {% if shop.customer_accounts_enabled %}
           <span class="plus-right {{avtive}}" onclick="Codnitive.expandMenu(this.parentNode)"><img src="{{ 'drop-down-arrow.png' | asset_img_url: '10x10'}}"></span>
@@ -197,22 +197,22 @@
 		<div class="mobile_social_media_title">FOLLOW US</div>
 		<ul class="mobile_social">
 		  {% if settings.footer_facebook_link != '' %}
-		  <li><a href="{{settings.footer_facebook_link}}">Facebook</a></li>
+		  <li><a target="_blank" href="{{settings.footer_facebook_link}}">Facebook</a></li>
 		  {% endif %}
 		  {% if settings.footer_twitter_link != '' %}
-		  <li><a href="{{settings.footer_twitter_link}}">Twitter</a></li>
+		  <li><a target="_blank" href="{{settings.footer_twitter_link}}">Twitter</a></li>
 		  {% endif %}
 		  {% if settings.footer_pinterest_link != '' %}
-		  <li><a href="{{settings.footer_pinterest_link}}">Pinterest</a></li>
+		  <li><a target="_blank" href="{{settings.footer_pinterest_link}}">Pinterest</a></li>
 		  {% endif %}
 		  {% if settings.footer_instagram_link != '' %}
-		  <li><a href="{{settings.footer_instagram_link}}">Instagram</a></li>
+		  <li><a target="_blank" href="{{settings.footer_instagram_link}}">Instagram</a></li>
 		  {% endif %}
 		  {% if settings.footer_lindin_link != '' %}
-		  <li><a href="{{settings.footer_lindin_link}}">LinkedIn</a></li>
+		  <li><a target="_blank" href="{{settings.footer_lindin_link}}">LinkedIn</a></li>
 		  {% endif %}
 		  {% if settings.footer_googleplus_link != '' %}
-		  <li><a href="{{settings.footer_googleplus_link}}">Google Plus</a></li>
+		  <li><a target="_blank" href="{{settings.footer_googleplus_link}}">Google Plus</a></li>
 		  {% endif %}
 		</ul>		
 	  </div>
@@ -254,6 +254,9 @@
 input#Search::placeholder {
     color: #c0bebb;
 }
+#sidebar-nav-menu .plus-left:hover, #sidebar-nav-menu .plus-right:hover {
+    background-color: transparent;
+}	
 input#Search {
     background: 0 0;
     font-size: 13px;

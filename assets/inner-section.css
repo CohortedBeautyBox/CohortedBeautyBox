@@ -2,6 +2,9 @@
     font-size: 15px;
     line-height: 24px;
 }
+#header-section .fa {
+    line-height: normal !important;
+}
 #win-page-terms-my h3 {
     font-family: 'Austin';
 }
@@ -109,6 +112,12 @@ display:none;
 /* .cms-page .page-title {
     display: none;
 } */
+.sticky-wrapper.is-sticky a:hover>span {
+    color: #eed3c6 !important;
+}
+#header-section a:hover {
+    color: #eed3c6!important;
+}
 @media(max-width:767px){
     body .overlap_heading {
         padding-top: 0 !important;
@@ -590,9 +599,9 @@ label.needsclick.kl-private-reset-css-Xuajs1 .needsclick.kl-private-reset-css-Xu
     line-height: 24px;
     text-transform: initial;
 }
-.mega_menu_left ul li.level1.menugroups:last-child a span {
+/* .mega_menu_left ul li.level1.menugroups:last-child a span {
     font-size: 10px;
-}
+} */
 #shopify-section-template--14211130196073__1638522509f8d1321f .secondary-btn.white {
     display: none;
 }
@@ -691,11 +700,15 @@ a#view_address {
     justify-content: flex-start !important;
 }
 p.buttons-phone {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 #customer_sidebar .page-title {
     border-bottom: 1px solid #dcdcdc;
-    padding: 15px 0;
+    padding: 0 0 15px 0;
+}
+a#view_address {
+    height: 40px !important;
+    margin: 0 !important;
 }
 #customer_sidebar h2 {
     margin-top: 0;
@@ -726,8 +739,8 @@ div#customer_sidebar p {
     margin-top: 70px;
 }
 #customer_sidebar a {
-    font: normal normal normal 18px/80px Austin;
-    letter-spacing: 0.9px;
+    font: 16px/50px Austin;
+    letter-spacing: .9px;
     text-transform: uppercase;
     margin-bottom: 10px;
     width: 100%!important;
@@ -735,6 +748,7 @@ div#customer_sidebar p {
     justify-content: center;
     align-items: center;
     grid-gap: 10px;
+    height: 50px;
 }
 #customer_sidebar h2 span:nth-child(1) {
     background: #fff;
@@ -844,7 +858,7 @@ body:not(.top-search-open) #cart, body:not(.top-search-open) .header-logo, body:
     margin-top: 30px;
 }
 .collapsible .plus-right {
-    width:90% !important;
+    width: 100% !important;
     height: 40px !important;
 }
 ul.mobile_social li {
@@ -1394,6 +1408,13 @@ div#more .primary-btn:hover img {
 #shopify-section-template--14211130196073__1638522509f8d1321f .product-image-content {
     padding-bottom: 0;
 }
+#top-search-trigger i {
+    left: 12px !important;
+}
+a#top-search-trigger {
+    padding: 20px;
+    padding-bottom: 0;
+}
 @media (max-width:1460px) {
     h3.product-name a {
         font: normal normal normal 18px/23px Austin;    
@@ -1479,6 +1500,12 @@ h3.shopify_explorer_faq__separator {
 }
 }
 @media(max-width:767px){
+    #win-page-terms-my ol { 
+        padding-left: 0;
+    }
+    #shopify-section-template--14216801779817__1639041953b0f8a75d .slick-dots {
+        bottom: -40px!important;
+    }
     #contactForm .buttons-set {
         margin-top: 30px;
     }

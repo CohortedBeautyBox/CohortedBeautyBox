@@ -119,22 +119,22 @@
                     <div class="socail_title">FOLLOW US</div>
                     <ul class="footer icon">
                       {% if settings.footer_facebook_link != '' %}
-                      <li><a href="{{settings.footer_facebook_link}}"><i class="fa fa-facebook"></i></a></li>
+                      <li><a target="_blank" href="{{settings.footer_facebook_link}}"><i class="fa fa-facebook"></i></a></li>
                       {% endif %}
                       {% if settings.footer_twitter_link != '' %}
-                      <li><a href="{{settings.footer_twitter_link}}"><i class="fa fa-twitter"></i></a></li>
+                      <li><a target="_blank" href="{{settings.footer_twitter_link}}"><i class="fa fa-twitter"></i></a></li>
                       {% endif %}
                       {% if settings.footer_pinterest_link != '' %}
-                      <li><a href="{{settings.footer_pinterest_link}}"><i class="fa fa-pinterest-p"></i></a></li>
+                      <li><a target="_blank" href="{{settings.footer_pinterest_link}}"><i class="fa fa-pinterest-p"></i></a></li>
                       {% endif %}
                       {% if settings.footer_instagram_link != '' %}
-                      <li><a href="{{settings.footer_instagram_link}}"><i class="fa fa-instagram"></i></a></li>
+                      <li><a target="_blank" href="{{settings.footer_instagram_link}}"><i class="fa fa-instagram"></i></a></li>
                       {% endif %}
                       {% if settings.footer_lindin_link != '' %}
-                      <li><a href="{{settings.footer_lindin_link}}"><i class="fa fa-linkedin-square"></i></a></li>
+                      <li><a target="_blank" href="{{settings.footer_lindin_link}}"><i class="fa fa-linkedin-square"></i></a></li>
                       {% endif %}
                       {% if settings.footer_googleplus_link != '' %}
-                      <li><a href="{{settings.footer_googleplus_link}}"><i class="fa fa-google-plus"></i></a></li>
+                      <li><a target="_blank" href="{{settings.footer_googleplus_link}}"><i class="fa fa-google-plus"></i></a></li>
                       {% endif %}
                       
                     </ul>			
@@ -158,42 +158,42 @@
                     <div class="paypal-logo">
                       {% if settings.payment_1_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="Comodo, Cohorted" alt="Comodo, Cohorted" src="{{ 'payment_image_1.png' | asset_url }}"/>
+                        <img title="American Express, Cohorted" alt="American Express" src="{{ 'payment_image_1.png' | asset_url }}"/>
                       </a>
                       {% endif %}
                       {% if settings.payment_2_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="PayPal, Cohorted" alt="PayPal, Cohorted" src="{{ 'payment_image_2.png' | asset_url }}"/>
+                        <img title="Apple Pay, Cohorted" alt="Apple Pay" src="{{ 'payment_image_2.png' | asset_url }}"/>
                       </a>
                       {% endif %}
                       {% if settings.payment_3_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="Visa, Cohorted" alt="Visa, Cohorted" src="{{ 'payment_image_3.png' | asset_url }}"/>
+                        <img title="Discover, Cohorted" alt="Discover" src="{{ 'payment_image_3.png' | asset_url }}"/>
                       </a>
                       {% endif %}
                       {% if settings.payment_4_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="Reviews, Cohorted" alt="Reviews, Cohorted" src="{{ 'payment_image_4.png' | asset_url }}"/>
+                        <img title="Google Pay, Cohorted" alt="Google Pay" src="{{ 'payment_image_4.png' | asset_url }}"/>
                       </a>
                       {% endif %}
                       {% if settings.payment_5_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="PayPal" alt="" src="{{ 'payment_image_5.png' | asset_url }}"/>
+                        <img title="Klarna, Cohorted" alt="Klarna" src="{{ 'payment_image_5.png' | asset_url }}"/>
                       </a>
                       {% endif %}
                       {% if settings.payment_6_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="PayPal" alt="" src="{{ 'payment_image_6.png' | asset_url }}"/>
+                        <img title="Master Card, Cohorted" alt="Master Card" src="{{ 'payment_image_6.png' | asset_url }}"/>
                       </a>	
                       {% endif %}
                       {% if settings.payment_7_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="PayPal" alt="" src="{{ 'payment_image_7.png' | asset_url }}"/>
+                        <img title="PayPal, Cohorted" alt="PayPal" src="{{ 'payment_image_7.png' | asset_url }}"/>
                       </a>	
                       {% endif %}
                       {% if settings.payment_8_enable %}
                       <a target="_blank" href="javascript:;">
-                        <img title="PayPal" alt="" src="{{ 'payment_image_8.png' | asset_url }}"/>
+                        <img title="Visa, Cohorted" alt="Visa" src="{{ 'payment_image_8.png' | asset_url }}"/>
                       </a>	
                       {% endif %}
                     </div>		 
